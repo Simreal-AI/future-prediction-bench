@@ -1,0 +1,9 @@
+{
+  "kind": "stateless_python_cases_overlay_v1",
+  "task_id": "humanize-4150-naturalsize-rounding-v2",
+  "verifier_sha256": "4e36079f09ed50c6b9d1c23aed746e9d6ffca22cf62878411717b8329dcb7305",
+  "requires_live_background_process_state": false,
+  "requires_shared_case_filesystem_state": false,
+  "requires_quiescent_submitted_state": true,
+  "allow_unprivileged_case_execution": true
+}

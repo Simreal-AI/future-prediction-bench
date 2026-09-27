@@ -1,0 +1,10 @@
+{
+  "kind": "quiescent_process_fork_frozen_overlay_humanize_v1",
+  "task_id": "humanize-4150-naturalsize-rounding-v2",
+  "source_path": "src/humanize/filesize.py",
+  "case_count": 14,
+  "requires_live_background_process_state": false,
+  "requires_shared_case_filesystem_state": false,
+  "requires_quiescent_submitted_state": true,
+  "resident_case_contract_sha256": "43f710030aae7c5855ec10e91cd9e98fbad04c56d7a4a3e8bd8964c531eb6921"
+}
