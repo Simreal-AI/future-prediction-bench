@@ -1,0 +1,10 @@
+{
+  "kind": "quiescent_process_fork_frozen_overlay_boltons_v1",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "source_path": "boltons/strutils.py",
+  "case_count": 14,
+  "requires_live_background_process_state": false,
+  "requires_shared_case_filesystem_state": false,
+  "requires_quiescent_submitted_state": true,
+  "resident_case_contract_sha256": "8e537a023545b3116728c5f1ddf4fcd365891ccd513dcc0106e53c747f948f38"
+}
