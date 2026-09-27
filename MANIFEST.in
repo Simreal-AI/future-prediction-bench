@@ -1,0 +1,10 @@
+include README.md CONTRIBUTING.md LICENSE THIRD_PARTY_NOTICES.md CHANGELOG.md pilot_config.json .env.example
+recursive-include docs *.md
+recursive-include docs *.json
+include configs/sources.json
+recursive-include configs *.example.json
+recursive-include examples *.json *.jsonl *.py *.md *.c *.go
+recursive-include examples/official_cubecow *.rs *.toml *.lock
+recursive-include tests *.py
+recursive-include scripts *.py
+include scripts/public_manifest.json

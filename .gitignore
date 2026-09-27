@@ -1,0 +1,34 @@
+# Python environments and build outputs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Operational state and evidence snapshots
+runs/*
+!runs/.gitkeep
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+configs/*.local.json
+*.pem
+*.key
+
+# Editor and operating-system state
+.DS_Store
+.idea/
+.vscode/

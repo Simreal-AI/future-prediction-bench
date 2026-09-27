@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "future-prediction-bench"
+version = "0.19.1"
+description = "Probability forecasting and verifiable real-world agent environments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Simreal-AI contributors"}]
+maintainers = [{name = "Simreal-AI"}]
+keywords = ["forecasting", "benchmark", "probability", "agents", "delayed-feedback"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/Simreal-AI/future-prediction-bench"
+Repository = "https://github.com/Simreal-AI/future-prediction-bench"
+Issues = "https://github.com/Simreal-AI/future-prediction-bench/issues"
+Changelog = "https://github.com/Simreal-AI/future-prediction-bench/blob/main/CHANGELOG.md"
+
+[project.scripts]
+future-prediction-bench = "future_prediction_bench.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["future_prediction_bench*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.2",
+  "status": "live_discovery_verified_forecasting_not_started",
+  "confirmed_preferences": {
+    "multi_domain": true,
+    "max_forecast_horizon_hours": 168,
+    "horizon_definition": "metadata.target_at minus forecast_deadline; outcome_not_before bounds earliest possible outcome knowledge",
+    "output": "full_probability_distribution"
+  },
+  "proposed_event_count": {
+    "min": 30,
+    "max": 50
+  },
+  "horizon_buckets_hours": [
+    {
+      "lower_exclusive": 0,
+      "upper_inclusive": 24
+    },
+    {
+      "lower_exclusive": 24,
+      "upper_inclusive": 72
+    },
+    {
+      "lower_exclusive": 72,
+      "upper_inclusive": 168
+    }
+  ],
+  "resolution_latency_may_exceed_horizon": true,
+  "question_types": [
+    "binary",
+    "categorical"
+  ],
+  "categorical_option_count_preference": [
+    3,
+    4,
+    5
+  ],
+  "proposed_domain_weights": {
+    "weather_environment": 0.3,
+    "sports": 0.3,
+    "economic_releases": 0.25,
+    "space_technology": 0.15
+  },
+  "research_modes": [
+    "self_research",
+    "no_search"
+  ],
+  "market_modes": [
+    "no_consensus",
+    "market_aware"
+  ],
+  "prototype_tool_call_limit": 8,
+  "next_required_integrations": [
+    "configure_real_model_and_search_credentials",
+    "configure_internal_baseline_credentials",
+    "review_matching_market_contracts",
+    "expand_source_domains",
+    "evaluate_live_resolutions",
+    "token_level_RL_trainer"
+  ],
+  "notes": "Domain weights are future pilot proposals, not the distribution of the initial MLB/USGS batch. This planning file is not a policy loader; executable source settings are in configs/sources.json. Real model forecasts and RL training have not been run.",
+  "implemented_sources": [
+    "mlb",
+    "usgs"
+  ],
+  "baseline_policy": {
+    "priority": [
+      "reviewed_matching_market",
+      "fixed_internal_model"
+    ],
+    "visibility": "private_reward_only",
+    "seal_before_first_forecast": true,
+    "missing_behavior": "skip_baseline_improvement_forecast"
+  }
+}
