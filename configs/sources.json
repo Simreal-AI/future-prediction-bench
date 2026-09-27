@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.2",
+  "sources": [
+    {
+      "id": "mlb",
+      "enabled": true,
+      "split": "test",
+      "horizon_hours": 168,
+      "min_lead_minutes": 30,
+      "deadline_before_start_minutes": 60
+    },
+    {
+      "id": "usgs",
+      "enabled": true,
+      "split": "test",
+      "region": "global",
+      "min_magnitude": 5.0,
+      "lookahead_days": 5,
+      "horizon_hours": 168,
+      "min_lead_minutes": 30,
+      "deadline_before_start_minutes": 60,
+      "settle_hours": 24
+    }
+  ],
+  "pipeline": {
+    "auto_publish": true,
+    "max_questions_per_source": 20,
+    "retry_base_seconds": 900,
+    "retry_max_seconds": 21600,
+    "max_resolution_attempts": 20
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "market_mappings": {},
+  "mapping_example_do_not_activate": {
+    "QUESTION_ID": {
+      "provider": "polymarket",
+      "reviewed": false,
+      "market_id": "REPLACE_WITH_NUMERIC_GAMMA_MARKET_ID",
+      "question_sha256": "HASH_OF_THE_PUBLIC_FROZEN_QUESTION",
+      "market_question": "Exact market question",
+      "market_description_sha256": "HASH_OF_THE_EXACT_MARKET_DESCRIPTION_STRING",
+      "market_end_date": "Exact endDate field from the market",
+      "outcome_map": {"Yes": "yes", "No": "no"},
+      "max_age_seconds": 3600,
+      "resolution_equivalence_note": "Explain why the outcomes, event, time window, cancellation rules, and resolution criteria match."
+    }
+  }
+}
