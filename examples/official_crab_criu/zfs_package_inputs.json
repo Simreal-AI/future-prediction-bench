@@ -1,0 +1,201 @@
+{
+  "architecture": "linux/amd64",
+  "kernel_release": "6.18.53-0-virt",
+  "zfs_version": "2.4.4-r0",
+  "apkindex_url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/APKINDEX.tar.gz",
+  "apkindex_sha256": "5abf112c0fca9054212e1bb0176216691db51e9b45a70ce0a227f5099d2b1deb",
+  "packages": [
+    {
+      "filename": "keyutils-libs-1.6.3-r4.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/keyutils-libs-1.6.3-r4.apk",
+      "bytes": 7635,
+      "pkgname": "keyutils-libs",
+      "pkgver": "1.6.3-r4",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1tzMclvB3/DUi7kNhpEHRCXIEzZA=",
+      "sha256": "855c94e6bd750fcd2ca34df29ae3602bc93bb0b4512b56d8f4ecca06919ed1b8"
+    },
+    {
+      "filename": "krb5-conf-1.0-r2.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/krb5-conf-1.0-r2.apk",
+      "bytes": 1745,
+      "pkgname": "krb5-conf",
+      "pkgver": "1.0-r2",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1QKEeBpClnhEDZ7YqgGYQJOmUKi0=",
+      "sha256": "28b8e361a1583c04e98c261c3eb05ca7f0c0e80a9984a7c1b3cbfd7b60c86f37"
+    },
+    {
+      "filename": "krb5-libs-1.22.2-r1.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/krb5-libs-1.22.2-r1.apk",
+      "bytes": 765540,
+      "pkgname": "krb5-libs",
+      "pkgver": "1.22.2-r1",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q17wI0biG4F/83nkYB5bH8l2Dl4xo=",
+      "sha256": "79502e864cafa97c7da8a07937422ee020f470526fe0c7fc8c2306302a7c2439"
+    },
+    {
+      "filename": "libblkid-2.42.3-r1.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libblkid-2.42.3-r1.apk",
+      "bytes": 98429,
+      "pkgname": "libblkid",
+      "pkgver": "2.42.3-r1",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1B0eyM6avTem7+AUq2YfRl/hqcrQ=",
+      "sha256": "2512c2bff496ac2b8561a3c814d21d35ce10cda579b3d410f9f96da93a5aaac1"
+    },
+    {
+      "filename": "libcom_err-1.47.4-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libcom_err-1.47.4-r0.apk",
+      "bytes": 6095,
+      "pkgname": "libcom_err",
+      "pkgver": "1.47.4-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1S5+1iZ6gscDPuyosWVJwRDfU7O8=",
+      "sha256": "4723d0fb8e286dc6adb54dd3cdaedcd8db54260f75ee778a5acb4c16922c0f52"
+    },
+    {
+      "filename": "libcrypto3-3.5.8-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libcrypto3-3.5.8-r0.apk",
+      "bytes": 1978546,
+      "pkgname": "libcrypto3",
+      "pkgver": "3.5.8-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1GzufwME29JNpMryy7CFJnwrl39M=",
+      "sha256": "161223a16f042b8e469e9441291e071464fd91d4f4bbe6f496ee8d0abd4e0701"
+    },
+    {
+      "filename": "libeconf-0.8.3-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libeconf-0.8.3-r0.apk",
+      "bytes": 26054,
+      "pkgname": "libeconf",
+      "pkgver": "0.8.3-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1M57ga4q1Zc6sMwKtO44cuhd6S2g=",
+      "sha256": "2a791c7957961f830cf31b04f35f814a63afcf633badc9052425ff1cf2f64380"
+    },
+    {
+      "filename": "libintl-1.0-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libintl-1.0-r0.apk",
+      "bytes": 39537,
+      "pkgname": "libintl",
+      "pkgver": "1.0-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1KC1mQsyshyN+Q6hkFZ1zz1q+dVA=",
+      "sha256": "cb03919cba5624b5e8759d04f3b31913b02585355988b914bc31de4746ff5ef6"
+    },
+    {
+      "filename": "libssl3-3.5.8-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libssl3-3.5.8-r0.apk",
+      "bytes": 379265,
+      "pkgname": "libssl3",
+      "pkgver": "3.5.8-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1X5seVdghlT0uKx2zItrXCjtQQeo=",
+      "sha256": "aca521e5ae4a321322a9d47ed64a1775f5ab1ffd215d1e9fc0433c58f7bfd037"
+    },
+    {
+      "filename": "libtirpc-1.3.5-r1.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libtirpc-1.3.5-r1.apk",
+      "bytes": 76160,
+      "pkgname": "libtirpc",
+      "pkgver": "1.3.5-r1",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1wyhlvYaouIKdFSJ5yrvFrG1DDrI=",
+      "sha256": "73d0fa9459a9b506a88f5c545c77af86e46495b5cdd16b3502928ab306bb9616"
+    },
+    {
+      "filename": "libtirpc-conf-1.3.5-r1.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libtirpc-conf-1.3.5-r1.apk",
+      "bytes": 2182,
+      "pkgname": "libtirpc-conf",
+      "pkgver": "1.3.5-r1",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1DBfZmI3JhskOIveXeN8EfsqZc/8=",
+      "sha256": "eb9b5e86ecb79f9d4092d9747466491a5f6d6b0b2ebb1d3812dc5cba4a04c0ba"
+    },
+    {
+      "filename": "libuuid-2.42.3-r1.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libuuid-2.42.3-r1.apk",
+      "bytes": 14261,
+      "pkgname": "libuuid",
+      "pkgver": "2.42.3-r1",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1jwQe9jetdfOBzAwDTyr7uwMDJk4=",
+      "sha256": "8306e5bb577696c9069fe1dfd9e1dcc39d2d481c6a1b0e707fd03c3e21aa6aa2"
+    },
+    {
+      "filename": "libverto-0.3.2-r2.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/libverto-0.3.2-r2.apk",
+      "bytes": 9283,
+      "pkgname": "libverto",
+      "pkgver": "0.3.2-r2",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1cyMwWTOBQuSsbY+4uwB06T2nXcE=",
+      "sha256": "c20d2d8db18fe088c14cf00efa3780c81ff13f0663525df85d25ad44d415cdf5"
+    },
+    {
+      "filename": "linux-virt-6.18.53-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/linux-virt-6.18.53-r0.apk",
+      "bytes": 44477773,
+      "pkgname": "linux-virt",
+      "pkgver": "6.18.53-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1nW1Irs8vFMuVeV8Atq+u047ZI28=",
+      "sha256": "cad859cc46342e18002621fdde166bf2cd520dfec5e781d241de7d13e53970d6"
+    },
+    {
+      "filename": "musl-1.2.6-r2.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/musl-1.2.6-r2.apk",
+      "bytes": 415475,
+      "pkgname": "musl",
+      "pkgver": "1.2.6-r2",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1D35YJ+ThpzYxvtont4QxqLokDgU=",
+      "sha256": "573712e2f49c15bfc20a2699f204acdfc74c772722b15e7353d768057fae0e71"
+    },
+    {
+      "filename": "zfs-2.4.4-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/zfs-2.4.4-r0.apk",
+      "bytes": 428069,
+      "pkgname": "zfs",
+      "pkgver": "2.4.4-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1eS/Vq8kwSo5UoLGdd69e9Jswiww=",
+      "sha256": "207077bb04d66720adb61a87b2fced363235e2ab60b5cea2f92f16bb65a88e2b"
+    },
+    {
+      "filename": "zfs-libs-2.4.4-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/zfs-libs-2.4.4-r0.apk",
+      "bytes": 1624454,
+      "pkgname": "zfs-libs",
+      "pkgver": "2.4.4-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1+tU/egmHaq1QbNR2f78Gvpn3q7o=",
+      "sha256": "8a442a1a11e6de60261dd4b737dab49a51d6d8e7cc3425fc0fdf7431a464fcc7"
+    },
+    {
+      "filename": "zfs-virt-6.18.53-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/zfs-virt-6.18.53-r0.apk",
+      "bytes": 34215483,
+      "pkgname": "zfs-virt",
+      "pkgver": "6.18.53-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q1ObQ5vJKQoqaqXg5/1GucVF4vPx0=",
+      "sha256": "4daa19beb77600e798a26ca879116b81d323d2f6c9ca55f06fb1d4e9eebbbd21"
+    },
+    {
+      "filename": "zlib-1.3.2-r0.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/zlib-1.3.2-r0.apk",
+      "bytes": 56195,
+      "pkgname": "zlib",
+      "pkgver": "1.3.2-r0",
+      "architecture": "x86_64",
+      "apkindex_checksum": "Q13Uw9ECrK7ypxoUlZUdVfq8hoBhM=",
+      "sha256": "b636306cbf8a0c15493b38de608ba11605fd8f11ade631f5ece6f7fdf5a1e09e"
+    }
+  ],
+  "schema_version": "official-crab-zfs-fixed-inputs-v1",
+  "trust_basis": "Primary HTTPS bytes pinned by whole APK SHA256, recorded APKINDEX compressed-control SHA1, and control-bound compressed-payload SHA256. Package signature verification is not claimed."
+}
