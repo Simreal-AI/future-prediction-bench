@@ -1,0 +1,60 @@
+{
+  "schema_version": "microvm-guest-identity-probe-v1",
+  "scope": "three offline QEMU/HVF full-VM graded episodes on one solved public task",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "bound_task_sha256": "3b88b356281b99f9becdb7e1f0cda625fc1aa106124785c459e9f65cfc458b08",
+  "candidate_python_identity": "guest_uid_gid_65534_v2",
+  "seed_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+  "attack_source_sha256": "18924b58002c2918567a4ede6e6bc22420b21cb489069c8b4473c3c71ad35470",
+  "attack_kind": "module_import_attempts_to_kill_guest_pid1",
+  "adapter_source_sha256": "4d680c412da11b5e3e9157e022d9cfd8b5a9eb8959071bb581d22e0046487d7f",
+  "arms": {
+    "baseline": {
+      "status": "graded",
+      "reward": 0.0,
+      "passed_cases": 7,
+      "case_count": 14,
+      "return_codes": [
+        0
+      ],
+      "full_vm_restores": 14,
+      "raw_report_sha256": "d1d8cfeb8cdd3faf20c57365bb506754abf015a3993cd3320e1fe0c1f9428ef6"
+    },
+    "repair": {
+      "status": "graded",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "return_codes": [
+        0
+      ],
+      "full_vm_restores": 14,
+      "raw_report_sha256": "ff0a0db0e4da2010ac393b8887453ba8810736a10bd5c5de90e83b12da5db603"
+    },
+    "kill_pid1": {
+      "status": "graded",
+      "reward": 0.0,
+      "passed_cases": 0,
+      "case_count": 14,
+      "return_codes": [
+        1
+      ],
+      "full_vm_restores": 14,
+      "raw_report_sha256": "616556416db78d4637ba338e7d3435bfa709acd140a0a43f90ba914bbb0d28bf"
+    }
+  },
+  "limits": [
+    "One public solved Boltons task and one PID-1 kill attempt; not a general containment proof.",
+    "No model inference, optimizer update, or throughput comparison was measured.",
+    "Historical reports that used guest-root Python have a different execution binding."
+  ],
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "readonly_disk_sha256": "32a189d5e4ae4417cf65bfcc91d2cc8ffdf5957fbbc1f055b037861c595b7328"
+  }
+}

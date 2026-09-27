@@ -1,0 +1,80 @@
+{
+  "kind": "virtio_action_read_transport_benchmark_v1",
+  "scope": "same booted ARM64 QEMU/HVF VM, trusted read-only agent",
+  "repetitions": 100,
+  "warmup": 10,
+  "pair_order": "alternated; read phase reverses PING order",
+  "latency": {
+    "shell_true": {
+      "count": 100,
+      "median_ms": 2.890104,
+      "p95_ms": 3.302042,
+      "min_ms": 2.018458,
+      "max_ms": 5.806167
+    },
+    "virtio_ping": {
+      "count": 100,
+      "median_ms": 0.229584,
+      "p95_ms": 0.420458,
+      "min_ms": 0.106083,
+      "max_ms": 0.684583
+    },
+    "shell_read": {
+      "count": 100,
+      "median_ms": 70.447438,
+      "p95_ms": 78.001709,
+      "min_ms": 67.876125,
+      "max_ms": 98.342791
+    },
+    "virtio_read": {
+      "count": 100,
+      "median_ms": 0.511291,
+      "p95_ms": 0.852083,
+      "min_ms": 0.345417,
+      "max_ms": 1.19025
+    }
+  },
+  "parity": {
+    "read_observation_equal": true,
+    "complete_observation_pairs_checked": 110,
+    "measured_pairs_checked": 100,
+    "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+  },
+  "setup": {
+    "boot_seconds": 5.718522,
+    "total_seconds": 14.321801,
+    "vm_metrics": {
+      "vm_starts": 1,
+      "guest_commands": 243,
+      "snapshot_saves": 0,
+      "snapshot_loads": 0,
+      "forks_spawned": 0,
+      "fork_reflink_disks": 0,
+      "fork_copied_disks": 0,
+      "fork_seconds": 0.0,
+      "fork_disk_clone_seconds": 0.0,
+      "fork_child_start_restore_seconds": 0.0,
+      "vm_start_seconds": 0.2286794160027057,
+      "guest_command_seconds": 8.558811618248,
+      "snapshot_save_seconds": 0.0,
+      "snapshot_load_seconds": 0.0
+    },
+    "rpc_metrics": {
+      "requests": 224,
+      "request_seconds": 0.10829641460441053,
+      "bytes_sent": 23300,
+      "bytes_received": 2430841
+    }
+  },
+  "assets": {
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "rootfs_seed_sha256": "9201a533e7491c882cca72672b4a3ca13ca85acd1b4235ee652410ec33f52cf7",
+    "agent_sha256": "d299698543570ffb2590453c91dc34c1ec166c38c284bebb0648f1a95b70f6a0"
+  },
+  "limitations": [
+    "read-only prototype; no write, submit, snapshot, or reward RPC",
+    "shell read timing omits the separate adapter symlink scan",
+    "no policy inference, optimizer update, or whole-episode timing"
+  ]
+}

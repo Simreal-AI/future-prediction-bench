@@ -1,0 +1,32 @@
+{
+  "kind": "real_qemu_snapshot_transaction_probe_v1",
+  "status": "passed",
+  "scope": "One pinned Boltons v2 VM; real HMP operations with host-injected lost acknowledgement after savevm completed",
+  "source_sha256": {
+    "runtime": "e996cd858ec863a95a738afcff3d62c0e8f19aa7a03aa1e7c7e1dd6c2f03e30d",
+    "probe": "b5480394bb22302137f97a5fdfc935a001d121aa7c468d85141b78163d98bc78",
+    "asset_and_boot_helper": "717d71fe85c05cc4a5a1ef458104aeef3084e2bacce3d7bf051c65f1980262ba"
+  },
+  "source_and_assets_stable_through_run": true,
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "manifest_sha256": "fd7188345c8564ca2be6727e72770e96424256ddce553569f415d1e983c4c309",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "rootfs_qcow2_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "modloop_disk_sha256": "32a189d5e4ae4417cf65bfcc91d2cc8ffdf5957fbbc1f055b037861c595b7328"
+  },
+  "checks": {
+    "existing_tag_rejected_without_replacement": true,
+    "committed_ram_and_ext4_restored": true,
+    "lost_ack_closed_runtime": true,
+    "qcow2_committed_tag_preserved": true,
+    "qcow2_uncommitted_tag_deleted": true,
+    "replacement_vm_restored_committed_ram_and_ext4": true,
+    "failed_delete_quarantined_runtime_and_disk": true
+  },
+  "model_inference_or_training": false,
+  "host_power_or_storage_failure_tested": false
+}

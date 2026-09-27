@@ -1,0 +1,1971 @@
+{
+  "schema_version": "official-pilot-coding-outcomes-measurement-v1",
+  "recorded_date": "2026-09-27",
+  "passed": true,
+  "scope": "actual_scripted_public_repository_episodes_and_original_selector_not_model_rollouts",
+  "model_inference_executed": false,
+  "optimizer_update_executed": false,
+  "gpu_speedup_measured": false,
+  "summary": {
+    "actual_repository_episodes": 4,
+    "pilot_episodes": 2,
+    "commit_episodes": 2,
+    "terminal_binary_rewards": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "case_count_per_episode": 14,
+    "passed_case_counts": [
+      7,
+      14,
+      7,
+      14
+    ],
+    "actual_cases_total": 56,
+    "original_selector_calls": 1,
+    "provider_calls_total": 10,
+    "duplicate_dispatch_provider_calls": 0,
+    "final_budget": {
+      "total_budget": 4,
+      "spent": 4,
+      "reserved": 0,
+      "remaining": 0
+    }
+  },
+  "audit": {
+    "method": "independent_standard_library_read_only_derivation_no_Docker_or_producer_import",
+    "checks": {
+      "all_56_stdout_exit_comparisons_rederived": true,
+      "all_four_submitted_workspace_trees_rehashed": true,
+      "all_visible_event_digests_order_and_control_actions_rederived": true,
+      "all_receipt_execution_outcome_plan_reservation_ids_rederived": true,
+      "each_authoritative_outcome_matches_matching_spent_receipt_and_reservation": true,
+      "budget_snapshot_and_original_selector_input_match_actual_pilot_receipts": true,
+      "input_producer_original_source_dependency_and_policy_hashes_recomputed": true,
+      "read_only_SQLite_integrity_check_ok": true,
+      "raw_artifact_bytes_unchanged_by_audit": true
+    },
+    "audit_source_sha256": "bb306bed211a556be0146908616099be4a1ee39fb32a6d1e924a5a9d463671e4",
+    "limits": "Host-managed provenance and final SQLite state, not signed external execution attestation. The recorded runtime control flow claims reservations before execution; SQLite has no per-transition timestamp history."
+  },
+  "raw_artifact_sha256": {
+    "result.json": "461415d9b37e867e50c2c26c5929170c55bcb8f192b9138c7191470cb1df62ab",
+    "budget.sqlite3": "f388a15bec7441bf8b60fa2cfb5c95209957b811ea5019014304437ebac18d2e",
+    "driver-source.py": "e727df3170de477cff045e995e92885db9f810c4fb52dcd76d2eae7ce3250212",
+    "producer/producer-manifest.json": "7a99809f4412bf0531296041b4052c6d8882fb60d2cc745111bb6efa348ef356",
+    "producer/70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713/outcome.json": "8c33508c88e3d2a707861e7131a0659574bf871cf64bbb5cedd75ebcb813d810",
+    "producer/71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598/outcome.json": "3322d725ccc3a0170311919c2fdeab6ec102e2d9d989d98c4bb6fe389a7762bc",
+    "producer/96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c/outcome.json": "19768fb009a195eebbc46e52a185b27f8234d0d63a6c608066921b0e81c763fd",
+    "producer/c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50/outcome.json": "2728a084293a5a14b36d436daaf4fa62338fb2a3647289f10d403ca27cffeff2",
+    "producer/70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713/trajectory.json": "cd6cce41a740c42fd8186b33dfbdd480cd3af35b1546a768a1da386de200f9cf",
+    "producer/71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598/trajectory.json": "6dc0cf344b2e6fde62329c23553da7e5771140cf896751fc7471ef578d90e498",
+    "producer/96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c/trajectory.json": "30f5b18062b6431c0ac6c2eab6c6ff060868e0b89cfbd0a3fadab63d877030fc",
+    "producer/c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50/trajectory.json": "f1bf4954e8a90f13649b39aa1668a118cd58003c5896b6370bc019c6ba75fe38",
+    "producer/source/coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+    "producer/source/pilot_commit.py": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012",
+    "producer/source/pilot_commit_coding.py": "51fa980dbdd1fe41fa04e784525c41c746a453450aea7f97067071a3dbbb1d69",
+    "producer/source/realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31"
+  },
+  "publication_policy": {
+    "host_paths": "No host absolute paths included; raw artifact keys are paths relative to the retained run root.",
+    "provider_identity": "Only opaque declared policy hashes and generic scripted control labels are published.",
+    "trajectory_payloads": "Public event summaries retain every event digest and metadata plus payload digest/keys; repository text/action bodies remain in the raw local trajectories.",
+    "stdout": "Exact actual stdout SHA-256 and return codes retained for every hidden case; raw hidden stdout text was not persisted by this verifier.",
+    "canonical_digest_serialization": "Producer/ledger canonical JSON uses sorted keys, compact separators, finite values and ensure_ascii=True. Realworld task/event hashes use ensure_ascii=False. File SHA-256 hashes exact retained bytes."
+  },
+  "producer_manifest": {
+    "artifact_binding": {
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+      "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+      "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+    },
+    "epoch_id": "actual-repository-control",
+    "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+    "schema_version": "coding-pilot-producer-binding-v1",
+    "source_sha256": {
+      "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+      "pilot_commit.py": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012",
+      "pilot_commit_coding.py": "51fa980dbdd1fe41fa04e784525c41c746a453450aea7f97067071a3dbbb1d69",
+      "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31"
+    },
+    "task_id": "boltons-26-singularize-ss-v1",
+    "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+  },
+  "policy_binding": {
+    "controller_sha256": "e727df3170de477cff045e995e92885db9f810c4fb52dcd76d2eae7ce3250212",
+    "prompt_sha256": "bf1d26fc788b320f7981881848148ffe08177c82eedda7b9fd606928b8dd83a3",
+    "provider_config_sha256": "017c41205aee4d74ccd3417eddbf7cbeb6ce6d6ca287674bef37bc46031e5784"
+  },
+  "trusted_verifier_specification": {
+    "kind": "command_cases_v1",
+    "cases": [
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('glass'))"
+        ],
+        "expected_stdout": "glass\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('glasses'))"
+        ],
+        "expected_stdout": "glass\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('boss'))"
+        ],
+        "expected_stdout": "boss\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('bosses'))"
+        ],
+        "expected_stdout": "boss\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('class'))"
+        ],
+        "expected_stdout": "class\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('classes'))"
+        ],
+        "expected_stdout": "class\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('kiss'))"
+        ],
+        "expected_stdout": "kiss\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('kisses'))"
+        ],
+        "expected_stdout": "kiss\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('address'))"
+        ],
+        "expected_stdout": "address\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('addresses'))"
+        ],
+        "expected_stdout": "address\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('business'))"
+        ],
+        "expected_stdout": "business\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('businesses'))"
+        ],
+        "expected_stdout": "business\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('GLASS'))"
+        ],
+        "expected_stdout": "GLASS\n",
+        "expected_returncode": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from boltons.strutils import singularize; print(singularize('Glasses'))"
+        ],
+        "expected_stdout": "Glass\n",
+        "expected_returncode": 0
+      }
+    ]
+  },
+  "expected_stdout_sha256_by_case": [
+    "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+    "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+    "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+    "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+    "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+    "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+    "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+    "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+    "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+    "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+    "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+    "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+    "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0",
+    "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+  ],
+  "episodes": [
+    {
+      "phase": "pilot",
+      "sample_index": 0,
+      "control": "unchanged-baseline",
+      "outcome_file_sha256": "19768fb009a195eebbc46e52a185b27f8234d0d63a6c608066921b0e81c763fd",
+      "outcome_canonical_sha256": "7a7e670e3d1472e6952979c2ec8c77b84eb3ae665bdb18af0744d9f41a12fad8",
+      "trajectory_file_sha256": "30f5b18062b6431c0ac6c2eab6c6ff060868e0b89cfbd0a3fadab63d877030fc",
+      "passed_case_count": 7,
+      "failed_case_indices": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "outcome": {
+        "schema_version": "coding-pilot-outcome-v1",
+        "receipt": {
+          "receipt_id": "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 0,
+          "verification_id": "coding:b95960f97a6e8dc9becc802ab70601149de38d7bea0f872a2fee3eb8a042dc81"
+        },
+        "execution": {
+          "schema_version": "actual-coding-verification-v1",
+          "epoch_id": "actual-repository-control",
+          "reservation": {
+            "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c",
+            "task_id": "boltons-26-singularize-ss-v1",
+            "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+            "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+          },
+          "owner_id": "scripted-control-worker",
+          "started_at": "2026-09-27T11:59:16.740790+00:00",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "artifact_binding": {
+            "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+            "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+            "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+            "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+          },
+          "source_sha256": {
+            "pilot_commit_coding.py": "51fa980dbdd1fe41fa04e784525c41c746a453450aea7f97067071a3dbbb1d69",
+            "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+            "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31",
+            "pilot_commit.py": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012"
+          },
+          "inputs_unchanged_after_execution": true,
+          "terminal_status": "graded",
+          "verification": {
+            "status": "graded",
+            "reward": 0.0,
+            "evidence": {
+              "kind": "host_checked_command_cases_v1",
+              "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+              "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+              "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+              "case_results": [
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "21e57e33b30c2322804f7f72df59656c470e82c4b64eb58230bfc78daa4c79c2",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "26cb0b8f46d53a3284f85d76fb30ec49560ebb5287bfaa562be3c69c19d01ff6",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "886d0b9b945f097ba790f064d9db7a70210539072b6370fd7dd67de6ae61b735",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "ebef1ee82b1929c3b39b5f9df86cb3f52e62553dd68c14686f36eeeaf0b2c87c",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "173be02f7b7dd6b0c5d8f629b8fa7813fe00a847d56fabb90c2a908377332bf8",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "89adff98cc6a2e5ebc5b3e714bbbf7c2f5a6bd2fb7364a582de82dc27f82a9f8",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "34f7f20e0ba3fe4014d685a3a8b34b2b717d3d83277a08e95aafabb23ceed24e",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d",
+                  "passed": true
+                }
+              ]
+            },
+            "available_at": "2026-09-27T11:59:21.881448+00:00"
+          },
+          "case_count": 14,
+          "cost": {
+            "provider_ns": 63458,
+            "provider_calls": 1,
+            "reset_ns": 2721555792,
+            "actions_ns": 72706042,
+            "verification_ns": 2344879958,
+            "cleanup_ns": 1042,
+            "wall_ns": 5194852833,
+            "actions_used": 1
+          },
+          "cost_scope": "wall_includes_reset_provider_actions_verifier_cleanup_final_readonly_guards; excludes_admission_claim_and_persistence",
+          "budget_units": "one_dispatched_episode",
+          "provider_identity_recorded": false,
+          "optimizer_executed": false,
+          "failure": null
+        }
+      },
+      "trajectory": {
+        "schema_version": "realworld-0.1",
+        "record_type": "realworld_text_trajectory",
+        "trainer_ready": false,
+        "is_fixture": true,
+        "task_id": "boltons-26-singularize-ss-v1",
+        "event_id": "boltons-26-singularize-ss",
+        "cluster_id": "boltons-strutils-singularize",
+        "task_sha256": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "reward_contract_sha256": "ad5f48e581e3d2575d4ba355117e1aee00810ca10a7b6d98bc312ac153660c5b",
+        "policy_id": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "episode_id": "573bce1a08c24175956ee9e7b052a237",
+        "branch_lineage": null,
+        "submitted_at": "2026-09-27T11:59:19.536826+00:00",
+        "available_at": "2026-09-27T11:59:21.881448+00:00",
+        "resolved_at": "2026-09-27T11:59:21.881711+00:00",
+        "reward": 0.0,
+        "events": [
+          {
+            "sequence": 0,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:19.463957+00:00",
+            "sha256": "245292da5d6a88147dc12f547769fafb818df1b9851ed4992b00be392bbeda30",
+            "payload_sha256": "54a943eed921a00e7e34c3cc0f694be94a233578bd2c3aab9e5edfe3d9a5c79f",
+            "payload_keys": [
+              "task_id",
+              "tools",
+              "workspace_files",
+              "workspace_sha256",
+              "image_sha256",
+              "visible_check"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 1,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:19.464216+00:00",
+            "sha256": "330a15208cbe885d5f7557212fcaff3e9ec0d2cd3a3d182d4324c10044196709",
+            "payload_sha256": "6831a7112fd0308595c6abaab94fbd4f05541fda862d0e6075e89ad1df53163b",
+            "payload_keys": [
+              "action"
+            ],
+            "action": "submit"
+          },
+          {
+            "sequence": 2,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:19.536826+00:00",
+            "sha256": "9b3cc08bc9dc859fa908e90cb05de5f2e214518b1018e12f7654034132261660",
+            "payload_sha256": "4222ffed31c9fe4c388bd8c5c09669c27d045d32eaf2d330b0bf6228f98bd4de",
+            "payload_keys": [
+              "status",
+              "workspace_sha256"
+            ],
+            "action": null
+          }
+        ]
+      },
+      "submitted_snapshot_rehashed": true
+    },
+    {
+      "phase": "pilot",
+      "sample_index": 1,
+      "control": "repair",
+      "outcome_file_sha256": "8c33508c88e3d2a707861e7131a0659574bf871cf64bbb5cedd75ebcb813d810",
+      "outcome_canonical_sha256": "1ccd5cfb3b4245cfc43deb3ddd5b437f338c4952cde45a2f2f6b1f9996741ebc",
+      "trajectory_file_sha256": "cd6cce41a740c42fd8186b33dfbdd480cd3af35b1546a768a1da386de200f9cf",
+      "passed_case_count": 14,
+      "failed_case_indices": [],
+      "outcome": {
+        "schema_version": "coding-pilot-outcome-v1",
+        "receipt": {
+          "receipt_id": "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 1,
+          "verification_id": "coding:ae62e2696d12fc3db96bb45ec5023fce55fa9ec72eef91afff6ca01f9005b56b"
+        },
+        "execution": {
+          "schema_version": "actual-coding-verification-v1",
+          "epoch_id": "actual-repository-control",
+          "reservation": {
+            "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713",
+            "task_id": "boltons-26-singularize-ss-v1",
+            "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+            "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+          },
+          "owner_id": "scripted-control-worker",
+          "started_at": "2026-09-27T11:59:21.971083+00:00",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "artifact_binding": {
+            "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+            "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+            "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+            "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+          },
+          "source_sha256": {
+            "pilot_commit_coding.py": "51fa980dbdd1fe41fa04e784525c41c746a453450aea7f97067071a3dbbb1d69",
+            "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+            "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31",
+            "pilot_commit.py": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012"
+          },
+          "inputs_unchanged_after_execution": true,
+          "terminal_status": "graded",
+          "verification": {
+            "status": "graded",
+            "reward": 1.0,
+            "evidence": {
+              "kind": "host_checked_command_cases_v1",
+              "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+              "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+              "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+              "case_results": [
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d",
+                  "passed": true
+                }
+              ]
+            },
+            "available_at": "2026-09-27T11:59:24.724433+00:00"
+          },
+          "case_count": 14,
+          "cost": {
+            "provider_ns": 68041,
+            "provider_calls": 4,
+            "reset_ns": 254047958,
+            "actions_ns": 362245916,
+            "verification_ns": 2137084834,
+            "cleanup_ns": 958,
+            "wall_ns": 2803777500,
+            "actions_used": 4
+          },
+          "cost_scope": "wall_includes_reset_provider_actions_verifier_cleanup_final_readonly_guards; excludes_admission_claim_and_persistence",
+          "budget_units": "one_dispatched_episode",
+          "provider_identity_recorded": false,
+          "optimizer_executed": false,
+          "failure": null
+        }
+      },
+      "trajectory": {
+        "schema_version": "realworld-0.1",
+        "record_type": "realworld_text_trajectory",
+        "trainer_ready": false,
+        "is_fixture": true,
+        "task_id": "boltons-26-singularize-ss-v1",
+        "event_id": "boltons-26-singularize-ss",
+        "cluster_id": "boltons-strutils-singularize",
+        "task_sha256": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "reward_contract_sha256": "ad5f48e581e3d2575d4ba355117e1aee00810ca10a7b6d98bc312ac153660c5b",
+        "policy_id": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "episode_id": "8c0129941d304530a3b353d02c9f04cb",
+        "branch_lineage": null,
+        "submitted_at": "2026-09-27T11:59:22.588310+00:00",
+        "available_at": "2026-09-27T11:59:24.724433+00:00",
+        "resolved_at": "2026-09-27T11:59:24.725294+00:00",
+        "reward": 1.0,
+        "events": [
+          {
+            "sequence": 0,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:22.225938+00:00",
+            "sha256": "b6c7098d13e9279954df75f50dcbf3b5cf9b2b8aee6a6e88fec109a24a6ec0b5",
+            "payload_sha256": "54a943eed921a00e7e34c3cc0f694be94a233578bd2c3aab9e5edfe3d9a5c79f",
+            "payload_keys": [
+              "task_id",
+              "tools",
+              "workspace_files",
+              "workspace_sha256",
+              "image_sha256",
+              "visible_check"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 1,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:22.226086+00:00",
+            "sha256": "b0b73691eb43beb8abf1e63da25c1879e1a2e89bec488c83f56be41a83336ab4",
+            "payload_sha256": "aed24f90de8b1a01386e07b7b42a28647c4a45d06def66887512cf3d916aba5a",
+            "payload_keys": [
+              "action",
+              "path"
+            ],
+            "action": "read_file"
+          },
+          {
+            "sequence": 2,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:22.226343+00:00",
+            "sha256": "17d9ac31a5ecff89c03f779abcf8ac2fb9b9e54231cc4d216b9ad6d04753dbad",
+            "payload_sha256": "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+            "payload_keys": [
+              "path",
+              "text",
+              "sha256",
+              "truncated"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 3,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:22.226415+00:00",
+            "sha256": "3763ffe1e3f88e1d9e04bd0993ae6ca84b43849a136aa0e2094450cac298690b",
+            "payload_sha256": "4169d8ff0ea7933ddeac964ff500de6e37fa0f954449e6695728712a395261f4",
+            "payload_keys": [
+              "action",
+              "path",
+              "content"
+            ],
+            "action": "write_file"
+          },
+          {
+            "sequence": 4,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:22.273974+00:00",
+            "sha256": "e8808638acc54a76b0a0b7521f61170c54208f3ccbeef07a3028ec03e1c4f51a",
+            "payload_sha256": "6ff0e64276e30f72398c2160c443c48c0ce0b412ceba723f366e5f10270b8e29",
+            "payload_keys": [
+              "path",
+              "sha256",
+              "workspace_sha256"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 5,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:22.274005+00:00",
+            "sha256": "6b912cf11f580b15ada697bc6d479614cf3e1045ebd44ce65cac8c4a61ac34be",
+            "payload_sha256": "74a98119f2dc5c5d065bc8ef078d0a197318f824d1113f1aadae5983bb3a6541",
+            "payload_keys": [
+              "action"
+            ],
+            "action": "run_visible_checks"
+          },
+          {
+            "sequence": 6,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:22.527779+00:00",
+            "sha256": "b404c3fe01608632281e41e6e77eb56c1c7b1ee1676989f6e12d76d755f51877",
+            "payload_sha256": "dd5ad9419a674d83d4d1ec56bb97b537319c2b3c1b5b668fd32488ac43bd83df",
+            "payload_keys": [
+              "passed",
+              "return_code",
+              "stdout",
+              "stderr",
+              "workspace_sha256"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 7,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:22.527881+00:00",
+            "sha256": "5e56edf2ae80af820d757cb5764caf9dc89581139646ef9f52b5be99fe1ecf7e",
+            "payload_sha256": "6831a7112fd0308595c6abaab94fbd4f05541fda862d0e6075e89ad1df53163b",
+            "payload_keys": [
+              "action"
+            ],
+            "action": "submit"
+          },
+          {
+            "sequence": 8,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:22.588310+00:00",
+            "sha256": "aa924df437a2d85334a9f829fd88f817f1d50093445d0cd667675b9ae6dfef91",
+            "payload_sha256": "52b78b47d70652867289472d176bbd01ae3f3c0605dd5dc1e46ea55fd6e7e3b7",
+            "payload_keys": [
+              "status",
+              "workspace_sha256"
+            ],
+            "action": null
+          }
+        ]
+      },
+      "submitted_snapshot_rehashed": true
+    },
+    {
+      "phase": "commit",
+      "sample_index": 2,
+      "control": "unchanged-baseline",
+      "outcome_file_sha256": "2728a084293a5a14b36d436daaf4fa62338fb2a3647289f10d403ca27cffeff2",
+      "outcome_canonical_sha256": "7277a529db7c4acffca6d358351855382128c5a3de2a754cb914ce9c655831c1",
+      "trajectory_file_sha256": "f1bf4954e8a90f13649b39aa1668a118cd58003c5896b6370bc019c6ba75fe38",
+      "passed_case_count": 7,
+      "failed_case_indices": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "outcome": {
+        "schema_version": "coding-pilot-outcome-v1",
+        "receipt": {
+          "receipt_id": "7bb25b42a60d58326aed3a8faf295c9ad2d086cda8eb18cf4e90a65d8559a2e4",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 0,
+          "verification_id": "coding:8c8c711d6efc1fb2a765799ff81640782ea92886083662f5c0a827cdf26bbdd5"
+        },
+        "execution": {
+          "schema_version": "actual-coding-verification-v1",
+          "epoch_id": "actual-repository-control",
+          "reservation": {
+            "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50",
+            "task_id": "boltons-26-singularize-ss-v1",
+            "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+            "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+          },
+          "owner_id": "scripted-commit-worker",
+          "started_at": "2026-09-27T11:59:24.855072+00:00",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "artifact_binding": {
+            "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+            "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+            "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+            "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+          },
+          "source_sha256": {
+            "pilot_commit_coding.py": "51fa980dbdd1fe41fa04e784525c41c746a453450aea7f97067071a3dbbb1d69",
+            "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+            "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31",
+            "pilot_commit.py": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012"
+          },
+          "inputs_unchanged_after_execution": true,
+          "terminal_status": "graded",
+          "verification": {
+            "status": "graded",
+            "reward": 0.0,
+            "evidence": {
+              "kind": "host_checked_command_cases_v1",
+              "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+              "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+              "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+              "case_results": [
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "21e57e33b30c2322804f7f72df59656c470e82c4b64eb58230bfc78daa4c79c2",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "26cb0b8f46d53a3284f85d76fb30ec49560ebb5287bfaa562be3c69c19d01ff6",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "886d0b9b945f097ba790f064d9db7a70210539072b6370fd7dd67de6ae61b735",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "ebef1ee82b1929c3b39b5f9df86cb3f52e62553dd68c14686f36eeeaf0b2c87c",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "173be02f7b7dd6b0c5d8f629b8fa7813fe00a847d56fabb90c2a908377332bf8",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "89adff98cc6a2e5ebc5b3e714bbbf7c2f5a6bd2fb7364a582de82dc27f82a9f8",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "34f7f20e0ba3fe4014d685a3a8b34b2b717d3d83277a08e95aafabb23ceed24e",
+                  "passed": false
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d",
+                  "passed": true
+                }
+              ]
+            },
+            "available_at": "2026-09-27T11:59:27.352487+00:00"
+          },
+          "case_count": 14,
+          "cost": {
+            "provider_ns": 37917,
+            "provider_calls": 1,
+            "reset_ns": 262503459,
+            "actions_ns": 70875834,
+            "verification_ns": 2163496334,
+            "cleanup_ns": 375,
+            "wall_ns": 2550113834,
+            "actions_used": 1
+          },
+          "cost_scope": "wall_includes_reset_provider_actions_verifier_cleanup_final_readonly_guards; excludes_admission_claim_and_persistence",
+          "budget_units": "one_dispatched_episode",
+          "provider_identity_recorded": false,
+          "optimizer_executed": false,
+          "failure": null
+        }
+      },
+      "trajectory": {
+        "schema_version": "realworld-0.1",
+        "record_type": "realworld_text_trajectory",
+        "trainer_ready": false,
+        "is_fixture": true,
+        "task_id": "boltons-26-singularize-ss-v1",
+        "event_id": "boltons-26-singularize-ss",
+        "cluster_id": "boltons-strutils-singularize",
+        "task_sha256": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "reward_contract_sha256": "ad5f48e581e3d2575d4ba355117e1aee00810ca10a7b6d98bc312ac153660c5b",
+        "policy_id": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "episode_id": "8548b796cc5b421ea1ab78e89d662e5d",
+        "branch_lineage": null,
+        "submitted_at": "2026-09-27T11:59:25.189320+00:00",
+        "available_at": "2026-09-27T11:59:27.352487+00:00",
+        "resolved_at": "2026-09-27T11:59:27.352783+00:00",
+        "reward": 0.0,
+        "events": [
+          {
+            "sequence": 0,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:25.118377+00:00",
+            "sha256": "1e8e1ddde2d0ccbbd527db472ba96d04129955f815daa7cd2b0efb5ea5ecc07e",
+            "payload_sha256": "54a943eed921a00e7e34c3cc0f694be94a233578bd2c3aab9e5edfe3d9a5c79f",
+            "payload_keys": [
+              "task_id",
+              "tools",
+              "workspace_files",
+              "workspace_sha256",
+              "image_sha256",
+              "visible_check"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 1,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:25.118520+00:00",
+            "sha256": "88b35f4fa46f931ce55b59c906b95d65bbd2b2845ea13485bde56420446c47db",
+            "payload_sha256": "6831a7112fd0308595c6abaab94fbd4f05541fda862d0e6075e89ad1df53163b",
+            "payload_keys": [
+              "action"
+            ],
+            "action": "submit"
+          },
+          {
+            "sequence": 2,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:25.189320+00:00",
+            "sha256": "4079efe512044ac18749984e6fe7bbfac218f8ad28b91dffb0ea2786e5700c37",
+            "payload_sha256": "4222ffed31c9fe4c388bd8c5c09669c27d045d32eaf2d330b0bf6228f98bd4de",
+            "payload_keys": [
+              "status",
+              "workspace_sha256"
+            ],
+            "action": null
+          }
+        ]
+      },
+      "submitted_snapshot_rehashed": true
+    },
+    {
+      "phase": "commit",
+      "sample_index": 3,
+      "control": "repair",
+      "outcome_file_sha256": "3322d725ccc3a0170311919c2fdeab6ec102e2d9d989d98c4bb6fe389a7762bc",
+      "outcome_canonical_sha256": "954e85344e9cadd24b9d5a12f42a0621fd42dcd48714935e4407b16bb76f8a2a",
+      "trajectory_file_sha256": "6dc0cf344b2e6fde62329c23553da7e5771140cf896751fc7471ef578d90e498",
+      "passed_case_count": 14,
+      "failed_case_indices": [],
+      "outcome": {
+        "schema_version": "coding-pilot-outcome-v1",
+        "receipt": {
+          "receipt_id": "0792e3e94082d4a4b6e18fdf1f72d511892aa2bfa30382005f80c1560d7e4f1c",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 1,
+          "verification_id": "coding:32089f1a072e4095b1c822457090ac1839c63c01b8339205ce33dcdb9f6ac43d"
+        },
+        "execution": {
+          "schema_version": "actual-coding-verification-v1",
+          "epoch_id": "actual-repository-control",
+          "reservation": {
+            "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598",
+            "task_id": "boltons-26-singularize-ss-v1",
+            "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+            "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+          },
+          "owner_id": "scripted-commit-worker",
+          "started_at": "2026-09-27T11:59:27.449213+00:00",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "artifact_binding": {
+            "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+            "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+            "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+            "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+          },
+          "source_sha256": {
+            "pilot_commit_coding.py": "51fa980dbdd1fe41fa04e784525c41c746a453450aea7f97067071a3dbbb1d69",
+            "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+            "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31",
+            "pilot_commit.py": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012"
+          },
+          "inputs_unchanged_after_execution": true,
+          "terminal_status": "graded",
+          "verification": {
+            "status": "graded",
+            "reward": 1.0,
+            "evidence": {
+              "kind": "host_checked_command_cases_v1",
+              "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+              "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+              "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+              "case_results": [
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0",
+                  "passed": true
+                },
+                {
+                  "return_code": 0,
+                  "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d",
+                  "passed": true
+                }
+              ]
+            },
+            "available_at": "2026-09-27T11:59:30.583533+00:00"
+          },
+          "case_count": 14,
+          "cost": {
+            "provider_ns": 100751,
+            "provider_calls": 4,
+            "reset_ns": 239231250,
+            "actions_ns": 397539917,
+            "verification_ns": 2497612583,
+            "cleanup_ns": 417,
+            "wall_ns": 3184371458,
+            "actions_used": 4
+          },
+          "cost_scope": "wall_includes_reset_provider_actions_verifier_cleanup_final_readonly_guards; excludes_admission_claim_and_persistence",
+          "budget_units": "one_dispatched_episode",
+          "provider_identity_recorded": false,
+          "optimizer_executed": false,
+          "failure": null
+        }
+      },
+      "trajectory": {
+        "schema_version": "realworld-0.1",
+        "record_type": "realworld_text_trajectory",
+        "trainer_ready": false,
+        "is_fixture": true,
+        "task_id": "boltons-26-singularize-ss-v1",
+        "event_id": "boltons-26-singularize-ss",
+        "cluster_id": "boltons-strutils-singularize",
+        "task_sha256": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "reward_contract_sha256": "ad5f48e581e3d2575d4ba355117e1aee00810ca10a7b6d98bc312ac153660c5b",
+        "policy_id": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "episode_id": "5bfad61d634948d191910e10a6d1e856",
+        "branch_lineage": null,
+        "submitted_at": "2026-09-27T11:59:28.086935+00:00",
+        "available_at": "2026-09-27T11:59:30.583533+00:00",
+        "resolved_at": "2026-09-27T11:59:30.584216+00:00",
+        "reward": 1.0,
+        "events": [
+          {
+            "sequence": 0,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:27.689231+00:00",
+            "sha256": "b18167e561217eabe7590c07bdfa35f6a74ddb6d473686c0eb15b747eaf06436",
+            "payload_sha256": "54a943eed921a00e7e34c3cc0f694be94a233578bd2c3aab9e5edfe3d9a5c79f",
+            "payload_keys": [
+              "task_id",
+              "tools",
+              "workspace_files",
+              "workspace_sha256",
+              "image_sha256",
+              "visible_check"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 1,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:27.689394+00:00",
+            "sha256": "45af2ae9a5fd119b76cc858af0c55b049798f2fddf8d4fcc22be99e58ea32ad8",
+            "payload_sha256": "aed24f90de8b1a01386e07b7b42a28647c4a45d06def66887512cf3d916aba5a",
+            "payload_keys": [
+              "action",
+              "path"
+            ],
+            "action": "read_file"
+          },
+          {
+            "sequence": 2,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:27.689700+00:00",
+            "sha256": "e0b0999fc27c3a1257383dad444a4cc9c1880026d9e4a5375ffe78195866aa6b",
+            "payload_sha256": "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+            "payload_keys": [
+              "path",
+              "text",
+              "sha256",
+              "truncated"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 3,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:27.689788+00:00",
+            "sha256": "a244953fdc91cda38973c06599ba6b65ff07dbccb1a3f391d68dec140d2ca27e",
+            "payload_sha256": "4169d8ff0ea7933ddeac964ff500de6e37fa0f954449e6695728712a395261f4",
+            "payload_keys": [
+              "action",
+              "path",
+              "content"
+            ],
+            "action": "write_file"
+          },
+          {
+            "sequence": 4,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:27.735159+00:00",
+            "sha256": "04cd2a48f5a57a194b0005445429ad25ab1b9d2f3bea902b29c04e5bcdf1afdd",
+            "payload_sha256": "6ff0e64276e30f72398c2160c443c48c0ce0b412ceba723f366e5f10270b8e29",
+            "payload_keys": [
+              "path",
+              "sha256",
+              "workspace_sha256"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 5,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:27.735193+00:00",
+            "sha256": "fa0ef16380333850d647d134dc8a7e03600a26bcf8bcf6c6447f5e1a20c88764",
+            "payload_sha256": "74a98119f2dc5c5d065bc8ef078d0a197318f824d1113f1aadae5983bb3a6541",
+            "payload_keys": [
+              "action"
+            ],
+            "action": "run_visible_checks"
+          },
+          {
+            "sequence": 6,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:28.018559+00:00",
+            "sha256": "a34cfdbe14331a34ceb6c712c724d3345b470bf8ca31d4674de895bce89cf68f",
+            "payload_sha256": "dd5ad9419a674d83d4d1ec56bb97b537319c2b3c1b5b668fd32488ac43bd83df",
+            "payload_keys": [
+              "passed",
+              "return_code",
+              "stdout",
+              "stderr",
+              "workspace_sha256"
+            ],
+            "action": null
+          },
+          {
+            "sequence": 7,
+            "kind": "action",
+            "origin": "policy",
+            "visible_to_policy": true,
+            "loss_mask": 1,
+            "at": "2026-09-27T11:59:28.018660+00:00",
+            "sha256": "8f0613652e35b8315e7fa66c28d422c74959f3dfd7a0ef36280b5211de116947",
+            "payload_sha256": "6831a7112fd0308595c6abaab94fbd4f05541fda862d0e6075e89ad1df53163b",
+            "payload_keys": [
+              "action"
+            ],
+            "action": "submit"
+          },
+          {
+            "sequence": 8,
+            "kind": "observation",
+            "origin": "adapter",
+            "visible_to_policy": true,
+            "loss_mask": 0,
+            "at": "2026-09-27T11:59:28.086935+00:00",
+            "sha256": "9df05a38aaadb7911fbf73320e462c5129f6a3831ae6acd247a1728d0681cbe2",
+            "payload_sha256": "52b78b47d70652867289472d176bbd01ae3f3c0605dd5dc1e46ea55fd6e7e3b7",
+            "payload_keys": [
+              "status",
+              "workspace_sha256"
+            ],
+            "action": null
+          }
+        ]
+      },
+      "submitted_snapshot_rehashed": true
+    }
+  ],
+  "sqlite_final_tables": {
+    "pilot_epochs": [
+      {
+        "epoch_id": "actual-repository-control",
+        "total_budget": 4
+      }
+    ],
+    "pilot_reservations": [
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c",
+        "task_id": "boltons-26-singularize-ss-v1",
+        "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "state": "spent",
+        "owner_id": "scripted-control-worker",
+        "receipt_id": "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713",
+        "task_id": "boltons-26-singularize-ss-v1",
+        "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "state": "spent",
+        "owner_id": "scripted-control-worker",
+        "receipt_id": "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50",
+        "task_id": "boltons-26-singularize-ss-v1",
+        "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "state": "spent",
+        "owner_id": "scripted-commit-worker",
+        "receipt_id": "7bb25b42a60d58326aed3a8faf295c9ad2d086cda8eb18cf4e90a65d8559a2e4"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598",
+        "task_id": "boltons-26-singularize-ss-v1",
+        "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+        "state": "spent",
+        "owner_id": "scripted-commit-worker",
+        "receipt_id": "0792e3e94082d4a4b6e18fdf1f72d511892aa2bfa30382005f80c1560d7e4f1c"
+      }
+    ],
+    "pilot_receipts": [
+      {
+        "epoch_id": "actual-repository-control",
+        "receipt_id": "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7",
+        "payload": {
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "receipt_id": "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7",
+          "reward": 0,
+          "status": "resolved_binary",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "units": 1,
+          "verification_id": "coding:b95960f97a6e8dc9becc802ab70601149de38d7bea0f872a2fee3eb8a042dc81"
+        },
+        "units": 1,
+        "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "receipt_id": "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+        "payload": {
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "receipt_id": "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+          "reward": 1,
+          "status": "resolved_binary",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "units": 1,
+          "verification_id": "coding:ae62e2696d12fc3db96bb45ec5023fce55fa9ec72eef91afff6ca01f9005b56b"
+        },
+        "units": 1,
+        "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "receipt_id": "7bb25b42a60d58326aed3a8faf295c9ad2d086cda8eb18cf4e90a65d8559a2e4",
+        "payload": {
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "receipt_id": "7bb25b42a60d58326aed3a8faf295c9ad2d086cda8eb18cf4e90a65d8559a2e4",
+          "reward": 0,
+          "status": "resolved_binary",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "units": 1,
+          "verification_id": "coding:8c8c711d6efc1fb2a765799ff81640782ea92886083662f5c0a827cdf26bbdd5"
+        },
+        "units": 1,
+        "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "receipt_id": "0792e3e94082d4a4b6e18fdf1f72d511892aa2bfa30382005f80c1560d7e4f1c",
+        "payload": {
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "receipt_id": "0792e3e94082d4a4b6e18fdf1f72d511892aa2bfa30382005f80c1560d7e4f1c",
+          "reward": 1,
+          "status": "resolved_binary",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "units": 1,
+          "verification_id": "coding:32089f1a072e4095b1c822457090ac1839c63c01b8339205ce33dcdb9f6ac43d"
+        },
+        "units": 1,
+        "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598"
+      }
+    ],
+    "pilot_plans": [
+      {
+        "epoch_id": "actual-repository-control",
+        "request_id": "initial-two-controls",
+        "request_sha256": "eb34f2e537d6c793e179c6ef5a464e4303b2dd145b5283237da6c78e52dddd26",
+        "payload": {
+          "allocations": [
+            {
+              "count": 2,
+              "evidence_ids": [],
+              "task_id": "boltons-26-singularize-ss-v1",
+              "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+            }
+          ],
+          "epoch_id": "actual-repository-control",
+          "evidence_verifier_id": "actual-coding-verifier-v1",
+          "ineligible_receipts": [],
+          "pilot_receipt_ids": [],
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "request_id": "initial-two-controls",
+          "reservations": [
+            {
+              "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+              "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c",
+              "task_id": "boltons-26-singularize-ss-v1",
+              "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+            },
+            {
+              "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+              "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713",
+              "task_id": "boltons-26-singularize-ss-v1",
+              "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+            }
+          ],
+          "reserved_before_plan": 0,
+          "reserved_by_plan": 2,
+          "selection": {
+            "exclude_too_easy": [],
+            "keep": [],
+            "too_correct": [],
+            "too_incorrect": []
+          },
+          "selector_id": "unselected-coding-initial-pilots-v1",
+          "spent_at_creation": 0,
+          "total_budget": 4,
+          "unallocated_at_creation": 2
+        }
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "request_id": "allocate-from-actual-cases",
+        "request_sha256": "368074bbe15324153fbb228bc02eae32ba26ea31dd587e1565e154b780b41e3d",
+        "payload": {
+          "allocations": [
+            {
+              "count": 2,
+              "evidence_ids": [
+                "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+                "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7"
+              ],
+              "task_id": "boltons-26-singularize-ss-v1",
+              "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+            }
+          ],
+          "epoch_id": "actual-repository-control",
+          "evidence_verifier_id": "actual-coding-outcome-SQLite-v1",
+          "ineligible_receipts": [],
+          "pilot_receipt_ids": [
+            "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+            "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7"
+          ],
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "request_id": "allocate-from-actual-cases",
+          "reservations": [
+            {
+              "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+              "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50",
+              "task_id": "boltons-26-singularize-ss-v1",
+              "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+            },
+            {
+              "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+              "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598",
+              "task_id": "boltons-26-singularize-ss-v1",
+              "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+            }
+          ],
+          "reserved_before_plan": 0,
+          "reserved_by_plan": 2,
+          "selection": {
+            "exclude_too_easy": [],
+            "keep": [
+              "boltons-26-singularize-ss-v1"
+            ],
+            "too_correct": [],
+            "too_incorrect": []
+          },
+          "selector_id": "databricks-pilot-commit-6def20ea211fc936ed092a5a08624807c54df381",
+          "spent_at_creation": 2,
+          "total_budget": 4,
+          "unallocated_at_creation": 0
+        }
+      }
+    ],
+    "coding_pilot_outcomes": [
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c",
+        "receipt_id": "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7",
+        "outcome_sha256": "7a7e670e3d1472e6952979c2ec8c77b84eb3ae665bdb18af0744d9f41a12fad8"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713",
+        "receipt_id": "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+        "outcome_sha256": "1ccd5cfb3b4245cfc43deb3ddd5b437f338c4952cde45a2f2f6b1f9996741ebc"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50",
+        "receipt_id": "7bb25b42a60d58326aed3a8faf295c9ad2d086cda8eb18cf4e90a65d8559a2e4",
+        "outcome_sha256": "7277a529db7c4acffca6d358351855382128c5a3de2a754cb914ce9c655831c1"
+      },
+      {
+        "epoch_id": "actual-repository-control",
+        "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598",
+        "receipt_id": "0792e3e94082d4a4b6e18fdf1f72d511892aa2bfa30382005f80c1560d7e4f1c",
+        "outcome_sha256": "954e85344e9cadd24b9d5a12f42a0621fd42dcd48714935e4407b16bb76f8a2a"
+      }
+    ],
+    "realworld_tasks": [
+      {
+        "task_id": "boltons-26-singularize-ss-v1",
+        "event_id": "boltons-26-singularize-ss",
+        "cluster_id": "boltons-strutils-singularize",
+        "split": "train",
+        "task_sha256": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+        "task_json": {
+          "schema_version": "realworld-0.1",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "event_id": "boltons-26-singularize-ss",
+          "cluster_id": "boltons-strutils-singularize",
+          "split": "train",
+          "prompt": "In the pinned Boltons repository, singularize() incorrectly removes the final s from already singular words ending in ss (for example, glass). Repair this without breaking existing plural forms such as glasses, and submit the workspace.",
+          "issued_at": "2026-09-27T11:56:50.618080+00:00",
+          "action_deadline": "2026-09-27T12:27:50.618080+00:00",
+          "outcome_not_before": "2026-09-27T11:56:50.618080+00:00",
+          "verify_after": "2026-09-27T11:56:50.618080+00:00",
+          "tool_manifest": [
+            {
+              "name": "list_files",
+              "description": "List repository files."
+            },
+            {
+              "name": "read_file",
+              "description": "Read a repository file."
+            },
+            {
+              "name": "write_file",
+              "description": "Replace a repository file."
+            },
+            {
+              "name": "run_visible_checks",
+              "description": "Run the fixed visible import check."
+            },
+            {
+              "name": "submit",
+              "description": "Freeze and submit the repository workspace."
+            }
+          ],
+          "reward_contract": {
+            "id": "boltons26-singularize-host-cases-v1",
+            "description": "One point if every held-out command case matches its expected result.",
+            "min_reward": 0,
+            "max_reward": 1
+          },
+          "budgets": {
+            "max_actions": 8,
+            "max_wall_seconds": 900
+          },
+          "is_fixture": true,
+          "adapter_id": "docker_coding",
+          "adapter_version": "0.1",
+          "metadata": {
+            "provenance": "public_upstream_repair_example",
+            "repository": "https://github.com/mahmoud/boltons",
+            "source_commit": "fb464991b718ca7bfabc14555c2947f25e7c79c9",
+            "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+            "upstream_fix": "https://github.com/mahmoud/boltons/pull/418",
+            "license": "BSD-3-Clause",
+            "artifact_binding": {
+              "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+              "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+              "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+              "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+            }
+          },
+          "reward_contract_sha256": "ad5f48e581e3d2575d4ba355117e1aee00810ca10a7b6d98bc312ac153660c5b",
+          "task_sha256": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e"
+        }
+      }
+    ]
+  },
+  "raw_result": {
+    "schema_version": "official-pilot-coding-outcomes-v1",
+    "passed": true,
+    "scope": "actual_scripted_public_repository_episodes_and_original_selector_not_model_rollouts",
+    "model_inference_executed": false,
+    "optimizer_update_executed": false,
+    "gpu_speedup_measured": false,
+    "input_sha256": {
+      "task.json": "4d0350fc5a29f8774d621d7deb64fb7c49bc9dfe5df6f568860fd8b4f5768727",
+      "actions.baseline.jsonl": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "actions.solution.jsonl": "7b27f3cd65dd39bf2986f2acd75c5baf0246a9c0e7835ccb9945085708da4f97",
+      "boltons-26.0.0.tar.gz": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd"
+    },
+    "driver_sha256": "e727df3170de477cff045e995e92885db9f810c4fb52dcd76d2eae7ce3250212",
+    "scripted_policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+    "source_before": {
+      "commit": "6def20ea211fc936ed092a5a08624807c54df381",
+      "python_file_count": 450,
+      "python_sha256": "9ea69afcf931fb1a1c4a19573fc3150379632e7018ebf99885a3934ad93cd264",
+      "git_clean": true
+    },
+    "dependencies_before": {
+      "pyvers": {
+        "version": "0.1.0",
+        "file_count": 9,
+        "sha256": "53acaacdd0fee27e102753fe7d41f58452421339e59b71d0cfd275a0b1a65e74"
+      },
+      "tensordict": {
+        "version": "0.9.1",
+        "file_count": 47,
+        "sha256": "43cbe1005a2efe7f63d21863cdd8e4e4a711a6bdb9b00d4ec4bfe47311b77938"
+      },
+      "ray": {
+        "version": "2.58.0",
+        "file_count": 2767,
+        "sha256": "308f3875c8ef7e5f5b885c158183ed66d6e76ed49a5b5cdc1e737777e6657165"
+      }
+    },
+    "original_selector_calls": [
+      {
+        "input": {
+          "task_ids": [
+            "boltons-26-singularize-ss-v1"
+          ],
+          "prompt_indices": [
+            0,
+            0
+          ],
+          "rewards": [
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 1.0
+          }
+        },
+        "actual_output": {
+          "keep": [
+            0
+          ],
+          "too_correct": [],
+          "too_incorrect": [],
+          "exclude_too_easy": []
+        }
+      }
+    ],
+    "dispatches": [
+      {
+        "phase": "pilot",
+        "sample_index": 0,
+        "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c",
+        "dispatched": true,
+        "receipt": {
+          "receipt_id": "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 0,
+          "verification_id": "coding:b95960f97a6e8dc9becc802ab70601149de38d7bea0f872a2fee3eb8a042dc81"
+        },
+        "outcome_sha256": "7a7e670e3d1472e6952979c2ec8c77b84eb3ae665bdb18af0744d9f41a12fad8",
+        "provider_calls": 1
+      },
+      {
+        "phase": "pilot",
+        "sample_index": 1,
+        "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713",
+        "dispatched": true,
+        "receipt": {
+          "receipt_id": "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 1,
+          "verification_id": "coding:ae62e2696d12fc3db96bb45ec5023fce55fa9ec72eef91afff6ca01f9005b56b"
+        },
+        "outcome_sha256": "1ccd5cfb3b4245cfc43deb3ddd5b437f338c4952cde45a2f2f6b1f9996741ebc",
+        "provider_calls": 4
+      },
+      {
+        "phase": "commit",
+        "sample_index": 2,
+        "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50",
+        "dispatched": true,
+        "receipt": {
+          "receipt_id": "7bb25b42a60d58326aed3a8faf295c9ad2d086cda8eb18cf4e90a65d8559a2e4",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 0,
+          "verification_id": "coding:8c8c711d6efc1fb2a765799ff81640782ea92886083662f5c0a827cdf26bbdd5"
+        },
+        "outcome_sha256": "7277a529db7c4acffca6d358351855382128c5a3de2a754cb914ce9c655831c1",
+        "provider_calls": 1
+      },
+      {
+        "phase": "commit",
+        "sample_index": 3,
+        "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598",
+        "dispatched": true,
+        "receipt": {
+          "receipt_id": "0792e3e94082d4a4b6e18fdf1f72d511892aa2bfa30382005f80c1560d7e4f1c",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+          "status": "resolved_binary",
+          "units": 1,
+          "reward": 1,
+          "verification_id": "coding:32089f1a072e4095b1c822457090ac1839c63c01b8339205ce33dcdb9f6ac43d"
+        },
+        "outcome_sha256": "954e85344e9cadd24b9d5a12f42a0621fd42dcd48714935e4407b16bb76f8a2a",
+        "provider_calls": 4
+      }
+    ],
+    "initial_plan": {
+      "epoch_id": "actual-repository-control",
+      "request_id": "initial-two-controls",
+      "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+      "selector_id": "unselected-coding-initial-pilots-v1",
+      "evidence_verifier_id": "actual-coding-verifier-v1",
+      "total_budget": 4,
+      "spent_at_creation": 0,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 2,
+      "unallocated_at_creation": 2,
+      "pilot_receipt_ids": [],
+      "selection": {
+        "keep": [],
+        "too_correct": [],
+        "too_incorrect": [],
+        "exclude_too_easy": []
+      },
+      "allocations": [
+        {
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "count": 2,
+          "evidence_ids": []
+        }
+      ],
+      "reservations": [
+        {
+          "reservation_id": "96bbbef0a5bbe2a19531a293d98aedc288b87d3c0d90dfde69f85beb1f9ea75c",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+        },
+        {
+          "reservation_id": "70afe154e1be5e0d5c6201d86d3088d417badb31e84031518b72518a5bc62713",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+        }
+      ],
+      "ineligible_receipts": []
+    },
+    "budget_after_initial_reservation": {
+      "total_budget": 4,
+      "spent": 0,
+      "reserved": 2,
+      "remaining": 2
+    },
+    "budget_after_actual_pilots": {
+      "total_budget": 4,
+      "spent": 2,
+      "reserved": 0,
+      "remaining": 2
+    },
+    "actual_commit_plan": {
+      "epoch_id": "actual-repository-control",
+      "request_id": "allocate-from-actual-cases",
+      "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da",
+      "selector_id": "databricks-pilot-commit-6def20ea211fc936ed092a5a08624807c54df381",
+      "evidence_verifier_id": "actual-coding-outcome-SQLite-v1",
+      "total_budget": 4,
+      "spent_at_creation": 2,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 2,
+      "unallocated_at_creation": 0,
+      "pilot_receipt_ids": [
+        "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+        "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7"
+      ],
+      "selection": {
+        "keep": [
+          "boltons-26-singularize-ss-v1"
+        ],
+        "too_correct": [],
+        "too_incorrect": [],
+        "exclude_too_easy": []
+      },
+      "allocations": [
+        {
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "count": 2,
+          "evidence_ids": [
+            "6092044939081461e57640f9c29d9cafb527b74bc7a67f00e6f361e82a345895",
+            "ec32c3bc80771c1ef1189d38e1787c760add881a40bbe4075dc7d795ab6e03a7"
+          ]
+        }
+      ],
+      "reservations": [
+        {
+          "reservation_id": "c4a697555288ea0b24cf7fb716628e942a5a0498ebf1fd241c56efea16b7cf50",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+        },
+        {
+          "reservation_id": "71ca4f22f9f05b74591043f8acec23511a9ac0e6aa9f1fb3f794a59f81158598",
+          "task_id": "boltons-26-singularize-ss-v1",
+          "task_revision": "b852e9e5c730810fdcbe34595f4a544353223af9926d25c8f62a27f8a159694e",
+          "policy_revision": "b5f2e26884cc51e60b971aac150ff0a7aceb57203657d3521ab3f11a5e1558da"
+        }
+      ],
+      "ineligible_receipts": []
+    },
+    "budget_after_actual_selection": {
+      "total_budget": 4,
+      "spent": 2,
+      "reserved": 2,
+      "remaining": 0
+    },
+    "duplicate_dispatch": {
+      "dispatched": false,
+      "provider_calls": 0,
+      "receipt": null
+    },
+    "final_budget": {
+      "total_budget": 4,
+      "spent": 4,
+      "reserved": 0,
+      "remaining": 0
+    },
+    "source_after": {
+      "commit": "6def20ea211fc936ed092a5a08624807c54df381",
+      "python_file_count": 450,
+      "python_sha256": "9ea69afcf931fb1a1c4a19573fc3150379632e7018ebf99885a3934ad93cd264",
+      "git_clean": true
+    },
+    "dependencies_after": {
+      "pyvers": {
+        "version": "0.1.0",
+        "file_count": 9,
+        "sha256": "53acaacdd0fee27e102753fe7d41f58452421339e59b71d0cfd275a0b1a65e74"
+      },
+      "tensordict": {
+        "version": "0.9.1",
+        "file_count": 47,
+        "sha256": "43cbe1005a2efe7f63d21863cdd8e4e4a711a6bdb9b00d4ec4bfe47311b77938"
+      },
+      "ray": {
+        "version": "2.58.0",
+        "file_count": 2767,
+        "sha256": "308f3875c8ef7e5f5b885c158183ed66d6e76ed49a5b5cdc1e737777e6657165"
+      }
+    },
+    "input_sha256_after": {
+      "task.json": "4d0350fc5a29f8774d621d7deb64fb7c49bc9dfe5df6f568860fd8b4f5768727",
+      "actions.baseline.jsonl": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "actions.solution.jsonl": "7b27f3cd65dd39bf2986f2acd75c5baf0246a9c0e7835ccb9945085708da4f97",
+      "boltons-26.0.0.tar.gz": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd"
+    }
+  },
+  "limits": [
+    "One known public Boltons repair fixture, scripted actors, one sequential control run; no unseen-task generalization result.",
+    "The original select_prompts function is imported normally and called once; the original trainer and optimizer are not run.",
+    "Provider costs measure fixed scripted calls, not inference latency or token cost.",
+    "Wall and component costs are actual observations, not paired acceleration measurements.",
+    "Episode wall cost includes reset/provider/actions/verifier/cleanup/final read-only guards, excluding admission/claim/persistence; budget charges one unit per dispatched episode.",
+    "Candidate timeout/output-limit handling inherits the binary failure contract only with confirmed owned-container cleanup; infrastructure/provider/unknown failures stay charged and unresolved without reward. No such failures occurred in this run.",
+    "The dependency byte pins cover this macOS ARM64 cohort, not every imported library or platform.",
+    "The declared policy hash binds controller/prompt/configuration, not attested remote model weights.",
+    "Trainer-ready token trajectories, model sampling, optimizer updates, GPU acceleration and multi-task allocation savings remain outside this result."
+  ]
+}

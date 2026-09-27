@@ -1,0 +1,115 @@
+{
+  "schema_version": "official-klpo-loss-cpu-v1",
+  "upstream": {
+    "repository": "https://github.com/yifanzhang-pro/KLPO",
+    "commit": "30c0ae8c3fa8f56213d6b57bc88b18ebee8ed696",
+    "source_sha256": {
+      "klpo/__init__.py": "155e26bbe1ef79901763b5cbe5232393d21ca8382687512d4c6b30b4464d4ead",
+      "klpo/loss.py": "7ff24795adec318be56271a80f20bef55dbc8ccce0125be62b6de607a65e9355",
+      "klpo/_validation.py": "9d82aa525bb348d5b3d26e705f219a777b18e29a06a6e06d0f0c73d35b056d3e",
+      "klpo/molt.py": "bf58effa0f94b9190b0123cf3dd7e1f5de1d1312c7cd46f9dcf278db71250f65",
+      "klpo/budget.py": "2cf10f976d2cfc95718a8ce1dc057f08abdd41833fb801dd015f6ad1e47f3484",
+      "tests/test_mc.py": "739a7b5838f1f863e028234893909a500659360a9c823434659744aa6304444c"
+    },
+    "modified_upstream_files": [],
+    "dependency_doubles": [],
+    "loss_execution": "normal import of unmodified klpo package",
+    "native_adapter_execution": "klpo.molt.KLPOLoss only; no Molt backend imported"
+  },
+  "torch_version": "2.11.0",
+  "device": "cpu",
+  "fixture": "author tests/test_mc.py two-token terminal path; exhaustive independent auxiliary draws",
+  "loss_and_gradients": [
+    {
+      "route": "token",
+      "mc_samples_per_prefix": 1,
+      "exhaustively_enumerated_auxiliary_banks": 4,
+      "expected_mc_gradient": [
+        0.43462458621012245,
+        -0.6645815672203188,
+        0.15983682432620455
+      ],
+      "full_kl_gradient": [
+        0.4346245862101224,
+        -0.6645815672203187,
+        0.15983682432620455
+      ],
+      "maximum_absolute_gradient_difference": 1.1102230246251565e-16,
+      "native_loss_adapter_gradient_matches_direct_loss": true,
+      "native_ignores_ppo_old_logprobs_and_group_advantages": true,
+      "complete_fixed_terminal_fixture": true,
+      "real_torch_autograd": true
+    },
+    {
+      "route": "sequence",
+      "mc_samples_per_prefix": 2,
+      "exhaustively_enumerated_auxiliary_banks": 16,
+      "expected_mc_gradient": [
+        0.48815359585324136,
+        -0.7375364111260929,
+        0.16979255507938837
+      ],
+      "full_kl_gradient": [
+        0.4881535958532409,
+        -0.7375364111260923,
+        0.16979255507938806
+      ],
+      "maximum_absolute_gradient_difference": 6.661338147750939e-16,
+      "native_loss_adapter_gradient_matches_direct_loss": true,
+      "native_ignores_ppo_old_logprobs_and_group_advantages": true,
+      "complete_fixed_terminal_fixture": true,
+      "real_torch_autograd": true
+    }
+  ],
+  "upstream_guard_checks": {
+    "nonboolean_action_mask": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "action_mask must be boolean"
+    },
+    "no_policy_tokens": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "every row must contain a complete trajectory with policy tokens"
+    },
+    "nonfinite_active_sampler_logprob": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "sampled-action log probabilities must be finite and <= 0"
+    },
+    "nonfinite_auxiliary_sampler_logprob": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "active MC log probabilities must be finite and <= 0"
+    },
+    "missing_auxiliary_bank": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "MC-KL requires current and historical MC records"
+    },
+    "sequence_requires_two_independent_columns": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "sequence MC-KL needs M >= 2 for leave-one-out residuals"
+    },
+    "native_requires_actual_rollout_logprobs": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "KLPO requires actual rollout logps and a complete-trajectory action mask"
+    },
+    "native_requires_global_trajectory_count": {
+      "rejected": true,
+      "exception": "ValueError",
+      "reason": "global_batch_size must count the entire optimizer-step batch across DP ranks"
+    }
+  },
+  "offpolicy_current_and_sampler_differ": true,
+  "complete_trajectory_not_inferred_from_mask": true,
+  "arbitrary_sampling_independence_validated": false,
+  "arbitrary_history_transform_matching_validated": false,
+  "llm_rollout": false,
+  "molt_trainer": false,
+  "distributed_backend": false,
+  "gpu_training": false,
+  "inference_or_training_speedup_measured": false
+}

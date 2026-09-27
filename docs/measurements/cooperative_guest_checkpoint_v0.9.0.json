@@ -1,0 +1,1581 @@
+{
+  "assets": {
+    "case_program_payload_sha256": "8fb9626868ba92c6f0baebe3e2c23da867f9b0f90a82fcdd122cd5f4e26d94a1",
+    "guest_program_sha256": "5ea2b3cf0988c33582c32351cd532fe2b9037a6593bfa9aced37e0c511ad6a3e",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58"
+  },
+  "guest": {
+    "checkpoint_ns": [
+      3212541,
+      359791,
+      414542,
+      332958,
+      369875,
+      351667,
+      1294625,
+      302375,
+      1153250,
+      288583
+    ],
+    "checkpoint_stats": {
+      "max_ms": 3.212541,
+      "min_ms": 0.288583,
+      "n": 10,
+      "p50_ms": 0.364833,
+      "p95_ms": 3.212541
+    },
+    "cycles": 10,
+    "cycles_data": [
+      {
+        "branch_cycle_ns": [
+          317951667,
+          270503458,
+          1508958,
+          986625,
+          1016917,
+          860542,
+          1199958,
+          1131834,
+          1559917,
+          1195625
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 3212541,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          2924000,
+          870333,
+          547125,
+          429375,
+          354167,
+          350667,
+          350291,
+          385792,
+          1349917,
+          508375
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1956084,
+          1020750,
+          1705209,
+          939792,
+          1025583,
+          1005083,
+          1073208,
+          960125,
+          1128208,
+          860791
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 359791,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          653875,
+          454125,
+          471167,
+          417125,
+          366833,
+          426208,
+          387958,
+          368459,
+          439417,
+          338875
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1162250,
+          796167,
+          1024250,
+          831125,
+          1011417,
+          944041,
+          1228458,
+          961333,
+          967292,
+          802666
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 414542,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          928916,
+          350375,
+          862042,
+          693125,
+          336042,
+          804208,
+          361291,
+          783167,
+          826500,
+          662958
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1133750,
+          851334,
+          1109834,
+          833417,
+          1318416,
+          1007416,
+          1043250,
+          1147125,
+          4519542,
+          2093292
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 332958,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          366917,
+          355959,
+          410334,
+          352417,
+          342625,
+          463833,
+          868916,
+          735041,
+          2119083,
+          1204209
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          2626042,
+          2196625,
+          3528833,
+          3067000,
+          3237334,
+          1133958,
+          1139458,
+          2894750,
+          1710875,
+          1570667
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 369875,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          1054000,
+          589583,
+          1547208,
+          2046459,
+          1932500,
+          525667,
+          382458,
+          1294833,
+          787958,
+          547209
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1488125,
+          1425583,
+          1252375,
+          1352334,
+          1515167,
+          998666,
+          1064125,
+          954458,
+          1063208,
+          1025416
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 351667,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          468625,
+          830625,
+          1000250,
+          623250,
+          457000,
+          464958,
+          357083,
+          419792,
+          387250,
+          372833
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1168291,
+          1122333,
+          933167,
+          775208,
+          975959,
+          784875,
+          942958,
+          795458,
+          1070000,
+          933375
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 1294625,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          881291,
+          595208,
+          335834,
+          324792,
+          328209,
+          335125,
+          778666,
+          660833,
+          893208,
+          759292
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1096916,
+          807625,
+          937291,
+          794500,
+          900833,
+          818334,
+          1142250,
+          1163292,
+          1028125,
+          847500
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 302375,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          870458,
+          665541,
+          788250,
+          329084,
+          319375,
+          346250,
+          368708,
+          400375,
+          374833,
+          331875
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1030875,
+          748125,
+          933167,
+          853083,
+          997833,
+          1071708,
+          973458,
+          859375,
+          983541,
+          826542
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 1153250,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          807125,
+          321416,
+          348334,
+          355083,
+          848250,
+          897083,
+          840458,
+          716750,
+          817250,
+          677875
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      },
+      {
+        "branch_cycle_ns": [
+          1271000,
+          895708,
+          1042875,
+          1117792,
+          955958,
+          779875,
+          977042,
+          926750,
+          1091333,
+          943083
+        ],
+        "branches": [
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 111,
+            "mode": "repair",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca"
+          },
+          {
+            "inherited_turn": 17,
+            "local_turn": 222,
+            "mode": "baseline",
+            "mount_namespace": "mnt:[4026532110]",
+            "prefix_seen": true,
+            "sibling_markers_absent": true,
+            "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+          }
+        ],
+        "checkpoint_ns": 288583,
+        "frozen_prefix_unchanged": true,
+        "frozen_source_unchanged": true,
+        "parent_turn_after_checkpoint": 999,
+        "restore_ns": [
+          349291,
+          758792,
+          347916,
+          944959,
+          810166,
+          652167,
+          319583,
+          391375,
+          361125,
+          427625
+        ],
+        "template_mount_namespace": "mnt:[4026532109]",
+        "template_turn_after_restores": 17
+      }
+    ],
+    "kind": "cooperative_coupled_fork_overlay_checkpoint_v1",
+    "no_case_branch_cycle_ns": [
+      1508958,
+      986625,
+      1016917,
+      860542,
+      1199958,
+      1131834,
+      1559917,
+      1195625,
+      1956084,
+      1020750,
+      1705209,
+      939792,
+      1025583,
+      1005083,
+      1073208,
+      960125,
+      1128208,
+      860791,
+      1162250,
+      796167,
+      1024250,
+      831125,
+      1011417,
+      944041,
+      1228458,
+      961333,
+      967292,
+      802666,
+      1133750,
+      851334,
+      1109834,
+      833417,
+      1318416,
+      1007416,
+      1043250,
+      1147125,
+      4519542,
+      2093292,
+      2626042,
+      2196625,
+      3528833,
+      3067000,
+      3237334,
+      1133958,
+      1139458,
+      2894750,
+      1710875,
+      1570667,
+      1488125,
+      1425583,
+      1252375,
+      1352334,
+      1515167,
+      998666,
+      1064125,
+      954458,
+      1063208,
+      1025416,
+      1168291,
+      1122333,
+      933167,
+      775208,
+      975959,
+      784875,
+      942958,
+      795458,
+      1070000,
+      933375,
+      1096916,
+      807625,
+      937291,
+      794500,
+      900833,
+      818334,
+      1142250,
+      1163292,
+      1028125,
+      847500,
+      1030875,
+      748125,
+      933167,
+      853083,
+      997833,
+      1071708,
+      973458,
+      859375,
+      983541,
+      826542,
+      1271000,
+      895708,
+      1042875,
+      1117792,
+      955958,
+      779875,
+      977042,
+      926750,
+      1091333,
+      943083
+    ],
+    "no_case_branch_cycle_stats": {
+      "max_ms": 4.519542,
+      "min_ms": 0.748125,
+      "n": 98,
+      "p50_ms": 1.0255,
+      "p95_ms": 2.89475
+    },
+    "outer_ext4_source_unchanged": true,
+    "outer_ext4_tree_sha256": "5bf5283a91d72a1984404dadcdab7c41f9cc91c3cfcdfa798bda4b35da4a2904",
+    "outer_ext4_tree_unchanged": true,
+    "restore_ns": [
+      2924000,
+      870333,
+      547125,
+      429375,
+      354167,
+      350667,
+      350291,
+      385792,
+      1349917,
+      508375,
+      653875,
+      454125,
+      471167,
+      417125,
+      366833,
+      426208,
+      387958,
+      368459,
+      439417,
+      338875,
+      928916,
+      350375,
+      862042,
+      693125,
+      336042,
+      804208,
+      361291,
+      783167,
+      826500,
+      662958,
+      366917,
+      355959,
+      410334,
+      352417,
+      342625,
+      463833,
+      868916,
+      735041,
+      2119083,
+      1204209,
+      1054000,
+      589583,
+      1547208,
+      2046459,
+      1932500,
+      525667,
+      382458,
+      1294833,
+      787958,
+      547209,
+      468625,
+      830625,
+      1000250,
+      623250,
+      457000,
+      464958,
+      357083,
+      419792,
+      387250,
+      372833,
+      881291,
+      595208,
+      335834,
+      324792,
+      328209,
+      335125,
+      778666,
+      660833,
+      893208,
+      759292,
+      870458,
+      665541,
+      788250,
+      329084,
+      319375,
+      346250,
+      368708,
+      400375,
+      374833,
+      331875,
+      807125,
+      321416,
+      348334,
+      355083,
+      848250,
+      897083,
+      840458,
+      716750,
+      817250,
+      677875,
+      349291,
+      758792,
+      347916,
+      944959,
+      810166,
+      652167,
+      319583,
+      391375,
+      361125,
+      427625
+    ],
+    "restore_stats": {
+      "max_ms": 2.924,
+      "min_ms": 0.319375,
+      "n": 100,
+      "p50_ms": 0.469896,
+      "p95_ms": 1.349917
+    },
+    "restores_per_cycle": 10,
+    "scope": "trusted one-process template inside one booted Linux QEMU guest",
+    "seed_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e"
+  },
+  "host": {
+    "boot_seconds": 5.97581,
+    "full_vm_ram_ext4_restore_checks": 30,
+    "full_vm_restore_seconds": [
+      0.2638035831041634,
+      0.13026383286342025,
+      0.08884737500920892,
+      0.2001458341255784,
+      0.3835478750988841,
+      0.25815829215571284,
+      0.07948762481100857,
+      0.0641820840537548,
+      0.27494916692376137,
+      0.11062674992717803,
+      0.06183566711843014,
+      0.06198612507432699,
+      0.056296540889889,
+      0.05783729185350239,
+      0.05391308385878801,
+      0.11562025011517107,
+      0.06456170789897442,
+      0.25989545811899006,
+      0.0768098752014339,
+      0.06341279204934835,
+      0.09696295903995633,
+      0.17240091692656279,
+      0.17433154210448265,
+      0.07029741699807346,
+      0.2503170829731971,
+      0.22547183302231133,
+      0.2515922919847071,
+      0.07977220881730318,
+      0.07113591697998345,
+      0.21826200000941753
+    ],
+    "full_vm_restore_stats": {
+      "max_ms": 383.547875,
+      "min_ms": 53.913084,
+      "n": 30,
+      "p50_ms": 103.794854,
+      "p95_ms": 274.949167
+    },
+    "guest_call_seconds": 0.936199,
+    "total_seconds": 12.261189,
+    "vm_metrics": {
+      "fork_child_start_restore_seconds": 0.0,
+      "fork_copied_disks": 0,
+      "fork_disk_clone_seconds": 0.0,
+      "fork_reflink_disks": 0,
+      "fork_seconds": 0.0,
+      "forks_spawned": 0,
+      "guest_command_seconds": 1.7609740016050637,
+      "guest_commands": 150,
+      "snapshot_load_seconds": 4.33323058206588,
+      "snapshot_loads": 30,
+      "snapshot_save_seconds": 0.24150150013156235,
+      "snapshot_saves": 1,
+      "vm_start_seconds": 0.38228608411736786,
+      "vm_starts": 1
+    }
+  },
+  "host_private_grading": [
+    {
+      "case_count": 14,
+      "mode": "repair",
+      "passed_cases": 14,
+      "reward": 1.0
+    },
+    {
+      "case_count": 14,
+      "mode": "baseline",
+      "passed_cases": 7,
+      "reward": 0.0
+    }
+  ],
+  "kind": "cooperative_coupled_checkpoint_qemu_benchmark_v1",
+  "limits": [
+    "cooperative one-process template only; no arbitrary writable FDs or background processes",
+    "guest branches share one VM and Linux kernel; untrusted-root security is not provided",
+    "guest checkpoint includes remount-readonly plus process fork, but no CRIU artifact or durable crash recovery",
+    "guest restore includes child fork and nested overlay mount; full VM loadvm restores CPU/RAM/device/ext4 and is a different contract",
+    "guest-clock restore-to-ready timings exclude branch actions, verifier execution, cleanup, VM boot, serial transfer, and model/trainer work; no-case branch-cycle timings include cleanup"
+  ],
+  "scope": "one pinned Boltons v2 ARM64 QEMU/HVF task, one booted VM"
+}

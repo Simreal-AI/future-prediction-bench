@@ -1,0 +1,318 @@
+{
+  "all_graded_signatures_equal": true,
+  "crash_probe": {
+    "episode": {
+      "action_kinds": [
+        "read_file",
+        "replace_text",
+        "run_visible_checks",
+        "submit"
+      ],
+      "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+      "case_count": 14,
+      "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+      "passed_cases": 14,
+      "reward": 1.0,
+      "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+      "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+    },
+    "first_attempt_had_no_reward": true,
+    "old_token_rejected": true,
+    "replacement_attempt": 2,
+    "worker_exitcode": -15,
+    "worker_killed_after_all_cases_before_commit": true
+  },
+  "episode_signatures": {
+    "baseline": {
+      "action_kinds": [
+        "submit"
+      ],
+      "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+      "case_count": 14,
+      "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+      "passed_cases": 7,
+      "reward": 0.0,
+      "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+      "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+    },
+    "repair": {
+      "action_kinds": [
+        "read_file",
+        "replace_text",
+        "run_visible_checks",
+        "submit"
+      ],
+      "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+      "case_count": 14,
+      "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+      "passed_cases": 14,
+      "reward": 1.0,
+      "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+      "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+    }
+  },
+  "fixture": {
+    "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+    "policy_revision": "pinned-scripted-weight-revision-v1",
+    "seed_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "task_id": "boltons-26-singularize-ss-v2",
+    "task_sha256": "10eeaecff428f2639b064a553feffc9a4077860f69bc145282b48b6e0cb2be7d",
+    "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135"
+  },
+  "implementation_sha256": {
+    "benchmark": "0e7c6989ee773fb9138be0870104974b6284aa171e0e7a31b0956d755727987e",
+    "docker_adapter": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+    "durable_queue": "1d287068a64ad4fa5c4c02b531a4658eeaf09c418945f5748e2d14e240c1daeb",
+    "in_memory_pipeline": "1e0569d64beb4c1c22d94bb1e89bcf21f35cbaef3e68625e72824cb1624f9b85",
+    "realworld_contract": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31"
+  },
+  "limitations": [
+    "Scripted public repair/baseline, not model inference or learning",
+    "SQLite same-host durability, not distributed RollArt service",
+    "The verifier may re-execute after crash; only reward publication is at most once",
+    "The actor-to-queue handoff is not recoverable before enqueue returns"
+  ],
+  "median_graded_throughput_ratio_durable_to_control": 0.9836323757109122,
+  "median_wall_seconds": {
+    "durable_sqlite_process": 9.889902542112395,
+    "in_memory_pipeline": 9.728028333047405
+  },
+  "rows": [
+    {
+      "condition": "in_memory_pipeline",
+      "durable_attempts": null,
+      "episodes": {
+        "baseline": {
+          "action_kinds": [
+            "submit"
+          ],
+          "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+          "case_count": 14,
+          "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+          "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+        },
+        "repair": {
+          "action_kinds": [
+            "read_file",
+            "replace_text",
+            "run_visible_checks",
+            "submit"
+          ],
+          "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+          "case_count": 14,
+          "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+          "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+        }
+      },
+      "graded_episodes_per_second": 0.20559150647266664,
+      "pair": 1,
+      "wall_seconds": 9.728028333047405
+    },
+    {
+      "condition": "durable_sqlite_process",
+      "durable_attempts": {
+        "baseline": 1,
+        "repair": 1
+      },
+      "episodes": {
+        "baseline": {
+          "action_kinds": [
+            "submit"
+          ],
+          "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+          "case_count": 14,
+          "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+          "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+        },
+        "repair": {
+          "action_kinds": [
+            "read_file",
+            "replace_text",
+            "run_visible_checks",
+            "submit"
+          ],
+          "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+          "case_count": 14,
+          "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+          "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+        }
+      },
+      "graded_episodes_per_second": 0.20222646193769447,
+      "pair": 1,
+      "wall_seconds": 9.889902542112395
+    },
+    {
+      "condition": "durable_sqlite_process",
+      "durable_attempts": {
+        "baseline": 1,
+        "repair": 1
+      },
+      "episodes": {
+        "baseline": {
+          "action_kinds": [
+            "submit"
+          ],
+          "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+          "case_count": 14,
+          "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+          "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+        },
+        "repair": {
+          "action_kinds": [
+            "read_file",
+            "replace_text",
+            "run_visible_checks",
+            "submit"
+          ],
+          "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+          "case_count": 14,
+          "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+          "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+        }
+      },
+      "graded_episodes_per_second": 0.11657128330717259,
+      "pair": 2,
+      "wall_seconds": 17.1568841249682
+    },
+    {
+      "condition": "in_memory_pipeline",
+      "durable_attempts": null,
+      "episodes": {
+        "baseline": {
+          "action_kinds": [
+            "submit"
+          ],
+          "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+          "case_count": 14,
+          "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+          "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+        },
+        "repair": {
+          "action_kinds": [
+            "read_file",
+            "replace_text",
+            "run_visible_checks",
+            "submit"
+          ],
+          "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+          "case_count": 14,
+          "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+          "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+        }
+      },
+      "graded_episodes_per_second": 0.21756925490593787,
+      "pair": 2,
+      "wall_seconds": 9.192475291900337
+    },
+    {
+      "condition": "in_memory_pipeline",
+      "durable_attempts": null,
+      "episodes": {
+        "baseline": {
+          "action_kinds": [
+            "submit"
+          ],
+          "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+          "case_count": 14,
+          "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+          "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+        },
+        "repair": {
+          "action_kinds": [
+            "read_file",
+            "replace_text",
+            "run_visible_checks",
+            "submit"
+          ],
+          "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+          "case_count": 14,
+          "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+          "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+        }
+      },
+      "graded_episodes_per_second": 0.19379303125765546,
+      "pair": 3,
+      "wall_seconds": 10.320288541959599
+    },
+    {
+      "condition": "durable_sqlite_process",
+      "durable_attempts": {
+        "baseline": 1,
+        "repair": 1
+      },
+      "episodes": {
+        "baseline": {
+          "action_kinds": [
+            "submit"
+          ],
+          "action_observations_sha256": "4529d0e0bd6c4b581552036496b0afaf5b2f5e7bafe2535f3bdbbdf59a7969ff",
+          "case_count": 14,
+          "case_results_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+          "workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6"
+        },
+        "repair": {
+          "action_kinds": [
+            "read_file",
+            "replace_text",
+            "run_visible_checks",
+            "submit"
+          ],
+          "action_observations_sha256": "bae2e7aa4f39b3cf09dc1801fb24e14b779c6819bd1cf7a6d03fea84803f0e8c",
+          "case_count": 14,
+          "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+          "workspace_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8"
+        }
+      },
+      "graded_episodes_per_second": 0.22691080239821163,
+      "pair": 3,
+      "wall_seconds": 8.81403608317487
+    }
+  ],
+  "schema": "durable-docker-rollout-ab-public-v1",
+  "setup": {
+    "actor_workers": 1,
+    "cases_per_episode": 14,
+    "durable_worker_processes": 1,
+    "episodes_per_arm": 2,
+    "host_architecture": "macOS arm64, local Docker Desktop",
+    "pairs": 3,
+    "verifier_workers": 1
+  }
+}

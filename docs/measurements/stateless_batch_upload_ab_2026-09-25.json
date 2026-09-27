@@ -1,0 +1,555 @@
+{
+  "asset_binding": {
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "readonly_modloop_sha256": "32a189d5e4ae4417cf65bfcc91d2cc8ffdf5957fbbc1f055b037861c595b7328",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "task_id": "boltons-26-singularize-ss-v2"
+  },
+  "candidate_python_identity": "guest_uid_gid_65534_v2",
+  "effective_replace_text_helper_sha256": "681c6a05f2eb00a5b6b415fc295fdf3a35dc85b7e5e539cd1a968ca39e2ec1b7",
+  "episode_count": 12,
+  "host_private_case_count": 14,
+  "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+  "kind": "boltons_v2_prepared_stateless_batch_upload_ab_v1",
+  "limits": [
+    "Public solved Boltons v2 scripted fixture, not held-out agent repair.",
+    "One Apple Silicon host and three pairs per branch; timing gains may be smaller than noise.",
+    "The same 14 cases run serially inside one guest batch in both arms.",
+    "One full-VM save at submit and one restore at verify remain required.",
+    "The one-time clean template setup is excluded from steady episode timing and included separately."
+  ],
+  "model_inference_measured": false,
+  "one_call_total_including_setup_seconds": 17.111739041050896,
+  "one_call_total_seconds": 10.519120624987409,
+  "order": [
+    {
+      "arm": "serial",
+      "branch": "repair",
+      "pair": 0
+    },
+    {
+      "arm": "one_call",
+      "branch": "repair",
+      "pair": 0
+    },
+    {
+      "arm": "serial",
+      "branch": "baseline",
+      "pair": 0
+    },
+    {
+      "arm": "one_call",
+      "branch": "baseline",
+      "pair": 0
+    },
+    {
+      "arm": "one_call",
+      "branch": "baseline",
+      "pair": 1
+    },
+    {
+      "arm": "serial",
+      "branch": "baseline",
+      "pair": 1
+    },
+    {
+      "arm": "one_call",
+      "branch": "repair",
+      "pair": 1
+    },
+    {
+      "arm": "serial",
+      "branch": "repair",
+      "pair": 1
+    },
+    {
+      "arm": "serial",
+      "branch": "repair",
+      "pair": 2
+    },
+    {
+      "arm": "one_call",
+      "branch": "repair",
+      "pair": 2
+    },
+    {
+      "arm": "serial",
+      "branch": "baseline",
+      "pair": 2
+    },
+    {
+      "arm": "one_call",
+      "branch": "baseline",
+      "pair": 2
+    }
+  ],
+  "original_refreshed_task_sha256": "385d9494f7b9896fc8c7bd71bdbc5f459b6716ec529dd9895ebed56a65963801",
+  "original_replace_text_helper_sha256": "181d3ab6b88ede16b940e61a8f49226a6a28debe7ecc0a54bd44492f056378f5",
+  "original_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+  "original_task_file_sha256": "fe8bd31801d738b4040ab571e1533f6d4dff46efa7a26033c2621b059876bcf7",
+  "pairs_per_branch": 3,
+  "prepared_id": "5be1bb443a779f117b6ed5678f46387768df36f3e179fb24ef943fa82b5b9831",
+  "repaired_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+  "rl_training_measured": false,
+  "rows": [
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "serial",
+      "batch_upload_seconds": 0.028469083830714226,
+      "branch": "repair",
+      "case_vector_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56",
+      "environment_verify_seconds": 0.7008551668841392,
+      "episode_wall_seconds": 2.0024867919273674,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "guest_tool_seconds": 0.42990404088050127,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 0,
+      "passed_cases": 14,
+      "reward": 1.0,
+      "submit_snapshot_seconds": 0.3592726248316467,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.4114708749111742,
+      "verify_restore_seconds": 0.20871129096485674
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "one_call",
+      "batch_upload_seconds": 0.021918333135545254,
+      "branch": "repair",
+      "case_vector_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56",
+      "environment_verify_seconds": 0.6780586249660701,
+      "episode_wall_seconds": 1.9309859999921173,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "guest_tool_seconds": 0.38636571099050343,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 0,
+      "passed_cases": 14,
+      "reward": 1.0,
+      "submit_snapshot_seconds": 0.38635799987241626,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.3902848339639604,
+      "verify_restore_seconds": 0.22449691710062325
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "serial",
+      "batch_upload_seconds": 0.02782900002785027,
+      "branch": "baseline",
+      "case_vector_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d",
+      "environment_verify_seconds": 0.557851874968037,
+      "episode_wall_seconds": 1.575074999826029,
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "guest_tool_seconds": 0.2525337524712086,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 0,
+      "passed_cases": 7,
+      "reward": 0.0,
+      "submit_snapshot_seconds": 0.30808799993246794,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.35020445892587304,
+      "verify_restore_seconds": 0.14462275011464953
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "one_call",
+      "batch_upload_seconds": 0.02129254210740328,
+      "branch": "baseline",
+      "case_vector_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d",
+      "environment_verify_seconds": 0.5300215838942677,
+      "episode_wall_seconds": 1.5703017909545451,
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "guest_tool_seconds": 0.24551454349420965,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 0,
+      "passed_cases": 7,
+      "reward": 0.0,
+      "submit_snapshot_seconds": 0.3388135831337422,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.35244204197078943,
+      "verify_restore_seconds": 0.11601683404296637
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "one_call",
+      "batch_upload_seconds": 0.023196832975372672,
+      "branch": "baseline",
+      "case_vector_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d",
+      "environment_verify_seconds": 0.5926540829241276,
+      "episode_wall_seconds": 1.600824624998495,
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "guest_tool_seconds": 0.2591418749652803,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 1,
+      "passed_cases": 7,
+      "reward": 0.0,
+      "submit_snapshot_seconds": 0.3166569999884814,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.3768172499258071,
+      "verify_restore_seconds": 0.13809345802292228
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "serial",
+      "batch_upload_seconds": 0.02785025001503527,
+      "branch": "baseline",
+      "case_vector_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d",
+      "environment_verify_seconds": 0.5630582498852164,
+      "episode_wall_seconds": 1.5520080421119928,
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "guest_tool_seconds": 0.2446237877011299,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 1,
+      "passed_cases": 7,
+      "reward": 0.0,
+      "submit_snapshot_seconds": 0.3088805000297725,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.34373950003646314,
+      "verify_restore_seconds": 0.15372129203751683
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "one_call",
+      "batch_upload_seconds": 0.025132832815870643,
+      "branch": "repair",
+      "case_vector_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56",
+      "environment_verify_seconds": 0.6159809997770935,
+      "episode_wall_seconds": 1.9029009169898927,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "guest_tool_seconds": 0.42325916001573205,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 1,
+      "passed_cases": 14,
+      "reward": 1.0,
+      "submit_snapshot_seconds": 0.4103345829062164,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.35790499998256564,
+      "verify_restore_seconds": 0.19555324991233647
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "serial",
+      "batch_upload_seconds": 0.02699966705404222,
+      "branch": "repair",
+      "case_vector_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56",
+      "environment_verify_seconds": 0.7201926249545068,
+      "episode_wall_seconds": 1.9587011660914868,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "guest_tool_seconds": 0.3763555842451751,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 1,
+      "passed_cases": 14,
+      "reward": 1.0,
+      "submit_snapshot_seconds": 0.39167729183100164,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.35164862498641014,
+      "verify_restore_seconds": 0.3014444170985371
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "serial",
+      "batch_upload_seconds": 0.027831749990582466,
+      "branch": "repair",
+      "case_vector_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56",
+      "environment_verify_seconds": 0.6175919999368489,
+      "episode_wall_seconds": 1.7815178751479834,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "guest_tool_seconds": 0.397662793751806,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 2,
+      "passed_cases": 14,
+      "reward": 1.0,
+      "submit_snapshot_seconds": 0.3256823329720646,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.3539534581359476,
+      "verify_restore_seconds": 0.17572933295741677
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "one_call",
+      "batch_upload_seconds": 0.022539624944329262,
+      "branch": "repair",
+      "case_vector_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56",
+      "environment_verify_seconds": 0.5907015418633819,
+      "episode_wall_seconds": 1.8116796249523759,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "guest_tool_seconds": 0.37422824976965785,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 2,
+      "passed_cases": 14,
+      "reward": 1.0,
+      "submit_snapshot_seconds": 0.35749016609042883,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.3621346661821008,
+      "verify_restore_seconds": 0.16323395911604166
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "serial",
+      "batch_upload_seconds": 0.02774520916864276,
+      "branch": "baseline",
+      "case_vector_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d",
+      "environment_verify_seconds": 0.7188235837966204,
+      "episode_wall_seconds": 1.8439134578220546,
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "guest_tool_seconds": 0.2580297882668674,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 2,
+      "passed_cases": 7,
+      "reward": 0.0,
+      "submit_snapshot_seconds": 0.39150016685016453,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.3790319999679923,
+      "verify_restore_seconds": 0.26704991701990366
+    },
+    {
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "arm": "one_call",
+      "batch_upload_seconds": 0.02935112500563264,
+      "branch": "baseline",
+      "case_vector_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d",
+      "environment_verify_seconds": 0.6243700829800218,
+      "episode_wall_seconds": 1.7024276670999825,
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "guest_tool_seconds": 0.26762766763567924,
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "pair": 2,
+      "passed_cases": 7,
+      "reward": 0.0,
+      "submit_snapshot_seconds": 0.3520148750394583,
+      "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+      "verify_batch_seconds": 0.392312458017841,
+      "verify_restore_seconds": 0.16496583400294185
+    }
+  ],
+  "same_contract_and_prepared_template": true,
+  "serial_total_including_setup_seconds": 17.3063207489904,
+  "serial_total_seconds": 10.713702332926914,
+  "setup_amortized_ratio_at_six_episodes": 1.0113712409634523,
+  "stateless_contract_sha256": "95ed7cdd3240a60ef6dde9c9cb692b77b4ae870555c991a0a7d4c4908548e16d",
+  "status": "passed",
+  "steady_total_time_ratio": 1.0184979063247255,
+  "summary": {
+    "baseline": {
+      "one_call": {
+        "batch_upload_seconds": {
+          "max": 0.02935112500563264,
+          "median": 0.023196832975372672,
+          "min": 0.02129254210740328,
+          "n": 3
+        },
+        "episode_wall_seconds": {
+          "max": 1.7024276670999825,
+          "median": 1.600824624998495,
+          "min": 1.5703017909545451,
+          "n": 3
+        },
+        "submit_snapshot_seconds": {
+          "max": 0.3520148750394583,
+          "median": 0.3388135831337422,
+          "min": 0.3166569999884814,
+          "n": 3
+        },
+        "verify_batch_seconds": {
+          "max": 0.392312458017841,
+          "median": 0.3768172499258071,
+          "min": 0.35244204197078943,
+          "n": 3
+        },
+        "verify_restore_seconds": {
+          "max": 0.16496583400294185,
+          "median": 0.13809345802292228,
+          "min": 0.11601683404296637,
+          "n": 3
+        }
+      },
+      "paired_serial_minus_one_call_seconds": [
+        {
+          "batch_upload": 0.006536457920446992,
+          "episode_wall": 0.004773208871483803,
+          "pair": 0
+        },
+        {
+          "batch_upload": 0.0046534170396625996,
+          "episode_wall": -0.04881658288650215,
+          "pair": 1
+        },
+        {
+          "batch_upload": -0.0016059158369898796,
+          "episode_wall": 0.14148579072207212,
+          "pair": 2
+        }
+      ],
+      "serial": {
+        "batch_upload_seconds": {
+          "max": 0.02785025001503527,
+          "median": 0.02782900002785027,
+          "min": 0.02774520916864276,
+          "n": 3
+        },
+        "episode_wall_seconds": {
+          "max": 1.8439134578220546,
+          "median": 1.575074999826029,
+          "min": 1.5520080421119928,
+          "n": 3
+        },
+        "submit_snapshot_seconds": {
+          "max": 0.39150016685016453,
+          "median": 0.3088805000297725,
+          "min": 0.30808799993246794,
+          "n": 3
+        },
+        "verify_batch_seconds": {
+          "max": 0.3790319999679923,
+          "median": 0.35020445892587304,
+          "min": 0.34373950003646314,
+          "n": 3
+        },
+        "verify_restore_seconds": {
+          "max": 0.26704991701990366,
+          "median": 0.15372129203751683,
+          "min": 0.14462275011464953,
+          "n": 3
+        }
+      }
+    },
+    "repair": {
+      "one_call": {
+        "batch_upload_seconds": {
+          "max": 0.025132832815870643,
+          "median": 0.022539624944329262,
+          "min": 0.021918333135545254,
+          "n": 3
+        },
+        "episode_wall_seconds": {
+          "max": 1.9309859999921173,
+          "median": 1.9029009169898927,
+          "min": 1.8116796249523759,
+          "n": 3
+        },
+        "submit_snapshot_seconds": {
+          "max": 0.4103345829062164,
+          "median": 0.38635799987241626,
+          "min": 0.35749016609042883,
+          "n": 3
+        },
+        "verify_batch_seconds": {
+          "max": 0.3902848339639604,
+          "median": 0.3621346661821008,
+          "min": 0.35790499998256564,
+          "n": 3
+        },
+        "verify_restore_seconds": {
+          "max": 0.22449691710062325,
+          "median": 0.19555324991233647,
+          "min": 0.16323395911604166,
+          "n": 3
+        }
+      },
+      "paired_serial_minus_one_call_seconds": [
+        {
+          "batch_upload": 0.006550750695168972,
+          "episode_wall": 0.07150079193525016,
+          "pair": 0
+        },
+        {
+          "batch_upload": 0.0018668342381715775,
+          "episode_wall": 0.05580024910159409,
+          "pair": 1
+        },
+        {
+          "batch_upload": 0.005292125046253204,
+          "episode_wall": -0.030161749804392457,
+          "pair": 2
+        }
+      ],
+      "serial": {
+        "batch_upload_seconds": {
+          "max": 0.028469083830714226,
+          "median": 0.027831749990582466,
+          "min": 0.02699966705404222,
+          "n": 3
+        },
+        "episode_wall_seconds": {
+          "max": 2.0024867919273674,
+          "median": 1.9587011660914868,
+          "min": 1.7815178751479834,
+          "n": 3
+        },
+        "submit_snapshot_seconds": {
+          "max": 0.39167729183100164,
+          "median": 0.3592726248316467,
+          "min": 0.3256823329720646,
+          "n": 3
+        },
+        "verify_batch_seconds": {
+          "max": 0.4114708749111742,
+          "median": 0.3539534581359476,
+          "min": 0.35164862498641014,
+          "n": 3
+        },
+        "verify_restore_seconds": {
+          "max": 0.3014444170985371,
+          "median": 0.20871129096485674,
+          "min": 0.17572933295741677,
+          "n": 3
+        }
+      }
+    }
+  },
+  "task_id": "boltons-26-singularize-ss-v2",
+  "task_sha256": "3b672caa076ac934e33fe28f497e8032aa8ba500af0691a3ee1cf1da1a0892be",
+  "template_disk_sha256": "7d924dc25feba7b0e12aa98666362ba683e7472909a065b02234a4114ffa26d0",
+  "template_setup_seconds": 6.5926184160634875
+}

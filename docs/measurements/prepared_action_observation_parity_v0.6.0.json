@@ -1,0 +1,122 @@
+{
+  "kind": "live_prepared_action_observation_parity_v1",
+  "scope": "Three distinct one-pair real ARM64 QEMU/HVF comparisons after the encoded-path hardening. Each pair compares two environment conditions on repaired and baseline policy branches.",
+  "measures_model_training": false,
+  "variants": [
+    {
+      "variant": "default_full_vm",
+      "raw_report_sha256": "24493f82d67c0d67e34606a3a9f15306a2d307fe7148410e156b88291ad3c48f",
+      "task_sha256": "662e4258ad2f9a9dbfbf4615ab38395d7bb9271d51abfea79e11bcc6c4848c6b",
+      "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+      "condition_order": "alternated by repetition within branch",
+      "branches": [
+        {
+          "branch": "repair",
+          "reward": 1.0,
+          "passed_cases": 14,
+          "hidden_case_count": 14,
+          "policy_action_observation_count": 4,
+          "opening_observation_equal": true,
+          "policy_action_observations_equal": true,
+          "case_results_equal": true,
+          "policy_action_observation_digest_sha256": "8596e8bb003ad28d670222dfa2fe0ab8e68a26639744632358e03aae122157c3",
+          "case_results_digest_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c"
+        },
+        {
+          "branch": "baseline",
+          "reward": 0.0,
+          "passed_cases": 7,
+          "hidden_case_count": 14,
+          "policy_action_observation_count": 2,
+          "opening_observation_equal": true,
+          "policy_action_observations_equal": true,
+          "case_results_equal": true,
+          "policy_action_observation_digest_sha256": "c3f28c6d9fe1d1ce940593c0a9688cda35dec417d2e8b46f00cbd56c94f2923c",
+          "case_results_digest_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24"
+        }
+      ],
+      "prepared_id": "ecacdf99c357cf5dda81b53ef453cbbe0fbde77d145811d0dcd081759f39bd8c"
+    },
+    {
+      "variant": "prepared_stateless",
+      "raw_report_sha256": "371c303fef27c7b5ba92c6eff8a83f4a4f0ebdf13576c4f4e55eed68783242ec",
+      "task_sha256": "8f2fef860d9256beadb65b6f1ba6b6d31127d0299fd66f10f850d0a68bd10299",
+      "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+      "condition_order": "alternated by repetition within branch",
+      "branches": [
+        {
+          "branch": "repair",
+          "reward": 1.0,
+          "passed_cases": 14,
+          "hidden_case_count": 14,
+          "policy_action_observation_count": 4,
+          "opening_observation_equal": true,
+          "policy_action_observations_equal": true,
+          "case_results_equal": true,
+          "policy_action_observation_digest_sha256": "8596e8bb003ad28d670222dfa2fe0ab8e68a26639744632358e03aae122157c3",
+          "case_results_digest_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56"
+        },
+        {
+          "branch": "baseline",
+          "reward": 0.0,
+          "passed_cases": 7,
+          "hidden_case_count": 14,
+          "policy_action_observation_count": 2,
+          "opening_observation_equal": true,
+          "policy_action_observations_equal": true,
+          "case_results_equal": true,
+          "policy_action_observation_digest_sha256": "c3f28c6d9fe1d1ce940593c0a9688cda35dec417d2e8b46f00cbd56c94f2923c",
+          "case_results_digest_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d"
+        }
+      ],
+      "prepared_id": "dd3c5f434118497c56f77347c1769e78022b9f5df384b3da9d5878f40f1d93da"
+    },
+    {
+      "variant": "helper_only_ab",
+      "raw_report_sha256": "be42c69d7ddc3452708cc007260e5e38a670c3b5b08f84b6d844684befbc6296",
+      "task_sha256": "a9b7a5f8637eaafa217f7c9f6491becec4357e53fd0022fcbf85740f1ccc7804",
+      "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+      "condition_order": "alternated by repetition within branch",
+      "branches": [
+        {
+          "branch": "repair",
+          "reward": 1.0,
+          "passed_cases": 14,
+          "hidden_case_count": 14,
+          "policy_action_observation_count": 4,
+          "opening_observation_equal": true,
+          "policy_action_observations_equal": true,
+          "case_results_equal": true,
+          "policy_action_observation_digest_sha256": "8596e8bb003ad28d670222dfa2fe0ab8e68a26639744632358e03aae122157c3",
+          "case_results_digest_sha256": "37945bc53b81025cc645ab8f0cbaa50043a0d5b81f70faa843d15a98cc7e6f56"
+        },
+        {
+          "branch": "baseline",
+          "reward": 0.0,
+          "passed_cases": 7,
+          "hidden_case_count": 14,
+          "policy_action_observation_count": 2,
+          "opening_observation_equal": true,
+          "policy_action_observations_equal": true,
+          "case_results_equal": true,
+          "policy_action_observation_digest_sha256": "c3f28c6d9fe1d1ce940593c0a9688cda35dec417d2e8b46f00cbd56c94f2923c",
+          "case_results_digest_sha256": "556269b9581b33b099475695c4ffae3da94132e3233bc2e6bfe85a8a681f345d"
+        }
+      ],
+      "helper_is_generic_only": true,
+      "expected_outputs_in_guest": false,
+      "hidden_case_code_present_at_template_export": false
+    }
+  ],
+  "source_helper_note": "This is the source-tree guest helper digest at curation. The stateless prepared path pins this helper in its task binding, but the raw one-pair report does not independently print the per-run helper digest.",
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  },
+  "provenance_note": "Each variant is bound to the SHA-256 of its local raw report. The raw operational runs are excluded from release materials. The three-pair timing reports were measured separately; this correctness report does not pool or replace their timings.",
+  "limitation": "One pair per variant on one public solved fixture, no model inference or training.",
+  "source_helper_at_curation_sha256": "fa6ff41dd5f652a5ef39a2f8c71decd7f43175ddd59a88a815a17bd35d4dedec"
+}

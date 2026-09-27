@@ -1,0 +1,267 @@
+{
+  "scope": "pinned public Boltons v2 scripted QEMU/HVF recovery experiment",
+  "memory_mib": 128,
+  "uses_actual_qemu": true,
+  "model_or_optimizer_included": false,
+  "arms": [
+    {
+      "name": "every-turn",
+      "mode": "every_turn",
+      "fault_injected": false,
+      "clone_mode": "clonefile",
+      "elapsed_seconds": 8.688390624942258,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "decisions": [
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": true
+        },
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "replace_text",
+          "checkpointed": true
+        },
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": true
+        },
+        {
+          "action": "run_visible_checks",
+          "checkpointed": true
+        }
+      ],
+      "recovery": {
+        "turn": 7,
+        "checkpoint_turn": 7,
+        "replayed_turns": 0
+      },
+      "fault_recovery_verified": false,
+      "process_restored": false,
+      "ram_restored": false,
+      "vm_process_crash_restored": false,
+      "terminal_interruption_verified": false,
+      "journal_metrics": {
+        "snapshot_saves": 8,
+        "skipped_turns": 0,
+        "inspection_seconds": 0.0,
+        "snapshot_seconds": 0.6189764565788209,
+        "manifest_seconds": 0.003158875508233905,
+        "replay_seconds": 0.08625308307819068,
+        "replayed_turns": 0
+      },
+      "vm_snapshot_saves": 9,
+      "vm_snapshot_loads": 15
+    },
+    {
+      "name": "selective",
+      "mode": "selective",
+      "fault_injected": false,
+      "clone_mode": "clonefile",
+      "elapsed_seconds": 8.895361833972856,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "decisions": [
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": false
+        },
+        {
+          "action": "read_file",
+          "checkpointed": false
+        },
+        {
+          "action": "replace_text",
+          "checkpointed": true
+        },
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": false
+        },
+        {
+          "action": "run_visible_checks",
+          "checkpointed": true
+        }
+      ],
+      "recovery": {
+        "turn": 7,
+        "checkpoint_turn": 7,
+        "replayed_turns": 0
+      },
+      "fault_recovery_verified": false,
+      "process_restored": false,
+      "ram_restored": false,
+      "vm_process_crash_restored": false,
+      "terminal_interruption_verified": false,
+      "journal_metrics": {
+        "snapshot_saves": 5,
+        "skipped_turns": 3,
+        "inspection_seconds": 0.707659664331004,
+        "snapshot_seconds": 0.4051518337801099,
+        "manifest_seconds": 0.003784667234867811,
+        "replay_seconds": 0.08435958391055465,
+        "replayed_turns": 0
+      },
+      "vm_snapshot_saves": 6,
+      "vm_snapshot_loads": 15
+    },
+    {
+      "name": "selective-fault",
+      "mode": "selective",
+      "fault_injected": true,
+      "clone_mode": "clonefile",
+      "elapsed_seconds": 10.53029204113409,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "decisions": [
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": false
+        },
+        {
+          "action": "read_file",
+          "checkpointed": false
+        },
+        {
+          "action": "replace_text",
+          "checkpointed": true
+        },
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": false
+        },
+        {
+          "action": "run_visible_checks",
+          "checkpointed": true
+        }
+      ],
+      "recovery": {
+        "turn": 7,
+        "checkpoint_turn": 7,
+        "replayed_turns": 0
+      },
+      "fault_recovery_verified": true,
+      "process_restored": true,
+      "ram_restored": true,
+      "vm_process_crash_restored": true,
+      "terminal_interruption_verified": false,
+      "journal_metrics": {
+        "snapshot_saves": 7,
+        "skipped_turns": 3,
+        "inspection_seconds": 0.7092978782020509,
+        "snapshot_seconds": 0.9085438763722777,
+        "manifest_seconds": 0.0054247076623141766,
+        "replay_seconds": 0.6694400408305228,
+        "replayed_turns": 2
+      },
+      "vm_snapshot_saves": 8,
+      "vm_snapshot_loads": 17
+    },
+    {
+      "name": "selective-terminal-interrupted",
+      "mode": "selective",
+      "fault_injected": false,
+      "clone_mode": "clonefile",
+      "elapsed_seconds": 9.507702542003244,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "decisions": [
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": false
+        },
+        {
+          "action": "read_file",
+          "checkpointed": false
+        },
+        {
+          "action": "replace_text",
+          "checkpointed": true
+        },
+        {
+          "action": "read_file",
+          "checkpointed": true
+        },
+        {
+          "action": "list_files",
+          "checkpointed": false
+        },
+        {
+          "action": "run_visible_checks",
+          "checkpointed": true
+        }
+      ],
+      "recovery": {
+        "turn": 7,
+        "checkpoint_turn": 7,
+        "replayed_turns": 0
+      },
+      "fault_recovery_verified": false,
+      "process_restored": false,
+      "ram_restored": false,
+      "vm_process_crash_restored": false,
+      "terminal_interruption_verified": true,
+      "journal_metrics": {
+        "snapshot_saves": 5,
+        "skipped_turns": 3,
+        "inspection_seconds": 0.8193817501887679,
+        "snapshot_seconds": 0.48753179097548127,
+        "manifest_seconds": 0.004166833823546767,
+        "replay_seconds": 0.2642254161182791,
+        "replayed_turns": 0
+      },
+      "vm_snapshot_saves": 6,
+      "vm_snapshot_loads": 16
+    }
+  ],
+  "observation_parity": true,
+  "all_hidden_case_parity": true,
+  "terminal_interruption_parity": true,
+  "full_vm_checkpoint_saves_avoided": 3,
+  "elapsed_ratio_control_over_selective": 0.9767326823918346,
+  "recovery_scope": "sandbox snapshot plus replayed read observations; not RealWorldEnv event-log recovery",
+  "limitations": [
+    "trusted bounded tools and exclusive coordinator only",
+    "not eBPF, ZFS, CRIU, or arbitrary process diff",
+    "no host power-loss durability guarantee"
+  ]
+}

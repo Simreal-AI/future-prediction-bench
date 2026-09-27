@@ -1,0 +1,46 @@
+{
+  "scope": "public pinned Boltons 26.0.0 scripted integration fixture",
+  "uses_realworld_env": true,
+  "measures_model_training": false,
+  "runtime_kind": "qemu_hvf_full_vm_qcow2_v1",
+  "checkpoint_kind": "full_vm_state_qcow2_v1",
+  "task_id": "boltons-26-singularize-ss-v1",
+  "task_sha256": "f4b276375b06e411755612f86a0204d58e714edda32f6b53d09dac16bab23112",
+  "snapshot_disk_sha256": "f87b65ce6d929f8f0f4e3e7d0befa18630e7a59fd028ef3b31ae19e89eecc24f",
+  "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+  "parent_disk_clone_mode": "clonefile",
+  "branches": [
+    {
+      "id": "repaired",
+      "reward": 1.0,
+      "hidden_cases": 14
+    },
+    {
+      "id": "baseline",
+      "reward": 0.0,
+      "hidden_cases": 14
+    }
+  ],
+  "parent_and_sibling_ram_and_ext4_independent": true,
+  "inherited_parent_ram_and_ext4": true,
+  "post_checkpoint_parent_write_absent_from_children": true,
+  "repaired_code_absent_from_baseline_and_parent": true,
+  "parent_workspace_unchanged": true,
+  "branch_local_rloo": {
+    "advantages": {
+      "baseline": -1.0,
+      "repaired": 1.0
+    },
+    "trainer_ready": false,
+    "loss_scope": "post_checkpoint_policy_actions_only",
+    "prefix_visible_event_count": 3
+  },
+  "elapsed_seconds": 12.629205707926303,
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  }
+}

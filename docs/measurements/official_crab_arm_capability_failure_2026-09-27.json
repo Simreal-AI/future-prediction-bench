@@ -1,0 +1,18 @@
+{
+  "schema_version": "official-crab-capability-probe-v1",
+  "upstream": {
+    "repository": "https://github.com/open-agent-infra/crab",
+    "commit": "9607d61a41dc44358cf078c4b438bfd971c8ee9d",
+    "process_monitor_sha256": "8b40e96eed0aea0892e17416d93d31042ef1ec4f7d3d2522cdaee86eff04b975",
+    "scheduler_sha256": "d671430c848099f3ac9ed3ac89068a235d437c52145cc25404ffe15070684b52",
+    "modified_upstream_files": [],
+    "dependency_doubles": []
+  },
+  "capabilities": {
+    "soft_dirty_known_write_detected": false,
+    "machine": "aarch64",
+    "inspection_scope": "one_stopped_worker_and_one_file"
+  },
+  "benchmark_started": false,
+  "reason": "soft_dirty_calibration_failed"
+}

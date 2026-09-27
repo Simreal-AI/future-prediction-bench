@@ -1,0 +1,125 @@
+{
+  "kind": "pinned_microvm_realworld_stateless_episode_comparison_v1",
+  "pairs": 3,
+  "records": [
+    {
+      "pair": 1,
+      "mode": "default",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "setup_seconds": 5.607831459026784,
+      "action_seconds": 0.8495647490490228,
+      "verification_seconds": 1.9066894580610096,
+      "episode_seconds": 8.37078033410944,
+      "outer_wall_seconds": 8.487095625139773,
+      "full_vm_restores": 14,
+      "stateless_batches": 0,
+      "verifier_evidence_kind": "host_checked_qemu_full_vm_cases_v1"
+    },
+    {
+      "pair": 1,
+      "mode": "stateless",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "setup_seconds": 5.480528166983277,
+      "action_seconds": 1.3567162919789553,
+      "verification_seconds": 0.4609270410146564,
+      "episode_seconds": 7.298959374893457,
+      "outer_wall_seconds": 7.4095191669184715,
+      "full_vm_restores": 2,
+      "stateless_batches": 1,
+      "verifier_evidence_kind": "host_checked_guest_stateless_namespaced_cases_v1"
+    },
+    {
+      "pair": 2,
+      "mode": "stateless",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "setup_seconds": 5.505119958193973,
+      "action_seconds": 1.2758285000454634,
+      "verification_seconds": 0.45087629090994596,
+      "episode_seconds": 7.233540083048865,
+      "outer_wall_seconds": 7.337839999934658,
+      "full_vm_restores": 2,
+      "stateless_batches": 1,
+      "verifier_evidence_kind": "host_checked_guest_stateless_namespaced_cases_v1"
+    },
+    {
+      "pair": 2,
+      "mode": "default",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "setup_seconds": 5.4426292919088155,
+      "action_seconds": 0.9523052487056702,
+      "verification_seconds": 2.0335947920102626,
+      "episode_seconds": 8.43156383302994,
+      "outer_wall_seconds": 8.536031791009009,
+      "full_vm_restores": 14,
+      "stateless_batches": 0,
+      "verifier_evidence_kind": "host_checked_qemu_full_vm_cases_v1"
+    },
+    {
+      "pair": 3,
+      "mode": "default",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "setup_seconds": 5.472443124977872,
+      "action_seconds": 0.8513762911316007,
+      "verification_seconds": 1.9460097081027925,
+      "episode_seconds": 8.270995375001803,
+      "outer_wall_seconds": 8.3739711670205,
+      "full_vm_restores": 14,
+      "stateless_batches": 0,
+      "verifier_evidence_kind": "host_checked_qemu_full_vm_cases_v1"
+    },
+    {
+      "pair": 3,
+      "mode": "stateless",
+      "reward": 1.0,
+      "passed_cases": 14,
+      "setup_seconds": 5.475883041974157,
+      "action_seconds": 1.3394619580358267,
+      "verification_seconds": 0.449590333038941,
+      "episode_seconds": 7.266509584151208,
+      "outer_wall_seconds": 7.3805737919174135,
+      "full_vm_restores": 2,
+      "stateless_batches": 1,
+      "verifier_evidence_kind": "host_checked_guest_stateless_namespaced_cases_v1"
+    }
+  ],
+  "medians": {
+    "default": {
+      "setup_seconds_median": 5.472443124977872,
+      "action_seconds_median": 0.8513762911316007,
+      "verification_seconds_median": 1.9460097081027925,
+      "episode_seconds_median": 8.37078033410944,
+      "outer_wall_seconds_median": 8.487095625139773
+    },
+    "stateless": {
+      "setup_seconds_median": 5.480528166983277,
+      "action_seconds_median": 1.3394619580358267,
+      "verification_seconds_median": 0.45087629090994596,
+      "episode_seconds_median": 7.266509584151208,
+      "outer_wall_seconds_median": 7.3805737919174135
+    }
+  },
+  "graded_episode_speed_ratio": 1.15196714972574,
+  "limits": [
+    "pinned public scripted repair, not model-generated actions",
+    "default restores a full VM per hidden case",
+    "stateless uses one batch of per-case mount/PID namespaces after one VM restore",
+    "stateless also restores once at submit to validate the frozen process census",
+    "one Apple Silicon host; no model inference or optimizer training"
+  ],
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1",
+    "task_source_sha256": "e5efd50cd4ee1a5df6848ce7ed562b7145b7f3647c46d7ac169620d7a4236673",
+    "verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+    "contract_sha256": "5f8dff81f05822d152dc2b941a1da45b17fc873a51efe98bce163a1b4e5d6c80",
+    "guest_helper_sha256": "a36acef2f2651b2e612ca7841c292ff639249c82d076cf180df86058b0b8e8a5"
+  }
+}

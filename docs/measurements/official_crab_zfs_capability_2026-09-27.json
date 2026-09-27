@@ -1,0 +1,2271 @@
+{
+  "schema_version": "curated-original-crab-zfs-capability-v1",
+  "date": "2026-09-27",
+  "success_count": 1,
+  "fair_baseline_executed": false,
+  "model_rollout_or_optimizer_executed": false,
+  "process_composition_verified": false,
+  "raw_record_sha256": "8cbfa61118fb650926d7a4efae1ac34dfa5498e984e871aa78ea262a78932759",
+  "guest_raw_record_sha256": "6c734586b86dfacfb441ce3c2486f658516a09a74f9309c92d4986be24c220b0",
+  "backend": "x86_64_tcg",
+  "memory_mib": 1024,
+  "driver_sha256": "6f7354004c138eb00705858d2bf7d126641ce93419ee6c270941ea59ecff0bad",
+  "guest_probe_sha256": "fcfd1bc50956d84f77e589f49167832e5a7b0c6911a0ad831e8758858a5d5c4d",
+  "asset_bindings": {
+    "candidate_manifest_sha256": "9b86c196550da99d5f45436f37308193432c49bf67dbf7a0d2fb98a656b76510",
+    "kernel_sha256": "3b6e001d41938fdf4fab7d87826fc40dfab733973a5ef96a14c892dbdec87502",
+    "initramfs_sha256": "e1adcfa8aea53d5c52e873097bae2ff4b0b278a41ca6e5451610cdaf111d2075",
+    "rootfs_qcow2_sha256": "925c6be25be30cbe4ec81abf3ad23e8ef8410f55f81461ba0a633d508ee81b5a",
+    "kernel_config_sha256": "453545679d2852e55c8a219b43b1386d46991f5c267454045604d91a35f80d89"
+  },
+  "kernel_netfilter_configuration": [
+    "CONFIG_NF_TABLES=m",
+    "CONFIG_NF_TABLES_INET=y",
+    "CONFIG_NF_TABLES_NETDEV=y",
+    "CONFIG_NF_TABLES_IPV4=y",
+    "CONFIG_NF_TABLES_ARP=y",
+    "CONFIG_IP_NF_IPTABLES=m",
+    "CONFIG_NF_TABLES_IPV6=y",
+    "CONFIG_IP6_NF_IPTABLES=m",
+    "CONFIG_NF_TABLES_BRIDGE=m"
+  ],
+  "setup_commands": [
+    {
+      "command": "uname -r",
+      "stdout": "6.18.53-0-virt\n",
+      "return_code": 0
+    },
+    {
+      "command": "/usr/bin/kmod --version",
+      "stdout": "kmod version 34.2\n+ZSTD +XZ +ZLIB +OPENSSL\n",
+      "return_code": 0
+    },
+    {
+      "command": "sha256sum /usr/bin/kmod /lib/modules/6.18.53-0-virt/modules.dep",
+      "stdout": "a1284d970ad4adc3c7ce7622fb571133928fe50014ebc2cea5c0ccaf4de2df3d  /usr/bin/kmod\n140a347f9feab534d18b3a2616a86c9ecd9fb252f6bcd82a61c9799d1f64bdee  /lib/modules/6.18.53-0-virt/modules.dep\n",
+      "return_code": 0
+    },
+    {
+      "command": "ln -s /usr/bin/kmod /tmp/depmod",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "/tmp/depmod -a 6.18.53-0-virt",
+      "stdout": "depmod: ERROR: fstatat(3, vmlinuz): No such file or directory\n",
+      "return_code": 0
+    },
+    {
+      "command": "sha256sum /lib/modules/6.18.53-0-virt/modules.dep /lib/modules/6.18.53-0-virt/modules.dep.bin",
+      "stdout": "140a347f9feab534d18b3a2616a86c9ecd9fb252f6bcd82a61c9799d1f64bdee  /lib/modules/6.18.53-0-virt/modules.dep\nf90e6a9aefbccbdf0b569e80ab9cae30b6ff729c835a9ea6126068a11f9b5fa3  /lib/modules/6.18.53-0-virt/modules.dep.bin\n",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe virtio_pci",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe virtio_blk",
+      "stdout": "[   12.919353] virtio_blk virtio0: 1/0/0 default/read/poll queues\n[   12.924447] virtio_blk virtio0: [vda] 6291456 512-byte logical blocks (3.22 GB/3.00 GiB)\n",
+      "return_code": 0
+    },
+    {
+      "command": "cat /proc/partitions",
+      "stdout": "major minor  #blocks  name\n\n 253        0    3145728 vda\n",
+      "return_code": 0
+    },
+    {
+      "command": "ls -l /dev/vda",
+      "stdout": "brw-------    1 root     root      253,   0 Sep 27 10:32 \u001b[1;35m/dev/vda\u001b[m\n",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe ext4",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mkdir -p /mnt/root",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount -t ext4 /dev/vda /mnt/root",
+      "stdout": "[   13.176485] EXT4-fs (vda): mounted filesystem e3a79b48-5128-4b5a-82b5-24d8ac4903f7 r/w with ordered data mode. Quota mode: none.\n",
+      "return_code": 0
+    },
+    {
+      "command": "mkdir -p /mnt/root/proc /mnt/root/sys /mnt/root/dev /mnt/root/run /mnt/root/tmp /sys/fs/cgroup /dev/pts",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mountpoint -q /sys/fs/cgroup || mount -t cgroup2 none /sys/fs/cgroup",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mountpoint -q /dev/pts || mount -t devpts devpts /dev/pts",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount --bind /proc /mnt/root/proc",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount --bind /sys /mnt/root/sys",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount --bind /sys/fs/cgroup /mnt/root/sys/fs/cgroup",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount --bind /dev /mnt/root/dev",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount --bind /dev/pts /mnt/root/dev/pts",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount -t tmpfs tmpfs /mnt/root/run",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "mount --bind /mnt/root/tmp /tmp",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "ip link set lo up",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe unix_diag",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe inet_diag",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe tcp_diag",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe udp_diag",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe netlink_diag",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe af_packet_diag",
+      "stdout": "[   13.365262] NET: Registered PF_PACKET protocol family\n",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe tun",
+      "stdout": "[   13.391378] tun: Universal TUN/TAP device driver, 1.6\n",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe nf_tables",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe x_tables",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe nft_compat",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe xt_mark",
+      "stdout": "",
+      "return_code": 0
+    },
+    {
+      "command": "modprobe zfs zfs_arc_max=134217728 zfs_prefetch_disable=1",
+      "stdout": "[   13.618348] spl: loading out-of-tree module taints kernel.\n[   15.795227] zfs: module license 'CDDL' taints kernel.\n[   15.795520] Disabling lock debugging due to kernel taint\n[   15.795714] zfs: module license taints kernel.\n[   16.382405] ZFS: Loaded module v2.4.4-1, ZFS pool version 5000, ZFS filesystem version 5\n",
+      "return_code": 0
+    },
+    {
+      "command": "ls -l /dev/zfs",
+      "stdout": "crw-------    1 root     root       10, 249 Sep 27 10:33 \u001b[1;35m/dev/zfs\u001b[m\n",
+      "return_code": 0
+    },
+    {
+      "command": "cat /sys/module/zfs/version",
+      "stdout": "2.4.4-1\n",
+      "return_code": 0
+    },
+    {
+      "command": "cat /sys/module/spl/version",
+      "stdout": "2.4.4-1\n",
+      "return_code": 0
+    },
+    {
+      "command": "cat /mnt/root/tmp/zfs-stderr.log",
+      "stdout": "",
+      "return_code": 0
+    }
+  ],
+  "guest_result": {
+    "schema_version": "original-crab-zfs-capability-v1",
+    "passed": true,
+    "scope": "real_original_filesystem_worker_only_not_process_or_agent_checkpoint",
+    "preflight": {
+      "schema_version": "official-crab-criu-preflight-v1",
+      "system": "Linux",
+      "architecture": "x86_64",
+      "kernel": "6.18.53-0-virt",
+      "gpu_required": false,
+      "scope": "process_CR_and_dirty_memory_tracking_only",
+      "criu_path": "/usr/sbin/criu",
+      "runc_path": "/usr/bin/runc",
+      "nft_path": "/usr/sbin/nft",
+      "iptables-restore_path": "/usr/sbin/iptables-restore",
+      "ip6tables-restore_path": "/usr/sbin/ip6tables-restore",
+      "tar_path": "/bin/tar",
+      "gcc_path": "/usr/bin/gcc",
+      "cc_path": "/usr/bin/cc",
+      "zfs_path": "/usr/sbin/zfs",
+      "zpool_path": "/usr/sbin/zpool",
+      "clang_path": null,
+      "versions": {
+        "runc": {
+          "argv": [
+            "runc",
+            "--version"
+          ],
+          "returncode": 0,
+          "stdout": "runc version 1.4.3\ncommit: bb14dabeb7185bb72c8c86735d090dcb20f36587\nspec: 1.3.0\ngo: go1.26.8\nlibseccomp: 2.6.0\n",
+          "stderr": ""
+        },
+        "criu": {
+          "argv": [
+            "criu",
+            "--version"
+          ],
+          "returncode": 0,
+          "stdout": "Version: 4.2\n",
+          "stderr": ""
+        },
+        "tar": {
+          "argv": [
+            "tar",
+            "--version"
+          ],
+          "returncode": 0,
+          "stdout": "tar (GNU tar) 1.35\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by John Gilmore and Jay Fenlason.\n",
+          "stderr": ""
+        }
+      },
+      "binary_sha256": {
+        "runc": "09653b0f4c473d6c855a0cd522dcc27a69b34b2403214ff67ebbbf22b360ec9c",
+        "criu": "7603b91bf98249ccb5b956c11c1b14e746309c21b90669893e29b84eb6d8795b",
+        "tar": "2d3e170780a649c3a4cd8dd3e86960644b8a66ee7a76d39d9ecabe157bf98617"
+      },
+      "matches_alpine_binary_pins": true,
+      "root_mount": {
+        "root_link": "/",
+        "passed": true,
+        "scope": "probe_process_root_only_not_full_isolation_attestation",
+        "root_fd_mount_id": 43,
+        "mount": {
+          "mount_id": 43,
+          "parent_mount_id": 36,
+          "device": "253:0",
+          "root": "/",
+          "mountpoint": "/",
+          "mount_options": "rw,relatime",
+          "filesystem": "ext4",
+          "source": "/dev/vda",
+          "super_options": "rw"
+        },
+        "root_stat_device": "253:0"
+      },
+      "gnu_tar": {
+        "path": "/bin/tar",
+        "expected_resolved_path": "/bin/tar",
+        "expected_version_line": "tar (GNU tar) 1.35",
+        "expected_sha256": "2d3e170780a649c3a4cd8dd3e86960644b8a66ee7a76d39d9ecabe157bf98617",
+        "passed": true,
+        "resolved_path": "/bin/tar",
+        "elf": {
+          "elf64_little_endian": true,
+          "elf_type": 3,
+          "machine": 62,
+          "x86_64_executable": true
+        },
+        "sha256": "2d3e170780a649c3a4cd8dd3e86960644b8a66ee7a76d39d9ecabe157bf98617",
+        "version": {
+          "argv": [
+            "tar",
+            "--version"
+          ],
+          "returncode": 0,
+          "stdout": "tar (GNU tar) 1.35\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by John Gilmore and Jay Fenlason.\n",
+          "stderr": ""
+        },
+        "identity_passed": true,
+        "capability": {
+          "create": {
+            "argv": [
+              "/bin/tar",
+              "--create",
+              "--gzip",
+              "--no-unquote",
+              "--no-wildcards",
+              "--one-file-system",
+              "--check-links",
+              "--preserve-permissions",
+              "--sparse",
+              "--numeric-owner",
+              "--directory",
+              "/tmp/fpb-gnu-tar-kyxh1x7j/source",
+              "--file",
+              "/tmp/fpb-gnu-tar-kyxh1x7j/owned.tar.gz",
+              "."
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          "extract": {
+            "argv": [
+              "/bin/tar",
+              "--extract",
+              "--gzip",
+              "--no-unquote",
+              "--no-wildcards",
+              "--directory",
+              "/tmp/fpb-gnu-tar-kyxh1x7j/restored",
+              "--file",
+              "/tmp/fpb-gnu-tar-kyxh1x7j/owned.tar.gz"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          "archive_bytes": 215,
+          "payload_sha256": "e81ae1e60825b9bf4ffb04e38b88d5b355417d6f4b20b83a9cd965fe5d5ebe7c",
+          "payload_restored_exactly": true,
+          "passed": true,
+          "scope": "owned_tiny_tar_roundtrip_not_process_checkpoint"
+        }
+      },
+      "kernel_config": {
+        "CHECKPOINT_RESTORE": "y",
+        "MEM_SOFT_DIRTY": "y",
+        "NAMESPACES": "y",
+        "PID_NS": "y",
+        "IPC_NS": "y",
+        "UTS_NS": "y",
+        "NET_NS": "y",
+        "UNIX_DIAG": "m",
+        "INET_DIAG": "m",
+        "PACKET_DIAG": "m",
+        "NETLINK_DIAG": "y",
+        "USERFAULTFD": "unknown",
+        "BPF": "y",
+        "BPF_SYSCALL": "y"
+      },
+      "soft_dirty": {
+        "supported": true,
+        "present_after_clear": true,
+        "dirty_after_clear": false,
+        "dirty_after_write": true
+      },
+      "criu_check": {
+        "argv": [
+          "criu",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "Looks good.\n",
+        "stderr": ""
+      },
+      "mem_dirty_track": {
+        "argv": [
+          "criu",
+          "check",
+          "--feature",
+          "mem_dirty_track"
+        ],
+        "returncode": 0,
+        "stdout": "mem_dirty_track is supported\n",
+        "stderr": ""
+      },
+      "network_lock_backend": "iptables_default",
+      "network_lock_bypass": false,
+      "iptables_restore_version": {
+        "argv": [
+          "iptables-restore",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "iptables-restore v1.8.13 (nf_tables)\n",
+        "stderr": ""
+      },
+      "ip6tables_restore_version": {
+        "argv": [
+          "ip6tables-restore",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "ip6tables-restore v1.8.13 (nf_tables)\n",
+        "stderr": ""
+      },
+      "default_runc_criu_config_present": false,
+      "default_runc_criu_config_sha256": null,
+      "default_runc_criu_config_option_free": true,
+      "nftables_readonly_probe": {
+        "argv": [
+          "nft",
+          "list",
+          "ruleset"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "process_chain_prerequisites_passed": true,
+      "full_crab_backend_verified": false
+    },
+    "commands": [
+      {
+        "argv": [
+          "zfs",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "zfs-2.4.4-1\nzfs-kmod-2.4.4-1\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "zpool",
+          "create",
+          "-f",
+          "-o",
+          "cachefile=none",
+          "-o",
+          "ashift=12",
+          "-O",
+          "mountpoint=none",
+          "-O",
+          "atime=off",
+          "-O",
+          "compression=off",
+          "fpbcrab",
+          "/tmp/zfs-capability-probe/owned-vdev.bin"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "zfs",
+          "create",
+          "-o",
+          "mountpoint=/tmp/zfs-capability-probe/bundles/caps/rootfs",
+          "fpbcrab/caps"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "zfs",
+          "list",
+          "-Hp",
+          "-t",
+          "filesystem,snapshot",
+          "-o",
+          "name,used,referenced,mountpoint",
+          "-r",
+          "fpbcrab"
+        ],
+        "returncode": 0,
+        "stdout": "fpbcrab\t688128\t98304\tnone\nfpbcrab/caps\t172032\t163840\t/tmp/zfs-capability-probe/bundles/caps/rootfs\nfpbcrab/caps@cp0\t8192\t163840\t-\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "zpool",
+          "destroy",
+          "fpbcrab"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "zfs_version": "zfs-2.4.4-1\nzfs-kmod-2.4.4-1\n",
+    "saved_sha256": "8b0a3e846d9808a933047cf1e7976c0ecffb9d4d746de63128092ebaaffe9028",
+    "actual_filesystem_checkpoint_ms": 81.21140599999777,
+    "checkpoint_status": {
+      "success": true,
+      "executed": true,
+      "command": [
+        "zfs",
+        "snapshot",
+        "fpbcrab/caps@cp0"
+      ],
+      "metadata": {
+        "phase": "filesystem_checkpoint",
+        "runtime": "runc",
+        "dataset": "fpbcrab/caps",
+        "snapshot": "fpbcrab/caps@cp0",
+        "mountpoint": "/tmp/zfs-capability-probe/bundles/caps/rootfs",
+        "stdout": "",
+        "stderr": "",
+        "checkpoint_scope": "filesystem_only",
+        "filesystem_checkpoint_written_bytes": 163840,
+        "filesystem_checkpoint_used_bytes": 0
+      }
+    },
+    "damaged_sha256": "45ecf79eb02406560b5735265feb43ef07180eb0c4c2ade50461f1831d276ac9",
+    "actual_filesystem_restore_ms": 108.35054200000016,
+    "restore_status": {
+      "executed": true,
+      "command": [
+        "zfs",
+        "rollback",
+        "-r",
+        "fpbcrab/caps@cp0"
+      ],
+      "metadata": {
+        "phase": "filesystem_restore",
+        "runtime": "runc",
+        "dataset": "fpbcrab/caps",
+        "snapshot": "fpbcrab/caps@cp0",
+        "mountpoint": "/tmp/zfs-capability-probe/bundles/caps/rootfs",
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    "restored_sha256": "8b0a3e846d9808a933047cf1e7976c0ecffb9d4d746de63128092ebaaffe9028",
+    "bytes_verified": 65536,
+    "zfs_state": "fpbcrab\t688128\t98304\tnone\nfpbcrab/caps\t172032\t163840\t/tmp/zfs-capability-probe/bundles/caps/rootfs\nfpbcrab/caps@cp0\t8192\t163840\t-\n",
+    "cleanup": ""
+  },
+  "guest_execution_return_code": 0,
+  "guest_sync": {
+    "stdout": "",
+    "return_code": 0
+  },
+  "driver_wall_seconds": 26.305752582848072,
+  "prior_attempts": [
+    {
+      "attempt_number": 2,
+      "raw_record_sha256": "9fced3fa2d52d7a2b164ae451252eda2b27dcf90604c1f2c33c1ecca7ebfccd7",
+      "passed": false,
+      "error": "owned_guest_command_failed: {\"command\": \"modprobe ext4\", \"stdout\": \"modprobe: FATAL: Module ext4 not found in directory /lib/modules/6.18.53-0-virt\\n\", \"return_code\": 1}",
+      "guest_error": null,
+      "driver_wall_seconds": 9.119703500065953,
+      "driver_sha256": "09c18ce40495b04d770b23af7dbeac3b7da178e02ed3b517b72a3b446ca7ee07"
+    },
+    {
+      "attempt_number": 3,
+      "raw_record_sha256": "a45b89fc56abf85d61dbc66dd9a049692911e52b59ca96fdb474262c6f1b597a",
+      "passed": false,
+      "error": "owned_guest_command_failed: {\"command\": \"modprobe ext4\", \"stdout\": \"modprobe: FATAL: Module ext4 not found in directory /lib/modules/6.18.53-0-virt\\n\", \"return_code\": 1}",
+      "guest_error": null,
+      "driver_wall_seconds": 9.826396957971156,
+      "driver_sha256": "74e26866d3135ca5271e721babb0283fb42d7da646662d302b35fb2a5b6941ad"
+    },
+    {
+      "attempt_number": 4,
+      "raw_record_sha256": "7f03c9ff408205048d20dd25424f8cd235cc4325e2d918e1964df0835d54f647",
+      "passed": false,
+      "error": "owned_guest_command_failed: {\"command\": \"mount -t ext4 /dev/vda /mnt/root\", \"stdout\": \"[   13.665267] /dev/vda: Can't lookup blockdev\\nmount: mounting /dev/vda on /mnt/root failed: No such file or directory\\n\", \"return_code\": 255}",
+      "guest_error": null,
+      "driver_wall_seconds": 14.809383457992226,
+      "driver_sha256": "e899faacee97b02d4d552e16c5fcb259a9ab4242df80848e69009da85746f163"
+    },
+    {
+      "attempt_number": 5,
+      "raw_record_sha256": "f2a36456fd3912e3ca72c8406921d33d68d0c313dfe05462d4ea8e70e5c4e1f1",
+      "passed": false,
+      "error": "owned_guest_command_failed: {\"command\": \"modprobe ip_tables\", \"stdout\": \"modprobe: FATAL: Module ip_tables not found in directory /lib/modules/6.18.53-0-virt\\n\", \"return_code\": 1}",
+      "guest_error": null,
+      "driver_wall_seconds": 15.832144750049338,
+      "driver_sha256": "d83971c0179e9ba376c195959acfad4e6a964189f38478c089cd41a8f5615d62"
+    },
+    {
+      "attempt_number": 6,
+      "raw_record_sha256": "cc73e7d4bf94f06b0c0a28519784912e8cc0cb53c489128544b6af6758c8b64e",
+      "passed": false,
+      "error": null,
+      "guest_error": "actual_guest_command_failed:{\"argv\": [\"zpool\", \"create\", \"-f\", \"-o\", \"cachefile=none\", \"-o\", \"ashift=12\", \"-O\", \"mountpoint=none\", \"-O\", \"atime=off\", \"-O\", \"compression=off\", \"fpbcrab\", \"/tmp/zfs-capability-probe/owned-vdev.bin\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cannot create 'fpbcrab': no such pool or dataset\\n\"}",
+      "driver_wall_seconds": 32.39732866710983,
+      "driver_sha256": "674be142e4125453b2f13953733dab43a9037ebb42678e5b7f8bcf8a73e0e8db"
+    }
+  ],
+  "curation": "full_guest_result_preserved; host_paths_and_base64_source_transfer_commands_excluded; prior_actual_errors_retained",
+  "composition_attempts": [
+    {
+      "attempt": 2,
+      "raw_host_record_sha256": "770d1807a8edf0f211ab7f9671a2f9b72c67a8676216675869741371a7413427",
+      "raw_guest_record_sha256": "087c8341364ea2cb906db9beac0c8da954460d932ea5b1b47d6374858c65ded9",
+      "source_sha256": {
+        "worker_workspace.c": "070f3896cd58bc19e348da16983c33012a7768ce805a825c728ddea972492a59",
+        "guest_workspace_probe.py": "e1b76b41d33827fafa6518fd00318e36aa12d3ddffa9a37bf1ab521f82d01918",
+        "guest_workspace_driver.py": "86d6cef9003af55692570210c3a12bcec5c8b20854dbe6471ad755795cee2794"
+      },
+      "source_sha256_after": {
+        "worker_workspace.c": "070f3896cd58bc19e348da16983c33012a7768ce805a825c728ddea972492a59",
+        "guest_workspace_probe.py": "e1b76b41d33827fafa6518fd00318e36aa12d3ddffa9a37bf1ab521f82d01918",
+        "guest_workspace_driver.py": "86d6cef9003af55692570210c3a12bcec5c8b20854dbe6471ad755795cee2794"
+      },
+      "driver_sha256": "9c41c4696bbf06292a0e25054e3bbe3c29e9f4f165bf4e9b26210c946950ef16",
+      "boot_helper_sha256": "6f7354004c138eb00705858d2bf7d126641ce93419ee6c270941ea59ecff0bad",
+      "guest_result": {
+        "schema_version": "private-original-crab-composite-driver-v1",
+        "passed": false,
+        "commands": [
+          {
+            "argv": [
+              "gcc",
+              "-O2",
+              "-static",
+              "-Wall",
+              "-Wextra",
+              "-o",
+              "/tmp/candidate-source/worker-workspace",
+              "/tmp/candidate-source/worker_workspace.c"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "zpool",
+              "create",
+              "-f",
+              "-o",
+              "cachefile=none",
+              "-o",
+              "ashift=12",
+              "-O",
+              "mountpoint=none",
+              "-O",
+              "atime=off",
+              "-O",
+              "compression=off",
+              "fpbworkspace",
+              "/tmp/owned-composite-driver/owned-vdev.bin"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "zfs",
+              "create",
+              "-o",
+              "mountpoint=none",
+              "fpbworkspace/sandboxes"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "zpool",
+              "destroy",
+              "fpbworkspace"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "pool_created": true,
+        "actual_compiled_worker_sha256": "825271fe8d87e7ccd080b085bb41e0ff23251ce3134aa36db8c2698902b0784d",
+        "probe_execution": {
+          "argv": [
+            "/usr/local/bin/python3.12",
+            "-B",
+            "/tmp/candidate-source/guest_workspace_probe.py",
+            "--worker",
+            "/tmp/candidate-source/worker-workspace",
+            "--zfs-prefix",
+            "fpbworkspace/sandboxes",
+            "--output",
+            "/tmp/owned-composite-probe",
+            "--memory-mib",
+            "8"
+          ],
+          "returncode": 1,
+          "stderr": ""
+        },
+        "probe_stdout_sha256": "974eade42f98f9f31bc64fa5f0903fb7b5201d8fa484a0a8f734f3fb9f6f2643",
+        "probe_result": {
+          "schema_version": "private-crab-zfs-owned-workspace-probe-v1",
+          "memory_mib": 8,
+          "crab_commit": "9607d61a41dc44358cf078c4b438bfd971c8ee9d",
+          "original_crab_python_sha256": "c6d0439e627c75ecc9aea47943212ece93a900605cbac924e99d823ee44b657b",
+          "original_integrations_python_sha256": "fe0edc09ea062f3495807d3da0f0d5a78e5855ec3f56c426f90d092c39bf897d",
+          "worker_binary_sha256": "825271fe8d87e7ccd080b085bb41e0ff23251ce3134aa36db8c2698902b0784d",
+          "probe_source_sha256": "e1b76b41d33827fafa6518fd00318e36aa12d3ddffa9a37bf1ab521f82d01918",
+          "filesystem_backend": "genuine_original_ZFS_snapshot_rollback",
+          "upstream_runtime_replaced_or_stubbed": false,
+          "lazy_pages": false,
+          "checkpoint_mode": "one_full_composite_checkpoint",
+          "incremental_process": false,
+          "bounded_single_process_single_file_writer": true,
+          "quiescence_contract": "observed_rt_sigtimedwait128_and_stable_full_RAM_file_FD_before_after_capture; no external writers during capture",
+          "runc_pause_executed": false,
+          "filesystem_checkpoint_executed": true,
+          "graded_repository_episode": false,
+          "general_concurrent_writer_atomicity_verified": false,
+          "model_rollout_or_optimizer_executed": false,
+          "negative_control": {
+            "scope": "original_process_worker_restore_only_without_ZFS_rollback",
+            "restore_log_before": {
+              "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work/restore.log",
+              "available": false,
+              "unavailable_reason": "source_log_absent"
+            },
+            "operation": {
+              "executed": true,
+              "reason": "command_executed",
+              "command": [
+                "runc",
+                "--root",
+                "/tmp/owned-composite-probe/runc-state",
+                "restore",
+                "-d",
+                "--bundle",
+                "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                "--image-path",
+                "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                "--work-path",
+                "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                "--tcp-established",
+                "--shell-job",
+                "--ext-unix-sk",
+                "--manage-cgroups-mode",
+                "ignore",
+                "fpb-workspace-60ccdc972e9f"
+              ],
+              "metadata": {
+                "phase": "process_restore",
+                "runtime": "runc",
+                "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                "state_root": "/tmp/owned-composite-probe/runc-state",
+                "lazy_pages": false,
+                "lazy_pages_daemon_pid": null,
+                "stdout": "",
+                "stderr": ""
+              }
+            },
+            "restore_ms": 599.6210019999992,
+            "restore_attempt_evidence": {
+              "scope": "original_process_worker_restore_only_without_ZFS_rollback",
+              "restore_log_before": {
+                "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work/restore.log",
+                "available": false,
+                "unavailable_reason": "source_log_absent"
+              },
+              "operation": {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "runc",
+                  "--root",
+                  "/tmp/owned-composite-probe/runc-state",
+                  "restore",
+                  "-d",
+                  "--bundle",
+                  "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                  "--image-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                  "--work-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                  "--tcp-established",
+                  "--shell-job",
+                  "--ext-unix-sk",
+                  "--manage-cgroups-mode",
+                  "ignore",
+                  "fpb-workspace-60ccdc972e9f"
+                ],
+                "metadata": {
+                  "phase": "process_restore",
+                  "runtime": "runc",
+                  "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                  "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                  "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                  "state_root": "/tmp/owned-composite-probe/runc-state",
+                  "lazy_pages": false,
+                  "lazy_pages_daemon_pid": null,
+                  "stdout": "",
+                  "stderr": ""
+                }
+              },
+              "restore_ms": 599.6210019999992,
+              "restore_log": {
+                "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work/restore.log",
+                "available": true,
+                "bytes": 33934,
+                "sha256": "ef003c57ff1ba0f5a0b923331f76dad6db71a487e33b31393ecd05d01032f7f4",
+                "inode": 5351,
+                "device": 64768,
+                "mtime_ns": 1790505504385139174,
+                "stable_during_read": true,
+                "retained_path": "/tmp/owned-composite-probe/restore-attempts/negative-process-only/restore.log",
+                "retained_sha256": "ef003c57ff1ba0f5a0b923331f76dad6db71a487e33b31393ecd05d01032f7f4",
+                "retained_bytes": 33934,
+                "tail_utf8": "eff47128000-7eff47230000 vma\n(00.161764)      1: Parsed 7eff47128000-7eff47231000 vma\n(00.161770)      1: Parsed 7eff47128000-7eff47232000 vma\n(00.161776)      1: Parsed 7eff47128000-7eff47239000 vma\n(00.161782)      1: Parsed 7eff47128000-7eff47245000 vma\n(00.161789)      1: Parsed 7eff47128000-7eff4724d000 vma\n(00.161794)      1: Parsed 7eff47128000-7eff4724f000 vma\n(00.161801)      1: Parsed 7eff47128000-7eff47250000 vma\n(00.161806)      1: Parsed 7eff47128000-7eff47251000 vma\n(00.161812)      1: Parsed 7eff47128000-7eff47255000 vma\n(00.161818)      1: Parsed 7eff47128000-7eff47256000 vma\n(00.161824)      1: Parsed 7eff47128000-7eff47257000 vma\n(00.161830)      1: Parsed 7eff47128000-7eff47258000 vma\n(00.161836)      1: Parsed 7eff47128000-7eff47260000 vma\n(00.161910)      1: Parsed 7eff47128000-7eff472bf000 vma\n(00.161919)      1: Parsed 7eff47128000-7eff47307000 vma\n(00.161926)      1: Parsed 7eff47128000-7eff4731a000 vma\n(00.161933)      1: Parsed 7eff47128000-7eff4731e000 vma\n(00.161939)      1: Parsed 7eff47128000-7eff47320000 vma\n(00.161945)      1: Parsed 7eff47128000-7eff47324000 vma\n(00.161951)      1: Parsed 7eff47128000-7eff47326000 vma\n(00.161956)      1: Parsed 7eff47128000-7eff47328000 vma\n(00.161962)      1: Parsed 7eff47128000-7eff4733c000 vma\n(00.161968)      1: Parsed 7eff47128000-7eff47395000 vma\n(00.161974)      1: Parsed 7eff47128000-7eff473cb000 vma\n(00.161980)      1: Parsed 7eff47128000-7eff473cc000 vma\n(00.161986)      1: Parsed 7eff47128000-7eff473cd000 vma\n(00.161991)      1: Parsed 7eff47128000-7eff473d0000 vma\n(00.161998)      1: Parsed 7ffc07c18000-7ffc07c39000 vma\n(00.162088)      1: 1 threads require 136K of memory\n(00.162165)      1: Found bootstrap VMA hint at: 0x10000 (needs ~168K)\n(00.163988)      1: \tcall mremap(0x7eff4713b000, 8192, 8192, MAYMOVE | FIXED, 0x2d000)\n(00.164184)      1: \tcall mremap(0x7eff47148000, 8192, 8192, MAYMOVE | FIXED, 0x2f000)\n(00.164698)      1: x86: xsave runtime structure\n(00.164709)      1: x86: -----------------------\n(00.164714)      1: x86: cwd:0x37f swd:0 twd:0 fop:0 mxcsr:0x1f80 mxcsr_mask:0xffff\n(00.164729)      1: x86: magic1:0x46505853 extended_size:1092 xstate_bv:0x17 xstate_size:1088\n(00.164740)      1: x86: xstate_bv: 0x17\n(00.164746)      1: x86: -----------------------\n(00.164776)      1: Thread    0 stack  0x1f080 rt_sigframe  0x27080\n(00.165197)      1: Going to chroot into /proc/self/fd/8\n(00.165277)      1: Restoring umask to 22\n(00.165436)      1: task_args: 0x2c000\ntask_args->pid: 1\ntask_args->nr_threads: 1\ntask_args->clone_restore_fn: 0x122d0\ntask_args->thread_args: 0x2c5c0\n(00.165625) pie: 1: Switched to the restorer 1\n(00.167192) pie: 1: Mapping native vDSO at 0x32000\n(00.167464) pie: 1: vdso: Using gettimeofday() on vdso at 0x38800\n(00.167801) pie: 1: \tmmap(0x7f5cd4800000 -> 0x7f5cd5000000, 0x3 0x32 -1)\n(00.167988) pie: 1: \tmmap(0x7f5cd512c000 -> 0x7f5cd5132000, 0x1 0x32 -1)\n(00.168005) pie: 1: \tmmap(0x7f5cd5132000 -> 0x7f5cd5134000, 0x7 0x32 -1)\n(00.168022) pie: 1: \tmmap(0x7f5cd5134000 -> 0x7f5cd5135000, 0x1 0x12 4)\n(00.168078) pie: 1: \tmmap(0x7f5cd5135000 -> 0x7f5cd513b000, 0x5 0x12 4)\n(00.168098) pie: 1: \tmmap(0x7f5cd513b000 -> 0x7f5cd513d000, 0x1 0x12 4)\n(00.168114) pie: 1: \tmmap(0x7f5cd513d000 -> 0x7f5cd513f000, 0x3 0x12 4)\n(00.168179) pie: 1: \tmmap(0x7fffb60d6000 -> 0x7fffb60f7000, 0x3 0x132 -1)\n(00.168209) pie: 1: Preadv 0x7f5cd4800000:8388608... (4 iovs)\n(00.382284) pie: 1: `- returned 8417280\n(00.382550) pie: 1:    `- skip pagemap\n(00.382568) pie: 1:    `- skip pagemap\n(00.382573) pie: 1:    `- skip pagemap\n(00.382577) pie: 1:    `- skip pagemap\n(00.382738) pie: 1: vdso: Parsing at 0x7f5cd5132000 0x7f5cd5134000\n(00.382834) pie: 1: vdso: PT_LOAD p_vaddr: 0x0\n(00.382892) pie: 1: vdso: DT_HASH: 0x120\n(00.382904) pie: 1: vdso: DT_GNU_HASH: 0x170\n(00.382919) pie: 1: vdso: DT_STRTAB: 0x320\n(00.382930) pie: 1: vdso: DT_SYMTAB: 0x1d0\n(00.382940) pie: 1: vdso: DT_STRSZ: 0x83\n(00.382950) pie: 1: vdso: DT_SYMENT: 0x18\n(00.383030) pie: 1: vdso: nbucket 0x3 nchain 0xe bucket 0x7f5cd5132128 chain 0x7f5cd5132134\n(00.383188) pie: 1: vdso: symbol __vdso_clock_gettime at address 0xb50\n(00.383369) pie: 1: vdso: symbol __vdso_getcpu at address 0xfc0\n(00.383392) pie: 1: vdso: symbol __vdso_gettimeofday at address 0x800\n(00.383396) pie: 1: vdso: symbol __vdso_time at address 0xb20\n(00.383412) pie: 1: vdso: symbol __kernel_sigreturn at address 0x0\n(00.383424) pie: 1: vdso: symbol __kernel_rt_sigreturn at address 0x0\n(00.383429) pie: 1: vdso: symbol __vdso_clock_gettime64 at address 0x0\n(00.383452) pie: 1: vdso: image [vdso] 0x7f5cd5132000-0x7f5cd5134000 [vvar] 0x7f5cd512c000-0x7f5cd5132000\n(00.383496) pie: 1: vdso: Runtime vdso/vvar matches dumpee, remap inplace\n(00.383675) pie: 1: vdso: Remap rt-vdso 0x38000 -> 0x7f5cd5132000\n(00.383815) pie: 1: vdso: Remap rt-vvar 0x36000 -> 0x7f5cd5130000\n(00.384005) pie: 1: vdso: Remap rt-vvar 0x32000 -> 0x7f5cd512c000\n(00.384045) pie: 1: vdso: Using gettimeofday() on vdso at 0x7f5cd5132800\n(00.384881) pie: 1: Restoring scheduler params 0.0.0\n(00.385317) pie: 1: rseq: nothing to restore\n(00.385424) pie: 1: 1: Restored\n(00.387059) Running post-restore scripts\n(00.387125) \tRPC\n(00.396113) mnt: Switching to new ns to clean ghosts\n(00.398053) net: Unlock network\n(00.398104) Running network-unlock scripts\n(00.398121) \tRPC\n(00.448247) pie: 1: seccomp: mode 0 on tid 1\n(00.452363) 1171 was trapped\n(00.452684) 1171 was trapped\n(00.452743) 1171 (native) is going to execute the syscall 15, required is 15\n(00.452882) 1171 was stopped\n(00.453291) 1171 was trapped\n(00.453514) 1171 (native) is going to execute the syscall 11, required is 11\n(00.453775) 1171 was stopped\n(00.453967) Run late stage hook from criu master for external devices\n(00.454003) plugin: `cuda_plugin' hook 9 -> 0x7eff47141b1e\n(00.454052) Running pre-resume scripts\n(00.454061) \tRPC\n(00.455257) Restore finished successfully. Tasks resumed.\n(00.455316) Writing stats\n(00.455914) Running post-resume scripts\n(00.456131) \tRPC\n",
+                "same_bytes_as_pre_attempt_log": null,
+                "unchanged_bytes_imply_new_log_was_written": false
+              },
+              "attempt_record_path": "/tmp/owned-composite-probe/restore-attempts/negative-process-only/attempt.json",
+              "attempt_record_sha256": "a0339231b0d195259c66ffa13a0dbfa03127573ec7dd81333dbb5697db20098b"
+            },
+            "restored_private_ram_sha256": "9eb6af60292a2155e899742fc8fde4b9c44c4eddd2550413ccf2623e8fe0be41",
+            "workspace_after_process_only": {
+              "entries": [
+                {
+                  "path": "ledger.bin",
+                  "mode": 384,
+                  "kind": "file",
+                  "bytes": 512,
+                  "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+                },
+                {
+                  "path": "post-checkpoint.txt",
+                  "mode": 420,
+                  "kind": "file",
+                  "bytes": 35,
+                  "sha256": "76c29925a4faf37a85254c84d92ed49176b2c6b660406c976735ce3fc898373e"
+                },
+                {
+                  "path": "renamed-after-save.txt",
+                  "mode": 416,
+                  "kind": "file",
+                  "bytes": 18,
+                  "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+                }
+              ],
+              "sha256": "f334be4fc1afceeede2bf01c5b7676d6f0bd082adab333fa30478d2f72b9c02f",
+              "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+            },
+            "ram_recovered": true,
+            "workspace_recovered": false,
+            "actual_process_only_complete_recovery": false,
+            "expected_failure_witness_verified": true
+          },
+          "passed": false,
+          "passed_meaning": "positive_full_composite_recovery_and_continued_fd_write; negative_control_has_separate_explicit_witness_flag",
+          "network_lock_backend": "iptables_default",
+          "network_lock_bypass": false,
+          "sandbox_id": "fpb-workspace-60ccdc972e9f",
+          "dataset": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f",
+          "original_host_pid": 1075,
+          "identity": {
+            "address": 140036678877184,
+            "bytes": 8388608,
+            "page_size": 4096,
+            "held_fd": 3,
+            "file_inode": 10,
+            "file_device": 27,
+            "namespace_pid": 1,
+            "initial_file_offset": 64
+          },
+          "saved_private_ram_sha256": "9eb6af60292a2155e899742fc8fde4b9c44c4eddd2550413ccf2623e8fe0be41",
+          "saved_workspace": {
+            "entries": [
+              {
+                "path": "ledger.bin",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 512,
+                "sha256": "f4ea0566dbd87f295f0b6399a092ec2ef77a24c0585d3b22794349d83a17beec"
+              },
+              {
+                "path": "saved.txt",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 18,
+                "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+              }
+            ],
+            "sha256": "feabbd29fad40e9f26fc2398989d4550cfa163f06188a1654dff5c1a108942e6",
+            "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+          },
+          "saved_fd": {
+            "fd": 3,
+            "target": "/workspace/ledger.bin",
+            "offset": 64,
+            "inode": 10,
+            "device": 27,
+            "size": 512,
+            "namespace_pid": 1,
+            "fdinfo": {
+              "pos": "64",
+              "flags": "0100002",
+              "mnt_id": "73",
+              "ino": "10"
+            }
+          },
+          "composite_checkpoint_ms": 1101.2015129999995,
+          "checkpoint_result": {
+            "status": "succeeded",
+            "failure_code": "none",
+            "message": null,
+            "operations": [
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "runc",
+                  "--root",
+                  "/tmp/owned-composite-probe/runc-state",
+                  "checkpoint",
+                  "--image-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                  "--work-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                  "--leave-running=true",
+                  "--tcp-established",
+                  "--shell-job",
+                  "--tcp-skip-in-flight",
+                  "--ext-unix-sk",
+                  "--manage-cgroups-mode",
+                  "ignore",
+                  "fpb-workspace-60ccdc972e9f"
+                ],
+                "metadata": {
+                  "phase": "process_checkpoint",
+                  "runtime": "runc",
+                  "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                  "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                  "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                  "state_root": "/tmp/owned-composite-probe/runc-state",
+                  "leave_running": true,
+                  "stdout": "",
+                  "stderr": "",
+                  "checkpoint_scope": "process_only",
+                  "process_checkpoint_size_bytes": 8422335,
+                  "process_checkpoint_file_count": 20
+                }
+              },
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "zfs",
+                  "snapshot",
+                  "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state"
+                ],
+                "metadata": {
+                  "phase": "filesystem_checkpoint",
+                  "runtime": "runc",
+                  "dataset": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f",
+                  "snapshot": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state",
+                  "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f/rootfs",
+                  "stdout": "",
+                  "stderr": "",
+                  "checkpoint_scope": "filesystem_only",
+                  "filesystem_checkpoint_written_bytes": 389120,
+                  "filesystem_checkpoint_used_bytes": 0
+                }
+              }
+            ]
+          },
+          "checkpoint_manifest": {
+            "schema_version": "v1",
+            "checkpoint_id": "full-owned-state",
+            "sandbox_id": "fpb-workspace-60ccdc972e9f",
+            "created_at": "2026-09-27T10:38:23.330760+00:00",
+            "runtime_name": "runc",
+            "runtime_version": null,
+            "process_artifacts": [
+              {
+                "kind": "process",
+                "name": "process_checkpoint.json",
+                "relative_path": "artifacts/fpb-workspace-60ccdc972e9f/full-owned-state/process/process_checkpoint.json",
+                "size_bytes": 1345,
+                "sha256": "a6ec4892f4456f693a3fe1cfbfd9ba055449e184f08dac4a5db71e1e9163e8b0",
+                "metadata": {
+                  "runtime": "runc"
+                }
+              }
+            ],
+            "filesystem_artifacts": [
+              {
+                "kind": "filesystem",
+                "name": "filesystem_checkpoint.json",
+                "relative_path": "artifacts/fpb-workspace-60ccdc972e9f/full-owned-state/filesystem/filesystem_checkpoint.json",
+                "size_bytes": 952,
+                "sha256": "07bc2d15d393a020af5e63d35e5f7c1c41bc291b37396157d8475db8b8605e6f",
+                "metadata": {
+                  "runtime": "runc"
+                }
+              }
+            ],
+            "metadata": {
+              "checkpoint_id": "full-owned-state",
+              "benchmark_trace_cursor": 0,
+              "job_id": "job-a49b80a97661",
+              "reason": "manual",
+              "leave_running": true,
+              "checkpoint_scope": "full",
+              "process_checkpoint_size_bytes": 8422335,
+              "process_checkpoint_file_count": 20,
+              "filesystem_checkpoint_written_bytes": 389120,
+              "filesystem_checkpoint_used_bytes": 0,
+              "checkpoint_estimated_io_bytes": 8811455
+            },
+            "integrity": {
+              "manifest_sha256": "cad11237ff073dceccc94e49d3abe3dab2cccccc0f5a7a3a7bae96dde550c431"
+            }
+          },
+          "capture_quiescence_verified": true,
+          "snapshot_properties": "guid\t8890652939367194078\ncreation\t1790505502\nused\t0\nwritten\t389120\n",
+          "damaged_private_ram_sha256": "952f64fbf8c852e7716874f6b429a11fbd455fba60546330db6788d7c390dcf1",
+          "damaged_workspace": {
+            "entries": [
+              {
+                "path": "ledger.bin",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 512,
+                "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+              },
+              {
+                "path": "post-checkpoint.txt",
+                "mode": 420,
+                "kind": "file",
+                "bytes": 35,
+                "sha256": "76c29925a4faf37a85254c84d92ed49176b2c6b660406c976735ce3fc898373e"
+              },
+              {
+                "path": "renamed-after-save.txt",
+                "mode": 416,
+                "kind": "file",
+                "bytes": 18,
+                "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+              }
+            ],
+            "sha256": "f334be4fc1afceeede2bf01c5b7676d6f0bd082adab333fa30478d2f72b9c02f",
+            "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+          },
+          "damaged_fd": {
+            "fd": 3,
+            "target": "/workspace/ledger.bin",
+            "offset": 72,
+            "inode": 10,
+            "device": 27,
+            "size": 512,
+            "namespace_pid": 1,
+            "fdinfo": {
+              "pos": "72",
+              "flags": "0100002",
+              "mnt_id": "73",
+              "ino": "10"
+            }
+          },
+          "restore_result": {
+            "status": "succeeded",
+            "failure_code": "none",
+            "message": null,
+            "operations": [
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "zfs",
+                  "rollback",
+                  "-r",
+                  "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state"
+                ],
+                "metadata": {
+                  "phase": "filesystem_restore",
+                  "runtime": "runc",
+                  "dataset": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f",
+                  "snapshot": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state",
+                  "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f/rootfs",
+                  "stdout": "",
+                  "stderr": ""
+                }
+              },
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "runc",
+                  "--root",
+                  "/tmp/owned-composite-probe/runc-state",
+                  "restore",
+                  "-d",
+                  "--bundle",
+                  "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                  "--image-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                  "--work-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                  "--tcp-established",
+                  "--shell-job",
+                  "--ext-unix-sk",
+                  "--manage-cgroups-mode",
+                  "ignore",
+                  "fpb-workspace-60ccdc972e9f"
+                ],
+                "metadata": {
+                  "phase": "process_restore",
+                  "runtime": "runc",
+                  "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                  "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                  "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                  "state_root": "/tmp/owned-composite-probe/runc-state",
+                  "lazy_pages": false,
+                  "lazy_pages_daemon_pid": null,
+                  "stdout": "",
+                  "stderr": ""
+                }
+              }
+            ]
+          },
+          "composite_restore_ms": 694.9014790000022,
+          "positive_restore_attempt_evidence": {
+            "scope": "original_full_composite_ZFS_then_process_restore",
+            "restore_log_before": {
+              "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work/restore.log",
+              "available": true,
+              "bytes": 33934,
+              "sha256": "ef003c57ff1ba0f5a0b923331f76dad6db71a487e33b31393ecd05d01032f7f4",
+              "inode": 5351,
+              "device": 64768,
+              "mtime_ns": 1790505504385139174,
+              "stable_during_read": true
+            },
+            "restore_result": {
+              "status": "succeeded",
+              "failure_code": "none",
+              "message": null,
+              "operations": [
+                {
+                  "executed": true,
+                  "reason": "command_executed",
+                  "command": [
+                    "zfs",
+                    "rollback",
+                    "-r",
+                    "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state"
+                  ],
+                  "metadata": {
+                    "phase": "filesystem_restore",
+                    "runtime": "runc",
+                    "dataset": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f",
+                    "snapshot": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state",
+                    "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f/rootfs",
+                    "stdout": "",
+                    "stderr": ""
+                  }
+                },
+                {
+                  "executed": true,
+                  "reason": "command_executed",
+                  "command": [
+                    "runc",
+                    "--root",
+                    "/tmp/owned-composite-probe/runc-state",
+                    "restore",
+                    "-d",
+                    "--bundle",
+                    "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                    "--image-path",
+                    "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                    "--work-path",
+                    "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                    "--tcp-established",
+                    "--shell-job",
+                    "--ext-unix-sk",
+                    "--manage-cgroups-mode",
+                    "ignore",
+                    "fpb-workspace-60ccdc972e9f"
+                  ],
+                  "metadata": {
+                    "phase": "process_restore",
+                    "runtime": "runc",
+                    "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/process",
+                    "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work",
+                    "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f",
+                    "state_root": "/tmp/owned-composite-probe/runc-state",
+                    "lazy_pages": false,
+                    "lazy_pages_daemon_pid": null,
+                    "stdout": "",
+                    "stderr": ""
+                  }
+                }
+              ]
+            },
+            "restore_ms": 694.9014790000022,
+            "restore_log": {
+              "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-60ccdc972e9f/full-owned-state/work/restore.log",
+              "available": true,
+              "bytes": 33934,
+              "sha256": "e0ceb1053981e3ed64c6de5ad756d8dc56c91a5269936ecee3c8ae4031168cb8",
+              "inode": 5351,
+              "device": 64768,
+              "mtime_ns": 1790505505368139180,
+              "stable_during_read": true,
+              "retained_path": "/tmp/owned-composite-probe/restore-attempts/positive-composite/restore.log",
+              "retained_sha256": "e0ceb1053981e3ed64c6de5ad756d8dc56c91a5269936ecee3c8ae4031168cb8",
+              "retained_bytes": 33934,
+              "tail_utf8": "f35b876c000-7f35b8874000 vma\n(00.115633)      1: Parsed 7f35b876c000-7f35b8875000 vma\n(00.115639)      1: Parsed 7f35b876c000-7f35b8876000 vma\n(00.115645)      1: Parsed 7f35b876c000-7f35b887d000 vma\n(00.115651)      1: Parsed 7f35b876c000-7f35b8889000 vma\n(00.115657)      1: Parsed 7f35b876c000-7f35b8891000 vma\n(00.115663)      1: Parsed 7f35b876c000-7f35b8893000 vma\n(00.115669)      1: Parsed 7f35b876c000-7f35b8894000 vma\n(00.115675)      1: Parsed 7f35b876c000-7f35b8895000 vma\n(00.115681)      1: Parsed 7f35b876c000-7f35b8899000 vma\n(00.115687)      1: Parsed 7f35b876c000-7f35b889a000 vma\n(00.115693)      1: Parsed 7f35b876c000-7f35b889b000 vma\n(00.115699)      1: Parsed 7f35b876c000-7f35b889c000 vma\n(00.115705)      1: Parsed 7f35b876c000-7f35b88a4000 vma\n(00.115752)      1: Parsed 7f35b876c000-7f35b8903000 vma\n(00.115759)      1: Parsed 7f35b876c000-7f35b894b000 vma\n(00.115766)      1: Parsed 7f35b876c000-7f35b895e000 vma\n(00.115772)      1: Parsed 7f35b876c000-7f35b8962000 vma\n(00.115778)      1: Parsed 7f35b876c000-7f35b8964000 vma\n(00.115783)      1: Parsed 7f35b876c000-7f35b8968000 vma\n(00.115789)      1: Parsed 7f35b876c000-7f35b896a000 vma\n(00.115795)      1: Parsed 7f35b876c000-7f35b896c000 vma\n(00.115801)      1: Parsed 7f35b876c000-7f35b8980000 vma\n(00.115807)      1: Parsed 7f35b876c000-7f35b89d9000 vma\n(00.115813)      1: Parsed 7f35b876c000-7f35b8a0f000 vma\n(00.115819)      1: Parsed 7f35b876c000-7f35b8a10000 vma\n(00.115825)      1: Parsed 7f35b876c000-7f35b8a11000 vma\n(00.115831)      1: Parsed 7f35b876c000-7f35b8a14000 vma\n(00.115838)      1: Parsed 7ffd60a8e000-7ffd60aaf000 vma\n(00.115862)      1: 1 threads require 136K of memory\n(00.115871)      1: Found bootstrap VMA hint at: 0x10000 (needs ~168K)\n(00.116225)      1: \tcall mremap(0x7f35b877f000, 8192, 8192, MAYMOVE | FIXED, 0x2d000)\n(00.116292)      1: \tcall mremap(0x7f35b878c000, 8192, 8192, MAYMOVE | FIXED, 0x2f000)\n(00.116365)      1: x86: xsave runtime structure\n(00.116373)      1: x86: -----------------------\n(00.116378)      1: x86: cwd:0x37f swd:0 twd:0 fop:0 mxcsr:0x1f80 mxcsr_mask:0xffff\n(00.116387)      1: x86: magic1:0x46505853 extended_size:1092 xstate_bv:0x17 xstate_size:1088\n(00.116394)      1: x86: xstate_bv: 0x17\n(00.116399)      1: x86: -----------------------\n(00.116407)      1: Thread    0 stack  0x1f080 rt_sigframe  0x27080\n(00.116550)      1: Going to chroot into /proc/self/fd/8\n(00.116577)      1: Restoring umask to 22\n(00.116637)      1: task_args: 0x2c000\ntask_args->pid: 1\ntask_args->nr_threads: 1\ntask_args->clone_restore_fn: 0x122d0\ntask_args->thread_args: 0x2c5c0\n(00.116935) pie: 1: Switched to the restorer 1\n(00.118211) pie: 1: Mapping native vDSO at 0x32000\n(00.118481) pie: 1: vdso: Using gettimeofday() on vdso at 0x38800\n(00.118658) pie: 1: \tmmap(0x7f5cd4800000 -> 0x7f5cd5000000, 0x3 0x32 -1)\n(00.118767) pie: 1: \tmmap(0x7f5cd512c000 -> 0x7f5cd5132000, 0x1 0x32 -1)\n(00.118783) pie: 1: \tmmap(0x7f5cd5132000 -> 0x7f5cd5134000, 0x7 0x32 -1)\n(00.118801) pie: 1: \tmmap(0x7f5cd5134000 -> 0x7f5cd5135000, 0x1 0x12 4)\n(00.118848) pie: 1: \tmmap(0x7f5cd5135000 -> 0x7f5cd513b000, 0x5 0x12 4)\n(00.118866) pie: 1: \tmmap(0x7f5cd513b000 -> 0x7f5cd513d000, 0x1 0x12 4)\n(00.118882) pie: 1: \tmmap(0x7f5cd513d000 -> 0x7f5cd513f000, 0x3 0x12 4)\n(00.118908) pie: 1: \tmmap(0x7fffb60d6000 -> 0x7fffb60f7000, 0x3 0x132 -1)\n(00.118939) pie: 1: Preadv 0x7f5cd4800000:8388608... (4 iovs)\n(00.328360) pie: 1: `- returned 8417280\n(00.328641) pie: 1:    `- skip pagemap\n(00.328659) pie: 1:    `- skip pagemap\n(00.328664) pie: 1:    `- skip pagemap\n(00.328667) pie: 1:    `- skip pagemap\n(00.328842) pie: 1: vdso: Parsing at 0x7f5cd5132000 0x7f5cd5134000\n(00.328938) pie: 1: vdso: PT_LOAD p_vaddr: 0x0\n(00.328998) pie: 1: vdso: DT_HASH: 0x120\n(00.329010) pie: 1: vdso: DT_GNU_HASH: 0x170\n(00.329024) pie: 1: vdso: DT_STRTAB: 0x320\n(00.329035) pie: 1: vdso: DT_SYMTAB: 0x1d0\n(00.329045) pie: 1: vdso: DT_STRSZ: 0x83\n(00.329056) pie: 1: vdso: DT_SYMENT: 0x18\n(00.329141) pie: 1: vdso: nbucket 0x3 nchain 0xe bucket 0x7f5cd5132128 chain 0x7f5cd5132134\n(00.329297) pie: 1: vdso: symbol __vdso_clock_gettime at address 0xb50\n(00.329338) pie: 1: vdso: symbol __vdso_getcpu at address 0xfc0\n(00.329343) pie: 1: vdso: symbol __vdso_gettimeofday at address 0x800\n(00.329347) pie: 1: vdso: symbol __vdso_time at address 0xb20\n(00.329365) pie: 1: vdso: symbol __kernel_sigreturn at address 0x0\n(00.329377) pie: 1: vdso: symbol __kernel_rt_sigreturn at address 0x0\n(00.329382) pie: 1: vdso: symbol __vdso_clock_gettime64 at address 0x0\n(00.329407) pie: 1: vdso: image [vdso] 0x7f5cd5132000-0x7f5cd5134000 [vvar] 0x7f5cd512c000-0x7f5cd5132000\n(00.329453) pie: 1: vdso: Runtime vdso/vvar matches dumpee, remap inplace\n(00.329840) pie: 1: vdso: Remap rt-vdso 0x38000 -> 0x7f5cd5132000\n(00.329960) pie: 1: vdso: Remap rt-vvar 0x36000 -> 0x7f5cd5130000\n(00.330119) pie: 1: vdso: Remap rt-vvar 0x32000 -> 0x7f5cd512c000\n(00.330155) pie: 1: vdso: Using gettimeofday() on vdso at 0x7f5cd5132800\n(00.330465) pie: 1: Restoring scheduler params 0.0.0\n(00.330611) pie: 1: rseq: nothing to restore\n(00.330685) pie: 1: 1: Restored\n(00.332063) Running post-restore scripts\n(00.332288) \tRPC\n(00.339600) mnt: Switching to new ns to clean ghosts\n(00.341241) net: Unlock network\n(00.341279) Running network-unlock scripts\n(00.341292) \tRPC\n(00.385496) pie: 1: seccomp: mode 0 on tid 1\n(00.387514) 1217 was trapped\n(00.387755) 1217 was trapped\n(00.387805) 1217 (native) is going to execute the syscall 15, required is 15\n(00.387925) 1217 was stopped\n(00.388455) 1217 was trapped\n(00.388518) 1217 (native) is going to execute the syscall 11, required is 11\n(00.388739) 1217 was stopped\n(00.388842) Run late stage hook from criu master for external devices\n(00.388854) plugin: `cuda_plugin' hook 9 -> 0x7f35b8785b1e\n(00.388867) Running pre-resume scripts\n(00.388874) \tRPC\n(00.389676) Restore finished successfully. Tasks resumed.\n(00.389717) Writing stats\n(00.391281) Running post-resume scripts\n(00.391322) \tRPC\n",
+              "same_bytes_as_pre_attempt_log": false,
+              "unchanged_bytes_imply_new_log_was_written": false
+            },
+            "attempt_record_path": "/tmp/owned-composite-probe/restore-attempts/positive-composite/attempt.json",
+            "attempt_record_sha256": "76e1e2c4bb310cdb51e362b74b989bd7e02d40a99eaa9ed7005436663d3f0b86"
+          },
+          "restored_host_pid": 1217,
+          "restored_identity_file": {
+            "address": 140036678877184,
+            "bytes": 8388608,
+            "page_size": 4096,
+            "held_fd": 3,
+            "file_inode": 10,
+            "file_device": 27,
+            "namespace_pid": 1,
+            "initial_file_offset": 64
+          },
+          "restored_private_ram_sha256": "9eb6af60292a2155e899742fc8fde4b9c44c4eddd2550413ccf2623e8fe0be41",
+          "restored_workspace": {
+            "entries": [
+              {
+                "path": "ledger.bin",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 512,
+                "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+              },
+              {
+                "path": "saved.txt",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 18,
+                "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+              }
+            ],
+            "sha256": "b24961738df93de26cdfa1c0c0ffb0ef94a5eb9e8a2022806d16d3f861ff98dd",
+            "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+          },
+          "restored_fd": {
+            "fd": 3,
+            "target": "/workspace/ledger.bin",
+            "offset": 64,
+            "inode": 10,
+            "device": 27,
+            "size": 512,
+            "namespace_pid": 1,
+            "fdinfo": {
+              "pos": "64",
+              "flags": "0100002",
+              "mnt_id": "75",
+              "ino": "10"
+            }
+          },
+          "private_ram_restored_exactly": true,
+          "entire_owned_workspace_restored_exactly": false,
+          "held_fd_object_and_offset_restored_exactly": true,
+          "identity_file_restored_exactly": true,
+          "error": "composed_recovery_witness_mismatch",
+          "traceback_tail": "Traceback (most recent call last):\n  File \"/tmp/candidate-source/guest_workspace_probe.py\", line 398, in main\n    raise RuntimeError('composed_recovery_witness_mismatch')\nRuntimeError: composed_recovery_witness_mismatch\n",
+          "probe_wall_ms": 4315.895608000002,
+          "wall_includes_negative_control_and_verification": true,
+          "verification_in_primitive_checkpoint_restore_timers": false,
+          "retained_process_images": {
+            "regular_image_files": [
+              {
+                "path": "full-owned-state/process/cgroup.img",
+                "bytes": 57
+              },
+              {
+                "path": "full-owned-state/process/core-1.img",
+                "bytes": 1831
+              },
+              {
+                "path": "full-owned-state/process/fdinfo-2.img",
+                "bytes": 56
+              },
+              {
+                "path": "full-owned-state/process/files.img",
+                "bytes": 285
+              },
+              {
+                "path": "full-owned-state/process/fs-1.img",
+                "bytes": 18
+              },
+              {
+                "path": "full-owned-state/process/ids-1.img",
+                "bytes": 36
+              },
+              {
+                "path": "full-owned-state/process/inventory.img",
+                "bytes": 86
+              },
+              {
+                "path": "full-owned-state/process/ipcns-var-11.img",
+                "bytes": 82
+              },
+              {
+                "path": "full-owned-state/process/mm-1.img",
+                "bytes": 498
+              },
+              {
+                "path": "full-owned-state/process/mountpoints-13.img",
+                "bytes": 1302
+              },
+              {
+                "path": "full-owned-state/process/pagemap-1.img",
+                "bytes": 106
+              },
+              {
+                "path": "full-owned-state/process/pages-1.img",
+                "bytes": 8417280
+              },
+              {
+                "path": "full-owned-state/process/pstree.img",
+                "bytes": 22
+              },
+              {
+                "path": "full-owned-state/process/seccomp.img",
+                "bytes": 12
+              },
+              {
+                "path": "full-owned-state/process/timens-0.img",
+                "bytes": 32
+              },
+              {
+                "path": "full-owned-state/process/tmpfs-dev-35.tar.gz.img",
+                "bytes": 368
+              },
+              {
+                "path": "full-owned-state/process/tmpfs-dev-37.tar.gz.img",
+                "bytes": 96
+              },
+              {
+                "path": "full-owned-state/process/tmpfs-dev-39.tar.gz.img",
+                "bytes": 96
+              },
+              {
+                "path": "full-owned-state/process/utsns-12.img",
+                "bytes": 35
+              }
+            ],
+            "parent_symlinks": [],
+            "logical_regular_image_bytes": 8422298
+          },
+          "zfs_state_after_probe": "fpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f\t397312\t368062464\t389120\t/tmp/owned-composite-probe/bundles/fpb-workspace-60ccdc972e9f/rootfs\nfpbworkspace/sandboxes/fpb-workspace-60ccdc972e9f@full-owned-state\t8192\t-\t389120\t-\n",
+          "live_process_cleanup": "actual_original_delete_runtime"
+        }
+      }
+    },
+    {
+      "attempt": 3,
+      "raw_host_record_sha256": "9f3ca2399e973db8933e66172efe6b0844c89c1524c00672f2ac09cd8c1b1711",
+      "raw_guest_record_sha256": "e5411bb958ba9ec12a799f0fbbaa251f7456010ecae7308327e9d5f599baa786",
+      "source_sha256": {
+        "worker_workspace.c": "070f3896cd58bc19e348da16983c33012a7768ce805a825c728ddea972492a59",
+        "guest_workspace_probe.py": "b9287e00d303eb49f56026b0df38d9c359bbff753c57393304641460f3b14850",
+        "guest_workspace_driver.py": "86d6cef9003af55692570210c3a12bcec5c8b20854dbe6471ad755795cee2794"
+      },
+      "source_sha256_after": {
+        "worker_workspace.c": "070f3896cd58bc19e348da16983c33012a7768ce805a825c728ddea972492a59",
+        "guest_workspace_probe.py": "b9287e00d303eb49f56026b0df38d9c359bbff753c57393304641460f3b14850",
+        "guest_workspace_driver.py": "86d6cef9003af55692570210c3a12bcec5c8b20854dbe6471ad755795cee2794"
+      },
+      "driver_sha256": "40d37c5cd33e701b93d79923dd8d92ecc96e3771e1b0ed419234c3d275485ad3",
+      "boot_helper_sha256": "6f7354004c138eb00705858d2bf7d126641ce93419ee6c270941ea59ecff0bad",
+      "guest_result": {
+        "schema_version": "private-original-crab-composite-driver-v1",
+        "passed": false,
+        "commands": [
+          {
+            "argv": [
+              "gcc",
+              "-O2",
+              "-static",
+              "-Wall",
+              "-Wextra",
+              "-o",
+              "/tmp/candidate-source/worker-workspace",
+              "/tmp/candidate-source/worker_workspace.c"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "zpool",
+              "create",
+              "-f",
+              "-o",
+              "cachefile=none",
+              "-o",
+              "ashift=12",
+              "-O",
+              "mountpoint=none",
+              "-O",
+              "atime=off",
+              "-O",
+              "compression=off",
+              "fpbworkspace",
+              "/tmp/owned-composite-driver/owned-vdev.bin"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "zfs",
+              "create",
+              "-o",
+              "mountpoint=none",
+              "fpbworkspace/sandboxes"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "zpool",
+              "destroy",
+              "fpbworkspace"
+            ],
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "pool_created": true,
+        "actual_compiled_worker_sha256": "825271fe8d87e7ccd080b085bb41e0ff23251ce3134aa36db8c2698902b0784d",
+        "probe_execution": {
+          "argv": [
+            "/usr/local/bin/python3.12",
+            "-B",
+            "/tmp/candidate-source/guest_workspace_probe.py",
+            "--worker",
+            "/tmp/candidate-source/worker-workspace",
+            "--zfs-prefix",
+            "fpbworkspace/sandboxes",
+            "--output",
+            "/tmp/owned-composite-probe",
+            "--memory-mib",
+            "8"
+          ],
+          "returncode": 1,
+          "stderr": ""
+        },
+        "probe_stdout_sha256": "6569e03a6c425759f4d182402a25a2dded6f0bb1ddedde927d5ede32cdba4ebf",
+        "probe_result": {
+          "schema_version": "private-crab-zfs-owned-workspace-probe-v1",
+          "memory_mib": 8,
+          "crab_commit": "9607d61a41dc44358cf078c4b438bfd971c8ee9d",
+          "original_crab_python_sha256": "c6d0439e627c75ecc9aea47943212ece93a900605cbac924e99d823ee44b657b",
+          "original_integrations_python_sha256": "fe0edc09ea062f3495807d3da0f0d5a78e5855ec3f56c426f90d092c39bf897d",
+          "worker_binary_sha256": "825271fe8d87e7ccd080b085bb41e0ff23251ce3134aa36db8c2698902b0784d",
+          "probe_source_sha256": "b9287e00d303eb49f56026b0df38d9c359bbff753c57393304641460f3b14850",
+          "filesystem_backend": "genuine_original_ZFS_snapshot_rollback",
+          "upstream_runtime_replaced_or_stubbed": false,
+          "lazy_pages": false,
+          "checkpoint_mode": "one_full_composite_checkpoint",
+          "incremental_process": false,
+          "bounded_single_process_single_file_writer": true,
+          "quiescence_contract": "observed_rt_sigtimedwait128_and_stable_full_RAM_file_FD_before_after_capture; no external writers during capture",
+          "runc_pause_executed": false,
+          "filesystem_checkpoint_executed": true,
+          "graded_repository_episode": false,
+          "general_concurrent_writer_atomicity_verified": false,
+          "model_rollout_or_optimizer_executed": false,
+          "negative_control": {
+            "scope": "original_process_worker_restore_only_without_ZFS_rollback",
+            "restore_log_before": {
+              "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work/restore.log",
+              "available": false,
+              "unavailable_reason": "source_log_absent"
+            },
+            "operation": {
+              "executed": true,
+              "reason": "command_executed",
+              "command": [
+                "runc",
+                "--root",
+                "/tmp/owned-composite-probe/runc-state",
+                "restore",
+                "-d",
+                "--bundle",
+                "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                "--image-path",
+                "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                "--work-path",
+                "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                "--tcp-established",
+                "--shell-job",
+                "--ext-unix-sk",
+                "--manage-cgroups-mode",
+                "ignore",
+                "fpb-workspace-f300f7210845"
+              ],
+              "metadata": {
+                "phase": "process_restore",
+                "runtime": "runc",
+                "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                "state_root": "/tmp/owned-composite-probe/runc-state",
+                "lazy_pages": false,
+                "lazy_pages_daemon_pid": null,
+                "stdout": "",
+                "stderr": ""
+              }
+            },
+            "restore_ms": 541.8631960000014,
+            "restore_attempt_evidence": {
+              "scope": "original_process_worker_restore_only_without_ZFS_rollback",
+              "restore_log_before": {
+                "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work/restore.log",
+                "available": false,
+                "unavailable_reason": "source_log_absent"
+              },
+              "operation": {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "runc",
+                  "--root",
+                  "/tmp/owned-composite-probe/runc-state",
+                  "restore",
+                  "-d",
+                  "--bundle",
+                  "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                  "--image-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                  "--work-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                  "--tcp-established",
+                  "--shell-job",
+                  "--ext-unix-sk",
+                  "--manage-cgroups-mode",
+                  "ignore",
+                  "fpb-workspace-f300f7210845"
+                ],
+                "metadata": {
+                  "phase": "process_restore",
+                  "runtime": "runc",
+                  "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                  "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                  "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                  "state_root": "/tmp/owned-composite-probe/runc-state",
+                  "lazy_pages": false,
+                  "lazy_pages_daemon_pid": null,
+                  "stdout": "",
+                  "stderr": ""
+                }
+              },
+              "restore_ms": 541.8631960000014,
+              "restore_log": {
+                "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work/restore.log",
+                "available": true,
+                "bytes": 33934,
+                "sha256": "3e291acd2dd2f3f773198d902279c333ca8b4728801dd34e58f23f912825cb7a",
+                "inode": 5351,
+                "device": 64768,
+                "mtime_ns": 1790505857343502246,
+                "stable_during_read": true,
+                "retained_path": "/tmp/owned-composite-probe/restore-attempts/negative-process-only/restore.log",
+                "retained_sha256": "3e291acd2dd2f3f773198d902279c333ca8b4728801dd34e58f23f912825cb7a",
+                "retained_bytes": 33934,
+                "tail_utf8": "fa03ba24000-7fa03bb2c000 vma\n(00.136426)      1: Parsed 7fa03ba24000-7fa03bb2d000 vma\n(00.136431)      1: Parsed 7fa03ba24000-7fa03bb2e000 vma\n(00.136437)      1: Parsed 7fa03ba24000-7fa03bb35000 vma\n(00.136443)      1: Parsed 7fa03ba24000-7fa03bb41000 vma\n(00.136448)      1: Parsed 7fa03ba24000-7fa03bb49000 vma\n(00.136454)      1: Parsed 7fa03ba24000-7fa03bb4b000 vma\n(00.136460)      1: Parsed 7fa03ba24000-7fa03bb4c000 vma\n(00.136465)      1: Parsed 7fa03ba24000-7fa03bb4d000 vma\n(00.136471)      1: Parsed 7fa03ba24000-7fa03bb51000 vma\n(00.136477)      1: Parsed 7fa03ba24000-7fa03bb52000 vma\n(00.136482)      1: Parsed 7fa03ba24000-7fa03bb53000 vma\n(00.136488)      1: Parsed 7fa03ba24000-7fa03bb54000 vma\n(00.136494)      1: Parsed 7fa03ba24000-7fa03bb5c000 vma\n(00.136546)      1: Parsed 7fa03ba24000-7fa03bbbb000 vma\n(00.136553)      1: Parsed 7fa03ba24000-7fa03bc03000 vma\n(00.136559)      1: Parsed 7fa03ba24000-7fa03bc16000 vma\n(00.136564)      1: Parsed 7fa03ba24000-7fa03bc1a000 vma\n(00.136570)      1: Parsed 7fa03ba24000-7fa03bc1c000 vma\n(00.136576)      1: Parsed 7fa03ba24000-7fa03bc20000 vma\n(00.136581)      1: Parsed 7fa03ba24000-7fa03bc22000 vma\n(00.136587)      1: Parsed 7fa03ba24000-7fa03bc24000 vma\n(00.136592)      1: Parsed 7fa03ba24000-7fa03bc38000 vma\n(00.136599)      1: Parsed 7fa03ba24000-7fa03bc91000 vma\n(00.136605)      1: Parsed 7fa03ba24000-7fa03bcc7000 vma\n(00.136611)      1: Parsed 7fa03ba24000-7fa03bcc8000 vma\n(00.136617)      1: Parsed 7fa03ba24000-7fa03bcc9000 vma\n(00.136623)      1: Parsed 7fa03ba24000-7fa03bccc000 vma\n(00.136630)      1: Parsed 7fffecbbd000-7fffecbde000 vma\n(00.136700)      1: 1 threads require 136K of memory\n(00.136777)      1: Found bootstrap VMA hint at: 0x10000 (needs ~168K)\n(00.137337)      1: \tcall mremap(0x7fa03ba37000, 8192, 8192, MAYMOVE | FIXED, 0x2d000)\n(00.137432)      1: \tcall mremap(0x7fa03ba44000, 8192, 8192, MAYMOVE | FIXED, 0x2f000)\n(00.138009)      1: x86: xsave runtime structure\n(00.138036)      1: x86: -----------------------\n(00.138042)      1: x86: cwd:0x37f swd:0 twd:0 fop:0 mxcsr:0x1f80 mxcsr_mask:0xffff\n(00.138053)      1: x86: magic1:0x46505853 extended_size:1092 xstate_bv:0x17 xstate_size:1088\n(00.138060)      1: x86: xstate_bv: 0x17\n(00.138066)      1: x86: -----------------------\n(00.138097)      1: Thread    0 stack  0x1f080 rt_sigframe  0x27080\n(00.138296)      1: Going to chroot into /proc/self/fd/8\n(00.138351)      1: Restoring umask to 22\n(00.138479)      1: task_args: 0x2c000\ntask_args->pid: 1\ntask_args->nr_threads: 1\ntask_args->clone_restore_fn: 0x122d0\ntask_args->thread_args: 0x2c5c0\n(00.138654) pie: 1: Switched to the restorer 1\n(00.140120) pie: 1: Mapping native vDSO at 0x32000\n(00.140481) pie: 1: vdso: Using gettimeofday() on vdso at 0x38800\n(00.140660) pie: 1: \tmmap(0x7fdd13000000 -> 0x7fdd13800000, 0x3 0x32 -1)\n(00.140817) pie: 1: \tmmap(0x7fdd138e3000 -> 0x7fdd138e9000, 0x1 0x32 -1)\n(00.140832) pie: 1: \tmmap(0x7fdd138e9000 -> 0x7fdd138eb000, 0x7 0x32 -1)\n(00.140850) pie: 1: \tmmap(0x7fdd138eb000 -> 0x7fdd138ec000, 0x1 0x12 4)\n(00.140891) pie: 1: \tmmap(0x7fdd138ec000 -> 0x7fdd138f2000, 0x5 0x12 4)\n(00.140910) pie: 1: \tmmap(0x7fdd138f2000 -> 0x7fdd138f4000, 0x1 0x12 4)\n(00.140925) pie: 1: \tmmap(0x7fdd138f4000 -> 0x7fdd138f6000, 0x3 0x12 4)\n(00.140947) pie: 1: \tmmap(0x7ffc058ae000 -> 0x7ffc058cf000, 0x3 0x132 -1)\n(00.140975) pie: 1: Preadv 0x7fdd13000000:8388608... (4 iovs)\n(00.351909) pie: 1: `- returned 8417280\n(00.352190) pie: 1:    `- skip pagemap\n(00.352212) pie: 1:    `- skip pagemap\n(00.352218) pie: 1:    `- skip pagemap\n(00.352222) pie: 1:    `- skip pagemap\n(00.352653) pie: 1: vdso: Parsing at 0x7fdd138e9000 0x7fdd138eb000\n(00.352778) pie: 1: vdso: PT_LOAD p_vaddr: 0x0\n(00.352834) pie: 1: vdso: DT_HASH: 0x120\n(00.352849) pie: 1: vdso: DT_GNU_HASH: 0x170\n(00.352864) pie: 1: vdso: DT_STRTAB: 0x320\n(00.352875) pie: 1: vdso: DT_SYMTAB: 0x1d0\n(00.352886) pie: 1: vdso: DT_STRSZ: 0x83\n(00.352897) pie: 1: vdso: DT_SYMENT: 0x18\n(00.352970) pie: 1: vdso: nbucket 0x3 nchain 0xe bucket 0x7fdd138e9128 chain 0x7fdd138e9134\n(00.353125) pie: 1: vdso: symbol __vdso_clock_gettime at address 0xb50\n(00.353173) pie: 1: vdso: symbol __vdso_getcpu at address 0xfc0\n(00.353178) pie: 1: vdso: symbol __vdso_gettimeofday at address 0x800\n(00.353182) pie: 1: vdso: symbol __vdso_time at address 0xb20\n(00.353197) pie: 1: vdso: symbol __kernel_sigreturn at address 0x0\n(00.353209) pie: 1: vdso: symbol __kernel_rt_sigreturn at address 0x0\n(00.353214) pie: 1: vdso: symbol __vdso_clock_gettime64 at address 0x0\n(00.353239) pie: 1: vdso: image [vdso] 0x7fdd138e9000-0x7fdd138eb000 [vvar] 0x7fdd138e3000-0x7fdd138e9000\n(00.353283) pie: 1: vdso: Runtime vdso/vvar matches dumpee, remap inplace\n(00.353434) pie: 1: vdso: Remap rt-vdso 0x38000 -> 0x7fdd138e9000\n(00.353561) pie: 1: vdso: Remap rt-vvar 0x36000 -> 0x7fdd138e7000\n(00.353878) pie: 1: vdso: Remap rt-vvar 0x32000 -> 0x7fdd138e3000\n(00.353934) pie: 1: vdso: Using gettimeofday() on vdso at 0x7fdd138e9800\n(00.354668) pie: 1: Restoring scheduler params 0.0.0\n(00.355294) pie: 1: rseq: nothing to restore\n(00.355457) pie: 1: 1: Restored\n(00.357340) Running post-restore scripts\n(00.357414) \tRPC\n(00.364718) mnt: Switching to new ns to clean ghosts\n(00.366361) net: Unlock network\n(00.366397) Running network-unlock scripts\n(00.366409) \tRPC\n(00.410766) pie: 1: seccomp: mode 0 on tid 1\n(00.415420) 1173 was trapped\n(00.415683) 1173 was trapped\n(00.415748) 1173 (native) is going to execute the syscall 15, required is 15\n(00.415882) 1173 was stopped\n(00.416281) 1173 was trapped\n(00.416312) 1173 (native) is going to execute the syscall 11, required is 11\n(00.416541) 1173 was stopped\n(00.416784) Run late stage hook from criu master for external devices\n(00.416840) plugin: `cuda_plugin' hook 9 -> 0x7fa03ba3db1e\n(00.416883) Running pre-resume scripts\n(00.416891) \tRPC\n(00.417510) Restore finished successfully. Tasks resumed.\n(00.417531) Writing stats\n(00.418944) Running post-resume scripts\n(00.418971) \tRPC\n",
+                "same_bytes_as_pre_attempt_log": null,
+                "unchanged_bytes_imply_new_log_was_written": false
+              },
+              "attempt_record_path": "/tmp/owned-composite-probe/restore-attempts/negative-process-only/attempt.json",
+              "attempt_record_sha256": "36140073353b9bf2a0f1d96d92f4e166270b154c638ecc094e92e7cbbc3bd850"
+            },
+            "restored_private_ram_sha256": "9eb6af60292a2155e899742fc8fde4b9c44c4eddd2550413ccf2623e8fe0be41",
+            "workspace_after_process_only": {
+              "entries": [
+                {
+                  "path": "ledger.bin",
+                  "mode": 384,
+                  "kind": "file",
+                  "bytes": 512,
+                  "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+                },
+                {
+                  "path": "post-checkpoint.txt",
+                  "mode": 420,
+                  "kind": "file",
+                  "bytes": 35,
+                  "sha256": "76c29925a4faf37a85254c84d92ed49176b2c6b660406c976735ce3fc898373e"
+                },
+                {
+                  "path": "renamed-after-save.txt",
+                  "mode": 416,
+                  "kind": "file",
+                  "bytes": 18,
+                  "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+                }
+              ],
+              "sha256": "f334be4fc1afceeede2bf01c5b7676d6f0bd082adab333fa30478d2f72b9c02f",
+              "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+            },
+            "ledger_after_process_only": {
+              "path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs/workspace/ledger.bin",
+              "bytes": 512,
+              "hex": "0714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495048303030303432becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b986bb2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495663707d8a97a4b1becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b98a5b2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c",
+              "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6",
+              "inode": 10,
+              "device": 27,
+              "mode": 384,
+              "mtime_ns": 1790505856652502210,
+              "scope": "exact_owned_ledger_bytes_and_actual_file_stat"
+            },
+            "ram_recovered": true,
+            "workspace_recovered": false,
+            "actual_process_only_complete_recovery": false,
+            "expected_failure_witness_verified": true
+          },
+          "passed": false,
+          "passed_meaning": "positive_full_composite_recovery_and_continued_fd_write; negative_control_has_separate_explicit_witness_flag",
+          "network_lock_backend": "iptables_default",
+          "network_lock_bypass": false,
+          "observer_instrumentation": "filesystem_adapter_subclass_calls_original_super_restore_then_reads_owned_workspace_before_original_process_restore",
+          "observer_modifies_restore_operation_or_status": false,
+          "composite_restore_ms_includes_observer_reads": true,
+          "composite_checkpoint_ms_includes_observer_reads": false,
+          "sandbox_id": "fpb-workspace-f300f7210845",
+          "dataset": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845",
+          "original_host_pid": 1074,
+          "identity": {
+            "address": 140587483267072,
+            "bytes": 8388608,
+            "page_size": 4096,
+            "held_fd": 3,
+            "file_inode": 10,
+            "file_device": 27,
+            "namespace_pid": 1,
+            "initial_file_offset": 64
+          },
+          "saved_private_ram_sha256": "9eb6af60292a2155e899742fc8fde4b9c44c4eddd2550413ccf2623e8fe0be41",
+          "saved_workspace": {
+            "entries": [
+              {
+                "path": "ledger.bin",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 512,
+                "sha256": "f4ea0566dbd87f295f0b6399a092ec2ef77a24c0585d3b22794349d83a17beec"
+              },
+              {
+                "path": "saved.txt",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 18,
+                "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+              }
+            ],
+            "sha256": "feabbd29fad40e9f26fc2398989d4550cfa163f06188a1654dff5c1a108942e6",
+            "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+          },
+          "saved_fd": {
+            "fd": 3,
+            "target": "/workspace/ledger.bin",
+            "offset": 64,
+            "inode": 10,
+            "device": 27,
+            "size": 512,
+            "namespace_pid": 1,
+            "fdinfo": {
+              "pos": "64",
+              "flags": "0100002",
+              "mnt_id": "73",
+              "ino": "10"
+            }
+          },
+          "saved_ledger": {
+            "path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs/workspace/ledger.bin",
+            "bytes": 512,
+            "hex": "0714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495663707d8a97a4b1becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b98a5b2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495663707d8a97a4b1becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b98a5b2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c",
+            "sha256": "f4ea0566dbd87f295f0b6399a092ec2ef77a24c0585d3b22794349d83a17beec",
+            "inode": 10,
+            "device": 27,
+            "mode": 384,
+            "mtime_ns": 1790505855262502136,
+            "scope": "exact_owned_ledger_bytes_and_actual_file_stat"
+          },
+          "composite_checkpoint_ms": 955.9378750000001,
+          "checkpoint_result": {
+            "status": "succeeded",
+            "failure_code": "none",
+            "message": null,
+            "operations": [
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "runc",
+                  "--root",
+                  "/tmp/owned-composite-probe/runc-state",
+                  "checkpoint",
+                  "--image-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                  "--work-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                  "--leave-running=true",
+                  "--tcp-established",
+                  "--shell-job",
+                  "--tcp-skip-in-flight",
+                  "--ext-unix-sk",
+                  "--manage-cgroups-mode",
+                  "ignore",
+                  "fpb-workspace-f300f7210845"
+                ],
+                "metadata": {
+                  "phase": "process_checkpoint",
+                  "runtime": "runc",
+                  "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                  "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                  "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                  "state_root": "/tmp/owned-composite-probe/runc-state",
+                  "leave_running": true,
+                  "stdout": "",
+                  "stderr": "",
+                  "checkpoint_scope": "process_only",
+                  "process_checkpoint_size_bytes": 8422336,
+                  "process_checkpoint_file_count": 20
+                }
+              },
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "zfs",
+                  "snapshot",
+                  "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state"
+                ],
+                "metadata": {
+                  "phase": "filesystem_checkpoint",
+                  "runtime": "runc",
+                  "dataset": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845",
+                  "snapshot": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state",
+                  "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs",
+                  "stdout": "",
+                  "stderr": "",
+                  "checkpoint_scope": "filesystem_only",
+                  "filesystem_checkpoint_written_bytes": 389120,
+                  "filesystem_checkpoint_used_bytes": 0
+                }
+              }
+            ]
+          },
+          "checkpoint_manifest": {
+            "schema_version": "v1",
+            "checkpoint_id": "full-owned-state",
+            "sandbox_id": "fpb-workspace-f300f7210845",
+            "created_at": "2026-09-27T10:44:16.410839+00:00",
+            "runtime_name": "runc",
+            "runtime_version": null,
+            "process_artifacts": [
+              {
+                "kind": "process",
+                "name": "process_checkpoint.json",
+                "relative_path": "artifacts/fpb-workspace-f300f7210845/full-owned-state/process/process_checkpoint.json",
+                "size_bytes": 1345,
+                "sha256": "7a7fe0df2904ef922f8f96795e076c9cdf50564c47156d1b602d92a11d2a2edb",
+                "metadata": {
+                  "runtime": "runc"
+                }
+              }
+            ],
+            "filesystem_artifacts": [
+              {
+                "kind": "filesystem",
+                "name": "filesystem_checkpoint.json",
+                "relative_path": "artifacts/fpb-workspace-f300f7210845/full-owned-state/filesystem/filesystem_checkpoint.json",
+                "size_bytes": 952,
+                "sha256": "37bdb071bc5f2daa9f6780c496dcb7fe4daf78eeee7e0311970efd974c71a067",
+                "metadata": {
+                  "runtime": "runc"
+                }
+              }
+            ],
+            "metadata": {
+              "checkpoint_id": "full-owned-state",
+              "benchmark_trace_cursor": 0,
+              "job_id": "job-15846d92c62d",
+              "reason": "manual",
+              "leave_running": true,
+              "checkpoint_scope": "full",
+              "process_checkpoint_size_bytes": 8422336,
+              "process_checkpoint_file_count": 20,
+              "filesystem_checkpoint_written_bytes": 389120,
+              "filesystem_checkpoint_used_bytes": 0,
+              "checkpoint_estimated_io_bytes": 8811456
+            },
+            "integrity": {
+              "manifest_sha256": "47bae5f142f3f63d81a89fd7007d6c1c9ece597367a4e15ebfeaed29e7c6a60f"
+            }
+          },
+          "capture_quiescence_verified": true,
+          "snapshot_properties": "guid\t3052629145792841598\ncreation\t1790505855\nused\t0\nwritten\t389120\n",
+          "damaged_private_ram_sha256": "952f64fbf8c852e7716874f6b429a11fbd455fba60546330db6788d7c390dcf1",
+          "damaged_workspace": {
+            "entries": [
+              {
+                "path": "ledger.bin",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 512,
+                "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+              },
+              {
+                "path": "post-checkpoint.txt",
+                "mode": 420,
+                "kind": "file",
+                "bytes": 35,
+                "sha256": "76c29925a4faf37a85254c84d92ed49176b2c6b660406c976735ce3fc898373e"
+              },
+              {
+                "path": "renamed-after-save.txt",
+                "mode": 416,
+                "kind": "file",
+                "bytes": 18,
+                "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+              }
+            ],
+            "sha256": "f334be4fc1afceeede2bf01c5b7676d6f0bd082adab333fa30478d2f72b9c02f",
+            "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+          },
+          "damaged_fd": {
+            "fd": 3,
+            "target": "/workspace/ledger.bin",
+            "offset": 72,
+            "inode": 10,
+            "device": 27,
+            "size": 512,
+            "namespace_pid": 1,
+            "fdinfo": {
+              "pos": "72",
+              "flags": "0100002",
+              "mnt_id": "73",
+              "ino": "10"
+            }
+          },
+          "damaged_ledger": {
+            "path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs/workspace/ledger.bin",
+            "bytes": 512,
+            "hex": "0714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495048303030303432becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b986bb2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495663707d8a97a4b1becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b98a5b2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c",
+            "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6",
+            "inode": 10,
+            "device": 27,
+            "mode": 384,
+            "mtime_ns": 1790505856652502210,
+            "scope": "exact_owned_ledger_bytes_and_actual_file_stat"
+          },
+          "filesystem_restore_observer": {
+            "phase": "after_original_filesystem_adapter_before_original_process_adapter",
+            "original_step_success": true,
+            "original_operation": {
+              "executed": true,
+              "reason": "command_executed",
+              "command": [
+                "zfs",
+                "rollback",
+                "-r",
+                "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state"
+              ],
+              "metadata": {
+                "phase": "filesystem_restore",
+                "runtime": "runc",
+                "dataset": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845",
+                "snapshot": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state",
+                "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs",
+                "stdout": "",
+                "stderr": ""
+              }
+            },
+            "observer_writes_to_owned_workspace": false,
+            "workspace": {
+              "entries": [
+                {
+                  "path": "ledger.bin",
+                  "mode": 384,
+                  "kind": "file",
+                  "bytes": 512,
+                  "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+                },
+                {
+                  "path": "saved.txt",
+                  "mode": 384,
+                  "kind": "file",
+                  "bytes": 18,
+                  "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+                }
+              ],
+              "sha256": "b24961738df93de26cdfa1c0c0ffb0ef94a5eb9e8a2022806d16d3f861ff98dd",
+              "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+            },
+            "ledger": {
+              "path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs/workspace/ledger.bin",
+              "bytes": 512,
+              "hex": "0714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495048303030303432becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b986bb2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495663707d8a97a4b1becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b98a5b2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c",
+              "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6",
+              "inode": 10,
+              "device": 27,
+              "mode": 384,
+              "mtime_ns": 1790505855262502136,
+              "scope": "exact_owned_ledger_bytes_and_actual_file_stat"
+            }
+          },
+          "restore_result": {
+            "status": "succeeded",
+            "failure_code": "none",
+            "message": null,
+            "operations": [
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "zfs",
+                  "rollback",
+                  "-r",
+                  "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state"
+                ],
+                "metadata": {
+                  "phase": "filesystem_restore",
+                  "runtime": "runc",
+                  "dataset": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845",
+                  "snapshot": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state",
+                  "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs",
+                  "stdout": "",
+                  "stderr": ""
+                }
+              },
+              {
+                "executed": true,
+                "reason": "command_executed",
+                "command": [
+                  "runc",
+                  "--root",
+                  "/tmp/owned-composite-probe/runc-state",
+                  "restore",
+                  "-d",
+                  "--bundle",
+                  "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                  "--image-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                  "--work-path",
+                  "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                  "--tcp-established",
+                  "--shell-job",
+                  "--ext-unix-sk",
+                  "--manage-cgroups-mode",
+                  "ignore",
+                  "fpb-workspace-f300f7210845"
+                ],
+                "metadata": {
+                  "phase": "process_restore",
+                  "runtime": "runc",
+                  "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                  "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                  "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                  "state_root": "/tmp/owned-composite-probe/runc-state",
+                  "lazy_pages": false,
+                  "lazy_pages_daemon_pid": null,
+                  "stdout": "",
+                  "stderr": ""
+                }
+              }
+            ]
+          },
+          "composite_restore_ms": 675.7847390000009,
+          "positive_restore_attempt_evidence": {
+            "scope": "original_full_composite_ZFS_then_process_restore",
+            "restore_log_before": {
+              "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work/restore.log",
+              "available": true,
+              "bytes": 33934,
+              "sha256": "3e291acd2dd2f3f773198d902279c333ca8b4728801dd34e58f23f912825cb7a",
+              "inode": 5351,
+              "device": 64768,
+              "mtime_ns": 1790505857343502246,
+              "stable_during_read": true
+            },
+            "restore_result": {
+              "status": "succeeded",
+              "failure_code": "none",
+              "message": null,
+              "operations": [
+                {
+                  "executed": true,
+                  "reason": "command_executed",
+                  "command": [
+                    "zfs",
+                    "rollback",
+                    "-r",
+                    "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state"
+                  ],
+                  "metadata": {
+                    "phase": "filesystem_restore",
+                    "runtime": "runc",
+                    "dataset": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845",
+                    "snapshot": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state",
+                    "mountpoint": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs",
+                    "stdout": "",
+                    "stderr": ""
+                  }
+                },
+                {
+                  "executed": true,
+                  "reason": "command_executed",
+                  "command": [
+                    "runc",
+                    "--root",
+                    "/tmp/owned-composite-probe/runc-state",
+                    "restore",
+                    "-d",
+                    "--bundle",
+                    "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                    "--image-path",
+                    "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                    "--work-path",
+                    "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                    "--tcp-established",
+                    "--shell-job",
+                    "--ext-unix-sk",
+                    "--manage-cgroups-mode",
+                    "ignore",
+                    "fpb-workspace-f300f7210845"
+                  ],
+                  "metadata": {
+                    "phase": "process_restore",
+                    "runtime": "runc",
+                    "image_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/process",
+                    "work_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work",
+                    "bundle_path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845",
+                    "state_root": "/tmp/owned-composite-probe/runc-state",
+                    "lazy_pages": false,
+                    "lazy_pages_daemon_pid": null,
+                    "stdout": "",
+                    "stderr": ""
+                  }
+                }
+              ]
+            },
+            "restore_ms": 675.7847390000009,
+            "restore_log": {
+              "source_path": "/tmp/owned-composite-probe/checkpoints/fpb-workspace-f300f7210845/full-owned-state/work/restore.log",
+              "available": true,
+              "bytes": 33934,
+              "sha256": "74ecb019e7bb2db854c68512237c356214828a8243b46d20abae0158a9527317",
+              "inode": 5351,
+              "device": 64768,
+              "mtime_ns": 1790505858311502298,
+              "stable_during_read": true,
+              "retained_path": "/tmp/owned-composite-probe/restore-attempts/positive-composite/restore.log",
+              "retained_sha256": "74ecb019e7bb2db854c68512237c356214828a8243b46d20abae0158a9527317",
+              "retained_bytes": 33934,
+              "tail_utf8": "f39783f0000-7f39784f8000 vma\n(00.107300)      1: Parsed 7f39783f0000-7f39784f9000 vma\n(00.107306)      1: Parsed 7f39783f0000-7f39784fa000 vma\n(00.107313)      1: Parsed 7f39783f0000-7f3978501000 vma\n(00.107319)      1: Parsed 7f39783f0000-7f397850d000 vma\n(00.107325)      1: Parsed 7f39783f0000-7f3978515000 vma\n(00.107332)      1: Parsed 7f39783f0000-7f3978517000 vma\n(00.107338)      1: Parsed 7f39783f0000-7f3978518000 vma\n(00.107344)      1: Parsed 7f39783f0000-7f3978519000 vma\n(00.107351)      1: Parsed 7f39783f0000-7f397851d000 vma\n(00.107357)      1: Parsed 7f39783f0000-7f397851e000 vma\n(00.107363)      1: Parsed 7f39783f0000-7f397851f000 vma\n(00.107370)      1: Parsed 7f39783f0000-7f3978520000 vma\n(00.107376)      1: Parsed 7f39783f0000-7f3978528000 vma\n(00.107469)      1: Parsed 7f39783f0000-7f3978587000 vma\n(00.107484)      1: Parsed 7f39783f0000-7f39785cf000 vma\n(00.107492)      1: Parsed 7f39783f0000-7f39785e2000 vma\n(00.107499)      1: Parsed 7f39783f0000-7f39785e6000 vma\n(00.107505)      1: Parsed 7f39783f0000-7f39785e8000 vma\n(00.107512)      1: Parsed 7f39783f0000-7f39785ec000 vma\n(00.107518)      1: Parsed 7f39783f0000-7f39785ee000 vma\n(00.107525)      1: Parsed 7f39783f0000-7f39785f0000 vma\n(00.107531)      1: Parsed 7f39783f0000-7f3978604000 vma\n(00.107538)      1: Parsed 7f39783f0000-7f397865d000 vma\n(00.107544)      1: Parsed 7f39783f0000-7f3978693000 vma\n(00.107550)      1: Parsed 7f39783f0000-7f3978694000 vma\n(00.107557)      1: Parsed 7f39783f0000-7f3978695000 vma\n(00.107563)      1: Parsed 7f39783f0000-7f3978698000 vma\n(00.107571)      1: Parsed 7ffc05c16000-7ffc05c37000 vma\n(00.107616)      1: 1 threads require 136K of memory\n(00.107627)      1: Found bootstrap VMA hint at: 0x10000 (needs ~168K)\n(00.108319)      1: \tcall mremap(0x7f3978403000, 8192, 8192, MAYMOVE | FIXED, 0x2d000)\n(00.108433)      1: \tcall mremap(0x7f3978410000, 8192, 8192, MAYMOVE | FIXED, 0x2f000)\n(00.108514)      1: x86: xsave runtime structure\n(00.108522)      1: x86: -----------------------\n(00.108527)      1: x86: cwd:0x37f swd:0 twd:0 fop:0 mxcsr:0x1f80 mxcsr_mask:0xffff\n(00.108536)      1: x86: magic1:0x46505853 extended_size:1092 xstate_bv:0x17 xstate_size:1088\n(00.108543)      1: x86: xstate_bv: 0x17\n(00.108548)      1: x86: -----------------------\n(00.108556)      1: Thread    0 stack  0x1f080 rt_sigframe  0x27080\n(00.108707)      1: Going to chroot into /proc/self/fd/8\n(00.108749)      1: Restoring umask to 22\n(00.108834)      1: task_args: 0x2c000\ntask_args->pid: 1\ntask_args->nr_threads: 1\ntask_args->clone_restore_fn: 0x122d0\ntask_args->thread_args: 0x2c5c0\n(00.109024) pie: 1: Switched to the restorer 1\n(00.110682) pie: 1: Mapping native vDSO at 0x32000\n(00.110936) pie: 1: vdso: Using gettimeofday() on vdso at 0x38800\n(00.111096) pie: 1: \tmmap(0x7fdd13000000 -> 0x7fdd13800000, 0x3 0x32 -1)\n(00.111203) pie: 1: \tmmap(0x7fdd138e3000 -> 0x7fdd138e9000, 0x1 0x32 -1)\n(00.111217) pie: 1: \tmmap(0x7fdd138e9000 -> 0x7fdd138eb000, 0x7 0x32 -1)\n(00.111233) pie: 1: \tmmap(0x7fdd138eb000 -> 0x7fdd138ec000, 0x1 0x12 4)\n(00.111281) pie: 1: \tmmap(0x7fdd138ec000 -> 0x7fdd138f2000, 0x5 0x12 4)\n(00.111298) pie: 1: \tmmap(0x7fdd138f2000 -> 0x7fdd138f4000, 0x1 0x12 4)\n(00.111313) pie: 1: \tmmap(0x7fdd138f4000 -> 0x7fdd138f6000, 0x3 0x12 4)\n(00.111333) pie: 1: \tmmap(0x7ffc058ae000 -> 0x7ffc058cf000, 0x3 0x132 -1)\n(00.111360) pie: 1: Preadv 0x7fdd13000000:8388608... (4 iovs)\n(00.322120) pie: 1: `- returned 8417280\n(00.322440) pie: 1:    `- skip pagemap\n(00.322462) pie: 1:    `- skip pagemap\n(00.322469) pie: 1:    `- skip pagemap\n(00.322472) pie: 1:    `- skip pagemap\n(00.322644) pie: 1: vdso: Parsing at 0x7fdd138e9000 0x7fdd138eb000\n(00.322744) pie: 1: vdso: PT_LOAD p_vaddr: 0x0\n(00.322801) pie: 1: vdso: DT_HASH: 0x120\n(00.322814) pie: 1: vdso: DT_GNU_HASH: 0x170\n(00.322829) pie: 1: vdso: DT_STRTAB: 0x320\n(00.322841) pie: 1: vdso: DT_SYMTAB: 0x1d0\n(00.322853) pie: 1: vdso: DT_STRSZ: 0x83\n(00.322868) pie: 1: vdso: DT_SYMENT: 0x18\n(00.323049) pie: 1: vdso: nbucket 0x3 nchain 0xe bucket 0x7fdd138e9128 chain 0x7fdd138e9134\n(00.323249) pie: 1: vdso: symbol __vdso_clock_gettime at address 0xb50\n(00.323296) pie: 1: vdso: symbol __vdso_getcpu at address 0xfc0\n(00.323302) pie: 1: vdso: symbol __vdso_gettimeofday at address 0x800\n(00.323306) pie: 1: vdso: symbol __vdso_time at address 0xb20\n(00.323321) pie: 1: vdso: symbol __kernel_sigreturn at address 0x0\n(00.323333) pie: 1: vdso: symbol __kernel_rt_sigreturn at address 0x0\n(00.323339) pie: 1: vdso: symbol __vdso_clock_gettime64 at address 0x0\n(00.323362) pie: 1: vdso: image [vdso] 0x7fdd138e9000-0x7fdd138eb000 [vvar] 0x7fdd138e3000-0x7fdd138e9000\n(00.323412) pie: 1: vdso: Runtime vdso/vvar matches dumpee, remap inplace\n(00.323573) pie: 1: vdso: Remap rt-vdso 0x38000 -> 0x7fdd138e9000\n(00.323703) pie: 1: vdso: Remap rt-vvar 0x36000 -> 0x7fdd138e7000\n(00.323890) pie: 1: vdso: Remap rt-vvar 0x32000 -> 0x7fdd138e3000\n(00.323930) pie: 1: vdso: Using gettimeofday() on vdso at 0x7fdd138e9800\n(00.324230) pie: 1: Restoring scheduler params 0.0.0\n(00.324436) pie: 1: rseq: nothing to restore\n(00.324531) pie: 1: 1: Restored\n(00.325990) Running post-restore scripts\n(00.326052) \tRPC\n(00.332825) mnt: Switching to new ns to clean ghosts\n(00.334417) net: Unlock network\n(00.334461) Running network-unlock scripts\n(00.334476) \tRPC\n(00.375919) pie: 1: seccomp: mode 0 on tid 1\n(00.377430) 1220 was trapped\n(00.377749) 1220 was trapped\n(00.377794) 1220 (native) is going to execute the syscall 15, required is 15\n(00.377902) 1220 was stopped\n(00.378179) 1220 was trapped\n(00.378211) 1220 (native) is going to execute the syscall 11, required is 11\n(00.378404) 1220 was stopped\n(00.378489) Run late stage hook from criu master for external devices\n(00.378501) plugin: `cuda_plugin' hook 9 -> 0x7f3978409b1e\n(00.378514) Running pre-resume scripts\n(00.378522) \tRPC\n(00.379357) Restore finished successfully. Tasks resumed.\n(00.379409) Writing stats\n(00.381004) Running post-resume scripts\n(00.381046) \tRPC\n",
+              "same_bytes_as_pre_attempt_log": false,
+              "unchanged_bytes_imply_new_log_was_written": false
+            },
+            "attempt_record_path": "/tmp/owned-composite-probe/restore-attempts/positive-composite/attempt.json",
+            "attempt_record_sha256": "63525b7b0b38efb7794127d3e8dd5933629df5d6044904d3f60080192913a278"
+          },
+          "ledger_after_composite_restore_call": {
+            "path": "/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs/workspace/ledger.bin",
+            "bytes": 512,
+            "hex": "0714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495048303030303432becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b986bb2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c8996a3b0bdcad7e4f103101d2a3744515e6b7885929facb9c6d3e0edfa0c192633404d5a6774818e9ba8b5c2cfdce9f60815222f3c495663707d8a97a4b1becbd8e5f204111e2b3845525f6c798693a0adbac7d4e1ee000d1a2734414e5b6875828f9ca9b6c3d0ddeaf7091623303d4a5764717e8b98a5b2bfccd9e6f305121f2c394653606d7a8794a1aebbc8d5e2ef010e1b2835424f5c697683909daab7c4d1deebf80a1724313e4b5865727f8c99a6b3c0cddae7f40613202d3a4754616e7b8895a2afbcc9d6e3f0020f1c293643505d6a7784919eabb8c5d2dfecf90b1825323f4c596673808d9aa7b4c1cedbe8f50714212e3b4855626f7c",
+            "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6",
+            "inode": 10,
+            "device": 27,
+            "mode": 384,
+            "mtime_ns": 1790505855262502136,
+            "scope": "exact_owned_ledger_bytes_and_actual_file_stat"
+          },
+          "restored_host_pid": 1220,
+          "restored_identity_file": {
+            "address": 140587483267072,
+            "bytes": 8388608,
+            "page_size": 4096,
+            "held_fd": 3,
+            "file_inode": 10,
+            "file_device": 27,
+            "namespace_pid": 1,
+            "initial_file_offset": 64
+          },
+          "restored_private_ram_sha256": "9eb6af60292a2155e899742fc8fde4b9c44c4eddd2550413ccf2623e8fe0be41",
+          "restored_workspace": {
+            "entries": [
+              {
+                "path": "ledger.bin",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 512,
+                "sha256": "ceee2bd1dc62c89cbb0193e3d4deb43087a171ece495041ab2123ec029c378b6"
+              },
+              {
+                "path": "saved.txt",
+                "mode": 384,
+                "kind": "file",
+                "bytes": 18,
+                "sha256": "f6a3dfe7142ac0614dc67f3401a649a13977f531f5eff63407f55522c3204fd6"
+              }
+            ],
+            "sha256": "b24961738df93de26cdfa1c0c0ffb0ef94a5eb9e8a2022806d16d3f861ff98dd",
+            "scope": "all_owned_workspace_paths_types_permissions_and_bytes; excludes_atime_mtime_device_numbers"
+          },
+          "restored_fd": {
+            "fd": 3,
+            "target": "/workspace/ledger.bin",
+            "offset": 64,
+            "inode": 10,
+            "device": 27,
+            "size": 512,
+            "namespace_pid": 1,
+            "fdinfo": {
+              "pos": "64",
+              "flags": "0100002",
+              "mnt_id": "75",
+              "ino": "10"
+            }
+          },
+          "private_ram_restored_exactly": true,
+          "entire_owned_workspace_restored_exactly": false,
+          "held_fd_object_and_offset_restored_exactly": true,
+          "identity_file_restored_exactly": true,
+          "error": "composed_recovery_witness_mismatch",
+          "traceback_tail": "Traceback (most recent call last):\n  File \"/tmp/candidate-source/guest_workspace_probe.py\", line 438, in main\n    raise RuntimeError('composed_recovery_witness_mismatch')\nRuntimeError: composed_recovery_witness_mismatch\n",
+          "probe_wall_ms": 3915.868870999997,
+          "wall_includes_negative_control_and_verification": true,
+          "verification_in_primitive_checkpoint_restore_timers": true,
+          "verification_timer_scope": "checkpoint_excludes_evidence_reads; composite_restore_includes_after_filesystem_observer_reads; whole_RAM_FD_and_post_restore_checks_outside_restore_timer",
+          "retained_process_images": {
+            "regular_image_files": [
+              {
+                "path": "full-owned-state/process/cgroup.img",
+                "bytes": 57
+              },
+              {
+                "path": "full-owned-state/process/core-1.img",
+                "bytes": 1831
+              },
+              {
+                "path": "full-owned-state/process/fdinfo-2.img",
+                "bytes": 56
+              },
+              {
+                "path": "full-owned-state/process/files.img",
+                "bytes": 285
+              },
+              {
+                "path": "full-owned-state/process/fs-1.img",
+                "bytes": 18
+              },
+              {
+                "path": "full-owned-state/process/ids-1.img",
+                "bytes": 36
+              },
+              {
+                "path": "full-owned-state/process/inventory.img",
+                "bytes": 86
+              },
+              {
+                "path": "full-owned-state/process/ipcns-var-11.img",
+                "bytes": 82
+              },
+              {
+                "path": "full-owned-state/process/mm-1.img",
+                "bytes": 498
+              },
+              {
+                "path": "full-owned-state/process/mountpoints-13.img",
+                "bytes": 1302
+              },
+              {
+                "path": "full-owned-state/process/pagemap-1.img",
+                "bytes": 106
+              },
+              {
+                "path": "full-owned-state/process/pages-1.img",
+                "bytes": 8417280
+              },
+              {
+                "path": "full-owned-state/process/pstree.img",
+                "bytes": 22
+              },
+              {
+                "path": "full-owned-state/process/seccomp.img",
+                "bytes": 12
+              },
+              {
+                "path": "full-owned-state/process/timens-0.img",
+                "bytes": 32
+              },
+              {
+                "path": "full-owned-state/process/tmpfs-dev-35.tar.gz.img",
+                "bytes": 369
+              },
+              {
+                "path": "full-owned-state/process/tmpfs-dev-37.tar.gz.img",
+                "bytes": 96
+              },
+              {
+                "path": "full-owned-state/process/tmpfs-dev-39.tar.gz.img",
+                "bytes": 96
+              },
+              {
+                "path": "full-owned-state/process/utsns-12.img",
+                "bytes": 35
+              }
+            ],
+            "parent_symlinks": [],
+            "logical_regular_image_bytes": 8422299
+          },
+          "zfs_state_after_probe": "fpbworkspace/sandboxes/fpb-workspace-f300f7210845\t397312\t368062464\t389120\t/tmp/owned-composite-probe/bundles/fpb-workspace-f300f7210845/rootfs\nfpbworkspace/sandboxes/fpb-workspace-f300f7210845@full-owned-state\t8192\t-\t389120\t-\n",
+          "live_process_cleanup": "actual_original_delete_runtime"
+        }
+      }
+    }
+  ]
+}

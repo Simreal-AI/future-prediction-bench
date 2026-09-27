@@ -1,0 +1,61 @@
+{
+  "scope": "same-host public Boltons 26.0.0 solved fixture",
+  "measures_model_training": false,
+  "episode_count": 3,
+  "repetitions": 2,
+  "case_workers_per_episode": 1,
+  "actor_workers": 1,
+  "verification_workers": 1,
+  "expected_rewards": [
+    1.0,
+    0.0,
+    1.0
+  ],
+  "runs": [
+    {
+      "repetition": 0,
+      "condition": "serial",
+      "wall_seconds": 10.918229667004198,
+      "rewards": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "repetition": 0,
+      "condition": "pipeline",
+      "wall_seconds": 8.639741917140782,
+      "rewards": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "repetition": 1,
+      "condition": "pipeline",
+      "wall_seconds": 7.671874958090484,
+      "rewards": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "repetition": 1,
+      "condition": "serial",
+      "wall_seconds": 8.738436208106577,
+      "rewards": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "median_wall_seconds": {
+    "serial": 9.828332937555388,
+    "pipeline": 8.155808437615633
+  },
+  "median_graded_episode_throughput_ratio": 1.2050715772363974
+}

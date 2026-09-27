@@ -1,0 +1,611 @@
+{
+  "all_state_checks_passed": true,
+  "asset_manifest_sha256": "83d29265644ff22bfd4fb7f5321618c0a6ddb2fe5d5195461a6d801c867aff01",
+  "asset_schema": "boltons-microvm-assets-v2",
+  "clone_mode": "clonefile",
+  "clone_seconds": 0.0015324170235544443,
+  "cold_boot_seconds": 5.736074540996924,
+  "excludes": "task policy, model, verifier, mutation and post-restore validation",
+  "hmp_stats": {
+    "cached": {
+      "count": 40,
+      "max_ms": 280.03054205328226,
+      "min_ms": 45.82633380778134,
+      "p50_ms": 87.13431237265468,
+      "p95_ms": 223.6425830051303
+    },
+    "strict": {
+      "count": 40,
+      "max_ms": 834.9170000292361,
+      "min_ms": 41.56875004991889,
+      "p50_ms": 107.2372084017843,
+      "p95_ms": 342.212124960497
+    }
+  },
+  "host_architecture": "arm64",
+  "memory_mib": 128,
+  "p50_speedup": 1.423306449711045,
+  "pairs": 40,
+  "samples": [
+    {
+      "hmp_loadvm_seconds": 0.056473291013389826,
+      "mode": "strict",
+      "pair": 0,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06972508388571441
+    },
+    {
+      "hmp_loadvm_seconds": 0.14122000010684133,
+      "mode": "cached",
+      "pair": 0,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.14332858286798
+    },
+    {
+      "hmp_loadvm_seconds": 0.052103874972090125,
+      "mode": "cached",
+      "pair": 1,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.0521576669998467
+    },
+    {
+      "hmp_loadvm_seconds": 0.05793916713446379,
+      "mode": "strict",
+      "pair": 1,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07041583303362131
+    },
+    {
+      "hmp_loadvm_seconds": 0.14551570801995695,
+      "mode": "strict",
+      "pair": 2,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.16536654205992818
+    },
+    {
+      "hmp_loadvm_seconds": 0.05728375003673136,
+      "mode": "cached",
+      "pair": 2,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.05737508297897875
+    },
+    {
+      "hmp_loadvm_seconds": 0.08014824986457825,
+      "mode": "cached",
+      "pair": 3,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.08019954198971391
+    },
+    {
+      "hmp_loadvm_seconds": 0.061304915929213166,
+      "mode": "strict",
+      "pair": 3,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07540004211477935
+    },
+    {
+      "hmp_loadvm_seconds": 0.1032181668560952,
+      "mode": "strict",
+      "pair": 4,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.11393374996259809
+    },
+    {
+      "hmp_loadvm_seconds": 0.0941203748807311,
+      "mode": "cached",
+      "pair": 4,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.09420345886610448
+    },
+    {
+      "hmp_loadvm_seconds": 0.15277883294038475,
+      "mode": "cached",
+      "pair": 5,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.15305562503635883
+    },
+    {
+      "hmp_loadvm_seconds": 0.5995117919519544,
+      "mode": "strict",
+      "pair": 5,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.6204511660616845
+    },
+    {
+      "hmp_loadvm_seconds": 0.342212124960497,
+      "mode": "strict",
+      "pair": 6,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.4505565830040723
+    },
+    {
+      "hmp_loadvm_seconds": 0.07382724992930889,
+      "mode": "cached",
+      "pair": 6,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07408304093405604
+    },
+    {
+      "hmp_loadvm_seconds": 0.10823691706173122,
+      "mode": "cached",
+      "pair": 7,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.10830166703090072
+    },
+    {
+      "hmp_loadvm_seconds": 0.05229675001464784,
+      "mode": "strict",
+      "pair": 7,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06180233298800886
+    },
+    {
+      "hmp_loadvm_seconds": 0.0600620829500258,
+      "mode": "strict",
+      "pair": 8,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07138650002889335
+    },
+    {
+      "hmp_loadvm_seconds": 0.27594320895150304,
+      "mode": "cached",
+      "pair": 8,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2764195411000401
+    },
+    {
+      "hmp_loadvm_seconds": 0.10284295794554055,
+      "mode": "cached",
+      "pair": 9,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.10324887512251735
+    },
+    {
+      "hmp_loadvm_seconds": 0.06278758402913809,
+      "mode": "strict",
+      "pair": 9,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07681212504394352
+    },
+    {
+      "hmp_loadvm_seconds": 0.09988233400508761,
+      "mode": "strict",
+      "pair": 10,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.10997474985197186
+    },
+    {
+      "hmp_loadvm_seconds": 0.05941874999552965,
+      "mode": "cached",
+      "pair": 10,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.05947758397087455
+    },
+    {
+      "hmp_loadvm_seconds": 0.06033195904456079,
+      "mode": "cached",
+      "pair": 11,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06039350014179945
+    },
+    {
+      "hmp_loadvm_seconds": 0.1017194171436131,
+      "mode": "strict",
+      "pair": 11,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.11832037498243153
+    },
+    {
+      "hmp_loadvm_seconds": 0.053146000020205975,
+      "mode": "strict",
+      "pair": 12,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06271916697733104
+    },
+    {
+      "hmp_loadvm_seconds": 0.10699166683480144,
+      "mode": "cached",
+      "pair": 12,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.10717800003476441
+    },
+    {
+      "hmp_loadvm_seconds": 0.1665677500423044,
+      "mode": "cached",
+      "pair": 13,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.16681758291088045
+    },
+    {
+      "hmp_loadvm_seconds": 0.05635854206047952,
+      "mode": "strict",
+      "pair": 13,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06687512481585145
+    },
+    {
+      "hmp_loadvm_seconds": 0.12230825005099177,
+      "mode": "strict",
+      "pair": 14,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.13369045802392066
+    },
+    {
+      "hmp_loadvm_seconds": 0.14820024999789894,
+      "mode": "cached",
+      "pair": 14,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.14850408304482698
+    },
+    {
+      "hmp_loadvm_seconds": 0.18328774999827147,
+      "mode": "cached",
+      "pair": 15,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.18355650012381375
+    },
+    {
+      "hmp_loadvm_seconds": 0.20999454194679856,
+      "mode": "strict",
+      "pair": 15,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2288123748730868
+    },
+    {
+      "hmp_loadvm_seconds": 0.2015413751360029,
+      "mode": "strict",
+      "pair": 16,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.22655424987897277
+    },
+    {
+      "hmp_loadvm_seconds": 0.21399316703900695,
+      "mode": "cached",
+      "pair": 16,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.21440608287230134
+    },
+    {
+      "hmp_loadvm_seconds": 0.07974275015294552,
+      "mode": "cached",
+      "pair": 17,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07982200011610985
+    },
+    {
+      "hmp_loadvm_seconds": 0.1680978750810027,
+      "mode": "strict",
+      "pair": 17,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.19197975005954504
+    },
+    {
+      "hmp_loadvm_seconds": 0.11952387518249452,
+      "mode": "strict",
+      "pair": 18,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.12990854098461568
+    },
+    {
+      "hmp_loadvm_seconds": 0.2049234169535339,
+      "mode": "cached",
+      "pair": 18,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2050903330091387
+    },
+    {
+      "hmp_loadvm_seconds": 0.1735527920536697,
+      "mode": "cached",
+      "pair": 19,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.17378824995830655
+    },
+    {
+      "hmp_loadvm_seconds": 0.0715533341281116,
+      "mode": "strict",
+      "pair": 19,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.08815487497486174
+    },
+    {
+      "hmp_loadvm_seconds": 0.12504666694439948,
+      "mode": "strict",
+      "pair": 20,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1362969169858843
+    },
+    {
+      "hmp_loadvm_seconds": 0.06338283303193748,
+      "mode": "cached",
+      "pair": 20,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06348270806483924
+    },
+    {
+      "hmp_loadvm_seconds": 0.17545545799657702,
+      "mode": "cached",
+      "pair": 21,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1756289170589298
+    },
+    {
+      "hmp_loadvm_seconds": 0.1112562499474734,
+      "mode": "strict",
+      "pair": 21,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.13130749994888902
+    },
+    {
+      "hmp_loadvm_seconds": 0.08871629205532372,
+      "mode": "strict",
+      "pair": 22,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.09751924988813698
+    },
+    {
+      "hmp_loadvm_seconds": 0.07457425002939999,
+      "mode": "cached",
+      "pair": 22,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07473641587421298
+    },
+    {
+      "hmp_loadvm_seconds": 0.07049920922145247,
+      "mode": "cached",
+      "pair": 23,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07055029086768627
+    },
+    {
+      "hmp_loadvm_seconds": 0.12969112489372492,
+      "mode": "strict",
+      "pair": 23,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1417087921872735
+    },
+    {
+      "hmp_loadvm_seconds": 0.05115945800207555,
+      "mode": "strict",
+      "pair": 24,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06369275017641485
+    },
+    {
+      "hmp_loadvm_seconds": 0.0627780829090625,
+      "mode": "cached",
+      "pair": 24,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06284637516364455
+    },
+    {
+      "hmp_loadvm_seconds": 0.06370645784772933,
+      "mode": "cached",
+      "pair": 25,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06392870796844363
+    },
+    {
+      "hmp_loadvm_seconds": 0.08168979198671877,
+      "mode": "strict",
+      "pair": 25,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.09937250008806586
+    },
+    {
+      "hmp_loadvm_seconds": 0.06034745811484754,
+      "mode": "strict",
+      "pair": 26,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07207445800304413
+    },
+    {
+      "hmp_loadvm_seconds": 0.07080129091627896,
+      "mode": "cached",
+      "pair": 26,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07104912493377924
+    },
+    {
+      "hmp_loadvm_seconds": 0.07935779099352658,
+      "mode": "cached",
+      "pair": 27,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.0794172091409564
+    },
+    {
+      "hmp_loadvm_seconds": 0.15637770807370543,
+      "mode": "strict",
+      "pair": 27,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.16781979193910956
+    },
+    {
+      "hmp_loadvm_seconds": 0.051664709113538265,
+      "mode": "strict",
+      "pair": 28,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06116583407856524
+    },
+    {
+      "hmp_loadvm_seconds": 0.1725341249257326,
+      "mode": "cached",
+      "pair": 28,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1727078331168741
+    },
+    {
+      "hmp_loadvm_seconds": 0.28003054205328226,
+      "mode": "cached",
+      "pair": 29,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2805095419753343
+    },
+    {
+      "hmp_loadvm_seconds": 0.8349170000292361,
+      "mode": "strict",
+      "pair": 29,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.9330061669461429
+    },
+    {
+      "hmp_loadvm_seconds": 0.1915727909654379,
+      "mode": "strict",
+      "pair": 30,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2133134170435369
+    },
+    {
+      "hmp_loadvm_seconds": 0.051254082936793566,
+      "mode": "cached",
+      "pair": 30,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.051320958184078336
+    },
+    {
+      "hmp_loadvm_seconds": 0.06498962501063943,
+      "mode": "cached",
+      "pair": 31,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06508091581054032
+    },
+    {
+      "hmp_loadvm_seconds": 0.14485216583125293,
+      "mode": "strict",
+      "pair": 31,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1622602918650955
+    },
+    {
+      "hmp_loadvm_seconds": 0.26157587487250566,
+      "mode": "strict",
+      "pair": 32,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2865263749845326
+    },
+    {
+      "hmp_loadvm_seconds": 0.218214875087142,
+      "mode": "cached",
+      "pair": 32,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.2184647920075804
+    },
+    {
+      "hmp_loadvm_seconds": 0.04582633380778134,
+      "mode": "cached",
+      "pair": 33,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.04591429210267961
+    },
+    {
+      "hmp_loadvm_seconds": 0.04156875004991889,
+      "mode": "strict",
+      "pair": 33,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.05214499984867871
+    },
+    {
+      "hmp_loadvm_seconds": 0.16509633301757276,
+      "mode": "strict",
+      "pair": 34,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1789352078922093
+    },
+    {
+      "hmp_loadvm_seconds": 0.07779287500306964,
+      "mode": "cached",
+      "pair": 34,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07864587497897446
+    },
+    {
+      "hmp_loadvm_seconds": 0.06532033416442573,
+      "mode": "cached",
+      "pair": 35,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.06537770805880427
+    },
+    {
+      "hmp_loadvm_seconds": 0.08903345791622996,
+      "mode": "strict",
+      "pair": 35,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.1023342499975115
+    },
+    {
+      "hmp_loadvm_seconds": 0.22746158298105001,
+      "mode": "strict",
+      "pair": 36,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.24179612519219518
+    },
+    {
+      "hmp_loadvm_seconds": 0.2236425830051303,
+      "mode": "cached",
+      "pair": 36,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.22381224995478988
+    },
+    {
+      "hmp_loadvm_seconds": 0.11689079203642905,
+      "mode": "cached",
+      "pair": 37,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.11707983398810029
+    },
+    {
+      "hmp_loadvm_seconds": 0.077898999908939,
+      "mode": "strict",
+      "pair": 37,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.0899764581117779
+    },
+    {
+      "hmp_loadvm_seconds": 0.16219175001606345,
+      "mode": "strict",
+      "pair": 38,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.17441037483513355
+    },
+    {
+      "hmp_loadvm_seconds": 0.07504583382979035,
+      "mode": "cached",
+      "pair": 38,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.07515029213391244
+    },
+    {
+      "hmp_loadvm_seconds": 0.1067335419356823,
+      "mode": "cached",
+      "pair": 39,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.10690804198384285
+    },
+    {
+      "hmp_loadvm_seconds": 0.20974324992857873,
+      "mode": "strict",
+      "pair": 39,
+      "ram_disk_process_restored": true,
+      "wall_seconds": 0.23098404193297029
+    }
+  ],
+  "schema_version": "fpb-qemu-cached-restore-ab-v1",
+  "scope": "QEMU/HVF full-VM restore transport A/B, not DeltaBox",
+  "status": "measured",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "wall_stats": {
+    "cached": {
+      "count": 40,
+      "max_ms": 280.5095419753343,
+      "min_ms": 45.91429210267961,
+      "p50_ms": 87.2015004279092,
+      "p95_ms": 223.81224995478988
+    },
+    "strict": {
+      "count": 40,
+      "max_ms": 933.0061669461429,
+      "min_ms": 52.14499984867871,
+      "p50_ms": 124.11445798352361,
+      "p95_ms": 450.5565830040723
+    }
+  }
+}

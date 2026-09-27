@@ -1,0 +1,561 @@
+{
+  "scope": "pinned public Boltons 26.0.0 repair fixture on one QEMU/HVF host",
+  "runtime": "qemu_hvf_full_vm_qcow2_v1",
+  "asset_schema_version": "boltons-microvm-assets-v2",
+  "host_private_case_count": 14,
+  "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+  "measures_model_training": false,
+  "uses_realworld_env": false,
+  "policy_action_window_checked": false,
+  "branch_count": 2,
+  "grading_workers": 2,
+  "repetitions": 3,
+  "condition_order": "alternated within pairs",
+  "parent_setup_seconds": 5.868518500123173,
+  "parent_disk_clone_mode": "clonefile",
+  "expected_rewards": [
+    1.0,
+    0.0
+  ],
+  "all_child_disks_independent": true,
+  "all_child_ram_independent": true,
+  "runs": [
+    {
+      "condition": "fork_serial",
+      "repetition": 0,
+      "wall_seconds": 7.693852332886308,
+      "setup_seconds": 1.119021208025515,
+      "fork_call_seconds": 1.103862167103216,
+      "child_start_restore_seconds": 0.6842251250054687,
+      "disk_clone_seconds": 0.18518108292482793,
+      "isolation_seconds": 0.05202275002375245,
+      "grading_seconds": 6.439174541970715,
+      "disk_clone_mode_counts": {
+        "clonefile": 2,
+        "copy": 0
+      },
+      "rewards": [
+        1.0,
+        0.0
+      ],
+      "branches": [
+        {
+          "index": 0,
+          "expected_reward": 1.0,
+          "reward": 1.0,
+          "passed_cases": 14,
+          "case_count": 14,
+          "value": "glass",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 21,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.1883729579858482,
+            "guest_command_seconds": 1.1654184178914875,
+            "snapshot_save_seconds": 0.45868170796893537,
+            "snapshot_load_seconds": 4.806721544358879
+          }
+        },
+        {
+          "index": 1,
+          "expected_reward": 0.0,
+          "reward": 0.0,
+          "passed_cases": 7,
+          "case_count": 14,
+          "value": "glas",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 20,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.09268262493424118,
+            "guest_command_seconds": 1.3422074988484383,
+            "snapshot_save_seconds": 0.4580562498886138,
+            "snapshot_load_seconds": 4.447254999540746
+          }
+        }
+      ],
+      "isolation": {
+        "independent_ram_markers": 2,
+        "independent_disk_markers": 2,
+        "parent_unchanged": true
+      },
+      "child_disks": [
+        {
+          "name": "fork_serial-r0-b0.qcow2",
+          "bytes": 268107922,
+          "sha256": "2ee6642b9a40e8d267adf66b55aac1e6a6c441d27aedd41b05c7dcb768cdb4fb"
+        },
+        {
+          "name": "fork_serial-r0-b1.qcow2",
+          "bytes": 267714706,
+          "sha256": "96cae64e7d7d07737faceac0db242d62393a992b53234bf2bc0f1e88d31766fc"
+        }
+      ]
+    },
+    {
+      "condition": "fork_parallel",
+      "repetition": 0,
+      "wall_seconds": 7.291417625034228,
+      "setup_seconds": 0.9766021249815822,
+      "fork_call_seconds": 0.9652082500979304,
+      "child_start_restore_seconds": 0.5741486670449376,
+      "disk_clone_seconds": 0.17568587511777878,
+      "isolation_seconds": 0.04418449988588691,
+      "grading_seconds": 6.202315666014329,
+      "disk_clone_mode_counts": {
+        "clonefile": 2,
+        "copy": 0
+      },
+      "rewards": [
+        1.0,
+        0.0
+      ],
+      "branches": [
+        {
+          "index": 0,
+          "expected_reward": 1.0,
+          "reward": 1.0,
+          "passed_cases": 14,
+          "case_count": 14,
+          "value": "glass",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 21,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.20873079192824662,
+            "guest_command_seconds": 1.176560249645263,
+            "snapshot_save_seconds": 0.4806895840447396,
+            "snapshot_load_seconds": 4.688502751523629
+          }
+        },
+        {
+          "index": 1,
+          "expected_reward": 0.0,
+          "reward": 0.0,
+          "passed_cases": 7,
+          "case_count": 14,
+          "value": "glas",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 20,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.21268579200841486,
+            "guest_command_seconds": 1.1736029998864979,
+            "snapshot_save_seconds": 0.48493529204279184,
+            "snapshot_load_seconds": 4.475119750248268
+          }
+        }
+      ],
+      "isolation": {
+        "independent_ram_markers": 2,
+        "independent_disk_markers": 2,
+        "parent_unchanged": true
+      },
+      "child_disks": [
+        {
+          "name": "fork_parallel-r0-b0.qcow2",
+          "bytes": 268107922,
+          "sha256": "921e66143a14470a3702096e687299430e328818eaba481113f9400f5b13df06"
+        },
+        {
+          "name": "fork_parallel-r0-b1.qcow2",
+          "bytes": 267714706,
+          "sha256": "1b219199e6b43c5240ddffb04292b6aca2d9eb3e39050ec3cc60bb201aa1f5a8"
+        }
+      ]
+    },
+    {
+      "condition": "fork_parallel",
+      "repetition": 1,
+      "wall_seconds": 7.234189541079104,
+      "setup_seconds": 0.8811354159843177,
+      "fork_call_seconds": 0.8714459161274135,
+      "child_start_restore_seconds": 0.4850071668624878,
+      "disk_clone_seconds": 0.17320299986749887,
+      "isolation_seconds": 0.04218191700056195,
+      "grading_seconds": 6.242748457938433,
+      "disk_clone_mode_counts": {
+        "clonefile": 2,
+        "copy": 0
+      },
+      "rewards": [
+        1.0,
+        0.0
+      ],
+      "branches": [
+        {
+          "index": 0,
+          "expected_reward": 1.0,
+          "reward": 1.0,
+          "passed_cases": 14,
+          "case_count": 14,
+          "value": "glass",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 21,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.192114916164428,
+            "guest_command_seconds": 1.2027847475837916,
+            "snapshot_save_seconds": 0.42515166592784226,
+            "snapshot_load_seconds": 4.676645501516759
+          }
+        },
+        {
+          "index": 1,
+          "expected_reward": 0.0,
+          "reward": 0.0,
+          "passed_cases": 7,
+          "case_count": 14,
+          "value": "glas",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 20,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.1902404169086367,
+            "guest_command_seconds": 1.2081578366924077,
+            "snapshot_save_seconds": 0.42926199990324676,
+            "snapshot_load_seconds": 4.414687916170806
+          }
+        }
+      ],
+      "isolation": {
+        "independent_ram_markers": 2,
+        "independent_disk_markers": 2,
+        "parent_unchanged": true
+      },
+      "child_disks": [
+        {
+          "name": "fork_parallel-r1-b0.qcow2",
+          "bytes": 268042386,
+          "sha256": "c8f9ce76e4e2a9da8ed5d80e3bfcf30257641d3ed36463d0ec661605e4fb5c41"
+        },
+        {
+          "name": "fork_parallel-r1-b1.qcow2",
+          "bytes": 267714706,
+          "sha256": "54b9ec6f223d950c4f082fb001b57a31f16b4d6506a0e4ed5c98caae4104b32a"
+        }
+      ]
+    },
+    {
+      "condition": "fork_serial",
+      "repetition": 1,
+      "wall_seconds": 8.313151125097647,
+      "setup_seconds": 0.996298500103876,
+      "fork_call_seconds": 0.9848066249396652,
+      "child_start_restore_seconds": 0.6052482081577182,
+      "disk_clone_seconds": 0.16265220916830003,
+      "isolation_seconds": 0.0430035418830812,
+      "grading_seconds": 7.132158917142078,
+      "disk_clone_mode_counts": {
+        "clonefile": 2,
+        "copy": 0
+      },
+      "rewards": [
+        1.0,
+        0.0
+      ],
+      "branches": [
+        {
+          "index": 0,
+          "expected_reward": 1.0,
+          "reward": 1.0,
+          "passed_cases": 14,
+          "case_count": 14,
+          "value": "glass",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 21,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.08323679189197719,
+            "guest_command_seconds": 1.1883302507922053,
+            "snapshot_save_seconds": 0.4783875420689583,
+            "snapshot_load_seconds": 5.506769499508664
+          }
+        },
+        {
+          "index": 1,
+          "expected_reward": 0.0,
+          "reward": 0.0,
+          "passed_cases": 7,
+          "case_count": 14,
+          "value": "glas",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 20,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.11408624984323978,
+            "guest_command_seconds": 1.4155324569437653,
+            "snapshot_save_seconds": 0.47149154217913747,
+            "snapshot_load_seconds": 4.988823831314221
+          }
+        }
+      ],
+      "isolation": {
+        "independent_ram_markers": 2,
+        "independent_disk_markers": 2,
+        "parent_unchanged": true
+      },
+      "child_disks": [
+        {
+          "name": "fork_serial-r1-b0.qcow2",
+          "bytes": 268042386,
+          "sha256": "26378e964f656c0b7bd63cc0ba6edf4a30099415bf5b7b618fb34e0a6540340a"
+        },
+        {
+          "name": "fork_serial-r1-b1.qcow2",
+          "bytes": 267714706,
+          "sha256": "826e27c0080067d973d8aed84bdcca805dd23c7101411969bcd874fea5640f43"
+        }
+      ]
+    },
+    {
+      "condition": "fork_serial",
+      "repetition": 2,
+      "wall_seconds": 7.538663125131279,
+      "setup_seconds": 1.1196853329893202,
+      "fork_call_seconds": 1.109831833979115,
+      "child_start_restore_seconds": 0.6794613329693675,
+      "disk_clone_seconds": 0.2109699579887092,
+      "isolation_seconds": 0.04818133404478431,
+      "grading_seconds": 6.314684957964346,
+      "disk_clone_mode_counts": {
+        "clonefile": 2,
+        "copy": 0
+      },
+      "rewards": [
+        1.0,
+        0.0
+      ],
+      "branches": [
+        {
+          "index": 0,
+          "expected_reward": 1.0,
+          "reward": 1.0,
+          "passed_cases": 14,
+          "case_count": 14,
+          "value": "glass",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 21,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.21053912490606308,
+            "guest_command_seconds": 1.1814448731020093,
+            "snapshot_save_seconds": 0.4906152079347521,
+            "snapshot_load_seconds": 4.610442874021828
+          }
+        },
+        {
+          "index": 1,
+          "expected_reward": 0.0,
+          "reward": 0.0,
+          "passed_cases": 7,
+          "case_count": 14,
+          "value": "glas",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 20,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.08924099989235401,
+            "guest_command_seconds": 1.2340678318869323,
+            "snapshot_save_seconds": 0.46016133413650095,
+            "snapshot_load_seconds": 4.423807623563334
+          }
+        }
+      ],
+      "isolation": {
+        "independent_ram_markers": 2,
+        "independent_disk_markers": 2,
+        "parent_unchanged": true
+      },
+      "child_disks": [
+        {
+          "name": "fork_serial-r2-b0.qcow2",
+          "bytes": 268107922,
+          "sha256": "c4881cdb4a42851bf6b4cdf1d54d8cc3ff584927d621e8e14b9e4dd96277a92b"
+        },
+        {
+          "name": "fork_serial-r2-b1.qcow2",
+          "bytes": 267714706,
+          "sha256": "a9f89b9f613c4873867df25ad52b394cb17779a9b5dfdda6e541d97c28523924"
+        }
+      ]
+    },
+    {
+      "condition": "fork_parallel",
+      "repetition": 2,
+      "wall_seconds": 7.251875458052382,
+      "setup_seconds": 0.8851171662099659,
+      "fork_call_seconds": 0.8736987910233438,
+      "child_start_restore_seconds": 0.4895726249087602,
+      "disk_clone_seconds": 0.1710333749651909,
+      "isolation_seconds": 0.037681667134165764,
+      "grading_seconds": 6.25812887493521,
+      "disk_clone_mode_counts": {
+        "clonefile": 2,
+        "copy": 0
+      },
+      "rewards": [
+        1.0,
+        0.0
+      ],
+      "branches": [
+        {
+          "index": 0,
+          "expected_reward": 1.0,
+          "reward": 1.0,
+          "passed_cases": 14,
+          "case_count": 14,
+          "value": "glass",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 21,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.20472583291120827,
+            "guest_command_seconds": 1.1307384159881622,
+            "snapshot_save_seconds": 0.46404604194685817,
+            "snapshot_load_seconds": 4.717641834868118
+          }
+        },
+        {
+          "index": 1,
+          "expected_reward": 0.0,
+          "reward": 0.0,
+          "passed_cases": 7,
+          "case_count": 14,
+          "value": "glas",
+          "vm_metrics": {
+            "vm_starts": 1,
+            "guest_commands": 20,
+            "snapshot_saves": 1,
+            "snapshot_loads": 15,
+            "forks_spawned": 0,
+            "fork_reflink_disks": 0,
+            "fork_copied_disks": 0,
+            "fork_seconds": 0.0,
+            "fork_disk_clone_seconds": 0.0,
+            "fork_child_start_restore_seconds": 0.0,
+            "vm_start_seconds": 0.20189049979671836,
+            "guest_command_seconds": 1.3085204570088536,
+            "snapshot_save_seconds": 0.3982499579433352,
+            "snapshot_load_seconds": 4.421427373075858
+          }
+        }
+      ],
+      "isolation": {
+        "independent_ram_markers": 2,
+        "independent_disk_markers": 2,
+        "parent_unchanged": true
+      },
+      "child_disks": [
+        {
+          "name": "fork_parallel-r2-b0.qcow2",
+          "bytes": 268042386,
+          "sha256": "1b4a8d0acb67dbe256dbd7f81d261def71897dc91641d02732ac74220eccce89"
+        },
+        {
+          "name": "fork_parallel-r2-b1.qcow2",
+          "bytes": 267714706,
+          "sha256": "0124b62207c98eb3bd343fbd47a5c487c62dc68feb8bea79db70497eb59922bc"
+        }
+      ]
+    }
+  ],
+  "median_serial_child_start_restore_seconds": 0.6794613329693675,
+  "median_parallel_child_start_restore_seconds": 0.4895726249087602,
+  "child_start_restore_ratio": 1.387866270292372,
+  "median_serial_setup_seconds": 1.119021208025515,
+  "median_parallel_setup_seconds": 0.8851171662099659,
+  "setup_ratio": 1.2642633661903953,
+  "median_serial_batch_seconds": 7.693852332886308,
+  "median_parallel_batch_seconds": 7.251875458052382,
+  "graded_batch_throughput_ratio": 1.060946561670907,
+  "serial_total_seconds": 23.545666583115235,
+  "parallel_total_seconds": 21.777482624165714,
+  "serial_total_including_parent_setup_seconds": 29.414185083238408,
+  "parallel_total_including_parent_setup_seconds": 27.646001124288887,
+  "amortized_graded_batch_throughput_ratio": 1.0639580368603854,
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  }
+}

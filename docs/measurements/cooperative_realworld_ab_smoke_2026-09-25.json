@@ -1,0 +1,126 @@
+{
+  "amortized_total_seconds": {
+    "cooperative": 8.553571,
+    "prepared_full_vm": 10.33113
+  },
+  "cooperative_checkpoint_ns": 904833,
+  "cooperative_graded_episode_stats": {
+    "n": 2,
+    "p50_seconds": 0.842236,
+    "p95_seconds": 0.860417
+  },
+  "cooperative_guest_case_runner_sha256": "2fe065f75c3343698bceb8edda06e8dc4bce9699220921a6ef7251682e129c2b",
+  "cooperative_guest_service_sha256": "d00cf5b4a4291fe22cb5fe398469bc54084f89b1c96a5ab96c8d990a8762c289",
+  "cooperative_one_time_setup_seconds": 6.8691000828985125,
+  "fixture": "public_solved_boltons_26_v2",
+  "kind": "cooperative_realworld_prepared_full_vm_ab_v1",
+  "model_or_optimizer_used": false,
+  "outer_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+  "paired_delta_stats_seconds": {
+    "n": 2,
+    "p50_seconds": 1.024224,
+    "p95_seconds": 1.238854
+  },
+  "paired_ratio_stats": {
+    "all_pairs_cooperative_faster": true,
+    "n": 2,
+    "p50": 2.2111,
+    "p95": 2.4398
+  },
+  "pairs": [
+    {
+      "condition_order": [
+        "cooperative",
+        "prepared_full_vm"
+      ],
+      "episodes": [
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 640750,
+          "guest_reset_ns": 3612333,
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "f7b2e2873923ee88db18d75cba0641e1e6d89ed9742352d0943767b99f7189bb",
+          "wall_seconds": 0.860417
+        },
+        {
+          "child_provision_seconds": 0.570212,
+          "child_teardown_seconds": 0.026305,
+          "condition": "prepared_full_vm",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "f8c06ed997adfe7a1886b130fa74425224415746c4b1d57f5046360a5416931f",
+          "wall_seconds": 2.099271
+        }
+      ],
+      "mode": "repair",
+      "paired_full_minus_cooperative_seconds": 1.238854,
+      "paired_full_over_cooperative_ratio": 2.4398,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 0
+    },
+    {
+      "condition_order": [
+        "prepared_full_vm",
+        "cooperative"
+      ],
+      "episodes": [
+        {
+          "child_provision_seconds": 0.387022,
+          "child_teardown_seconds": 0.012953,
+          "condition": "prepared_full_vm",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "f8c06ed997adfe7a1886b130fa74425224415746c4b1d57f5046360a5416931f",
+          "wall_seconds": 1.633649
+        },
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 594625,
+          "guest_reset_ns": 4133750,
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "f7b2e2873923ee88db18d75cba0641e1e6d89ed9742352d0943767b99f7189bb",
+          "wall_seconds": 0.824054
+        }
+      ],
+      "mode": "baseline",
+      "paired_full_minus_cooperative_seconds": 0.809594,
+      "paired_full_over_cooperative_ratio": 1.9825,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 0
+    }
+  ],
+  "prepared_full_vm_graded_episode_stats": {
+    "n": 2,
+    "p50_seconds": 1.86646,
+    "p95_seconds": 2.099271
+  },
+  "prepared_full_vm_one_time_setup_seconds": 6.5982099999673665,
+  "realworld_env_used": true,
+  "repetitions": 1,
+  "security_scope": "trusted shared guest kernel; cooperative process/OverlayFS checkpoint is not full-VM crash or hostile-root isolation",
+  "setup_amortized_total_ratio_full_over_cooperative": 1.2078,
+  "status": "passed",
+  "steady_state_median_ratio_full_over_cooperative": 2.2161,
+  "task_time_window_identical": true,
+  "timing_scope": "serialized graded episodes including child creation, actions, verifier, and child teardown; one-time setup separate; host outer-tree audit separate"
+}

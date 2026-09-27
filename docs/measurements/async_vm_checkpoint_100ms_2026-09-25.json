@@ -1,0 +1,226 @@
+{
+  "scope": "pinned public Boltons v2 scripted real-QEMU/HVF checkpoint overlap",
+  "uses_actual_qemu_savevm": true,
+  "policy_wait_kind": "time.sleep surrogate; no model, inference, GPU, or optimizer",
+  "memory_mib": 128,
+  "pairs": 2,
+  "wait_ms": 100.0,
+  "all_observation_parity": true,
+  "all_hidden_case_parity": true,
+  "all_reward_parity": true,
+  "all_checkpoint_count_parity": true,
+  "serial_median_graded_seconds": 8.389122020453215,
+  "overlap_median_graded_seconds": 7.994771728874184,
+  "paired_graded_deltas_seconds": [
+    0.2861694579478353,
+    0.5025311252102256
+  ],
+  "serial_checkpoint_critical_path_seconds": 0.531877500237897,
+  "overlap_exposed_gate_seconds": 0.006826292257755995,
+  "overlap_hidden_checkpoint_seconds": 0.5225057501811534,
+  "runs": [
+    {
+      "name": "pair-1-serial",
+      "mode": "serial",
+      "clone_mode": "clonefile",
+      "simulated_policy_wait_seconds_per_turn": 0.1,
+      "whole_graded_episode_seconds": 8.337198540801182,
+      "through_committed_turns_seconds": 6.68288837489672,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "turns": [
+        {
+          "turn": 1,
+          "action": "read_file",
+          "action_seconds": 0.07624562503769994,
+          "checkpoint_seconds": 0.09876937512308359,
+          "policy_wait_seconds": 0.11009966698475182,
+          "checkpoint_policy_overlap_seconds": 0.0,
+          "exposed_checkpoint_gate_seconds": 0.09876937512308359,
+          "boundary_seconds": 0.0016495420131832361,
+          "turn_seconds": 0.28691270807757974
+        },
+        {
+          "turn": 2,
+          "action": "replace_text",
+          "action_seconds": 0.06535404198803008,
+          "checkpoint_seconds": 0.10191866685636342,
+          "policy_wait_seconds": 0.10732945799827576,
+          "checkpoint_policy_overlap_seconds": 0.0,
+          "exposed_checkpoint_gate_seconds": 0.10191866685636342,
+          "boundary_seconds": 0.0013685000594705343,
+          "turn_seconds": 0.27601150004193187
+        },
+        {
+          "turn": 3,
+          "action": "run_visible_checks",
+          "action_seconds": 0.06866983301006258,
+          "checkpoint_seconds": 0.11933408305048943,
+          "policy_wait_seconds": 0.10850966698490083,
+          "checkpoint_policy_overlap_seconds": 0.0,
+          "exposed_checkpoint_gate_seconds": 0.11933408305048943,
+          "boundary_seconds": 0.0023836251348257065,
+          "turn_seconds": 0.29892687499523163
+        }
+      ],
+      "journal_snapshot_saves": 4,
+      "qemu_snapshot_saves": 5
+    },
+    {
+      "name": "pair-1-overlap",
+      "mode": "overlap",
+      "clone_mode": "clonefile",
+      "simulated_policy_wait_seconds_per_turn": 0.1,
+      "whole_graded_episode_seconds": 8.051029082853347,
+      "through_committed_turns_seconds": 6.278797415783629,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "turns": [
+        {
+          "turn": 1,
+          "action": "read_file",
+          "action_seconds": 0.08104983298107982,
+          "checkpoint_seconds": 0.1120160419959575,
+          "policy_wait_seconds": 0.10531274997629225,
+          "checkpoint_policy_overlap_seconds": 0.10531274997629225,
+          "exposed_checkpoint_gate_seconds": 0.006758333183825016,
+          "boundary_seconds": 0.002631999785080552,
+          "turn_seconds": 0.19619908300228417
+        },
+        {
+          "turn": 2,
+          "action": "replace_text",
+          "action_seconds": 0.06622333312407136,
+          "checkpoint_seconds": 0.0939234159886837,
+          "policy_wait_seconds": 0.10465866699814796,
+          "checkpoint_policy_overlap_seconds": 0.0939234159886837,
+          "exposed_checkpoint_gate_seconds": 1.5707919374108315e-05,
+          "boundary_seconds": 0.0010385001078248024,
+          "turn_seconds": 0.17198354098945856
+        },
+        {
+          "turn": 3,
+          "action": "run_visible_checks",
+          "action_seconds": 0.07072595809586346,
+          "checkpoint_seconds": 0.09821137506514788,
+          "policy_wait_seconds": 0.10005658306181431,
+          "checkpoint_policy_overlap_seconds": 0.09821137506514788,
+          "exposed_checkpoint_gate_seconds": 3.375113010406494e-06,
+          "boundary_seconds": 0.0018409588374197483,
+          "turn_seconds": 0.17272320808842778
+        }
+      ],
+      "journal_snapshot_saves": 4,
+      "qemu_snapshot_saves": 5
+    },
+    {
+      "name": "pair-2-overlap",
+      "mode": "overlap",
+      "clone_mode": "clonefile",
+      "simulated_policy_wait_seconds_per_turn": 0.1,
+      "whole_graded_episode_seconds": 7.938514374895021,
+      "through_committed_turns_seconds": 6.300171124981716,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "turns": [
+        {
+          "turn": 1,
+          "action": "read_file",
+          "action_seconds": 0.07620424986816943,
+          "checkpoint_seconds": 0.07653433294035494,
+          "policy_wait_seconds": 0.10898216720670462,
+          "checkpoint_policy_overlap_seconds": 0.07651616702787578,
+          "exposed_checkpoint_gate_seconds": 1.854216679930687e-05,
+          "boundary_seconds": 0.0010598329827189445,
+          "turn_seconds": 0.18679995788261294
+        },
+        {
+          "turn": 2,
+          "action": "replace_text",
+          "action_seconds": 0.06409612507559359,
+          "checkpoint_seconds": 0.08132495894096792,
+          "policy_wait_seconds": 0.10587079101242125,
+          "checkpoint_policy_overlap_seconds": 0.08132495894096792,
+          "exposed_checkpoint_gate_seconds": 1.591700129210949e-05,
+          "boundary_seconds": 0.0012269578874111176,
+          "turn_seconds": 0.171283750096336
+        },
+        {
+          "turn": 3,
+          "action": "run_visible_checks",
+          "action_seconds": 0.06743666692636907,
+          "checkpoint_seconds": 0.06721708318218589,
+          "policy_wait_seconds": 0.10497983288951218,
+          "checkpoint_policy_overlap_seconds": 0.06721708318218589,
+          "exposed_checkpoint_gate_seconds": 1.4416873455047607e-05,
+          "boundary_seconds": 0.0010415420401841402,
+          "turn_seconds": 0.1735513329040259
+        }
+      ],
+      "journal_snapshot_saves": 4,
+      "qemu_snapshot_saves": 5
+    },
+    {
+      "name": "pair-2-serial",
+      "mode": "serial",
+      "clone_mode": "clonefile",
+      "simulated_policy_wait_seconds_per_turn": 0.1,
+      "whole_graded_episode_seconds": 8.441045500105247,
+      "through_committed_turns_seconds": 6.478907292010263,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "turns": [
+        {
+          "turn": 1,
+          "action": "read_file",
+          "action_seconds": 0.07528345892205834,
+          "checkpoint_seconds": 0.07829516706988215,
+          "policy_wait_seconds": 0.11002054205164313,
+          "checkpoint_policy_overlap_seconds": 0.0,
+          "exposed_checkpoint_gate_seconds": 0.07829516706988215,
+          "boundary_seconds": 0.0011686659418046474,
+          "turn_seconds": 0.26491887494921684
+        },
+        {
+          "turn": 2,
+          "action": "replace_text",
+          "action_seconds": 0.07733725011348724,
+          "checkpoint_seconds": 0.06216475018300116,
+          "policy_wait_seconds": 0.10806858306750655,
+          "checkpoint_policy_overlap_seconds": 0.0,
+          "exposed_checkpoint_gate_seconds": 0.06216475018300116,
+          "boundary_seconds": 0.0015564169734716415,
+          "turn_seconds": 0.24915950000286102
+        },
+        {
+          "turn": 3,
+          "action": "run_visible_checks",
+          "action_seconds": 0.07145374990068376,
+          "checkpoint_seconds": 0.07139545795507729,
+          "policy_wait_seconds": 0.10418566619046032,
+          "checkpoint_policy_overlap_seconds": 0.0,
+          "exposed_checkpoint_gate_seconds": 0.07139545795507729,
+          "boundary_seconds": 0.00109083391726017,
+          "turn_seconds": 0.24816283280961215
+        }
+      ],
+      "journal_snapshot_saves": 4,
+      "qemu_snapshot_saves": 5
+    }
+  ],
+  "limitations": [
+    "One trusted, exclusively owned QEMU adapter per arm",
+    "Full QEMU checkpoint per turn, not Crab's eBPF/ZFS/CRIU classifier/backend",
+    "Injected policy wait is not evidence of model-training throughput",
+    "Initial VM boot, initial checkpoint, and host-private grading remain serial",
+    "No host power-loss atomicity or agent-process/event-log recovery"
+  ]
+}

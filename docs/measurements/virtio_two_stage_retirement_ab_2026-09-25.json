@@ -1,0 +1,64 @@
+{
+  "kind": "graded_realworld_virtio_two_stage_retirement_ab_v1",
+  "date_utc": "2026-09-25",
+  "host": "Apple Silicon macOS",
+  "qemu_version": "11.1.1",
+  "accelerator": "HVF",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "task_kind": "scripted public solved repository repair",
+  "source_binding": {
+    "runtime_sha256": "7ff5fda9e84ba58bb3dbbb8b8533ccc5722bce133252bbea3afddb3cab382a1f",
+    "coding_adapter_sha256": "02d67a296d2e08781a2c79906a0d715adc7b6100da5c0e3159117a32bfe88267",
+    "guest_agent_sha256": "60e68593593051bfcdfa6e8e8898a3a4ff9134ce169626cd09f01c46b6761167",
+    "benchmark_sha256": "581162c549f8ff8b8e0fe935fad47537b02416ff370db596b3079ca3507d06e5",
+    "task_json_sha256": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+    "rootfs_seed_sha256": "2060b904c9764496cedf1e4508a37fd3b92ee1338018034b94e4df14f1ccacd6",
+    "raw_local_report_sha256": "1b24821684ae587420d84f39349c3b7790f16a975756150bd6229e4cfdf6e915"
+  },
+  "workload": {
+    "pairs": 3,
+    "arm_order": [["serial", "virtio_read"], ["virtio_read", "serial"], ["serial", "virtio_read"]],
+    "same_preinstalled_image_for_both_arms": true,
+    "actions_per_episode": 8,
+    "repository_reads_per_episode": 5,
+    "hidden_cases_per_episode": 14,
+    "model_inference_in_timing": false,
+    "optimizer_in_timing": false
+  },
+  "two_stage_retirement": {
+    "stage_one": "STOP acknowledged; agent exit; guest bind unmounted; process and port-FD census; old host socket closed and never reconnected",
+    "qemu_reconciliation": "If QEMU reports exactly guest=off,host=on and connected chardev, a trusted root guest helper opens O_RDWR|O_NONBLOCK|O_NOFOLLOW, yields once, and closes without reading or writing action-port bytes. Its temporary bind is removed, followed by another guest process and FD census.",
+    "stage_two": "Checkpointing is attested only when QEMU reports exact fpb.control port 1 guest=off,host=off,throttle=off and disconnected fpbctl chardev. Save and load recheck QEMU state; load checks again afterward.",
+    "candidate_visible_and_hidden_python_uid": 65534,
+    "branch_fork_still_disabled": true,
+    "live_agent_snapshot_claimed": false
+  },
+  "parity": {
+    "opening_observation_equal": true,
+    "all_action_observations_equal": true,
+    "all_14_case_results_equal": true,
+    "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+    "all_14_cases_passed_in_every_episode": true,
+    "final_source_sha256_equal": true,
+    "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+    "reward_equal": true,
+    "reward_per_episode": 1.0,
+    "snapshot_saves_per_episode": 1,
+    "snapshot_loads_per_episode": 14,
+    "virtio_qemu_disconnect_attested_in_every_episode": true
+  },
+  "median_host_clock": {
+    "serial_five_reads_ms": 164.229416,
+    "virtio_five_reads_ms": 17.426542,
+    "read_action_ratio_serial_over_virtio": 9.424,
+    "serial_complete_episode_seconds": 7.272595,
+    "virtio_complete_episode_seconds": 7.558431,
+    "virtio_minus_serial_complete_episode_seconds": 0.285836,
+    "virtio_trusted_reopen_probe_ms": 20.762917,
+    "virtio_total_retirement_ms": 161.284958,
+    "serial_submit_ms": 130.37975,
+    "virtio_submit_ms": 263.293959
+  },
+  "paired_complete_episode_virtio_minus_serial_seconds": [-0.202321, 0.223198, 1.655047],
+  "interpretation": "The current QEMU-attested two-stage path recovers complete graded reward parity and reduces the five policy reads. It did not demonstrate a complete-episode speedup: the virtio median was 0.286 seconds slower and only one of three pairs favored virtio. Pair 3 included a high virtio verifier time. No model rollout, GPU training, or optimizer throughput was measured."
+}

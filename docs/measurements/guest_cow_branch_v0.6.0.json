@@ -1,0 +1,101 @@
+{
+  "kind": "host_observed_guest_cow_benchmark_v1",
+  "guest": {
+    "kind": "guest_linux_fork_overlayfs_microbenchmark_v1",
+    "scope": "trusted guest-local primitive inside one already-running ARM64 QEMU/HVF VM",
+    "repetitions": 200,
+    "correctness": {
+      "parent_glass": "glas",
+      "fix_branch": {
+        "mode": "fix",
+        "inherited_counter": 7,
+        "branch_counter": 11,
+        "glass": "glass",
+        "glasses": "glass",
+        "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+        "contains_fix": true
+      },
+      "baseline_branch": {
+        "mode": "baseline",
+        "inherited_counter": 7,
+        "branch_counter": 12,
+        "glass": "glas",
+        "glasses": "glass",
+        "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+        "contains_fix": false
+      },
+      "parent_counter": 7,
+      "shared_lower_sha256_unchanged": true,
+      "isolated_overlay_writes": true
+    },
+    "timings": {
+      "overlay_create": {
+        "count": 200,
+        "median_ms": 0.063271,
+        "p95_ms": 0.135209,
+        "min_ms": 0.046792,
+        "max_ms": 0.931583
+      },
+      "fork_ready": {
+        "count": 200,
+        "median_ms": 0.18725,
+        "p95_ms": 0.596416,
+        "min_ms": 0.134708,
+        "max_ms": 0.92675
+      },
+      "overlay_rollback": {
+        "count": 200,
+        "median_ms": 0.754375,
+        "p95_ms": 2.646833,
+        "min_ms": 0.441709,
+        "max_ms": 4.096708
+      },
+      "combined_branch_cycle": {
+        "count": 200,
+        "median_ms": 1.065584,
+        "p95_ms": 3.198,
+        "min_ms": 0.644167,
+        "max_ms": 4.507251
+      }
+    }
+  },
+  "host": {
+    "boot_seconds": 5.616621,
+    "guest_call_seconds": 0.412352,
+    "total_seconds": 6.243753,
+    "vm_metrics": {
+      "vm_starts": 1,
+      "guest_commands": 20,
+      "snapshot_saves": 0,
+      "snapshot_loads": 0,
+      "forks_spawned": 0,
+      "fork_reflink_disks": 0,
+      "fork_copied_disks": 0,
+      "fork_seconds": 0.0,
+      "fork_disk_clone_seconds": 0.0,
+      "vm_start_seconds": 0.13320004101842642,
+      "guest_command_seconds": 0.7162210000678897,
+      "snapshot_save_seconds": 0.0,
+      "snapshot_load_seconds": 0.0
+    }
+  },
+  "assets": {
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "rootfs_seed_sha256": "9201a533e7491c882cca72672b4a3ca13ca85acd1b4235ee652410ec33f52cf7",
+    "guest_program_sha256": "0fdc1798cd8747ac2f399855e00ec9706873e45f152290f6db0fc1952974fa87"
+  },
+  "limits": [
+    "trusted guest-local branches share one Linux kernel",
+    "not an adversarial policy sandbox",
+    "not a full VM checkpoint or restore",
+    "no model inference or optimizer training measured"
+  ],
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v1",
+    "rootfs_seed_sha256": "9201a533e7491c882cca72672b4a3ca13ca85acd1b4235ee652410ec33f52cf7",
+    "source_sdist_sha256": null,
+    "seed_workspace_sha256": null,
+    "provenance_note": "The v1 asset manifest did not record source or seed digests; no source binding is claimed."
+  }
+}

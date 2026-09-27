@@ -1,0 +1,141 @@
+{
+  "kind": "host_observed_guest_mount_namespace_benchmark_v1",
+  "guest": {
+    "kind": "guest_linux_mount_namespace_overlayfs_microbenchmark_v1",
+    "scope": "trusted guest-local fork with per-child mount namespace and tmpfs upper",
+    "repetitions": 200,
+    "correctness": {
+      "parent_namespace": "mnt:[4026531832]",
+      "parent_upper_device": 64784,
+      "parent_overlay_device": 64784,
+      "namespace_verification": "distinct /proc mount-namespace identifiers and tmpfs devices; empty parent mountpoint",
+      "fix_branch": {
+        "glass": "glass",
+        "glasses": "glass",
+        "inherited_counter": 7,
+        "branch_counter": 11,
+        "marker_visible": true,
+        "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+        "mount_namespace": "mnt:[4026532109]",
+        "upper_device": 32,
+        "overlay_device": 33
+      },
+      "baseline_branch": {
+        "glass": "glas",
+        "glasses": "glass",
+        "inherited_counter": 7,
+        "branch_counter": 12,
+        "marker_visible": true,
+        "source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+        "mount_namespace": "mnt:[4026532110]",
+        "upper_device": 28,
+        "overlay_device": 29
+      },
+      "parent_view_empty": true,
+      "distinct_child_mount_namespaces": true,
+      "shared_lower_sha256_unchanged": true,
+      "parent_heap_unchanged": true
+    },
+    "timings": {
+      "unshare_ns": {
+        "count": 200,
+        "median_ms": 0.011834,
+        "p95_ms": 0.017875,
+        "min_ms": 0.010334,
+        "max_ms": 0.037041
+      },
+      "private_propagation_ns": {
+        "count": 200,
+        "median_ms": 0.002083,
+        "p95_ms": 0.002875,
+        "min_ms": 0.001833,
+        "max_ms": 0.003792
+      },
+      "tmpfs_mount_ns": {
+        "count": 200,
+        "median_ms": 0.01325,
+        "p95_ms": 0.017292,
+        "min_ms": 0.012,
+        "max_ms": 0.028125
+      },
+      "overlay_mount_ns": {
+        "count": 200,
+        "median_ms": 0.022437,
+        "p95_ms": 0.034208,
+        "min_ms": 0.020334,
+        "max_ms": 0.047417
+      },
+      "cleanup_mounts_ns": {
+        "count": 200,
+        "median_ms": 0.010166,
+        "p95_ms": 0.012417,
+        "min_ms": 0.009208,
+        "max_ms": 0.023458
+      },
+      "fork_to_ready_ns": {
+        "count": 200,
+        "median_ms": 0.691854,
+        "p95_ms": 0.808666,
+        "min_ms": 0.620792,
+        "max_ms": 1.060667
+      },
+      "release_to_reap_ns": {
+        "count": 200,
+        "median_ms": 0.123063,
+        "p95_ms": 0.143375,
+        "min_ms": 0.112125,
+        "max_ms": 0.195041
+      },
+      "complete_cycle_ns": {
+        "count": 200,
+        "median_ms": 0.864438,
+        "p95_ms": 0.989541,
+        "min_ms": 0.778459,
+        "max_ms": 1.291084
+      }
+    }
+  },
+  "host": {
+    "boot_seconds": 5.652536,
+    "guest_call_seconds": 0.25851,
+    "total_seconds": 6.135701,
+    "vm_metrics": {
+      "vm_starts": 1,
+      "guest_commands": 24,
+      "snapshot_saves": 0,
+      "snapshot_loads": 0,
+      "forks_spawned": 0,
+      "fork_reflink_disks": 0,
+      "fork_copied_disks": 0,
+      "fork_seconds": 0.0,
+      "fork_disk_clone_seconds": 0.0,
+      "fork_child_start_restore_seconds": 0.0,
+      "vm_start_seconds": 0.21465650014579296,
+      "guest_command_seconds": 0.5667593332473189,
+      "snapshot_save_seconds": 0.0,
+      "snapshot_load_seconds": 0.0
+    }
+  },
+  "assets": {
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "task_id": "boltons-26-singularize-ss-v1",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "guest_program_sha256": "05189660944b1e4fc0075d03ac2d22e1a39361f9098a67fea98d60f964313062"
+  },
+  "limits": [
+    "trusted sibling processes share one guest Linux kernel",
+    "root authority in the guest can inspect or affect siblings",
+    "not an adversarial policy sandbox or full VM checkpoint",
+    "no model inference or optimizer training measured"
+  ],
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  }
+}

@@ -1,0 +1,3283 @@
+{
+  "schema_version": 1,
+  "source": {
+    "commit": "6def20ea211fc936ed092a5a08624807c54df381",
+    "python_file_count": 450,
+    "python_sha256": "9ea69afcf931fb1a1c4a19573fc3150379632e7018ebf99885a3934ad93cd264",
+    "git_clean": true
+  },
+  "dependency_pins": {
+    "pyvers": {
+      "version": "0.1.0",
+      "file_count": 9,
+      "sha256": "53acaacdd0fee27e102753fe7d41f58452421339e59b71d0cfd275a0b1a65e74"
+    },
+    "tensordict": {
+      "version": "0.9.1",
+      "file_count": 47,
+      "sha256": "43cbe1005a2efe7f63d21863cdd8e4e4a711a6bdb9b00d4ec4bfe47311b77938"
+    },
+    "ray": {
+      "version": "2.58.0",
+      "file_count": 2767,
+      "sha256": "308f3875c8ef7e5f5b885c158183ed66d6e76ed49a5b5cdc1e737777e6657165"
+    }
+  },
+  "probe_sha256": "c0c9d48325728543b74121de1f1a4ac91aa14425904cc7224686c1f1505273bb",
+  "scope": "unchanged_official_selection_and_replay_components_with_real_CPU_batches",
+  "license": "Apache-2.0 plus NOTICE and original third-party notices",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "python": "3.12.1 (v3.12.1:2305ca5144, Dec  7 2023, 17:23:38) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "inference_executed": false,
+  "optimizer_update_executed": false,
+  "gpu_speedup_measured": false,
+  "full_trainer_executed": false,
+  "fixtures": {
+    "selection_with_inclusive_threshold_boundaries": {
+      "rates": [
+        0,
+        0.125,
+        0.25,
+        0.5,
+        0.75,
+        0.875,
+        1
+      ],
+      "actual": {
+        "keep": [
+          101,
+          102,
+          103,
+          104
+        ],
+        "too_correct": [
+          105,
+          106
+        ],
+        "too_incorrect": [
+          100
+        ],
+        "exclude_too_easy": [
+          106
+        ]
+      },
+      "expected": {
+        "keep": [
+          101,
+          102,
+          103,
+          104
+        ],
+        "too_correct": [
+          105,
+          106
+        ],
+        "too_incorrect": [
+          100
+        ],
+        "exclude_too_easy": [
+          106
+        ]
+      },
+      "passed": true
+    },
+    "empty_selection": {
+      "actual": {
+        "keep": [],
+        "too_correct": [],
+        "too_incorrect": [],
+        "exclude_too_easy": []
+      },
+      "passed": true
+    },
+    "variance_ranked_real_batch_and_step_provenance": {
+      "actual_prompt_ids": [
+        20,
+        20,
+        10,
+        10
+      ],
+      "when_added": [
+        2,
+        1
+      ],
+      "rows": [
+        {
+          "row_id": 2003,
+          "uid": 20,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            20,
+            2003
+          ]
+        },
+        {
+          "row_id": 2001,
+          "uid": 20,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            20,
+            2001
+          ]
+        },
+        {
+          "row_id": 1003,
+          "uid": 10,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            10,
+            1003
+          ]
+        },
+        {
+          "row_id": 1000,
+          "uid": 10,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            10,
+            1000
+          ]
+        }
+      ],
+      "remaining_ids": [
+        30,
+        40
+      ],
+      "passed": true
+    },
+    "strict_step_staleness_boundary": {
+      "max_off_steps": 2,
+      "at_step_4": {
+        "evicted": 1,
+        "remaining_ids": [
+          60,
+          70
+        ]
+      },
+      "at_step_5": {
+        "evicted": 1,
+        "remaining_ids": [
+          70
+        ]
+      },
+      "enforced_evicted": 1,
+      "passed": true
+    },
+    "explicit_pop_order_and_alignment": {
+      "rows": [
+        {
+          "row_id": 9000,
+          "uid": 90,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            90,
+            9000
+          ]
+        },
+        {
+          "row_id": 9001,
+          "uid": 90,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            90,
+            9001
+          ]
+        },
+        {
+          "row_id": 8000,
+          "uid": 80,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            80,
+            8000
+          ]
+        },
+        {
+          "row_id": 8001,
+          "uid": 80,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            80,
+            8001
+          ]
+        }
+      ],
+      "when_added": [
+        5,
+        5
+      ],
+      "passed": true
+    },
+    "empty_replay_result": {
+      "actual": [
+        [],
+        []
+      ],
+      "passed": true
+    },
+    "original_prompt_extraction_and_UID_reduction": {
+      "prompt_ids": [
+        91,
+        92
+      ],
+      "tokens": [
+        [
+          91,
+          201,
+          202
+        ],
+        [
+          92,
+          201,
+          202
+        ]
+      ],
+      "policy_revisions": [
+        "policy-7",
+        "policy-7"
+      ],
+      "original_fields_consumed": true,
+      "passed": true
+    },
+    "binary_maximum_variance_exhaustive_oracle": {
+      "trial_count": 240,
+      "trials": [
+        {
+          "available": 1,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 1,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 2,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 2,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 2,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 2,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 2,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 2,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 0,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 3,
+          "ones": 1,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 3,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 3,
+          "ones": 2,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 3,
+          "ones": 3,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 3,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 3,
+          "ones": 3,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 0,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 0,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 1,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 1,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 2,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 2,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 3,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 3,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 3,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 3,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 4,
+          "ones": 4,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 4,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 4,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 4,
+          "ones": 4,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 0,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 0,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 0,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 1,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 1,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 1,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 2,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 2,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 2,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 3,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 3,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 3,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 3,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 3,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 4,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 4,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 4,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 4,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 4,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 5,
+          "ones": 5,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 5,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 5,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 5,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 5,
+          "ones": 5,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 0,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 0,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 0,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 0,
+          "selected": 6,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 1,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 1,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 1,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 1,
+          "selected": 6,
+          "actual_variance_numerator": 5,
+          "oracle_variance_numerator": 5,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 2,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 2,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 2,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 2,
+          "selected": 6,
+          "actual_variance_numerator": 8,
+          "oracle_variance_numerator": 8,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 3,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 3,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 3,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 3,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 3,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 3,
+          "selected": 6,
+          "actual_variance_numerator": 9,
+          "oracle_variance_numerator": 9,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 4,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 4,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 4,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 4,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 4,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 4,
+          "selected": 6,
+          "actual_variance_numerator": 8,
+          "oracle_variance_numerator": 8,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 5,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 5,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 5,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 5,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 5,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 5,
+          "selected": 6,
+          "actual_variance_numerator": 5,
+          "oracle_variance_numerator": 5,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 6,
+          "ones": 6,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 6,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 6,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 6,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 6,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 6,
+          "ones": 6,
+          "selected": 6,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 6,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 0,
+          "selected": 7,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 6,
+          "actual_variance_numerator": 5,
+          "oracle_variance_numerator": 5,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 1,
+          "selected": 7,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 6,
+          "actual_variance_numerator": 8,
+          "oracle_variance_numerator": 8,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 2,
+          "selected": 7,
+          "actual_variance_numerator": 10,
+          "oracle_variance_numerator": 10,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 6,
+          "actual_variance_numerator": 9,
+          "oracle_variance_numerator": 9,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 3,
+          "selected": 7,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 6,
+          "actual_variance_numerator": 9,
+          "oracle_variance_numerator": 9,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 4,
+          "selected": 7,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 6,
+          "actual_variance_numerator": 8,
+          "oracle_variance_numerator": 8,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 5,
+          "selected": 7,
+          "actual_variance_numerator": 10,
+          "oracle_variance_numerator": 10,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 6,
+          "actual_variance_numerator": 5,
+          "oracle_variance_numerator": 5,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 6,
+          "selected": 7,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 6,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 7,
+          "ones": 7,
+          "selected": 7,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 6,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 7,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 0,
+          "selected": 8,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 6,
+          "actual_variance_numerator": 5,
+          "oracle_variance_numerator": 5,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 7,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 1,
+          "selected": 8,
+          "actual_variance_numerator": 7,
+          "oracle_variance_numerator": 7,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 6,
+          "actual_variance_numerator": 8,
+          "oracle_variance_numerator": 8,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 7,
+          "actual_variance_numerator": 10,
+          "oracle_variance_numerator": 10,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 2,
+          "selected": 8,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 6,
+          "actual_variance_numerator": 9,
+          "oracle_variance_numerator": 9,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 7,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 3,
+          "selected": 8,
+          "actual_variance_numerator": 15,
+          "oracle_variance_numerator": 15,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 6,
+          "actual_variance_numerator": 9,
+          "oracle_variance_numerator": 9,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 7,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 4,
+          "selected": 8,
+          "actual_variance_numerator": 16,
+          "oracle_variance_numerator": 16,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 6,
+          "actual_variance_numerator": 9,
+          "oracle_variance_numerator": 9,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 7,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 5,
+          "selected": 8,
+          "actual_variance_numerator": 15,
+          "oracle_variance_numerator": 15,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 4,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 5,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 6,
+          "actual_variance_numerator": 8,
+          "oracle_variance_numerator": 8,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 7,
+          "actual_variance_numerator": 10,
+          "oracle_variance_numerator": 10,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 6,
+          "selected": 8,
+          "actual_variance_numerator": 12,
+          "oracle_variance_numerator": 12,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 2,
+          "actual_variance_numerator": 1,
+          "oracle_variance_numerator": 1,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 3,
+          "actual_variance_numerator": 2,
+          "oracle_variance_numerator": 2,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 4,
+          "actual_variance_numerator": 3,
+          "oracle_variance_numerator": 3,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 5,
+          "actual_variance_numerator": 4,
+          "oracle_variance_numerator": 4,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 6,
+          "actual_variance_numerator": 5,
+          "oracle_variance_numerator": 5,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 7,
+          "actual_variance_numerator": 6,
+          "oracle_variance_numerator": 6,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 7,
+          "selected": 8,
+          "actual_variance_numerator": 7,
+          "oracle_variance_numerator": 7,
+          "index_dtype": "int64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 1,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 2,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 3,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 4,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 5,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 6,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 7,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        },
+        {
+          "available": 8,
+          "ones": 8,
+          "selected": 8,
+          "actual_variance_numerator": 0,
+          "oracle_variance_numerator": 0,
+          "index_dtype": "float64"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "upstream_boundary_observations": {
+    "non_finite_rewards_are_not_rejected": {
+      "actual_keep": [
+        1
+      ],
+      "requires_client_guard": true
+    },
+    "max_size_not_enforced_by_add": {
+      "configured_max_size": 1,
+      "actual_prompt_count": 2,
+      "requires_client_guard": true
+    },
+    "sample_all_branch_returns_all_responses": {
+      "requested_prompt_count": 2,
+      "requested_responses_per_prompt": 2,
+      "expected_rows_from_request": 4,
+      "actual_rows": 8,
+      "rows": [
+        {
+          "row_id": 9500,
+          "uid": 95,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            95,
+            9500
+          ]
+        },
+        {
+          "row_id": 9501,
+          "uid": 95,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            95,
+            9501
+          ]
+        },
+        {
+          "row_id": 9502,
+          "uid": 95,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            95,
+            9502
+          ]
+        },
+        {
+          "row_id": 9503,
+          "uid": 95,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            95,
+            9503
+          ]
+        },
+        {
+          "row_id": 9600,
+          "uid": 96,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            96,
+            9600
+          ]
+        },
+        {
+          "row_id": 9601,
+          "uid": 96,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            96,
+            9601
+          ]
+        },
+        {
+          "row_id": 9602,
+          "uid": 96,
+          "reward": 0.0,
+          "revision": "policy-7",
+          "tokens": [
+            96,
+            9602
+          ]
+        },
+        {
+          "row_id": 9603,
+          "uid": 96,
+          "reward": 1.0,
+          "revision": "policy-7",
+          "tokens": [
+            96,
+            9603
+          ]
+        }
+      ],
+      "requires_client_guard": true
+    },
+    "collapsed_binary_pool_yields_float_index_failure": {
+      "exception_type": "IndexError",
+      "message": "tensors used as indices must be long, int, byte or bool tensors",
+      "requires_client_guard": true
+    },
+    "missing_pop_is_rejected": {
+      "exception_type": "AssertionError",
+      "message": "prompt 999 not in buffer"
+    },
+    "step_age_does_not_filter_policy_revisions": {
+      "consumer_revision": "policy-7",
+      "retained_revision": "policy-6",
+      "current_step": 3,
+      "added_step": 2,
+      "rows": [
+        {
+          "row_id": 9900,
+          "uid": 99,
+          "reward": 0.0,
+          "revision": "policy-6",
+          "tokens": [
+            99,
+            9900
+          ]
+        },
+        {
+          "row_id": 9901,
+          "uid": 99,
+          "reward": 1.0,
+          "revision": "policy-6",
+          "tokens": [
+            99,
+            9901
+          ]
+        }
+      ],
+      "requires_consumer_policy_provenance_contract": true,
+      "upstream_off_policy_algorithm_not_executed": true
+    }
+  },
+  "loaded_original_modules": {
+    "recipe.pc.replay_buffer": {
+      "relative_path": "recipe/pc/replay_buffer.py",
+      "sha256": "b70b368a1c46213419b9672865bc599a6c5cbf2d3d0ffdcb2598673dd65c5066"
+    },
+    "recipe.pc.utils": {
+      "relative_path": "recipe/pc/utils.py",
+      "sha256": "67d28124bdc5162e2137345402cb20e93547825b442eadbd8c745bb10dbea2d7"
+    },
+    "verl": {
+      "relative_path": "verl/__init__.py",
+      "sha256": "62ff1f047da92185acbafc5f6aac84f837d240b01eb2d5635de6bdfe7ca2f712"
+    },
+    "verl.protocol": {
+      "relative_path": "verl/protocol.py",
+      "sha256": "eb9569fb199297ce8262e0869621dc9bb282a4087fb663c1f80e0a12026e480a"
+    },
+    "verl.utils": {
+      "relative_path": "verl/utils/__init__.py",
+      "sha256": "491e8b6c6aa19b06dafcb72e706b1a30e79783d302f7909d3032ae699da8ba9e"
+    },
+    "verl.utils.config": {
+      "relative_path": "verl/utils/config.py",
+      "sha256": "7ecc8aaddeb6b65fa6715888583bdd0b446b79ed77f2deaf20bd66ed52a4ffe2"
+    },
+    "verl.utils.device": {
+      "relative_path": "verl/utils/device.py",
+      "sha256": "3141ab0ee99b326642c8330fc901b81bd9c0d587fe02e0974e85d64de7521a10"
+    },
+    "verl.utils.logging_utils": {
+      "relative_path": "verl/utils/logging_utils.py",
+      "sha256": "72f6abe76274ecee5812c90879dc8f0b40e68d105c91da32a8923b8862320294"
+    },
+    "verl.utils.py_functional": {
+      "relative_path": "verl/utils/py_functional.py",
+      "sha256": "fcad80993343ff5212b337ac3e25631d7c09cac51e9ae2592c2d602fb4b52475"
+    },
+    "verl.utils.tokenizer": {
+      "relative_path": "verl/utils/tokenizer.py",
+      "sha256": "b81a09a2ac5a4e8fd3df37712b19d336d4174f40903b76ab817453282fab6205"
+    },
+    "verl.utils.torch_functional": {
+      "relative_path": "verl/utils/torch_functional.py",
+      "sha256": "7133e257bc12afd3a527c9bd706418f39f740d43def556f4c5b9f8525108dece"
+    }
+  },
+  "loaded_original_module_count": 11,
+  "observed_dependency_versions": {
+    "torch": "2.11.0",
+    "numpy": "2.2.6",
+    "tensordict": "0.9.1",
+    "pyvers": "0.1.0",
+    "ray": "2.58.0",
+    "transformers": "5.5.4",
+    "pytest": "9.0.2"
+  },
+  "official_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "pytest",
+      "<external-original-source>/tests/test_protocol_on_cpu.py",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=<fresh-output>/official-tests.xml"
+    ],
+    "returncode": 0,
+    "wall_ms": 8772.376750130206,
+    "log_sha256": "ab7bbc38980511b5294dc1f3a07070596078ea1e04c226bd826e143e4551f2a1",
+    "counts": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_preservation": {
+    "before": {
+      "commit": "6def20ea211fc936ed092a5a08624807c54df381",
+      "python_file_count": 450,
+      "python_sha256": "9ea69afcf931fb1a1c4a19573fc3150379632e7018ebf99885a3934ad93cd264",
+      "git_clean": true
+    },
+    "after": {
+      "commit": "6def20ea211fc936ed092a5a08624807c54df381",
+      "python_file_count": 450,
+      "python_sha256": "9ea69afcf931fb1a1c4a19573fc3150379632e7018ebf99885a3934ad93cd264",
+      "git_clean": true
+    },
+    "after_planner": {
+      "commit": "6def20ea211fc936ed092a5a08624807c54df381",
+      "python_file_count": 450,
+      "python_sha256": "9ea69afcf931fb1a1c4a19573fc3150379632e7018ebf99885a3934ad93cd264",
+      "git_clean": true
+    }
+  },
+  "dependency_preservation": {
+    "before": {
+      "pyvers": {
+        "version": "0.1.0",
+        "file_count": 9,
+        "sha256": "53acaacdd0fee27e102753fe7d41f58452421339e59b71d0cfd275a0b1a65e74"
+      },
+      "tensordict": {
+        "version": "0.9.1",
+        "file_count": 47,
+        "sha256": "43cbe1005a2efe7f63d21863cdd8e4e4a711a6bdb9b00d4ec4bfe47311b77938"
+      },
+      "ray": {
+        "version": "2.58.0",
+        "file_count": 2767,
+        "sha256": "308f3875c8ef7e5f5b885c158183ed66d6e76ed49a5b5cdc1e737777e6657165"
+      }
+    },
+    "after": {
+      "pyvers": {
+        "version": "0.1.0",
+        "file_count": 9,
+        "sha256": "53acaacdd0fee27e102753fe7d41f58452421339e59b71d0cfd275a0b1a65e74"
+      },
+      "tensordict": {
+        "version": "0.9.1",
+        "file_count": 47,
+        "sha256": "43cbe1005a2efe7f63d21863cdd8e4e4a711a6bdb9b00d4ec4bfe47311b77938"
+      },
+      "ray": {
+        "version": "2.58.0",
+        "file_count": 2767,
+        "sha256": "308f3875c8ef7e5f5b885c158183ed66d6e76ed49a5b5cdc1e737777e6657165"
+      }
+    },
+    "after_planner": {
+      "pyvers": {
+        "version": "0.1.0",
+        "file_count": 9,
+        "sha256": "53acaacdd0fee27e102753fe7d41f58452421339e59b71d0cfd275a0b1a65e74"
+      },
+      "tensordict": {
+        "version": "0.9.1",
+        "file_count": 47,
+        "sha256": "43cbe1005a2efe7f63d21863cdd8e4e4a711a6bdb9b00d4ec4bfe47311b77938"
+      },
+      "ray": {
+        "version": "2.58.0",
+        "file_count": 2767,
+        "sha256": "308f3875c8ef7e5f5b885c158183ed66d6e76ed49a5b5cdc1e737777e6657165"
+      }
+    }
+  },
+  "wall_ms": 17668.735957937315,
+  "passed": true,
+  "pass_meaning": "documented_positive_component_contract_and_expected_boundary_observations; not full trainer or all inputs supported",
+  "planner_integration": {
+    "scope": "real_original_selector_and_product_SQLite_control_plane_with_owned_binary_fixtures",
+    "environment_rollout_executed": false,
+    "model_inference_executed": false,
+    "optimizer_update_executed": false,
+    "original_selector_call_count": 6,
+    "original_selector_calls": [
+      {
+        "input": {
+          "task_ids": [
+            "always-fails",
+            "always-passes",
+            "mixed-a",
+            "mixed-b"
+          ],
+          "prompt_indices": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "rewards": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 1.0
+          }
+        },
+        "actual_original_output": {
+          "keep": [
+            2,
+            3
+          ],
+          "too_correct": [
+            1
+          ],
+          "too_incorrect": [
+            0
+          ],
+          "exclude_too_easy": [
+            1
+          ]
+        }
+      },
+      {
+        "input": {
+          "task_ids": [
+            "always-fails",
+            "always-passes",
+            "mixed-a",
+            "mixed-b"
+          ],
+          "prompt_indices": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "rewards": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 1.0
+          }
+        },
+        "actual_original_output": {
+          "keep": [
+            2,
+            3
+          ],
+          "too_correct": [
+            1
+          ],
+          "too_incorrect": [
+            0
+          ],
+          "exclude_too_easy": [
+            1
+          ]
+        }
+      },
+      {
+        "input": {
+          "task_ids": [
+            "always-fails",
+            "always-passes",
+            "mixed-a",
+            "mixed-b"
+          ],
+          "prompt_indices": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "rewards": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 1.0
+          }
+        },
+        "actual_original_output": {
+          "keep": [
+            2,
+            3
+          ],
+          "too_correct": [
+            1
+          ],
+          "too_incorrect": [
+            0
+          ],
+          "exclude_too_easy": [
+            1
+          ]
+        }
+      },
+      {
+        "input": {
+          "task_ids": [
+            "always-fails",
+            "always-passes",
+            "mixed-a",
+            "mixed-b"
+          ],
+          "prompt_indices": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "rewards": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 0.5
+          }
+        },
+        "actual_original_output": {
+          "keep": [
+            2,
+            3
+          ],
+          "too_correct": [
+            1
+          ],
+          "too_incorrect": [
+            0
+          ],
+          "exclude_too_easy": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "input": {
+          "task_ids": [
+            "mixed-a",
+            "mixed-b"
+          ],
+          "prompt_indices": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "rewards": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 1.0
+          }
+        },
+        "actual_original_output": {
+          "keep": [
+            0,
+            1
+          ],
+          "too_correct": [],
+          "too_incorrect": [],
+          "exclude_too_easy": []
+        }
+      },
+      {
+        "input": {
+          "task_ids": [
+            "always-fails",
+            "always-passes",
+            "mixed-a",
+            "mixed-b"
+          ],
+          "prompt_indices": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "rewards": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "thresholds": {
+            "lower": 0.125,
+            "upper": 0.25,
+            "exclude": 1.0
+          }
+        },
+        "actual_original_output": {
+          "keep": [
+            2,
+            3
+          ],
+          "too_correct": [
+            1
+          ],
+          "too_incorrect": [
+            0
+          ],
+          "exclude_too_easy": [
+            1
+          ]
+        }
+      }
+    ],
+    "primary_plan": {
+      "epoch_id": "primary",
+      "request_id": "original-selector-plan",
+      "policy_revision": "policy-7",
+      "selector_id": "databricks-pilot-commit-6def20ea-selector",
+      "evidence_verifier_id": "owned-CPU-fixture-registry-v1",
+      "total_budget": 16,
+      "spent_at_creation": 8,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 8,
+      "unallocated_at_creation": 0,
+      "pilot_receipt_ids": [
+        "always-fails-0",
+        "always-fails-1",
+        "always-passes-0",
+        "always-passes-1",
+        "mixed-a-0",
+        "mixed-a-1",
+        "mixed-b-0",
+        "mixed-b-1"
+      ],
+      "selection": {
+        "keep": [
+          "mixed-a",
+          "mixed-b"
+        ],
+        "too_correct": [
+          "always-passes"
+        ],
+        "too_incorrect": [
+          "always-fails"
+        ],
+        "exclude_too_easy": [
+          "always-passes"
+        ]
+      },
+      "allocations": [
+        {
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "count": 4,
+          "evidence_ids": [
+            "mixed-a-0",
+            "mixed-a-1"
+          ]
+        },
+        {
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "count": 4,
+          "evidence_ids": [
+            "mixed-b-0",
+            "mixed-b-1"
+          ]
+        }
+      ],
+      "reservations": [
+        {
+          "reservation_id": "ba1b66b2a49cc972bea40a869ab2463b02484322d2ec7e4ef95aeedb819bb39c",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "51dd4f6a9602c278e70968f6b41fabf2af0112783b70e9c3e772db338536a495",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "341e7cb15dc559aa105c92872de098b79f8cadee38cfb411f59ac83e6b8e0742",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "c22446929280a0f44d67f11d09866ab7209999191ac32e05bbf5499184996030",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "45080741c0537c90a04a3a6aafc739670ed7c46a8c324fa7fe7b048ed04b25a8",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "473bed35d5df3325b1d7e7aa16d7b76979536f188e2c503952087e2e011e73e9",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "7bb84e2e4f45a10e5786641aae4764b583ca772663b242b4ae2af3ec6265a327",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "4bccd8ac0b7821801b2be5f2f02c979b9a576540c3393bcbe0b8ebf1477828ac",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        }
+      ],
+      "ineligible_receipts": []
+    },
+    "retry_equals_original": true,
+    "stale_dispatch_rejections": [
+      {
+        "policy": "policy-8",
+        "task_revision": "task-v1",
+        "error": "reservation_revision_changed_before_dispatch"
+      },
+      {
+        "policy": "policy-7",
+        "task_revision": "task-v2",
+        "error": "reservation_revision_changed_before_dispatch"
+      }
+    ],
+    "first_claim_granted": true,
+    "repeated_claim_granted": false,
+    "failed_completion_charged": true,
+    "repeated_completion_charged": false,
+    "primary_final_budget": {
+      "total_budget": 16,
+      "spent": 9,
+      "reserved": 7,
+      "remaining": 0
+    },
+    "overlapping_next_plan": {
+      "epoch_id": "primary",
+      "request_id": "overlapping-next-plan",
+      "policy_revision": "policy-7",
+      "selector_id": "databricks-pilot-commit-6def20ea-selector",
+      "evidence_verifier_id": "owned-CPU-fixture-registry-v1",
+      "total_budget": 16,
+      "spent_at_creation": 9,
+      "reserved_before_plan": 7,
+      "reserved_by_plan": 0,
+      "unallocated_at_creation": 0,
+      "pilot_receipt_ids": [
+        "always-fails-0",
+        "always-fails-1",
+        "always-passes-0",
+        "always-passes-1",
+        "mixed-a-0",
+        "mixed-a-1",
+        "mixed-b-0",
+        "mixed-b-1"
+      ],
+      "selection": {
+        "keep": [
+          "mixed-a",
+          "mixed-b"
+        ],
+        "too_correct": [
+          "always-passes"
+        ],
+        "too_incorrect": [
+          "always-fails"
+        ],
+        "exclude_too_easy": [
+          "always-passes"
+        ]
+      },
+      "allocations": [
+        {
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "count": 0,
+          "evidence_ids": [
+            "mixed-a-0",
+            "mixed-a-1"
+          ]
+        },
+        {
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "count": 0,
+          "evidence_ids": [
+            "mixed-b-0",
+            "mixed-b-1"
+          ]
+        }
+      ],
+      "reservations": [],
+      "ineligible_receipts": []
+    },
+    "independent_exclusion_overlap_plan": {
+      "epoch_id": "overlapping-exclusion",
+      "request_id": "original-selector-plan",
+      "policy_revision": "policy-7",
+      "selector_id": "databricks-pilot-commit-6def20ea-selector",
+      "evidence_verifier_id": "owned-CPU-fixture-registry-v1",
+      "total_budget": 16,
+      "spent_at_creation": 8,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 0,
+      "unallocated_at_creation": 8,
+      "pilot_receipt_ids": [
+        "always-fails-0",
+        "always-fails-1",
+        "always-passes-0",
+        "always-passes-1",
+        "mixed-a-0",
+        "mixed-a-1",
+        "mixed-b-0",
+        "mixed-b-1"
+      ],
+      "selection": {
+        "keep": [
+          "mixed-a",
+          "mixed-b"
+        ],
+        "too_correct": [
+          "always-passes"
+        ],
+        "too_incorrect": [
+          "always-fails"
+        ],
+        "exclude_too_easy": [
+          "always-passes",
+          "mixed-a",
+          "mixed-b"
+        ]
+      },
+      "allocations": [],
+      "reservations": [],
+      "ineligible_receipts": []
+    },
+    "small_floor_plan": {
+      "epoch_id": "small-floor",
+      "request_id": "original-selector-plan",
+      "policy_revision": "policy-7",
+      "selector_id": "databricks-pilot-commit-6def20ea-selector",
+      "evidence_verifier_id": "owned-CPU-fixture-registry-v1",
+      "total_budget": 7,
+      "spent_at_creation": 4,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 3,
+      "unallocated_at_creation": 0,
+      "pilot_receipt_ids": [
+        "mixed-a-0",
+        "mixed-a-1",
+        "mixed-b-0",
+        "mixed-b-1"
+      ],
+      "selection": {
+        "keep": [
+          "mixed-a",
+          "mixed-b"
+        ],
+        "too_correct": [],
+        "too_incorrect": [],
+        "exclude_too_easy": []
+      },
+      "allocations": [
+        {
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "count": 3,
+          "evidence_ids": [
+            "mixed-a-0",
+            "mixed-a-1"
+          ]
+        },
+        {
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "count": 0,
+          "evidence_ids": [
+            "mixed-b-0",
+            "mixed-b-1"
+          ]
+        }
+      ],
+      "reservations": [
+        {
+          "reservation_id": "131a933af49ce8feba8e7b1e70769aa54f16447dd3ca4fabd59b111ea4355c98",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "de76309202039a476b852898449042cb9115911f017bda10c598724b05357d23",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "963f125e246afe9ad58c2bbbc2dd30426f2a074bf4584fc2b86f9d128029c77f",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        }
+      ],
+      "ineligible_receipts": []
+    },
+    "failed_unresolved_stale_cost_plan": {
+      "epoch_id": "all-past-costs",
+      "request_id": "original-selector-plan",
+      "policy_revision": "policy-7",
+      "selector_id": "databricks-pilot-commit-6def20ea-selector",
+      "evidence_verifier_id": "owned-CPU-fixture-registry-v1",
+      "total_budget": 17,
+      "spent_at_creation": 11,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 6,
+      "unallocated_at_creation": 0,
+      "pilot_receipt_ids": [
+        "always-fails-0",
+        "always-fails-1",
+        "always-passes-0",
+        "always-passes-1",
+        "mixed-a-0",
+        "mixed-a-1",
+        "mixed-b-0",
+        "mixed-b-1",
+        "past-failed",
+        "past-stale",
+        "past-unresolved"
+      ],
+      "selection": {
+        "keep": [
+          "mixed-a",
+          "mixed-b"
+        ],
+        "too_correct": [
+          "always-passes"
+        ],
+        "too_incorrect": [
+          "always-fails"
+        ],
+        "exclude_too_easy": [
+          "always-passes"
+        ]
+      },
+      "allocations": [
+        {
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "count": 3,
+          "evidence_ids": [
+            "mixed-a-0",
+            "mixed-a-1"
+          ]
+        },
+        {
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "count": 3,
+          "evidence_ids": [
+            "mixed-b-0",
+            "mixed-b-1"
+          ]
+        }
+      ],
+      "reservations": [
+        {
+          "reservation_id": "89f2ef11981e9d3ecf21d24b7645d54df04b7425d5a9ef730aa25b00fa396a10",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "0be35b41d9ba266db7894de40ce8551768203e8bc7ff6e18acf0fb688f2e78a1",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "0394249ef248aa9d13791f71be210db8c87fe9071f2f18111cfe4aea0d26a8cb",
+          "task_id": "mixed-a",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "3555b9fd37872005768e0670ca4e245836b8aa095ed5cd38b0713a953eb4fc88",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "5955ee05269367a1d171b28f1e052d55c09010de4fa2f01b0309d6c5d5e52a0d",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        },
+        {
+          "reservation_id": "564255d8c7e4c79999d589dd52af7d6a0581810d614d49d8b6ba2c8bc51e82ec",
+          "task_id": "mixed-b",
+          "task_revision": "task-v1",
+          "policy_revision": "policy-7"
+        }
+      ],
+      "ineligible_receipts": [
+        {
+          "receipt_id": "past-failed",
+          "reason": "outcome_not_resolved_binary"
+        },
+        {
+          "receipt_id": "past-stale",
+          "reason": "policy_revision_changed"
+        },
+        {
+          "receipt_id": "past-unresolved",
+          "reason": "outcome_not_resolved_binary"
+        }
+      ]
+    },
+    "untrusted_plan": {
+      "epoch_id": "untrusted",
+      "request_id": "original-selector-plan",
+      "policy_revision": "policy-7",
+      "selector_id": "databricks-pilot-commit-6def20ea-selector",
+      "evidence_verifier_id": "deny-all-fixture",
+      "total_budget": 16,
+      "spent_at_creation": 8,
+      "reserved_before_plan": 0,
+      "reserved_by_plan": 0,
+      "unallocated_at_creation": 8,
+      "pilot_receipt_ids": [
+        "always-fails-0",
+        "always-fails-1",
+        "always-passes-0",
+        "always-passes-1",
+        "mixed-a-0",
+        "mixed-a-1",
+        "mixed-b-0",
+        "mixed-b-1"
+      ],
+      "selection": {
+        "keep": [],
+        "too_correct": [],
+        "too_incorrect": [],
+        "exclude_too_easy": []
+      },
+      "allocations": [],
+      "reservations": [],
+      "ineligible_receipts": [
+        {
+          "receipt_id": "always-fails-0",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "always-fails-1",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "always-passes-0",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "always-passes-1",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "mixed-a-0",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "mixed-a-1",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "mixed-b-0",
+          "reason": "untrusted_reward_evidence"
+        },
+        {
+          "receipt_id": "mixed-b-1",
+          "reason": "untrusted_reward_evidence"
+        }
+      ]
+    },
+    "passed": true
+  },
+  "core_source_sha256": "5be5b5b37e385d37cc1ef9111c913c6e4e01e87ed614ddb65356eb76aa9ec012",
+  "planner_probe_sha256": "ffe30e51ea3f03f34f4ef4dcd79fefe436db11a9166f5264c2b6f2a5b72e1667",
+  "curation": {
+    "date": "2026-09-27",
+    "original_raw_record_sha256": "b312009934cef86dacb5fcf852c59086821274f75168643fc142f7f1b371e1ab",
+    "original_raw_storage": "ignored local run; full raw logs and JUnit are not in the public package",
+    "redacted_fields": [
+      "official_tests.command executable/source/output paths"
+    ],
+    "substantive_fields_preserved": true,
+    "measurement_scope": "CPU original components and allocation control plane with owned binary task fixtures; no model, real environment rollout, optimizer or GPU performance result",
+    "paper": "https://arxiv.org/abs/2605.26606",
+    "official_repository": "https://github.com/databricks/pilot-commit",
+    "dependency_byte_pins_scope": "recorded macOS ARM64 genuine distributions; host Torch/NumPy/Transformers/pytest versions recorded only"
+  },
+  "owned_product_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_pilot_commit.py",
+      "-q"
+    ],
+    "returncode": 0,
+    "counts": {
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "budget_provenance_concurrency_tests": 24,
+    "input_preparation_guard_tests": 18,
+    "source_sha256": "f74b3406dee09fa4572511a7e92b83d4711f5ec7d1be4a2d08beec0f27eca1b1",
+    "log_sha256": "e2b284ecec099c6b5c1df2111ef69a35e32a4b7643f3195fe3116d7dd7b783d2",
+    "distinct_from_author_tests_and_oracle_configurations": true
+  }
+}

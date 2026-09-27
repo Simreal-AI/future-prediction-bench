@@ -1,0 +1,97 @@
+{
+  "branches_per_repository": 20,
+  "candidate_faults": [
+    "detached_grandchild_with_handshake",
+    "symlink_to_outside_write_denied",
+    "fresh_case_workspace_after_symlink",
+    "stdout_closed_candidate_timeout"
+  ],
+  "fault_case_frame_bytes": 792,
+  "kind": "cooperative_qemu_branch_failure_stress_v1",
+  "repositories": [
+    {
+      "all_case_results_stable_by_mode": true,
+      "all_outer_tree_and_helper_checks_passed": true,
+      "all_process_and_pool_censuses_empty": true,
+      "baseline_reward_and_passes": [
+        0.0,
+        7
+      ],
+      "fault_branch": {
+        "case_result_digest": "33e9ae15b1d35b0340da97b53ec7f3761be5235834ce194779a6fce37a21b850",
+        "cleanup_after_faults": {
+          "named_candidate_descendants": 0,
+          "root_side_branch_pool_debris": 0
+        },
+        "detached_grandchild_handshake": true,
+        "fault_case_count": 14,
+        "next_case_workspace_copy_clean": true,
+        "stdout_close_timeout_return_code": 124,
+        "symlink_outside_write_denied": true
+      },
+      "graded_branch_count": 20,
+      "guest_case_runner_sha256": "9a89608b623ed876729f57f0a90c37ee786cfe6f0b5d2b5d80fed5505caf86cd",
+      "guest_service_sha256": "3b5145481867b82ace819bda0eda119dadb2b1b2009f22dde2306db739e9bebf",
+      "outer_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+      "repair_reward_and_passes": [
+        1.0,
+        14
+      ],
+      "repository": "boltons",
+      "rootfs_qcow2_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+      "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+      "task_id": "boltons-26-singularize-ss-v2",
+      "unique_branch_nonces": 21,
+      "verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58"
+    },
+    {
+      "all_case_results_stable_by_mode": true,
+      "all_outer_tree_and_helper_checks_passed": true,
+      "all_process_and_pool_censuses_empty": true,
+      "baseline_reward_and_passes": [
+        0.0,
+        5
+      ],
+      "fault_branch": {
+        "case_result_digest": "33e9ae15b1d35b0340da97b53ec7f3761be5235834ce194779a6fce37a21b850",
+        "cleanup_after_faults": {
+          "named_candidate_descendants": 0,
+          "root_side_branch_pool_debris": 0
+        },
+        "detached_grandchild_handshake": true,
+        "fault_case_count": 14,
+        "next_case_workspace_copy_clean": true,
+        "stdout_close_timeout_return_code": 124,
+        "symlink_outside_write_denied": true
+      },
+      "graded_branch_count": 20,
+      "guest_case_runner_sha256": "9a89608b623ed876729f57f0a90c37ee786cfe6f0b5d2b5d80fed5505caf86cd",
+      "guest_service_sha256": "3b5145481867b82ace819bda0eda119dadb2b1b2009f22dde2306db739e9bebf",
+      "outer_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "repair_reward_and_passes": [
+        1.0,
+        14
+      ],
+      "repository": "humanize",
+      "rootfs_qcow2_sha256": "7d5fe2be77059694b546988a5cbebda0d1fe9dc00ffa00b5fb038f72843bbeba",
+      "source_sdist_sha256": "1dd098483eb1c7ee8e32eb2e99ad1910baefa4b75c3aff3a82f4d78688993b10",
+      "task_id": "humanize-4150-naturalsize-rounding-v2",
+      "unique_branch_nonces": 21,
+      "verifier_sha256": "4e36079f09ed50c6b9d1c23aed746e9d6ffca22cf62878411717b8329dcb7305"
+    }
+  ],
+  "scope": "Trusted fault injection plus graded RealWorldEnv branches in one guest per repository; shared guest kernel and trusted root; no full-VM security parity or speed claim",
+  "source_binding": {
+    "cooperative_case_runner_sha256": "9a89608b623ed876729f57f0a90c37ee786cfe6f0b5d2b5d80fed5505caf86cd",
+    "cooperative_guest_sha256": "3b5145481867b82ace819bda0eda119dadb2b1b2009f22dde2306db739e9bebf",
+    "cooperative_host_sha256": "eb575e3d980f1efbf4927000c9cdf86249b3e22ff38bae3d9d312e8a52ee491f",
+    "graded_episode_helper_sha256": "b843db9cf1d2fe76eef1c09f7f54e9b7a93b70163a020da73fc565e27700981d",
+    "humanize_action_helper_sha256": "b3ac14bf1bf0f502742d98e8dde9c9a07b0368e9a893b8054290a968297cf2ad",
+    "humanize_host_sha256": "aa3b425fc5f9d25979c7fba0a848d3c34858919fd00f2f4a3b86041207448e18",
+    "microvm_runtime_sha256": "e996cd858ec863a95a738afcff3d62c0e8f19aa7a03aa1e7c7e1dd6c2f03e30d",
+    "resident_case_runner_sha256": "baf844c5c57e00bfe067e9b3fd0ebaa0556bddfbc203b4829218375726daf15d",
+    "resident_supervisor_sha256": "9fbff59a7d9f47eee203b30023ffb4124821a0ec6f70d88f47897407081d82fb",
+    "stress_script_sha256": "72f5f7414a0268786ee7ad60774bdb8d8158f26d38846f0687edf8e2393aec9c"
+  },
+  "status": "passed"
+}

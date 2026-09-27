@@ -1,0 +1,402 @@
+{
+  "schema_version": "humanize-docker-verifier-workers-ab-0.1",
+  "classification": "public_solved_repository_integration_fixture",
+  "status": "passed",
+  "task_id": "humanize-4150-naturalsize-rounding-v1",
+  "source_commit": "2ddb5903cdc1c7e6eb6b083f4f99f73db50aecd9",
+  "source_sdist_sha256": "1dd098483eb1c7ee8e32eb2e99ad1910baefa4b75c3aff3a82f4d78688993b10",
+  "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+  "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+  "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+  "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+  "action_file_sha256": {
+    "baseline": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+    "solution": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd"
+  },
+  "pairs_per_mode": 3,
+  "total_episodes": 12,
+  "order": [
+    {
+      "pair": 0,
+      "mode": "baseline",
+      "workers": 1
+    },
+    {
+      "pair": 0,
+      "mode": "baseline",
+      "workers": 4
+    },
+    {
+      "pair": 0,
+      "mode": "solution",
+      "workers": 1
+    },
+    {
+      "pair": 0,
+      "mode": "solution",
+      "workers": 4
+    },
+    {
+      "pair": 1,
+      "mode": "solution",
+      "workers": 4
+    },
+    {
+      "pair": 1,
+      "mode": "solution",
+      "workers": 1
+    },
+    {
+      "pair": 1,
+      "mode": "baseline",
+      "workers": 4
+    },
+    {
+      "pair": 1,
+      "mode": "baseline",
+      "workers": 1
+    },
+    {
+      "pair": 2,
+      "mode": "baseline",
+      "workers": 1
+    },
+    {
+      "pair": 2,
+      "mode": "baseline",
+      "workers": 4
+    },
+    {
+      "pair": 2,
+      "mode": "solution",
+      "workers": 1
+    },
+    {
+      "pair": 2,
+      "mode": "solution",
+      "workers": 4
+    }
+  ],
+  "episodes": [
+    {
+      "mode": "baseline",
+      "workers": 1,
+      "reward": 0.0,
+      "passed_cases": 5,
+      "case_count": 14,
+      "case_vector_sha256": "5410aafd86d31b2251845986cc177d30727a729d4fb2f8a5e9cbeac1903122bb",
+      "visible_observations_sha256": "a54867dbf0155bf94478e433b34c010c31c3e778dda63affe36fe524d68dc961",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 5.680586917093024,
+      "verifier_stage_seconds": 2.175377083942294,
+      "pair": 0
+    },
+    {
+      "mode": "baseline",
+      "workers": 4,
+      "reward": 0.0,
+      "passed_cases": 5,
+      "case_count": 14,
+      "case_vector_sha256": "5410aafd86d31b2251845986cc177d30727a729d4fb2f8a5e9cbeac1903122bb",
+      "visible_observations_sha256": "a54867dbf0155bf94478e433b34c010c31c3e778dda63affe36fe524d68dc961",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 1.565267083933577,
+      "verifier_stage_seconds": 0.9718325410503894,
+      "pair": 0
+    },
+    {
+      "mode": "solution",
+      "workers": 1,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_vector_sha256": "3ba7ee9b60196934bb467d9b272e8022bd718da5d9f039ff2ace0cfd9ed798fa",
+      "visible_observations_sha256": "877667fae740b5081f06cf900dc7c6c3d5e3255e2900299a902a7c9886e3985a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 3.265505875227973,
+      "verifier_stage_seconds": 2.192510582972318,
+      "pair": 0
+    },
+    {
+      "mode": "solution",
+      "workers": 4,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_vector_sha256": "3ba7ee9b60196934bb467d9b272e8022bd718da5d9f039ff2ace0cfd9ed798fa",
+      "visible_observations_sha256": "877667fae740b5081f06cf900dc7c6c3d5e3255e2900299a902a7c9886e3985a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 2.2213189580943435,
+      "verifier_stage_seconds": 1.1441491250880063,
+      "pair": 0
+    },
+    {
+      "mode": "solution",
+      "workers": 4,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_vector_sha256": "3ba7ee9b60196934bb467d9b272e8022bd718da5d9f039ff2ace0cfd9ed798fa",
+      "visible_observations_sha256": "877667fae740b5081f06cf900dc7c6c3d5e3255e2900299a902a7c9886e3985a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 2.0747319580987096,
+      "verifier_stage_seconds": 0.9543406669981778,
+      "pair": 1
+    },
+    {
+      "mode": "solution",
+      "workers": 1,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_vector_sha256": "3ba7ee9b60196934bb467d9b272e8022bd718da5d9f039ff2ace0cfd9ed798fa",
+      "visible_observations_sha256": "877667fae740b5081f06cf900dc7c6c3d5e3255e2900299a902a7c9886e3985a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 3.210440041963011,
+      "verifier_stage_seconds": 2.190223083132878,
+      "pair": 1
+    },
+    {
+      "mode": "baseline",
+      "workers": 4,
+      "reward": 0.0,
+      "passed_cases": 5,
+      "case_count": 14,
+      "case_vector_sha256": "5410aafd86d31b2251845986cc177d30727a729d4fb2f8a5e9cbeac1903122bb",
+      "visible_observations_sha256": "a54867dbf0155bf94478e433b34c010c31c3e778dda63affe36fe524d68dc961",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 2.642114874906838,
+      "verifier_stage_seconds": 1.4885049171280116,
+      "pair": 1
+    },
+    {
+      "mode": "baseline",
+      "workers": 1,
+      "reward": 0.0,
+      "passed_cases": 5,
+      "case_count": 14,
+      "case_vector_sha256": "5410aafd86d31b2251845986cc177d30727a729d4fb2f8a5e9cbeac1903122bb",
+      "visible_observations_sha256": "a54867dbf0155bf94478e433b34c010c31c3e778dda63affe36fe524d68dc961",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 2.6694209999404848,
+      "verifier_stage_seconds": 2.0816723750904202,
+      "pair": 1
+    },
+    {
+      "mode": "baseline",
+      "workers": 1,
+      "reward": 0.0,
+      "passed_cases": 5,
+      "case_count": 14,
+      "case_vector_sha256": "5410aafd86d31b2251845986cc177d30727a729d4fb2f8a5e9cbeac1903122bb",
+      "visible_observations_sha256": "a54867dbf0155bf94478e433b34c010c31c3e778dda63affe36fe524d68dc961",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 2.9043637909926474,
+      "verifier_stage_seconds": 2.3389208749867976,
+      "pair": 2
+    },
+    {
+      "mode": "baseline",
+      "workers": 4,
+      "reward": 0.0,
+      "passed_cases": 5,
+      "case_count": 14,
+      "case_vector_sha256": "5410aafd86d31b2251845986cc177d30727a729d4fb2f8a5e9cbeac1903122bb",
+      "visible_observations_sha256": "a54867dbf0155bf94478e433b34c010c31c3e778dda63affe36fe524d68dc961",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 1.8101449580863118,
+      "verifier_stage_seconds": 1.1815982919652015,
+      "pair": 2
+    },
+    {
+      "mode": "solution",
+      "workers": 1,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_vector_sha256": "3ba7ee9b60196934bb467d9b272e8022bd718da5d9f039ff2ace0cfd9ed798fa",
+      "visible_observations_sha256": "877667fae740b5081f06cf900dc7c6c3d5e3255e2900299a902a7c9886e3985a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 3.222314292099327,
+      "verifier_stage_seconds": 2.1574925421737134,
+      "pair": 2
+    },
+    {
+      "mode": "solution",
+      "workers": 4,
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_vector_sha256": "3ba7ee9b60196934bb467d9b272e8022bd718da5d9f039ff2ace0cfd9ed798fa",
+      "visible_observations_sha256": "877667fae740b5081f06cf900dc7c6c3d5e3255e2900299a902a7c9886e3985a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "verifier_sha256": "570a9163dcd42514239d65ddb838620fdee1e6ecf46628e30b353ad670ca09e1",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+      "task_sha256": "5f69a4904323c06a30fa261ce1e7d8ca8d5bf3a2134f0727842616c87f806bae",
+      "complete_episode_seconds": 2.130431832978502,
+      "verifier_stage_seconds": 1.0977037909906358,
+      "pair": 2
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "1": {
+        "complete_episode_seconds": {
+          "n": 3,
+          "median": 2.9043637909926474,
+          "min": 2.6694209999404848,
+          "max": 5.680586917093024
+        },
+        "verifier_stage_seconds": {
+          "n": 3,
+          "median": 2.175377083942294,
+          "min": 2.0816723750904202,
+          "max": 2.3389208749867976
+        }
+      },
+      "4": {
+        "complete_episode_seconds": {
+          "n": 3,
+          "median": 1.8101449580863118,
+          "min": 1.565267083933577,
+          "max": 2.642114874906838
+        },
+        "verifier_stage_seconds": {
+          "n": 3,
+          "median": 1.1815982919652015,
+          "min": 0.9718325410503894,
+          "max": 1.4885049171280116
+        }
+      },
+      "paired_differences_seconds_1_minus_4": [
+        {
+          "pair": 0,
+          "complete_episode": 4.115319833159447,
+          "verifier_stage": 1.2035445428919047
+        },
+        {
+          "pair": 1,
+          "complete_episode": 0.027306125033646822,
+          "verifier_stage": 0.5931674579624087
+        },
+        {
+          "pair": 2,
+          "complete_episode": 1.0942188329063356,
+          "verifier_stage": 1.157322583021596
+        }
+      ]
+    },
+    "solution": {
+      "1": {
+        "complete_episode_seconds": {
+          "n": 3,
+          "median": 3.222314292099327,
+          "min": 3.210440041963011,
+          "max": 3.265505875227973
+        },
+        "verifier_stage_seconds": {
+          "n": 3,
+          "median": 2.190223083132878,
+          "min": 2.1574925421737134,
+          "max": 2.192510582972318
+        }
+      },
+      "4": {
+        "complete_episode_seconds": {
+          "n": 3,
+          "median": 2.130431832978502,
+          "min": 2.0747319580987096,
+          "max": 2.2213189580943435
+        },
+        "verifier_stage_seconds": {
+          "n": 3,
+          "median": 1.0977037909906358,
+          "min": 0.9543406669981778,
+          "max": 1.1441491250880063
+        }
+      },
+      "paired_differences_seconds_1_minus_4": [
+        {
+          "pair": 0,
+          "complete_episode": 1.0441869171336293,
+          "verifier_stage": 1.0483614578843117
+        },
+        {
+          "pair": 1,
+          "complete_episode": 1.1357080838643014,
+          "verifier_stage": 1.2358824161347002
+        },
+        {
+          "pair": 2,
+          "complete_episode": 1.091882459120825,
+          "verifier_stage": 1.0597887511830777
+        }
+      ]
+    }
+  },
+  "model_inference_measured": false,
+  "training_measured": false,
+  "limits": [
+    "Public solved Humanize fixture and scripted actions, not held-out repair ability.",
+    "One local Docker image and host; no policy inference or optimizer time.",
+    "Three pairs per mode provide a small controlled timing sample, not a broad throughput estimate.",
+    "Four workers run verifier containers concurrently and may increase host CPU and memory use."
+  ]
+}

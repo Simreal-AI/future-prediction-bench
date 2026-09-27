@@ -1,0 +1,102 @@
+{
+  "kind": "graded_realworld_virtio_hardened_action_port_ab_v1",
+  "date_utc": "2026-09-25",
+  "status": "passed",
+  "host": "Apple Silicon macOS",
+  "qemu_version": "11.1.1",
+  "accelerator": "HVF",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "task_kind": "scripted public solved Boltons 26.0.0 repair",
+  "source_binding": {
+    "runtime_sha256": "0f62b5741731efe2722a81050f0c45cc954fd1c570894bf7e2d075563d6f6a69",
+    "template_sha256": "a91a3f63b5a704b5456341e2adbbba3bd2a043ed50c819f1efe636f5dd402e22",
+    "coding_adapter_sha256": "02d67a296d2e08781a2c79906a0d715adc7b6100da5c0e3159117a32bfe88267",
+    "guest_agent_sha256": "60e68593593051bfcdfa6e8e8898a3a4ff9134ce169626cd09f01c46b6761167",
+    "benchmark_sha256": "581162c549f8ff8b8e0fe935fad47537b02416ff370db596b3079ca3507d06e5",
+    "task_json_sha256": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+    "verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+    "assets_manifest_sha256": "1f29ef35f5adf874f19fdaef9dd7a5056ad8143947b2a301711596d1ea6a5914",
+    "rootfs_seed_sha256": "2060b904c9764496cedf1e4508a37fd3b92ee1338018034b94e4df14f1ccacd6",
+    "raw_local_report_sha256": "63210e3e15b3c201769dfdfad4f914c063b4aa566584acfb713b97132e80a6e5"
+  },
+  "workload": {
+    "pairs": 3,
+    "arm_order": [
+      [
+        "serial",
+        "virtio_read"
+      ],
+      [
+        "virtio_read",
+        "serial"
+      ],
+      [
+        "serial",
+        "virtio_read"
+      ]
+    ],
+    "same_preinstalled_image_for_both_arms": true,
+    "read_paths": [
+      "boltons/strutils.py",
+      "tests/test_strutils.py",
+      "README.md",
+      "pyproject.toml",
+      "boltons/__init__.py"
+    ],
+    "actions_per_episode": 8,
+    "repository_reads_per_episode": 5,
+    "hidden_cases_per_episode": 14,
+    "model_inference_in_timing": false,
+    "optimizer_in_timing": false
+  },
+  "snapshot_retirement_contract": {
+    "agent_stopped_exited_and_guest_port_unmounted_before_host_retirement": true,
+    "host_action_socket_closed_and_listener_unlinked": true,
+    "qemu_exact_port_and_chardev_disconnect_attested": true,
+    "save_pauses_vm_then_rechecks_disconnect_before_and_after_savevm": true,
+    "uncertain_save_tag_is_removed_or_runtime_closed_fail_closed": true,
+    "load_rechecks_disconnect_before_and_after_loadvm": true,
+    "old_client_unusable_in_every_virtio_episode": true,
+    "action_port_branch_fork_disabled": true,
+    "live_agent_checkpoint_claimed": false,
+    "candidate_visible_and_hidden_python_uid": 65534
+  },
+  "parity": {
+    "six_episodes_graded_without_fallback_or_pending": true,
+    "opening_observation_equal": true,
+    "all_action_observations_equal": true,
+    "all_14_case_results_equal": true,
+    "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+    "all_14_cases_passed_in_every_episode": true,
+    "final_source_sha256_equal": true,
+    "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+    "reward_equal": true,
+    "reward_per_episode": 1.0,
+    "snapshot_saves_per_episode": 1,
+    "snapshot_loads_per_episode": 14,
+    "virtio_read_fallbacks_per_episode": 0,
+    "virtio_qemu_disconnect_attested_in_every_episode": true
+  },
+  "median_host_clock": {
+    "serial_five_reads_ms": 184.496667,
+    "virtio_five_reads_ms": 20.623667,
+    "read_action_ratio_serial_over_virtio": 8.946,
+    "serial_complete_episode_seconds": 7.62504,
+    "virtio_complete_episode_seconds": 7.786048,
+    "virtio_minus_serial_complete_episode_seconds": 0.161008,
+    "virtio_trusted_reopen_probe_ms": 24.582292,
+    "virtio_total_retirement_ms": 180.681959,
+    "serial_submit_ms": 122.323041,
+    "virtio_submit_ms": 280.237542,
+    "serial_snapshot_save_ms": 119.265834,
+    "virtio_snapshot_save_ms": 105.298041,
+    "serial_all_14_loads_ms": 879.805211,
+    "virtio_all_14_loads_ms": 936.170417
+  },
+  "paired_complete_episode_virtio_minus_serial_seconds": [
+    0.026998,
+    0.220824,
+    0.249212
+  ],
+  "interpretation": "The final source preserved exact graded parity while reducing five policy-read time. All three complete virtio episodes were slower than the paired serial episodes; the median difference was 0.161 seconds. This is not evidence of complete-episode, model rollout, or GPU training throughput improvement. The prior two-stage report is historical earlier-source evidence and remains separate."
+}

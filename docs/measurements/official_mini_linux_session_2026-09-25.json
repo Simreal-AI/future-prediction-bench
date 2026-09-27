@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-25",
+  "scope": "official_terminal_isolation_smoke_only",
+  "upstream_repository": "https://github.com/lblankl/SWE-MiniSandbox",
+  "upstream_sha": "381ada53ab35dadb342add33ff006f3157c22fb7",
+  "upstream_python_tree_sha256": "605342a1abd452ad04b8f9d00deb993d9b73c4afac61a268f229816af63b9d84",
+  "tested_script": "examples/official_mini_sandbox/check_linux_session.py",
+  "tested_script_sha256": "f91e38381527c59be2e64ae0d51459ff9acb34d4fdb86d5345320e54eed27f97",
+  "session_bridge_sha256": "d942acd131ced4dce556a8bcaced9792b7f769aabe89f7f935229181dfd214d7",
+  "reproduction_status": "local-only image and installed dependencies; public bundle does not include a Dockerfile or dependency lock for this probe",
+  "container": {
+    "image": "quantbench-ubuntu-test:0.7.0",
+    "architecture": "linux/arm64",
+    "privileged": true,
+    "network": "none",
+    "dependencies": "Pinned SWE-MiniSandbox and SWE-ReX classes loaded from the upstream checkout, with SWE-bench and R2E-Gym source paths and Python dependencies supplied from an ignored local test directory",
+    "key_python_versions": {
+      "bashlex": "0.18",
+      "pexpect": "4.9.0",
+      "pydantic": "2.13.5",
+      "ray": "2.58.0"
+    }
+  },
+  "command_inside_container": "python3 -m examples.official_mini_sandbox.check_linux_session --conda-env /opt/quantbench-venv",
+  "official_api_sequence": [
+    "SandboxDeploymentConfig.get_deployment",
+    "SandboxDeployment.start",
+    "SandboxDeployment.startup",
+    "LocalRuntime.create_session(CreateSandboxBashSessionRequest)",
+    "run_in_official_session -> LocalRuntime.run_in_session(BashAction)"
+  ],
+  "result": {
+    "exit_code": 0,
+    "upstream_deployment_class": "swesandbox.sandbox_deployment",
+    "operator_output": "inside-mini-ok",
+    "host_mount_namespace": "mnt:[4026532554]",
+    "session_mount_namespace": "mnt:[4026532687]",
+    "private_tmpfs": true,
+    "host_only_source_hidden": true,
+    "guest_tmp_marker_absent_on_host": true
+  },
+  "limits": [
+    "Session-only probe with a minimal terminal-bundle path; no task repository or virtual environment was prepared.",
+    "No Boltons or Humanize 14-case grading, model rollout, checkpoint/restore, or MiniSandbox performance comparison was run."
+  ]
+}

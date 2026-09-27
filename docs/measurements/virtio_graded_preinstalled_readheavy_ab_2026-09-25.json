@@ -1,0 +1,109 @@
+{
+  "kind": "public_graded_realworld_virtio_preinstalled_read_heavy_ab_v1",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "pairs": 3,
+  "graded_episodes": 6,
+  "actions_per_episode": [
+    "read_file",
+    "read_file",
+    "read_file",
+    "read_file",
+    "read_file",
+    "replace_text",
+    "run_visible_checks",
+    "submit"
+  ],
+  "read_paths": [
+    "boltons/strutils.py",
+    "tests/test_strutils.py",
+    "README.md",
+    "pyproject.toml",
+    "boltons/__init__.py"
+  ],
+  "case_count_per_episode": 14,
+  "reward_each_episode": 1.0,
+  "same_new_image_for_both_arms": true,
+  "rootfs_seed_sha256": "2060b904c9764496cedf1e4508a37fd3b92ee1338018034b94e4df14f1ccacd6",
+  "agent_sha256": "60e68593593051bfcdfa6e8e8898a3a4ff9134ce169626cd09f01c46b6761167",
+  "all_action_observations_equal": true,
+  "all_case_results_equal": true,
+  "all_source_digests_equal": true,
+  "all_rewards_equal": true,
+  "pair_results": [
+    {
+      "pair": 1,
+      "order": [
+        "serial",
+        "virtio_read"
+      ],
+      "serial_five_reads_ms": 160.373625,
+      "virtio_five_reads_ms": 17.485376,
+      "serial_whole_episode_seconds": 7.343688,
+      "virtio_whole_episode_seconds": 7.327869,
+      "observations_cases_source_rewards_equal": true
+    },
+    {
+      "pair": 2,
+      "order": [
+        "virtio_read",
+        "serial"
+      ],
+      "serial_five_reads_ms": 160.836417,
+      "virtio_five_reads_ms": 17.368208,
+      "serial_whole_episode_seconds": 7.163453,
+      "virtio_whole_episode_seconds": 7.310277,
+      "observations_cases_source_rewards_equal": true
+    },
+    {
+      "pair": 3,
+      "order": [
+        "serial",
+        "virtio_read"
+      ],
+      "serial_five_reads_ms": 158.938208,
+      "virtio_five_reads_ms": 17.730125,
+      "serial_whole_episode_seconds": 7.525165,
+      "virtio_whole_episode_seconds": 7.410648,
+      "observations_cases_source_rewards_equal": true
+    }
+  ],
+  "median": {
+    "serial_five_reads_ms": 160.373625,
+    "virtio_five_reads_ms": 17.485376,
+    "read_ratio_serial_over_virtio": 9.172,
+    "serial_whole_episode_seconds": 7.343688,
+    "virtio_whole_episode_seconds": 7.327869,
+    "virtio_agent_prepare_ms": 13.093041,
+    "virtio_agent_upload_ms": 0.0,
+    "virtio_agent_start_ping_ms": 20.07425,
+    "virtio_agent_retire_ms": 93.901042,
+    "serial_reset_seconds": 5.454891,
+    "virtio_reset_seconds": 5.529928,
+    "serial_submit_ms": 128.020708,
+    "virtio_submit_ms": 189.872125
+  },
+  "new_image_build": {
+    "stage_seconds": 9.273927,
+    "mkfs_seconds": 2.629599,
+    "convert_seconds": 0.095718,
+    "total_build_seconds": 12.033503,
+    "amortized_build_seconds_per_measured_episode": 2.005584,
+    "excluded_from_episode_timing": true
+  },
+  "retirement_and_snapshot_checks": {
+    "virtio_runs_with_stop_ack_closed_socket_unusable_old_client_no_reconnect_no_fork": 3,
+    "snapshot_saves_per_episode": 1,
+    "snapshot_loads_per_episode": 14
+  },
+  "source_sha256": {
+    "future_prediction_bench/microvm_coding.py": "f626743cc7ff33e377133acba30f6c42b42b5f81fcda1b865dbe0d87ca6f8db7",
+    "future_prediction_bench/microvm_runtime.py": "0c72ac87353ceb09d027401995925823076293a793ac9934ba6f7b8a8349960c",
+    "future_prediction_bench/guest_action_rpc.py": "60e68593593051bfcdfa6e8e8898a3a4ff9134ce169626cd09f01c46b6761167",
+    "future_prediction_bench/virtio_action.py": "3f5fb387d26aee81bac8b832e87b7f6cddf8a14b1a12302945c7fbd3a2803e77",
+    "examples/realworld_boltons26/benchmark_virtio_graded.py": "528d860fa2a2fe228bd75f4d5bedc35ec43244a26c63e9290f524952f634e96a",
+    "examples/realworld_boltons26/prepare_preinstalled_virtio_assets.py": "b19e75215ca34471b67d2bf88fbc046f593add1aa13c02130ee94d7f62663a5d"
+  },
+  "raw_run_sha256": "07be2c5589e45a39767cb01cb75f162ca0eb7e974e729e1c1d3eb9d595866711",
+  "raw_build_report_sha256": "605d3c36a07f39d1a1a5475c0dc5dfcb6cee96db6960956879e3c44373e5fafe",
+  "measurement_scope": "new pinned offline image, same image for both arms, five scripted distinct repository reads within eight-action budget, ARM64 QEMU/HVF, host clock; no model, GPU, optimizer, or RL throughput claim"
+}

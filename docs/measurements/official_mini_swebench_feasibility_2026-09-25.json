@@ -1,0 +1,32 @@
+{
+  "all_declared_cache_files_present": false,
+  "base_commit": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+  "dataset_sha256": "43ed5a3d1d98da36472c1ade65ddd2085d7b4ff694fcaf6a023a07c5c1f32f21",
+  "instance_id": "pallets__flask-5014",
+  "official_python_version": "3.11",
+  "official_terminal_bundle_present": true,
+  "preflight_script_sha256": "65b24cb8ed870f6a60c64b1cf70741e9c12c18ff235e8624470eb26d7b6c8e0c",
+  "public_source_checkout": {
+    "base_commit_verified": true,
+    "relative_path": "source/flask"
+  },
+  "repo": "pallets/flask",
+  "required_cache_assets": {
+    "git_checkout_cache": {
+      "present": false,
+      "relative_path": "git/pallets/flask/2.3/pallets__flask-5014/testbed.tar.gz"
+    },
+    "python_3_11_base_runtime": {
+      "present": false,
+      "relative_path": "conda/3.11/miniconda3/bin/python"
+    },
+    "versioned_venv_cache": {
+      "present": false,
+      "relative_path": "shared_venv/pallets/flask/2.3/default/venv.tar.gz"
+    }
+  },
+  "scope": "read_only_official_task_asset_preflight_no_grade",
+  "upstream_git_sha": "381ada53ab35dadb342add33ff006f3157c22fb7",
+  "upstream_python_tree_sha256": "605342a1abd452ad04b8f9d00deb993d9b73c4afac61a268f229816af63b9d84",
+  "version": "2.3"
+}

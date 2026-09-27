@@ -1,0 +1,241 @@
+{
+  "kind": "sanitized_full_vm_two_child_verifier_pool_proof_ab_v1",
+  "fixture": "public solved Boltons v2 scripted repository repair; not held-out model evaluation",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "task_sha256": "2fbca19203401982633ed6e7ce378058df3ca79901355428589b2daeb4b3eeb5",
+  "artifact_binding_sha256": "5f9b8dbfb23ea95fa887b27a3d71f3b2dc92e90666b0c1340c91f8c749e86cca",
+  "candidate_python_identity": "guest_uid_gid_65534_v2",
+  "asset_binding": {
+    "manifest_sha256": "3e853377e7a7fd53225be4b7aa905062b109d845745e8558ba52db6f01707bcd",
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "rootfs_qcow2_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "kernel_sha256": "e45e1f6083d1ed45db6647b422e32b6ae6dc54de7b8190b7b97744fb293412e3",
+    "initramfs_sha256": "ffe65ec5a0c0bf470042ad28f7ce7aa5f842ce8090e4230fb2703a7a34e1bebe",
+    "modloop_disk_sha256": "32a189d5e4ae4417cf65bfcc91d2cc8ffdf5957fbbc1f055b037861c595b7328"
+  },
+  "source_sha256": {
+    "examples/realworld_boltons26/fullvm_verifier_pool.py": "0301da4f748d0437c44dcd3231dc8c6bed9ba10327ebdf63c9083c60a2b0d7ef",
+    "examples/realworld_boltons26/benchmark_fullvm_verifier_pool.py": "7217b61b243c429702423031c164858227c6a56296e38287f29c9bdcd8e6f639",
+    "future_prediction_bench/microvm_coding.py": "02d67a296d2e08781a2c79906a0d715adc7b6100da5c0e3159117a32bfe88267",
+    "future_prediction_bench/microvm_runtime.py": "0f62b5741731efe2722a81050f0c45cc954fd1c570894bf7e2d075563d6f6a69"
+  },
+  "raw_report_sha256": "e6d2c6e0b3c7f3c4ce874dda87d7694fd9a0892ef3d2bc461707ce84005a4b81",
+  "raw_report_local_only": "runs/fullvm-pool-proof-final-20260925/report.json",
+  "source_and_asset_binding_stable_through_run": true,
+  "isolation_preflight": {
+    "excluded_from_timing": true,
+    "independent_child_and_parent_ram_tmp": true,
+    "independent_child_and_parent_writable_ext4": true,
+    "baseline_reward": 0.0,
+    "pool_failed": false
+  },
+  "pairs_per_branch": 5,
+  "measured_episode_count": 20,
+  "arm_order": [
+    {
+      "pair": 1,
+      "branch": "repair",
+      "arm": "serial"
+    },
+    {
+      "pair": 1,
+      "branch": "repair",
+      "arm": "pool"
+    },
+    {
+      "pair": 1,
+      "branch": "baseline",
+      "arm": "serial"
+    },
+    {
+      "pair": 1,
+      "branch": "baseline",
+      "arm": "pool"
+    },
+    {
+      "pair": 2,
+      "branch": "baseline",
+      "arm": "pool"
+    },
+    {
+      "pair": 2,
+      "branch": "baseline",
+      "arm": "serial"
+    },
+    {
+      "pair": 2,
+      "branch": "repair",
+      "arm": "pool"
+    },
+    {
+      "pair": 2,
+      "branch": "repair",
+      "arm": "serial"
+    },
+    {
+      "pair": 3,
+      "branch": "repair",
+      "arm": "serial"
+    },
+    {
+      "pair": 3,
+      "branch": "repair",
+      "arm": "pool"
+    },
+    {
+      "pair": 3,
+      "branch": "baseline",
+      "arm": "serial"
+    },
+    {
+      "pair": 3,
+      "branch": "baseline",
+      "arm": "pool"
+    },
+    {
+      "pair": 4,
+      "branch": "baseline",
+      "arm": "pool"
+    },
+    {
+      "pair": 4,
+      "branch": "baseline",
+      "arm": "serial"
+    },
+    {
+      "pair": 4,
+      "branch": "repair",
+      "arm": "pool"
+    },
+    {
+      "pair": 4,
+      "branch": "repair",
+      "arm": "serial"
+    },
+    {
+      "pair": 5,
+      "branch": "repair",
+      "arm": "serial"
+    },
+    {
+      "pair": 5,
+      "branch": "repair",
+      "arm": "pool"
+    },
+    {
+      "pair": 5,
+      "branch": "baseline",
+      "arm": "serial"
+    },
+    {
+      "pair": 5,
+      "branch": "baseline",
+      "arm": "pool"
+    }
+  ],
+  "per_branch_parity": {
+    "repair": {
+      "episode_count": 10,
+      "reward": 1.0,
+      "case_count": 14,
+      "case_vector_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+      "evidence_sha256": "a31030b5043f62e6fe10a5b53a5973fc4acbfa20e7ab516a370b26d71e93ab6a",
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "action_observation_sha256s": [
+        "a02fb71d26c64afaa9e99d9e2e001b6694b59801b3da5f90efb6a1345df44a5d",
+        "48814aa3dfed0ecdab4f11aa4c9c649391f34372c995d733ab2e4e3fe522af05",
+        "a4a315e48a1c1f6573802e986ec77792e789a4ef3948058a08ea45b2f2bc264d",
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "final_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "all_action_observations_cases_evidence_source_rewards_equal": true
+    },
+    "baseline": {
+      "episode_count": 10,
+      "reward": 0.0,
+      "case_count": 14,
+      "case_vector_sha256": "fc09266a45774310fcce0399c8c9696cd0a763d61ac5fa6b30ab4c131e380a24",
+      "evidence_sha256": "71c31a70a2aa464974a350981005a5a9834e380a64c1dab03ecb892049b08544",
+      "opening_observation_sha256": "f4c3f2cff3b056e63d308fd2d0c2087ac4c56d2cb847976307ed0676558b5617",
+      "action_observation_sha256s": [
+        "bf89542feb9ce46a860591f59294ce464dcbd643ee7e51047b37c3f39b51505b"
+      ],
+      "final_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "all_action_observations_cases_evidence_source_rewards_equal": true
+    }
+  },
+  "all_task_sha_artifact_binding_candidate_uid_equal": true,
+  "all_14_case_restores_and_private_evidence_equal_within_branch": true,
+  "memory": {
+    "configured_memory_mib_per_vm": 128,
+    "maximum_concurrent_vms": 3,
+    "parent_live_during_pool_grading_but_no_parent_hidden_cases": true,
+    "rss_sampling_interval_ms": 100,
+    "rss_sum_includes_parent_and_live_children": true,
+    "rss_samples_per_episode_min": 63,
+    "rss_samples_per_episode_max": 80,
+    "peak_qemu_rss_kib_sampled_max_by_arm": {
+      "serial": 442832,
+      "pool": 932688
+    },
+    "host_memory_free_percent_before": 25,
+    "host_memory_free_percent_after_min": 28,
+    "host_memory_free_percent_after_max": 42,
+    "guard": "Abort after an episode if RSS samples unavailable, sampled summed QEMU RSS >4 GiB, or macOS memory_pressure free <10%.",
+    "guard_fired": false,
+    "limitation": "Sampled summed RSS may double-count shared pages and miss brief peaks; it is not physical peak memory."
+  },
+  "medians": {
+    "serial": {
+      "episode_median_seconds": 7.21160072949715,
+      "verify_median_seconds": 1.4773133334238082,
+      "peak_qemu_rss_kib_sampled_max": 442832
+    },
+    "pool": {
+      "episode_median_seconds": 7.787710771081038,
+      "verify_median_seconds": 2.091855437378399,
+      "peak_qemu_rss_kib_sampled_max": 932688
+    }
+  },
+  "by_branch": {
+    "repair": {
+      "serial": {
+        "episode_median_seconds": 7.210119291907176,
+        "verify_median_seconds": 1.374425542075187
+      },
+      "pool": {
+        "episode_median_seconds": 8.804879292147234,
+        "verify_median_seconds": 2.405676124850288
+      },
+      "paired_serial_minus_pool_median_seconds": -0.9840662907809019
+    },
+    "baseline": {
+      "serial": {
+        "episode_median_seconds": 7.213082167087123,
+        "verify_median_seconds": 1.4951393329538405
+      },
+      "pool": {
+        "episode_median_seconds": 7.580144250066951,
+        "verify_median_seconds": 1.9212856248486787
+      },
+      "paired_serial_minus_pool_median_seconds": -0.4183857499156147
+    }
+  },
+  "pool_stage_medians_seconds": {
+    "fork_seconds": 0.7162802495295182,
+    "disk_clone_seconds": 0.18425514549016953,
+    "child_start_restore_seconds": 0.30770427046809345,
+    "parallel_case_wall_seconds": 1.0943460415583104,
+    "cleanup_seconds": 0.023363124928437173
+  },
+  "whole_episode_serial_over_pool_ratio": 0.9260231846663822,
+  "conclusion": "The two-child pool is slower on this fixture: whole graded episode median 7.788 s vs 7.212 s serial; verifier median 2.092 s vs 1.477 s. Do not promote to default verifier as a speed optimization.",
+  "limits": [
+    "One Apple Silicon eight-GB host and one public solved fixture.",
+    "Scripted baseline and repair, not model inference or RL updates.",
+    "Parent VM stays live; fork/child teardown costs are included.",
+    "No sandbox security equivalence claim from matching task and reward hashes."
+  ]
+}

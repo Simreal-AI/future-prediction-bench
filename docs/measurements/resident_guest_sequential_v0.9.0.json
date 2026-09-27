@@ -1,0 +1,98 @@
+{
+  "binding": {
+    "assets_manifest_sha256": "3e853377e7a7fd53225be4b7aa905062b109d845745e8558ba52db6f01707bcd",
+    "case_count": 14,
+    "case_isolation_kind": "nested_mount_pid_namespace_tmpfs_overlay_v1",
+    "guest_case_runner_sha256": "baf844c5c57e00bfe067e9b3fd0ebaa0556bddfbc203b4829218375726daf15d",
+    "guest_hardened_edit_sha256": "648afa69c726b568baa950de698b738c906c1191329e6318e7a09fc01dd19216",
+    "guest_supervisor_sha256": "9fbff59a7d9f47eee203b30023ffb4124821a0ec6f70d88f47897407081d82fb",
+    "guest_wire_sha256": "2ffad280134079683ec27fdd245764fe59815ed7178863ebba2c8656f97558e6",
+    "prototype_sha256": "6742a6c4da214ff4fa3c5dc00c73b354f59e4b9376329187780f2b694d8cacbc",
+    "runtime_kind": "trusted_resident_guest_mount_pid_overlay_experimental_v1",
+    "security_boundary": "one_vm_shared_guest_kernel_trusted_task_v1",
+    "seed_file_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+    "source_path": "boltons/strutils.py",
+    "source_task_sha256": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+    "stateless_contract_sha256": "8e537a023545b3116728c5f1ddf4fcd365891ccd513dcc0106e53c747f948f38",
+    "verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58"
+  },
+  "boot_id": "cc31f3cf76029a0a4987cb7b44ed9943",
+  "case_transport": "sequential",
+  "cases_per_episode": 14,
+  "clone_boot_seconds": 5.678588249953464,
+  "disk_clone_mode": "clonefile",
+  "episodes": [
+    {
+      "case_requests": 14,
+      "episode_wall_seconds": 1.2514456252101809,
+      "guest_case_total_ns": 381833834,
+      "guest_cleanup_ns": 840375,
+      "guest_reset_ns": 8701958,
+      "mode": "repair",
+      "outer_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "passed_cases": 14,
+      "reward": 1.0,
+      "status": "graded",
+      "submitted_source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+      "verify_seconds": 0.9520166669972241
+    },
+    {
+      "case_requests": 14,
+      "episode_wall_seconds": 1.239024291979149,
+      "guest_case_total_ns": 399393668,
+      "guest_cleanup_ns": 876875,
+      "guest_reset_ns": 1809167,
+      "mode": "baseline",
+      "outer_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "passed_cases": 7,
+      "reward": 0.0,
+      "status": "graded",
+      "submitted_source_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+      "verify_seconds": 1.0001519999932498
+    }
+  ],
+  "guest_helper_sha256": {
+    "case_runner.py": "baf844c5c57e00bfe067e9b3fd0ebaa0556bddfbc203b4829218375726daf15d",
+    "guest_supervisor.py": "9fbff59a7d9f47eee203b30023ffb4124821a0ec6f70d88f47897407081d82fb",
+    "hardened_edit.py": "648afa69c726b568baa950de698b738c906c1191329e6318e7a09fc01dd19216",
+    "wire.py": "2ffad280134079683ec27fdd245764fe59815ed7178863ebba2c8656f97558e6"
+  },
+  "install_connect_seconds": 0.8452419580426067,
+  "isolation_probe": {
+    "candidate_stdout_65_byte_transport_checked": true,
+    "case_count": 14,
+    "cross_case_file_isolation": true,
+    "guest_cleanup_ns": 867875,
+    "outer_workspace_pristine": true,
+    "status": "passed"
+  },
+  "kind": "resident_candidate_pinned_boltons_two_episode_qemu_smoke_v1",
+  "outer_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+  "policy_training_performed": false,
+  "resource_probe": {
+    "candidate_resource_return_code": 74,
+    "case_count": 14,
+    "graded_reward": 0.0,
+    "guest_cleanup_ns": 838167,
+    "later_cases_completed": 13,
+    "outer_workspace_pristine": true,
+    "passed_cases": 13,
+    "probe_wall_seconds": 1.2920364579185843,
+    "status": "passed"
+  },
+  "security_boundary": "trusted_shared_guest_kernel_overlay",
+  "seed_file_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+  "source_path": "boltons/strutils.py",
+  "status": "passed",
+  "timeout_probe": {
+    "candidate_timeout_return_code": 124,
+    "case_count": 14,
+    "graded_reward": 0.0,
+    "guest_cleanup_ns": 1284667,
+    "later_cases_completed": 13,
+    "outer_workspace_pristine": true,
+    "passed_cases": 13,
+    "probe_wall_seconds": 11.652586583048105,
+    "status": "passed"
+  }
+}

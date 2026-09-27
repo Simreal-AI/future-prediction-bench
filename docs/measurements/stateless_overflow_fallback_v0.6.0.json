@@ -1,0 +1,29 @@
+{
+  "kind": "live_stateless_oversize_reward_parity_v1",
+  "scope": "One real ARM64 QEMU/HVF guest on the pinned public Boltons fixture; a deliberately wrong candidate emitted 8 KiB of stdout per case.",
+  "case_count": 14,
+  "full_vm_per_case": {
+    "status": "graded",
+    "reward": 0.0,
+    "hidden_cases": 14
+  },
+  "stateless_namespaced_batch": {
+    "status": "graded",
+    "reward": 0.0,
+    "hidden_cases": 14,
+    "batch_fallback_used": true
+  },
+  "normalized_case_evidence_equal": true,
+  "normalized_case_evidence_sha256": "036536c203472f6610cf1467ba3a8c5273a88297e7c892d5dd5563cb93d74cdc",
+  "evidence_digest_method": "SHA-256 of canonical JSON for the ordered 14-element array of {return_code, stdout_sha256, passed}.",
+  "raw_summary_sha256": "d37ea16d88c0fe26846df1656baf5dc9409055483b37222917569148d6b947ab",
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  },
+  "provenance_note": "The local live probe loaded the pinned v2 asset directory; the asset binding is copied from that directory manifest. The task was date-refreshed, so this record does not claim an exact task-definition digest. Operational runs and the local probe script are excluded from release materials.",
+  "limitation": "Single correctness probe. Its observed wall times are not used for any speed claim; no model training was measured."
+}

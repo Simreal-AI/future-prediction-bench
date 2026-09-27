@@ -1,0 +1,50 @@
+{
+  "kind": "terminal_vm_crash_recovery_qemu_correctness_v1",
+  "scope": "one pinned public Boltons v2 repair; real QEMU/HVF control and crash arms",
+  "uses_actual_qemu": true,
+  "model_or_optimizer_included": false,
+  "control": {
+    "arm": "control",
+    "elapsed_seconds": 8.747362,
+    "clone_mode": "clonefile",
+    "submit_calls": 1,
+    "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+    "reward": 1.0,
+    "passed_cases": 14,
+    "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+    "crashed_after_first_hidden_case": false,
+    "partial_case_marker_removed": null,
+    "negative_control": null
+  },
+  "recovered": {
+    "arm": "vm-crash",
+    "elapsed_seconds": 8.175355,
+    "clone_mode": "clonefile",
+    "submit_calls": 1,
+    "case_results_sha256": "18efc102ff5dd6d4a9edadabaa0b5d02c33813cf5ba82cc00a96cd1db3a9222c",
+    "reward": 1.0,
+    "passed_cases": 14,
+    "source_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+    "crashed_after_first_hidden_case": true,
+    "partial_case_marker_removed": true,
+    "negative_control": "changed_kernel_sha256_rejected_before_boot"
+  },
+  "action_observation_parity": true,
+  "all_14_case_evidence_equal": true,
+  "reward_equal": true,
+  "source_sha256_equal": true,
+  "task_sha256": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+  "asset_manifest_sha256": "3e853377e7a7fd53225be4b7aa905062b109d845745e8558ba52db6f01707bcd",
+  "source_hashes": {
+    "recovery": "a4f2ee422d7b908718ce46e1317b22dd9f9a52d4ac4b56ee494566ed360510ae",
+    "runtime": "28e1ba54bf8973277a24f63f5f1c41974063f59252ef5d5b34d54fec1790b5be",
+    "adapter": "02d67a296d2e08781a2c79906a0d715adc7b6100da5c0e3159117a32bfe88267",
+    "benchmark": "d2cd31f12196c11365057c3e7fb28e81f04ae8a9abba3a0a9640440812482691"
+  },
+  "limitations": [
+    "host adapter and verifier survive; only the QEMU process is killed",
+    "full-VM verifier mode and one pinned solved fixture",
+    "no host power-loss or multi-tenant recovery guarantee",
+    "not a matched throughput A/B or RL training measurement"
+  ]
+}

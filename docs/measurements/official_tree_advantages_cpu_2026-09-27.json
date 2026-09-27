@@ -1,0 +1,132 @@
+{
+  "schema_version": "official-tree-advantages-cpu-v1",
+  "upstream": {
+    "repository": "https://github.com/AMAP-ML/Tree-GRPO",
+    "commit": "19bf3fa0c74d8b9ba70619a09a2fd480c31b9d59",
+    "source_path": "verl/trainer/ppo/core_algos.py",
+    "source_sha256": "6d62c3a6c20e3621c9cddef1a5ab7252867489aa44028274304124bc37813363",
+    "execution_scope": "two unmodified function ASTs with real PyTorch",
+    "dependency_doubles": [],
+    "modified_upstream_function_bodies": false
+  },
+  "torch_version": "2.11.0",
+  "device": "cpu",
+  "synthetic_scored_tensors": true,
+  "model_rollout": false,
+  "optimizer": false,
+  "cases": [
+    {
+      "mode": "tree",
+      "advantages": [
+        [
+          -1.2071046829223633,
+          -1.2071046829223633,
+          -1.2071046829223633,
+          -1.2071046829223633
+        ],
+        [
+          2.2071027755737305,
+          2.2071027755737305,
+          2.2071027755737305,
+          2.2071027755737305
+        ],
+        [
+          -0.4999989867210388,
+          -0.4999989867210388,
+          -0.4999989867210388,
+          0.0
+        ],
+        [
+          -0.4999989867210388,
+          -0.4999989867210388,
+          -0.4999989867210388,
+          0.0
+        ]
+      ],
+      "policy_loss_advantages": [
+        [
+          -0.0,
+          -0.0,
+          -1.2071046829223633,
+          -1.2071046829223633
+        ],
+        [
+          0.0,
+          0.0,
+          2.2071027755737305,
+          2.2071027755737305
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.4999989867210388,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.4999989867210388,
+          0.0
+        ]
+      ],
+      "context_and_padding_masked": true
+    },
+    {
+      "mode": "tree_2norm",
+      "advantages": [
+        [
+          -0.7071062326431274,
+          -0.7071062326431274,
+          -0.7071062326431274,
+          -0.7071062326431274
+        ],
+        [
+          0.7071062326431274,
+          0.7071062326431274,
+          0.7071062326431274,
+          0.7071062326431274
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "policy_loss_advantages": [
+        [
+          -0.0,
+          -0.0,
+          -0.7071062326431274,
+          -0.7071062326431274
+        ],
+        [
+          0.0,
+          0.0,
+          0.7071062326431274,
+          0.7071062326431274
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "context_and_padding_masked": true
+    }
+  ],
+  "invalid_cohorts_rejected": 2
+}

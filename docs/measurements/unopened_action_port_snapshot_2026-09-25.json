@@ -1,0 +1,109 @@
+{
+  "kind": "action_port_qemu_snapshot_state_proof_v1",
+  "date_utc": "2026-09-25",
+  "qemu_version": "11.1.1",
+  "accelerator": "HVF",
+  "host": "Apple Silicon macOS",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "status": "historical_pre_two_stage_negative_probe",
+  "scope": "Local, pinned, single-VM experiments. Direct HMP calls were used only in the unopened-port proof; production snapshot guards were not relaxed.",
+  "source_binding": {
+    "v0_11_0_runtime_sha256": "0c72ac87353ceb09d027401995925823076293a793ac9934ba6f7b8a8349960c",
+    "v0_11_0_coding_adapter_sha256": "f626743cc7ff33e377133acba30f6c42b42b5f81fcda1b865dbe0d87ca6f8db7",
+    "unopened_probe_sha256": "314b08e63314fffaa9412f47068d5056f4d2f2ab9265ed548055f02ab35b7c57",
+    "postbarrier_retirement_probe_sha256": "98971d9a2d5bbc51fe3055d6476b3404f03ff63eb8a4ea81f6779941ebaef8f8",
+    "postbarrier_runtime_sha256": "91ffcaa32f1f642bb64c76a08f99c9a20177bd71ec4b6d34ead210c67d3e0639",
+    "pinned_task_json_sha256": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+    "unopened_rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "retirement_rootfs_seed_sha256": "2060b904c9764496cedf1e4508a37fd3b92ee1338018034b94e4df14f1ccacd6",
+    "unopened_raw_report_sha256": "031522f8397449b506afffb8972a5ab7a7c51605616eca721c7e9af94b28400b",
+    "retirement_raw_report_sha256": "d6e20fe6e2027654e99a3805361a717df763f9bfa79cdf1902acca99d21c8fd5",
+    "postbarrier_raw_report_sha256": "a1e50d02c1454faa5518f694ded15579fb59714ae33d5cda7898a44ac10f5a0c"
+  },
+  "unopened_at_snapshot": {
+    "method": "Proof-only deferred host connection; the guest never opened fpb.control and no RPC agent ran. The host action listener existed but had no accepted connection at savevm or loadvm.",
+    "before_save_and_after_load_device": {
+      "port_number": 1,
+      "name": "fpb.control",
+      "chardev": "fpbctl",
+      "guest": "off",
+      "host": "off",
+      "throttle": "off"
+    },
+    "before_save_and_after_load_chardev_disconnected": true,
+    "guest_agent_processes_before_and_after": 0,
+    "guest_port_fd_holders_before_and_after": 0,
+    "host_listener_inode_preserved": true,
+    "guest_port_device_identity_preserved": true,
+    "ram_marker_restored": true,
+    "ext4_workspace_marker_restored": true,
+    "hmp_savevm_seconds_single_observation": 0.192810625070706,
+    "hmp_loadvm_seconds_single_observation": 0.1970286660362035,
+    "production_snapshot_guard_remained_closed": true
+  },
+  "post_load_negative_rpc": {
+    "fresh_host_connection_observed": true,
+    "guest_remained_off": true,
+    "new_client_generated_fresh_nonce_and_started_at_sequence_zero": true,
+    "fresh_host_socket_initial_bytes_absent_over_100ms": true,
+    "saved_session_epoch_at_snapshot": null,
+    "ping_result": "action_port_timed_out",
+    "python_rpc_client_failed_closed": true,
+    "qemu_host_and_chardev_disconnected_after_python_client_close": false,
+    "observations_after_python_client_close_seconds": [
+      {
+        "seconds": 0.0,
+        "device_guest": "off",
+        "device_host": "on",
+        "chardev_disconnected": false
+      },
+      {
+        "seconds": 2.0298748339992017,
+        "device_guest": "off",
+        "device_host": "on",
+        "chardev_disconnected": false
+      }
+    ]
+  },
+  "exact_graded_retirement_boundary": {
+    "actions": ["read_file", "replace_text", "run_visible_checks", "submit"],
+    "agent_stop_acknowledged": true,
+    "host_python_fd_closed": true,
+    "guest_port_bind_unmounted": true,
+    "guest_process_baseline_restored": true,
+    "guest_action_port_fd_holders": 0,
+    "immediate_after_host_close": {
+      "seconds": 0.000005041016265749931,
+      "device_guest": "off",
+      "device_host": "on",
+      "chardev_disconnected": false
+    },
+    "after_two_seconds": {
+      "seconds": 2.019406707957387,
+      "device_guest": "off",
+      "device_host": "on",
+      "chardev_disconnected": false
+    },
+    "submitted_savevm_called": false,
+    "proof_result": "snapshot_blocked_qemu_host_still_connected"
+  },
+  "postbarrier_graded_run": {
+    "same_pinned_task_and_preinstalled_rootfs": true,
+    "actions_before_submit": ["read_file", "replace_text", "run_visible_checks"],
+    "submit_status": "interrupted",
+    "barrier_error": "vm_action_port_qemu_not_disconnected",
+    "agent_stop_acknowledged": true,
+    "host_python_fd_closed": true,
+    "guest_port_bind_unmounted": true,
+    "guest_process_baseline_restored": true,
+    "guest_action_port_fd_holders": 0,
+    "qemu_guest_off_host_on_immediate": true,
+    "qemu_guest_off_host_on_after_seconds": 2.005922249983996,
+    "qemu_chardev_still_connected": true,
+    "snapshot_saves": 0,
+    "checkpoint_operations_supported": false,
+    "reward_computed": false
+  },
+  "interpretation": "An unopened action port can be saved and restored by QEMU under the narrow disconnected condition, but host socket closure does not by itself make QEMU report host=off. The pre-two-stage graded STOP/retire path violated that condition. These experiments do not establish a safe connected-port checkpoint, session-epoch restoration, branch fork, or production speedup.",
+  "subsequent_result": "A trusted, zero-byte guest reopen/close gave QEMU a read-ready interval to observe host EOF. A later two-stage runtime attested guest=off,host=off before snapshots and passed three alternating full graded pairs; see virtio_two_stage_retirement_ab_2026-09-25.json. This report remains the historical negative control."
+}

@@ -1,0 +1,446 @@
+{
+  "amortized_total_seconds": {
+    "cooperative": 14.917164,
+    "prepared_full_vm": 23.315254
+  },
+  "cooperative_checkpoint_ns": 796792,
+  "cooperative_graded_episode_stats": {
+    "n": 10,
+    "p50_seconds": 0.809546,
+    "p95_seconds": 0.844645
+  },
+  "cooperative_guest_case_runner_sha256": "2fe065f75c3343698bceb8edda06e8dc4bce9699220921a6ef7251682e129c2b",
+  "cooperative_guest_service_sha256": "d00cf5b4a4291fe22cb5fe398469bc54084f89b1c96a5ab96c8d990a8762c289",
+  "cooperative_one_time_setup_seconds": 6.885858375113457,
+  "fixture": "public_solved_boltons_26_v2",
+  "kind": "cooperative_realworld_prepared_full_vm_ab_v1",
+  "model_or_optimizer_used": false,
+  "outer_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+  "paired_delta_stats_seconds": {
+    "n": 10,
+    "p50_seconds": 0.848702,
+    "p95_seconds": 1.135509
+  },
+  "paired_ratio_stats": {
+    "all_pairs_cooperative_faster": true,
+    "n": 10,
+    "p50": 2.0473,
+    "p95": 2.39
+  },
+  "pairs": [
+    {
+      "condition_order": [
+        "cooperative",
+        "prepared_full_vm"
+      ],
+      "episodes": [
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 758167,
+          "guest_reset_ns": 3931500,
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.8169
+        },
+        {
+          "child_provision_seconds": 0.520356,
+          "child_teardown_seconds": 0.015305,
+          "condition": "prepared_full_vm",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.952409
+        }
+      ],
+      "mode": "repair",
+      "paired_full_minus_cooperative_seconds": 1.135509,
+      "paired_full_over_cooperative_ratio": 2.39,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 0
+    },
+    {
+      "condition_order": [
+        "prepared_full_vm",
+        "cooperative"
+      ],
+      "episodes": [
+        {
+          "child_provision_seconds": 0.359228,
+          "child_teardown_seconds": 0.018815,
+          "condition": "prepared_full_vm",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.576517
+        },
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 605083,
+          "guest_reset_ns": 3938083,
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.780427
+        }
+      ],
+      "mode": "baseline",
+      "paired_full_minus_cooperative_seconds": 0.79609,
+      "paired_full_over_cooperative_ratio": 2.0201,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 0
+    },
+    {
+      "condition_order": [
+        "cooperative",
+        "prepared_full_vm"
+      ],
+      "episodes": [
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 638667,
+          "guest_reset_ns": 1984709,
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.761623
+        },
+        {
+          "child_provision_seconds": 0.383344,
+          "child_teardown_seconds": 0.014126,
+          "condition": "prepared_full_vm",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.729782
+        }
+      ],
+      "mode": "baseline",
+      "paired_full_minus_cooperative_seconds": 0.968159,
+      "paired_full_over_cooperative_ratio": 2.2712,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 1
+    },
+    {
+      "condition_order": [
+        "prepared_full_vm",
+        "cooperative"
+      ],
+      "episodes": [
+        {
+          "child_provision_seconds": 0.367783,
+          "child_teardown_seconds": 0.018654,
+          "condition": "prepared_full_vm",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.609378
+        },
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 658791,
+          "guest_reset_ns": 4073792,
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.809432
+        }
+      ],
+      "mode": "repair",
+      "paired_full_minus_cooperative_seconds": 0.799946,
+      "paired_full_over_cooperative_ratio": 1.9883,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 1
+    },
+    {
+      "condition_order": [
+        "cooperative",
+        "prepared_full_vm"
+      ],
+      "episodes": [
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 626625,
+          "guest_reset_ns": 2359250,
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.809659
+        },
+        {
+          "child_provision_seconds": 0.356245,
+          "child_teardown_seconds": 0.017163,
+          "condition": "prepared_full_vm",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.639409
+        }
+      ],
+      "mode": "repair",
+      "paired_full_minus_cooperative_seconds": 0.82975,
+      "paired_full_over_cooperative_ratio": 2.0248,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 2
+    },
+    {
+      "condition_order": [
+        "prepared_full_vm",
+        "cooperative"
+      ],
+      "episodes": [
+        {
+          "child_provision_seconds": 0.379259,
+          "child_teardown_seconds": 0.028414,
+          "condition": "prepared_full_vm",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.647193
+        },
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 642084,
+          "guest_reset_ns": 5084084,
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.770676
+        }
+      ],
+      "mode": "baseline",
+      "paired_full_minus_cooperative_seconds": 0.876517,
+      "paired_full_over_cooperative_ratio": 2.1373,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 2
+    },
+    {
+      "condition_order": [
+        "cooperative",
+        "prepared_full_vm"
+      ],
+      "episodes": [
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 543542,
+          "guest_reset_ns": 2058417,
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.795779
+        },
+        {
+          "child_provision_seconds": 0.403792,
+          "child_teardown_seconds": 0.01605,
+          "condition": "prepared_full_vm",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.647073
+        }
+      ],
+      "mode": "baseline",
+      "paired_full_minus_cooperative_seconds": 0.851294,
+      "paired_full_over_cooperative_ratio": 2.0698,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 3
+    },
+    {
+      "condition_order": [
+        "prepared_full_vm",
+        "cooperative"
+      ],
+      "episodes": [
+        {
+          "child_provision_seconds": 0.362642,
+          "child_teardown_seconds": 0.023256,
+          "condition": "prepared_full_vm",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.690756
+        },
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 587250,
+          "guest_reset_ns": 4381542,
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.844645
+        }
+      ],
+      "mode": "repair",
+      "paired_full_minus_cooperative_seconds": 0.846111,
+      "paired_full_over_cooperative_ratio": 2.0017,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 3
+    },
+    {
+      "condition_order": [
+        "cooperative",
+        "prepared_full_vm"
+      ],
+      "episodes": [
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 640458,
+          "guest_reset_ns": 1858292,
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.831558
+        },
+        {
+          "child_provision_seconds": 0.399118,
+          "child_teardown_seconds": 0.014239,
+          "condition": "prepared_full_vm",
+          "passed_cases": 14,
+          "reward": 1.0,
+          "source_after_submit_sha256": "5c7a288cfbbac97a04e79c9ac968431e19a1b02e8beae2afba448b1334112aca",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.865032
+        }
+      ],
+      "mode": "repair",
+      "paired_full_minus_cooperative_seconds": 1.033474,
+      "paired_full_over_cooperative_ratio": 2.2428,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 4
+    },
+    {
+      "condition_order": [
+        "prepared_full_vm",
+        "cooperative"
+      ],
+      "episodes": [
+        {
+          "child_provision_seconds": 0.344404,
+          "child_teardown_seconds": 0.013342,
+          "condition": "prepared_full_vm",
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "45a8c8585d57c98a26407b055ec941e2a4764d845ec2df881136331fc91cc378",
+          "wall_seconds": 1.486501
+        },
+        {
+          "condition": "cooperative",
+          "guest_cleanup_ns": 623833,
+          "guest_reset_ns": 4806250,
+          "passed_cases": 7,
+          "reward": 0.0,
+          "source_after_submit_sha256": "f7f4873406d3913372c9d2b1296cc5e3efb87e88808457e93fc212a5df2de18e",
+          "task_sha256": "b99f675d75676df56e4c10d4fcf0ff8e7a71d8abbc4955c6bae6a86dfe27a4b8",
+          "wall_seconds": 0.810606
+        }
+      ],
+      "mode": "baseline",
+      "paired_full_minus_cooperative_seconds": 0.675895,
+      "paired_full_over_cooperative_ratio": 1.8338,
+      "parity": {
+        "equal_all_hidden_case_outcomes": true,
+        "equal_read_and_edit_observations": true,
+        "equal_reward": true,
+        "opening_declared_runtime_differs": true,
+        "submit_declared_snapshot_kind_differs": true,
+        "task_tool_manifests_differ_by_opt_in_scope": true
+      },
+      "repetition": 4
+    }
+  ],
+  "prepared_full_vm_graded_episode_stats": {
+    "n": 10,
+    "p50_seconds": 1.647133,
+    "p95_seconds": 1.952409
+  },
+  "prepared_full_vm_one_time_setup_seconds": 6.471203208900988,
+  "realworld_env_used": true,
+  "repetitions": 5,
+  "security_scope": "trusted shared guest kernel; cooperative process/OverlayFS checkpoint is not full-VM crash or hostile-root isolation",
+  "setup_amortized_total_ratio_full_over_cooperative": 1.563,
+  "status": "passed",
+  "steady_state_median_ratio_full_over_cooperative": 2.0346,
+  "task_time_window_identical": true,
+  "timing_scope": "serialized graded episodes including child creation, actions, verifier, and child teardown; one-time setup separate; host outer-tree audit separate"
+}

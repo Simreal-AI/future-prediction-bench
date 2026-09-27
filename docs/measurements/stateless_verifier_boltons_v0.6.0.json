@@ -1,0 +1,830 @@
+{
+  "kind": "boltons_microvm_stateless_verifier_comparison_v2",
+  "scope": "one pinned solved public Boltons 26.0.0 fixture; ARM64 QEMU/HVF on this host",
+  "task_id": "boltons-26-singularize-ss-v1",
+  "host_private_verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+  "guest_program_sha256": "a36acef2f2651b2e612ca7841c292ff639249c82d076cf180df86058b0b8e8a5",
+  "guest_case_code_sha256": "b63b7a847c959d3f69bf8ca17f141d328f3343f24622737eee36b0dd00ae68ef",
+  "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+  "disk_clone_mode": "clonefile",
+  "contract": {
+    "requires_live_background_process_state": false,
+    "requires_shared_case_filesystem_state": false,
+    "requires_quiescent_submitted_state": true,
+    "allow_unprivileged_case_execution": true
+  },
+  "validation": {
+    "full_baseline": {
+      "reward": 0.0,
+      "passed_cases": 7,
+      "case_count": 14,
+      "case_results": [
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "21e57e33b30c2322804f7f72df59656c470e82c4b64eb58230bfc78daa4c79c2"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "26cb0b8f46d53a3284f85d76fb30ec49560ebb5287bfaa562be3c69c19d01ff6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "886d0b9b945f097ba790f064d9db7a70210539072b6370fd7dd67de6ae61b735"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "ebef1ee82b1929c3b39b5f9df86cb3f52e62553dd68c14686f36eeeaf0b2c87c"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "173be02f7b7dd6b0c5d8f629b8fa7813fe00a847d56fabb90c2a908377332bf8"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "89adff98cc6a2e5ebc5b3e714bbbf7c2f5a6bd2fb7364a582de82dc27f82a9f8"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "34f7f20e0ba3fe4014d685a3a8b34b2b717d3d83277a08e95aafabb23ceed24e"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+        }
+      ]
+    },
+    "stateless_baseline": {
+      "reward": 0.0,
+      "passed_cases": 7,
+      "case_count": 14,
+      "case_results": [
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "21e57e33b30c2322804f7f72df59656c470e82c4b64eb58230bfc78daa4c79c2"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "26cb0b8f46d53a3284f85d76fb30ec49560ebb5287bfaa562be3c69c19d01ff6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "886d0b9b945f097ba790f064d9db7a70210539072b6370fd7dd67de6ae61b735"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "ebef1ee82b1929c3b39b5f9df86cb3f52e62553dd68c14686f36eeeaf0b2c87c"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "173be02f7b7dd6b0c5d8f629b8fa7813fe00a847d56fabb90c2a908377332bf8"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "89adff98cc6a2e5ebc5b3e714bbbf7c2f5a6bd2fb7364a582de82dc27f82a9f8"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "34f7f20e0ba3fe4014d685a3a8b34b2b717d3d83277a08e95aafabb23ceed24e"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+        }
+      ]
+    },
+    "batch_baseline": {
+      "reward": 0.0,
+      "passed_cases": 7,
+      "case_count": 14,
+      "case_results": [
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "21e57e33b30c2322804f7f72df59656c470e82c4b64eb58230bfc78daa4c79c2"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "26cb0b8f46d53a3284f85d76fb30ec49560ebb5287bfaa562be3c69c19d01ff6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "886d0b9b945f097ba790f064d9db7a70210539072b6370fd7dd67de6ae61b735"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "ebef1ee82b1929c3b39b5f9df86cb3f52e62553dd68c14686f36eeeaf0b2c87c"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "173be02f7b7dd6b0c5d8f629b8fa7813fe00a847d56fabb90c2a908377332bf8"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "89adff98cc6a2e5ebc5b3e714bbbf7c2f5a6bd2fb7364a582de82dc27f82a9f8"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": false,
+          "returncode": 0,
+          "stdout_sha256": "34f7f20e0ba3fe4014d685a3a8b34b2b717d3d83277a08e95aafabb23ceed24e"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+        }
+      ]
+    },
+    "full_repaired": {
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_results": [
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+        }
+      ]
+    },
+    "stateless_repaired": {
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_results": [
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+        }
+      ]
+    },
+    "batch_repaired": {
+      "reward": 1.0,
+      "passed_cases": 14,
+      "case_count": 14,
+      "case_results": [
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0"
+        },
+        {
+          "passed": true,
+          "returncode": 0,
+          "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+        }
+      ]
+    },
+    "serial_contamination": {
+      "overlay_marker_absent_next_case": true,
+      "private_tmp_marker_absent_next_case": true,
+      "direct_lower_workspace_write_denied": true,
+      "other_global_writable_paths_denied": true,
+      "candidate_procfs_not_mounted": true,
+      "lower_workspace_unchanged_after_cases": true,
+      "detached_candidate_process_cleaned": true
+    },
+    "batch_contamination": {
+      "overlay_marker_absent_next_case": true,
+      "private_tmp_marker_absent_next_case": true,
+      "direct_lower_workspace_write_denied": true,
+      "other_global_writable_paths_denied": true,
+      "candidate_procfs_not_mounted": true,
+      "lower_workspace_unchanged_after_cases": true,
+      "detached_candidate_process_cleaned": true
+    }
+  },
+  "setup_seconds": 5.883774,
+  "repetitions": 7,
+  "order": "three-condition rotation within repetitions",
+  "timed_scope": "14 host-checked case executions; full VM condition loads the same snapshot before every case; serial stateless uses 14 host serial calls; batch stateless uses one call but each case has a fresh mount and PID namespace; common initial load excluded from all conditions",
+  "runs": [
+    {
+      "iteration": 0,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 2.250309,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 0,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.628217,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 0,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.310741,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 1,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.634185,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 1,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.355672,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 1,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 1.771647,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 2,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.306167,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 2,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 1.542255,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 2,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.637175,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 3,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 2.519038,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 3,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.628877,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 3,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.331663,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 4,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.620523,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 4,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.33584,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 4,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 1.629474,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 5,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.349752,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 5,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 1.907568,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 5,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.709309,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 6,
+      "condition": "full_vm_restore_each_case",
+      "wall_seconds": 1.824629,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 6,
+      "condition": "stateless_serial_cases",
+      "wall_seconds": 0.654711,
+      "reward": 1.0,
+      "passed_cases": 14
+    },
+    {
+      "iteration": 6,
+      "condition": "stateless_batch_cases",
+      "wall_seconds": 0.362599,
+      "reward": 1.0,
+      "passed_cases": 14
+    }
+  ],
+  "median_seconds": {
+    "full_vm_restore_each_case": 1.824629,
+    "stateless_serial_cases": 0.634185,
+    "stateless_batch_cases": 0.33584
+  },
+  "graded_case_speedups": {
+    "serial_vs_full_vm": 2.877124,
+    "batch_vs_full_vm": 5.433031
+  },
+  "untimed_guest_diagnostic": {
+    "kind": "guest_stateless_case_profile_v1",
+    "case_count": 14,
+    "per_case": {
+      "whole_run_one": {
+        "count": 14,
+        "median_ms": 20.066417,
+        "p95_ms": 33.162251,
+        "sum_ms": 300.095502
+      },
+      "outer_supervision_and_cleanup": {
+        "count": 14,
+        "median_ms": 1.144813,
+        "p95_ms": 3.903917,
+        "sum_ms": 19.679708
+      },
+      "namespace_setup_and_non_candidate_work": {
+        "count": 14,
+        "median_ms": 0.184854,
+        "p95_ms": 0.549584,
+        "sum_ms": 2.975544
+      },
+      "candidate_process_and_python_execution": {
+        "count": 14,
+        "median_ms": 18.631145,
+        "p95_ms": 28.70875,
+        "sum_ms": 277.44025
+      }
+    },
+    "outputs": [
+      {
+        "returncode": 0,
+        "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0",
+        "truncated": false
+      },
+      {
+        "returncode": 0,
+        "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d",
+        "truncated": false
+      }
+    ],
+    "host_call_seconds": 0.352078,
+    "guest_program_sha256": "aa104e490aa4433a6d6516ad3749f8af669f352ab58dcc646fb8a097c4597595",
+    "measured_after_timed_conditions": true
+  },
+  "vm_metrics": {
+    "vm_starts": 1,
+    "guest_commands": 303,
+    "snapshot_saves": 2,
+    "snapshot_loads": 152,
+    "forks_spawned": 0,
+    "fork_reflink_disks": 0,
+    "fork_copied_disks": 0,
+    "fork_seconds": 0.0,
+    "fork_disk_clone_seconds": 0.0,
+    "fork_child_start_restore_seconds": 0.0,
+    "vm_start_seconds": 0.1393095829989761,
+    "guest_command_seconds": 15.365077168680727,
+    "snapshot_save_seconds": 0.411500666057691,
+    "snapshot_load_seconds": 13.444433296797797
+  },
+  "does_not_measure": [
+    "model inference",
+    "gradient updates",
+    "RL sample efficiency"
+  ],
+  "limits": [
+    "opt-in stateless verifier only; not equivalent to full-VM CPU/RAM/device restoration",
+    "one guest kernel shared across cases; not a hardened adversarial sandbox",
+    "candidate runs unprivileged but no comprehensive filesystem or syscall confinement audit",
+    "public solved fixture; no generalization claim"
+  ],
+  "trusted_root_python_isolated_mode": true,
+  "host_driver_sha256": "864414eacf1af98f7dd99d91c182fceb64598da947c2655aed94499ca1604265",
+  "benchmark_script_sha256": "ed5e9877054ca5a1c889995daab6b5f514dfade4a3341abc5825103406b96a55",
+  "opt_in_contract_sha256": "5f8dff81f05822d152dc2b941a1da45b17fc873a51efe98bce163a1b4e5d6c80",
+  "earlier_developmental_runs": [
+    {
+      "repetitions": 3,
+      "full_vm_median_seconds": 1.682509,
+      "batch_stateless_median_seconds": 0.339006,
+      "batch_vs_full_vm_ratio": 4.963066,
+      "guest_helper_sha256": "cfa2dd5ac71300ed68b1738a944591c6b35fadf2368bf400a999365c46fe4625",
+      "trusted_root_python_isolated_mode": false
+    },
+    {
+      "repetitions": 3,
+      "full_vm_median_seconds": 2.062805,
+      "batch_stateless_median_seconds": 0.31857,
+      "batch_vs_full_vm_ratio": 6.475202,
+      "guest_helper_sha256": "a36acef2f2651b2e612ca7841c292ff639249c82d076cf180df86058b0b8e8a5",
+      "trusted_root_python_isolated_mode": false
+    },
+    {
+      "repetitions": 7,
+      "full_vm_median_seconds": 1.991442,
+      "batch_stateless_median_seconds": 0.321447,
+      "batch_vs_full_vm_ratio": 6.195242,
+      "guest_helper_sha256": "a36acef2f2651b2e612ca7841c292ff639249c82d076cf180df86058b0b8e8a5",
+      "trusted_root_python_isolated_mode": false
+    }
+  ],
+  "earlier_runs_pooled_with_final": false,
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  }
+}

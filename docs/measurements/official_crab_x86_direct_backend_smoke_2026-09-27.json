@@ -1,0 +1,622 @@
+{
+  "schema_version": "official-crab-microvm-probe-v2",
+  "upstream": {
+    "repository": "https://github.com/open-agent-infra/crab",
+    "commit": "9607d61a41dc44358cf078c4b438bfd971c8ee9d",
+    "process_monitor_sha256": "8b40e96eed0aea0892e17416d93d31042ef1ec4f7d3d2522cdaee86eff04b975",
+    "scheduler_sha256": "d671430c848099f3ac9ed3ac89068a235d437c52145cc25404ffe15070684b52",
+    "modified_upstream_files": [],
+    "dependency_doubles": []
+  },
+  "guest_probe_sha256": "aac2af61e87f0d584523d1288f2297c58cf82e61630d42b4e8a9483821fa7caf",
+  "scope": "eight-action controlled stopped-worker RAM and single-file state probe",
+  "graded_software_episode": false,
+  "model_inference": false,
+  "optimizer": false,
+  "criu_zfs_backend": false,
+  "ebpf_filesystem_monitor": false,
+  "incremental_process_checkpoint": false,
+  "setup_seconds_excluded": 21.705203165998682,
+  "capabilities": {
+    "soft_dirty_known_write_detected": true,
+    "machine": "x86_64",
+    "inspection_scope": "one_stopped_worker_and_one_file"
+  },
+  "qemu_acceleration": "tcg",
+  "packed_rpc": true,
+  "packed_transport_identical_in_both_conditions": true,
+  "repetitions": 1,
+  "summary": {
+    "every_turn": {
+      "checkpoint_count_per_run": [
+        8
+      ],
+      "median_workload_seconds": 26.77092070807703,
+      "median_save_seconds": 3.3258949602022767
+    },
+    "selective": {
+      "checkpoint_count_per_run": [
+        3
+      ],
+      "median_workload_seconds": 18.843124042032287,
+      "median_save_seconds": 0.865864000050351
+    }
+  },
+  "runs": [
+    {
+      "condition": "every_turn",
+      "repetition": 0,
+      "workload_seconds": 26.77092070807703,
+      "checkpoint_count": 8,
+      "save_seconds": 3.3258949602022767,
+      "inspection_seconds": 0.0,
+      "guest_inspection_ns": [],
+      "records": [
+        {
+          "turn": 0,
+          "operation": {
+            "op": "state"
+          },
+          "saved": true,
+          "action_seconds": 3.2474332079291344,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 1.1538747090380639,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 1,
+          "operation": {
+            "op": "state"
+          },
+          "saved": true,
+          "action_seconds": 2.299916750052944,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.3324860001448542,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 2,
+          "operation": {
+            "op": "state"
+          },
+          "saved": true,
+          "action_seconds": 3.135077083017677,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.3754168748855591,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 3,
+          "operation": {
+            "op": "transient"
+          },
+          "saved": true,
+          "action_seconds": 3.3437086248304695,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.28964374982751906,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 4,
+          "operation": {
+            "op": "file",
+            "value": "changed"
+          },
+          "saved": true,
+          "action_seconds": 3.3354077090043575,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.3508069170638919,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 5,
+          "operation": {
+            "op": "state"
+          },
+          "saved": true,
+          "action_seconds": 2.494250499876216,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.25804545916616917,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 6,
+          "operation": {
+            "op": "memory",
+            "value": 456
+          },
+          "saved": true,
+          "action_seconds": 2.6658733340445906,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.2742735000792891,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 456,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 7,
+          "operation": {
+            "op": "state"
+          },
+          "saved": true,
+          "action_seconds": 2.9161020000465214,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.29134774999693036,
+          "inspection": null,
+          "decision": null,
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 456,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        }
+      ],
+      "restore_checks": [
+        {
+          "tag": "e0t0",
+          "restore_seconds": 0.3128472079988569,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t1",
+          "restore_seconds": 0.2797870000358671,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t2",
+          "restore_seconds": 0.33142254198901355,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t3",
+          "restore_seconds": 0.23755487496964633,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t4",
+          "restore_seconds": 0.3142923330888152,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t5",
+          "restore_seconds": 0.2627354171127081,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t6",
+          "restore_seconds": 0.22488441597670317,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "e0t7",
+          "restore_seconds": 0.2867536668200046,
+          "ram_and_disk_match": true
+        }
+      ],
+      "missing_worker_fail_closed": true,
+      "killed_worker_restored": true
+    },
+    {
+      "condition": "selective",
+      "repetition": 0,
+      "workload_seconds": 18.843124042032287,
+      "checkpoint_count": 3,
+      "save_seconds": 0.865864000050351,
+      "inspection_seconds": 0.0,
+      "guest_inspection_ns": [
+        14698104,
+        9923070,
+        9919069,
+        11988084,
+        11923084,
+        11984085,
+        4367030,
+        11412081
+      ],
+      "records": [
+        {
+          "turn": 0,
+          "operation": {
+            "op": "state"
+          },
+          "saved": true,
+          "action_seconds": 2.3756100421305746,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.40449495799839497,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": true,
+            "inspection_ns": 14698104
+          },
+          "decision": {
+            "should_checkpoint": true,
+            "checkpoint_process": true,
+            "checkpoint_filesystem": true,
+            "leave_running": true,
+            "reason": "no_previous_checkpoint",
+            "policy_name": "fault-tolerance",
+            "metadata": {
+              "llm_request_in_flight": false
+            },
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 1,
+          "operation": {
+            "op": "state"
+          },
+          "saved": false,
+          "action_seconds": 2.5666710829827935,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.0,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": false,
+            "inspection_ns": 9923070
+          },
+          "decision": {
+            "should_checkpoint": false,
+            "checkpoint_process": false,
+            "checkpoint_filesystem": false,
+            "leave_running": true,
+            "reason": "no_change_signal",
+            "policy_name": "fault-tolerance",
+            "metadata": {},
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": null,
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 2,
+          "operation": {
+            "op": "state"
+          },
+          "saved": false,
+          "action_seconds": 1.9282259170431644,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.0,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": false,
+            "inspection_ns": 9919069
+          },
+          "decision": {
+            "should_checkpoint": false,
+            "checkpoint_process": false,
+            "checkpoint_filesystem": false,
+            "leave_running": true,
+            "reason": "no_change_signal",
+            "policy_name": "fault-tolerance",
+            "metadata": {},
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": null,
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 3,
+          "operation": {
+            "op": "transient"
+          },
+          "saved": false,
+          "action_seconds": 1.9226760000456125,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.0,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": false,
+            "inspection_ns": 11988084
+          },
+          "decision": {
+            "should_checkpoint": false,
+            "checkpoint_process": false,
+            "checkpoint_filesystem": false,
+            "leave_running": true,
+            "reason": "no_change_signal",
+            "policy_name": "fault-tolerance",
+            "metadata": {},
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": null,
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "seed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 4,
+          "operation": {
+            "op": "file",
+            "value": "changed"
+          },
+          "saved": true,
+          "action_seconds": 1.8608453751076013,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.232281083939597,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": true,
+            "inspection_ns": 11923084
+          },
+          "decision": {
+            "should_checkpoint": true,
+            "checkpoint_process": false,
+            "checkpoint_filesystem": true,
+            "leave_running": true,
+            "reason": "change_signal_and_interval_elapsed",
+            "policy_name": "fault-tolerance",
+            "metadata": {
+              "elapsed_seconds": 8.283668,
+              "llm_request_in_flight": false
+            },
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": true,
+          "state": {
+            "value": 123,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 5,
+          "operation": {
+            "op": "state"
+          },
+          "saved": false,
+          "action_seconds": 1.9982471659313887,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.0,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": false,
+            "inspection_ns": 11984085
+          },
+          "decision": {
+            "should_checkpoint": false,
+            "checkpoint_process": false,
+            "checkpoint_filesystem": false,
+            "leave_running": true,
+            "reason": "no_change_signal",
+            "policy_name": "fault-tolerance",
+            "metadata": {},
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": null,
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 123,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 6,
+          "operation": {
+            "op": "memory",
+            "value": 456
+          },
+          "saved": true,
+          "action_seconds": 2.002784041920677,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.22908795811235905,
+          "inspection": {
+            "known": true,
+            "process_changed": true,
+            "filesystem_changed": false,
+            "inspection_ns": 4367030
+          },
+          "decision": {
+            "should_checkpoint": true,
+            "checkpoint_process": true,
+            "checkpoint_filesystem": true,
+            "leave_running": true,
+            "reason": "change_signal_and_interval_elapsed",
+            "policy_name": "fault-tolerance",
+            "metadata": {
+              "elapsed_seconds": 4.001351,
+              "llm_request_in_flight": false
+            },
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": "full_vm_state_qcow2_v1",
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 456,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        },
+        {
+          "turn": 7,
+          "operation": {
+            "op": "state"
+          },
+          "saved": false,
+          "action_seconds": 3.305763749871403,
+          "inspection_seconds": 0.0,
+          "packed_rpc_includes_action_inspection_state_and_baseline": true,
+          "baseline_seconds": 0.0,
+          "save_seconds": 0.0,
+          "inspection": {
+            "known": true,
+            "process_changed": false,
+            "filesystem_changed": false,
+            "inspection_ns": 11412081
+          },
+          "decision": {
+            "should_checkpoint": false,
+            "checkpoint_process": false,
+            "checkpoint_filesystem": false,
+            "leave_running": true,
+            "reason": "no_change_signal",
+            "policy_name": "fault-tolerance",
+            "metadata": {},
+            "is_incremental_process": false,
+            "parent_process_checkpoint_id": null,
+            "produce_pre_dump": false
+          },
+          "effective_backend": null,
+          "partial_decision_promoted_to_full_vm": false,
+          "state": {
+            "value": 456,
+            "file": "changed",
+            "worker_identity": 1399
+          }
+        }
+      ],
+      "restore_checks": [
+        {
+          "tag": "s0t0",
+          "restore_seconds": 0.4309037080965936,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "s0t4",
+          "restore_seconds": 0.2799631250090897,
+          "ram_and_disk_match": true
+        },
+        {
+          "tag": "s0t6",
+          "restore_seconds": 0.2325469171628356,
+          "ram_and_disk_match": true
+        }
+      ],
+      "missing_worker_fail_closed": true,
+      "killed_worker_restored": true
+    }
+  ],
+  "validation_scope": "one-pair real x86 direct-backend regression; no stability or native-speed claim",
+  "local_code_sha256": {
+    "future_prediction_bench/microvm_runtime.py": "ebe4ee635255f2a8bc1e1fa0349e8470a2585f4ff5e27932418c356b5189f411",
+    "examples/official_crab/x86_runtime.py": "57b104af1a64cb09d15144c16f767a8bdc15fac881f4398e34a9e5db001061fe"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "action_observation_parity": true,
+  "all_14_case_evidence_equal": true,
+  "asset_manifest_sha256": "3e853377e7a7fd53225be4b7aa905062b109d845745e8558ba52db6f01707bcd",
+  "clone_modes": {
+    "control": "clonefile",
+    "crash": "clonefile"
+  },
+  "durable_submit_marker_before_restart": true,
+  "host_process_exited_after_first_hidden_case": true,
+  "kind": "terminal_host_process_restart_qemu_correctness_v1",
+  "limitations": [
+    "one pinned solved fixture and full-VM serial verifier only",
+    "a trusted supervisor kills the orphan QEMU before reopening the disk",
+    "host power loss, concurrent coordinators, and multi-tenant recovery unproven",
+    "not a throughput, millisecond checkpoint, or RL training measurement"
+  ],
+  "live_orphan_rejected_before_boot": true,
+  "model_or_optimizer_included": false,
+  "new_adapter_submit_calls": 0,
+  "no_result_record_before_restart": true,
+  "original_adapter_submit_calls": 1,
+  "orphan_qemu_killed_by_supervisor": true,
+  "partial_case_marker_removed": true,
+  "passed_cases": 14,
+  "reward": 1.0,
+  "reward_equal": true,
+  "scope": "two pinned Boltons v2 arms; separate Python coordinator processes",
+  "source_hashes": {
+    "adapter": "ece372bed0b5de29da5b3bcf770851a1749c58a32ea514bb995bdc7df2942a7e",
+    "probe": "3891e7cdc3d12ae5d4e3a8911cba1d1c6c7dfd9ad723a6131adc85e6f5b1c70c",
+    "recovery": "6727df7c448e928d73b4ac7fdc9dc03b9f3216cc8a3fc19e044ba7f01bb1c8f0",
+    "runtime": "e996cd858ec863a95a738afcff3d62c0e8f19aa7a03aa1e7c7e1dd6c2f03e30d"
+  },
+  "source_sha256_equal": true,
+  "task_sha256": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+  "uses_actual_qemu": true,
+  "wrong_kernel_rejected_before_boot": true
+}

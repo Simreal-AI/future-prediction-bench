@@ -1,0 +1,109 @@
+{
+  "actor": {
+    "checked_out_head": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+    "checked_out_tree": "c3d16a156c9206389b230b2884557c486e871589",
+    "host_private_mounts_absent": true,
+    "noninteractive_pager": "cat",
+    "post_init_seconds": 6.374093627999855,
+    "private_task_fields_redacted": true,
+    "session_create_seconds": 0.37783375000003616
+  },
+  "date": "2026-09-25",
+  "grades": {
+    "baseline": {
+      "expected_cases_observed": 60,
+      "failed_cases": 1,
+      "log_sha256": "410794d7d544c4ce0c324ebe972c25cd26c0036a76f5f5565ac1ed7092c7a400",
+      "passed_cases": 59,
+      "post_init_seconds": 6.890198170000076,
+      "reward": 0.0,
+      "session_create_seconds": 0.3777038759999414,
+      "trusted_grade_seconds": 4.205254126999989
+    },
+    "official_patch": {
+      "expected_cases_observed": 60,
+      "failed_cases": 0,
+      "log_sha256": "c9ae2056e690c57aacd10856d89934e04816bbd3899e327dd25d4e469f9aed6e",
+      "passed_cases": 60,
+      "post_init_seconds": 6.250247501999866,
+      "reward": 1.0,
+      "session_create_seconds": 0.3802973330000441,
+      "trusted_grade_seconds": 4.159102377000181
+    }
+  },
+  "limitations": [
+    "This is a baseline/reference-patch discrimination and integration test, not a model rollout or RL training benchmark.",
+    "One sample per arm is insufficient for throughput or speedup claims.",
+    "One-time image/package preparation is excluded from the per-deployment and grade timings."
+  ],
+  "prepared_cache": {
+    "git_tar_bytes": 1478074,
+    "git_tar_sha256": "ef7e6369048575c2a5edecb28f1f859884615a6e70bfb5fefceaa33137c76633",
+    "official_pip_pins": [
+      "setuptools==70.0.0",
+      "click==8.1.3",
+      "itsdangerous==2.1.2",
+      "Jinja2==3.1.2",
+      "MarkupSafe==2.1.1",
+      "Werkzeug==2.3.7"
+    ],
+    "official_requirement_entries": 61,
+    "offline_wheels": [
+      {
+        "bytes": 199124,
+        "filename": "chardet-5.1.0-py3-none-any.whl",
+        "sha256": "362777fb014af596ad31334fde1e8c327dfdb076e1960d1694662d46a6917ab9"
+      },
+      {
+        "bytes": 863432,
+        "filename": "setuptools-70.0.0-py3-none-any.whl",
+        "sha256": "54faa7f2e8d2d11bcd2c07bed282eef1046b5c080d1c32add737d7b5817b1ad4"
+      },
+      {
+        "bytes": 64545,
+        "filename": "wheel-0.40.0-py3-none-any.whl",
+        "sha256": "d236b20e7cb522daf2390fa84c55eea81c5c30190f90f29ae2ca1ad8355bf247"
+      }
+    ],
+    "venv_tar_bytes": 50110494,
+    "venv_tar_sha256": "931eaf13e5b2f06b36280376221f673cee9ddc6afaf7a3b4c4249e5bb3b2ee86"
+  },
+  "runtime": {
+    "architecture": "linux/arm64",
+    "base_image_digest": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+    "derived_image_digest": "sha256:1d4aa500dad11450ca04fc25ca1e21fc8d7192b78e761556b48a40e1f6a7d509",
+    "network_during_actor_and_grade": "none",
+    "privileged_container": true,
+    "python_version": "3.11.2"
+  },
+  "sample_count": {
+    "baseline": 1,
+    "official_patch": 1
+  },
+  "scope": "one_real_swebench_verified_task_offline_official_minisandbox_grade",
+  "setup_caveat": "The pinned upstream post_init first cached an incomplete venv on this host; see the MiniSandbox task runbook. The successful grade used a repaired, import-checked cache.",
+  "setup_mode": "operator_prepared_cache_from_unmodified_upstream_requirements_and_pins",
+  "source_binding": {
+    "official_requirements_sha256": "9e982297703d53ff55ec0b57fa5d00520089cbd01dc88e35ab0112498a7fa55f",
+    "run_script_sha256": "afdeebd4cc2c74df479d9d70ea428fd7b66b823165d1175156c677bf91069e49",
+    "session_bridge_sha256": "d942acd131ced4dce556a8bcaced9792b7f769aabe89f7f935229181dfd214d7",
+    "strict_grade_sha256": "43046cb86314e9a8dc6a6f65267c224a7d75b85bfd99fffb62facb0b8957c5d1"
+  },
+  "task": {
+    "base_commit": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+    "base_tree": "c3d16a156c9206389b230b2884557c486e871589",
+    "dataset_sha256": "43ed5a3d1d98da36472c1ade65ddd2085d7b4ff694fcaf6a023a07c5c1f32f21",
+    "environment_setup_commit": "182ce3dd15dfa3537391c3efaf9c3ff407d134d4",
+    "fail_to_pass_cases": 1,
+    "instance_id": "pallets__flask-5014",
+    "pass_to_pass_cases": 59,
+    "private_test_patch_sha256": "e16f06b260b5169a49397e9d571b5af70317cd23792e1437232fabf718fe8871",
+    "reference_patch_sha256": "087d51d66413bfa35111ac0eca31f1db1636572702cfd967c428049b453f451d",
+    "repo": "pallets/flask"
+  },
+  "upstream": {
+    "commit": "381ada53ab35dadb342add33ff006f3157c22fb7",
+    "python_tree_sha256": "605342a1abd452ad04b8f9d00deb993d9b73c4afac61a268f229816af63b9d84",
+    "repo": "https://github.com/lblankl/SWE-MiniSandbox"
+  }
+}

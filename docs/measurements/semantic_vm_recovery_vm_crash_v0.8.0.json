@@ -1,0 +1,45 @@
+{
+  "scope": "pinned public Boltons v2 scripted QEMU/HVF recovery experiment",
+  "date": "2026-09-25",
+  "memory_mib": 128,
+  "source_report_sha256": "5dc8d6176e3deb25043c37267d84a2096bd18c8ad07637d6d1b79a4200ee64a1",
+  "control": {
+    "full_vm_journal_snapshots": 8,
+    "complete_scripted_graded_seconds": 9.104240000015125,
+    "hidden_cases_passed": 14,
+    "reward": 1.0
+  },
+  "selective": {
+    "full_vm_journal_snapshots": 5,
+    "snapshots_avoided": 3,
+    "skipped_turns": 3,
+    "guest_inspection_seconds": 0.9888479996006936,
+    "complete_scripted_graded_seconds": 12.375718167051673,
+    "hidden_cases_passed": 14,
+    "reward": 1.0
+  },
+  "parity": {
+    "all_action_observations_equal": true,
+    "all_14_hidden_case_results_equal": true,
+    "final_source_sha256_equal": true
+  },
+  "fault_arm": {
+    "full_vm_journal_snapshots_including_orphan": 7,
+    "full_vm_total_saves_including_submit": 8,
+    "qemu_process_killed_and_replaced": true,
+    "saved_vm_loaded_in_replacement_qemu": true,
+    "orphaned_edit_absent_after_manifest_recovery": true,
+    "terminal_grading_blocked_before_recovery": true,
+    "live_guest_process_restored": true,
+    "guest_initramfs_ram_marker_restored": true,
+    "all_14_hidden_case_results_equal_to_control": true,
+    "reward": 1.0
+  },
+  "interpretation": "Three full-VM journal saves were avoided, but this run was slower end to end; an earlier paired run had the opposite timing sign. No reliable episode-throughput gain is established.",
+  "boundaries": [
+    "This is a solved public integration fixture, not held-out agent evaluation.",
+    "The crashed process was QEMU; the host adapter/coordinator remained alive.",
+    "The inspector is trusted-tool and guest-probe based, not eBPF/ZFS/CRIU.",
+    "No model inference, optimizer, GPU training, or host power-loss test was included."
+  ]
+}

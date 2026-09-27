@@ -1,0 +1,47 @@
+{
+  "schema_version": "official-vip-allocator-cpu-v1",
+  "upstream": {
+    "repository": "https://github.com/HieuNT91/VIP",
+    "commit": "f7bd18915467f50a0d8565b4f16afaef0741a96f",
+    "source_path": "src/vip/allocation/bernoulli_allocation.py",
+    "source_sha256": "766339b7388bc61d7cad04b9554c5ca6cace70cdb1d350ade67b201958c99edb"
+  },
+  "execution_scope": "unmodified Allocator with real NumPy/SciPy",
+  "success_probability_inputs": [
+    0.01,
+    0.1,
+    0.2,
+    0.4,
+    0.5,
+    0.8,
+    0.95,
+    0.99
+  ],
+  "allocation": [
+    5,
+    11,
+    12,
+    12,
+    12,
+    4,
+    4,
+    4
+  ],
+  "total_rollouts": 64,
+  "uniform_rollouts": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "upstream_accuracy_clamp_at_0_8": true,
+  "success_predictor_trained": false,
+  "model_rollout": false,
+  "optimizer": false,
+  "trainer_entrypoint_executed": false,
+  "dependency_doubles": []
+}

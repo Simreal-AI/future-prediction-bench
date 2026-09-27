@@ -1,0 +1,496 @@
+{
+  "schema_version": "official-areal-staleness-cpu-v1",
+  "commit": "2fad2d0e308fe631e70e971b97188ad5c5cc03cb",
+  "areal_python_sha256": "ed205b771ed629a5ca656ade06efe3cc4ad5f245346e89e2e1cd1d1c27926af4",
+  "areal_python_file_count": 504,
+  "official_test_sha256": "0b6164520fd63f158d122b6f47dd4659a14982e29b02b74aba04acc57c2afeb8",
+  "probe_sha256": "edf8616b6f5b5e1bd7be2ec807a82c201b0485c9f7abfef75c2328f86d86ca62",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "python": "3.12.1 (v3.12.1:2305ca5144, Dec  7 2023, 17:23:38) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "scope": "original_capacity_control_CPU_only",
+  "inference_executed": false,
+  "gradient_update_executed": false,
+  "gpu_speedup_measured": false,
+  "passed": true,
+  "class_source_path": "areal/infra/staleness_manager.py",
+  "class_source_sha256": "ade1bd484e86d666421716159d6a675ca010c5b5acb8fca05f989389c7f4269d",
+  "lifecycle": [
+    {
+      "event": "initial",
+      "version": 0,
+      "capacity": 3,
+      "stats": {
+        "accepted": 0,
+        "enqueued": 0,
+        "rejected": 0,
+        "running": 0
+      }
+    },
+    {
+      "event": "three_submitted",
+      "version": 0,
+      "capacity": 0,
+      "stats": {
+        "accepted": 0,
+        "enqueued": 0,
+        "rejected": 0,
+        "running": 3
+      }
+    },
+    {
+      "event": "two_accepted_one_rejected",
+      "version": 0,
+      "capacity": 2,
+      "stats": {
+        "accepted": 2,
+        "enqueued": 0,
+        "rejected": 1,
+        "running": 0
+      }
+    },
+    {
+      "event": "version_counter_advanced",
+      "version": 1,
+      "capacity": 3,
+      "stats": {
+        "accepted": 2,
+        "enqueued": 0,
+        "rejected": 1,
+        "running": 0
+      }
+    }
+  ],
+  "pending_limit": 4,
+  "recovery": {
+    "recovered_version": 100,
+    "capacity_before_recovery_callback": 824,
+    "capacity_after_recovery_callback": 24,
+    "stats_after_recovery": {
+      "accepted": 800,
+      "enqueued": 0,
+      "rejected": 0,
+      "running": 0
+    }
+  },
+  "control_plane_checks_passed": true,
+  "loaded_original_modules": {
+    "areal": {
+      "path": "areal/__init__.py",
+      "sha256": "9077835b57ada25c10eadb447bd2fa2efad47e282d466bafea678af00ba1f56e"
+    },
+    "areal.api": {
+      "path": "areal/api/__init__.py",
+      "sha256": "d3592c2d14e2bb02acca2f43c2acdfebae54d1f6f818cf226c57b1283e6cd6e2"
+    },
+    "areal.api.alloc_mode": {
+      "path": "areal/api/alloc_mode.py",
+      "sha256": "c6f613c5041d2ccfe7237bb48c21d8c423d2192420d43cab6d479482832a5b96"
+    },
+    "areal.api.cli_args": {
+      "path": "areal/api/cli_args.py",
+      "sha256": "50bbab3763bd416d2b985294e15f16561efe149729711ab92a44080632a1bf8b"
+    },
+    "areal.api.engine_api": {
+      "path": "areal/api/engine_api.py",
+      "sha256": "cdb62bfa612af7a25afad155440fb9220cef5e9d80f3a0b3fb9d4ce923160fea"
+    },
+    "areal.api.io_struct": {
+      "path": "areal/api/io_struct.py",
+      "sha256": "57643e1e318291ee38f6b7633678dcb535da3bbb330ffcc5c1caefb4566b9359"
+    },
+    "areal.api.scheduler_api": {
+      "path": "areal/api/scheduler_api.py",
+      "sha256": "44ebbe79b4e6a7db704f934f04ceba8e443c8d9e179ed4594a8fb9fe2dbb49d1"
+    },
+    "areal.api.workflow_api": {
+      "path": "areal/api/workflow_api.py",
+      "sha256": "1c375889fef9e76751411dd8b978c84d9cbcada033e81c38497bf00926054726"
+    },
+    "areal.dataset": {
+      "path": "areal/dataset/__init__.py",
+      "sha256": "9a1fd6a600329e623bc5da0fc66b0bcb20071bae07dc84c620cbe71953215617"
+    },
+    "areal.dataset.mopd": {
+      "path": "areal/dataset/mopd.py",
+      "sha256": "bad47febbfc42f60f1123d1b1bfb9817ca2f3a642c3b0273959a8182dd606e73"
+    },
+    "areal.engine": {
+      "path": "areal/engine/__init__.py",
+      "sha256": "6b1880b6c48ba32ea828472907f3be40a2c5fb4c1611cb85a2b4feb3742806f8"
+    },
+    "areal.engine.fsdp_utils": {
+      "path": "areal/engine/fsdp_utils/__init__.py",
+      "sha256": "dccfd50f16d12e09d1de6b6b6b78daf12ca4f80d20b03506e330a16b49fcf458"
+    },
+    "areal.engine.fsdp_utils.attn_impl": {
+      "path": "areal/engine/fsdp_utils/attn_impl.py",
+      "sha256": "b6aa80d02d3672bc238670029c0bded825e3c693f59d0e40fea115760013970d"
+    },
+    "areal.engine.fsdp_utils.optimizer": {
+      "path": "areal/engine/fsdp_utils/optimizer.py",
+      "sha256": "c4816ab79dd8af29b3a26cfb82a20cb05facd4cb17c309f333872ab0cc51fef0"
+    },
+    "areal.experimental": {
+      "path": "areal/experimental/__init__.py",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1"
+    },
+    "areal.experimental.openai": {
+      "path": "areal/experimental/openai/__init__.py",
+      "sha256": "acbbc8f160ff0149f5d60016046078fb4c362f9ea9816fb50a400b680913d8e1"
+    },
+    "areal.experimental.openai.cache": {
+      "path": "areal/experimental/openai/cache.py",
+      "sha256": "1af13485ea471f6c1978507f436051a8998fe1b6354082846b23807f75c7a070"
+    },
+    "areal.experimental.openai.client": {
+      "path": "areal/experimental/openai/client.py",
+      "sha256": "ed9bcae3e945425e393e53e44737e7aabe9ab6f812056836453a19ce03e3025c"
+    },
+    "areal.experimental.openai.proxy": {
+      "path": "areal/experimental/openai/proxy/__init__.py",
+      "sha256": "f7780d72155e66ae2afaf6b021a95e471f2e3bec763a51aa68ded44477819a61"
+    },
+    "areal.experimental.openai.proxy.client_session": {
+      "path": "areal/experimental/openai/proxy/client_session.py",
+      "sha256": "5f33e22902af01d6d20b6b06328dfe13de365038af1b6453e0a0d4b8744d5717"
+    },
+    "areal.experimental.openai.proxy.server": {
+      "path": "areal/experimental/openai/proxy/server.py",
+      "sha256": "d79f54af835c78ff3ad959ba9fda462f7a2c7ee317c1ff0c77c89223e54d578e"
+    },
+    "areal.experimental.openai.proxy.tensor_reference": {
+      "path": "areal/experimental/openai/proxy/tensor_reference.py",
+      "sha256": "3afed03c0de456c86d235d5b51593b1592cc5644e1fbe700bcedfe247003373e"
+    },
+    "areal.experimental.openai.proxy.workflow": {
+      "path": "areal/experimental/openai/proxy/workflow.py",
+      "sha256": "ac8f7c757116e90cbb530d49c3df682f5aa7d1b379e00d9bf9983627b7f35f37"
+    },
+    "areal.experimental.openai.tool_call_parser": {
+      "path": "areal/experimental/openai/tool_call_parser.py",
+      "sha256": "8be66aa89fc6ac377bd6c3f0514ef9ebb60617f6d7312f9da867efb50f075441"
+    },
+    "areal.experimental.openai.types": {
+      "path": "areal/experimental/openai/types.py",
+      "sha256": "4bc4490254d67f26fc17d922bcf4bb06d9b28b692f980437c2b402f9916a786c"
+    },
+    "areal.infra": {
+      "path": "areal/infra/__init__.py",
+      "sha256": "65c158e6689360e6c82c6814e848b064798b6d344e4bf2602dabc71e8c36206f"
+    },
+    "areal.infra.async_task_runner": {
+      "path": "areal/infra/async_task_runner.py",
+      "sha256": "1a8510a47ef884b3edf90d915cfadf6863ec63849d55705e54b729fb3abf4e77"
+    },
+    "areal.infra.controller": {
+      "path": "areal/infra/controller/__init__.py",
+      "sha256": "9941e867fe9fbdcc5d9a1e2f043f4e42509d8c7b79c4fde8401f3b97a26f2523"
+    },
+    "areal.infra.controller.rollout_callback": {
+      "path": "areal/infra/controller/rollout_callback.py",
+      "sha256": "3305b3603e171be2d9accbefee75f83fa49466adee7a044f8cf0e3fe9d545936"
+    },
+    "areal.infra.controller.rollout_controller": {
+      "path": "areal/infra/controller/rollout_controller.py",
+      "sha256": "7ec914806b02365d2b6c741628ded80b66f263df13dedb1d0dfff2e131d56f08"
+    },
+    "areal.infra.controller.train_controller": {
+      "path": "areal/infra/controller/train_controller.py",
+      "sha256": "280aa4586cd19acc49c2dec402eb100a77993532b5024098ddbcafafb07fb28b"
+    },
+    "areal.infra.launcher": {
+      "path": "areal/infra/launcher/__init__.py",
+      "sha256": "a113ef3105394ee4931dd0a797dc9c91345303c8ba2e1087e30d171e122870a3"
+    },
+    "areal.infra.launcher.local": {
+      "path": "areal/infra/launcher/local.py",
+      "sha256": "8e067b15ba25d281c68c96130d0f1914501909ed316f89c17f365bffa21661f1"
+    },
+    "areal.infra.launcher.ray": {
+      "path": "areal/infra/launcher/ray.py",
+      "sha256": "b23872b232bd3e66eafb65ebc09e59f5283e9dede0fb8269e36675a5239196d7"
+    },
+    "areal.infra.launcher.ray_bootstrap": {
+      "path": "areal/infra/launcher/ray_bootstrap.py",
+      "sha256": "cbc62a22320caadbf74ace37c90613e8b1b78b7f0abc8d58282500bbda5b3bf3"
+    },
+    "areal.infra.launcher.sglang_server": {
+      "path": "areal/infra/launcher/sglang_server.py",
+      "sha256": "3f61df0c0b6b3dcc96f692f6f2b6bfe5c652c80a4d81a76fe87bcbd2f2837985"
+    },
+    "areal.infra.launcher.slurm": {
+      "path": "areal/infra/launcher/slurm.py",
+      "sha256": "7a8e7242b1644666a5b7c5431523f0a0e8c24961bd1fbcd5ca1e3b0169f35576"
+    },
+    "areal.infra.launcher.vllm_server": {
+      "path": "areal/infra/launcher/vllm_server.py",
+      "sha256": "cad3129130d37615cfd0df69af69ba2b0020bc4b426a944af5225cceb0c9bb6d"
+    },
+    "areal.infra.platforms": {
+      "path": "areal/infra/platforms/__init__.py",
+      "sha256": "e77a73713578d5ba2ef0b794987d6b528543d477aedeeef41a60cd200f069073"
+    },
+    "areal.infra.platforms.cpu": {
+      "path": "areal/infra/platforms/cpu.py",
+      "sha256": "aeb0402c322c43653e1875368aee293d555e1232dd04747f195b7fd5ef094533"
+    },
+    "areal.infra.platforms.cuda": {
+      "path": "areal/infra/platforms/cuda.py",
+      "sha256": "02363f2ae1f14c11fe3a2fefbf33fc9f3c3e9d1b03b18f58591c8bdf91959c3c"
+    },
+    "areal.infra.platforms.npu": {
+      "path": "areal/infra/platforms/npu.py",
+      "sha256": "d32414cd41bb8cda4efaa8dbc7324c118f5a8504c923b3cea4b88a2664d0bffe"
+    },
+    "areal.infra.platforms.platform": {
+      "path": "areal/infra/platforms/platform.py",
+      "sha256": "0f9fe6a92be5db33ca490fb46738fa71094a4098d6cde83f5eafdb8a93b8fa72"
+    },
+    "areal.infra.platforms.rocm": {
+      "path": "areal/infra/platforms/rocm.py",
+      "sha256": "74cb07374cc6d943136f9f43f6eae2ddaeba54db4b74cb7dcd24be53ac0086ca"
+    },
+    "areal.infra.platforms.unknown": {
+      "path": "areal/infra/platforms/unknown.py",
+      "sha256": "754f9ff7f1712c0186fd200e3ecc359cf3487625a9a8f5c4922fa6a1c1bb5748"
+    },
+    "areal.infra.processor_cache": {
+      "path": "areal/infra/processor_cache.py",
+      "sha256": "aab1a0e62f7f30ec8835f76f61357896880b2a2f07a880f8ec640b0acbf69a39"
+    },
+    "areal.infra.remote_inf_engine": {
+      "path": "areal/infra/remote_inf_engine.py",
+      "sha256": "cf99b7af824f8073aa57ee8a0ad68702199af49ca8a66045795b8a2027fc4963"
+    },
+    "areal.infra.rpc": {
+      "path": "areal/infra/rpc/__init__.py",
+      "sha256": "ce12e3ff2f6279035cc1c6e5d60a5533e8b637480f9b699aa719a3238d9c932e"
+    },
+    "areal.infra.rpc.rtensor": {
+      "path": "areal/infra/rpc/rtensor.py",
+      "sha256": "6cfab54f4b4db06e97a69bf853168487939a8ee0109f2ecbef39ffd7c3e0a167"
+    },
+    "areal.infra.rpc.serialization": {
+      "path": "areal/infra/rpc/serialization.py",
+      "sha256": "786e79815e50707d0be2dfce249fa1336e83d5d8528736645587caf49b227c9b"
+    },
+    "areal.infra.scheduler": {
+      "path": "areal/infra/scheduler/__init__.py",
+      "sha256": "6422577d08961f750dfa9bd7abac31aad19ee228f23bb22aac50806039746ae7"
+    },
+    "areal.infra.scheduler.exceptions": {
+      "path": "areal/infra/scheduler/exceptions.py",
+      "sha256": "a16ec0587b4aaa370a32dcccd42178b46a342359948a092079fb9d04e5a9c91a"
+    },
+    "areal.infra.scheduler.local": {
+      "path": "areal/infra/scheduler/local.py",
+      "sha256": "b4cb329d6d77ee7373b107df843b8aed3dbe97e6d659bb95d5144b63f8fd4804"
+    },
+    "areal.infra.scheduler.ray": {
+      "path": "areal/infra/scheduler/ray.py",
+      "sha256": "844379c0a4a083e900ae3cc42a3782515431c6c9d695ed6c63786c0d2479e85a"
+    },
+    "areal.infra.scheduler.slurm": {
+      "path": "areal/infra/scheduler/slurm.py",
+      "sha256": "2b27f98d3db2374fb4172c07315059c2ab929753c2f2828268fe07b48e8e84be"
+    },
+    "areal.infra.staleness_manager": {
+      "path": "areal/infra/staleness_manager.py",
+      "sha256": "ade1bd484e86d666421716159d6a675ca010c5b5acb8fca05f989389c7f4269d"
+    },
+    "areal.infra.utils": {
+      "path": "areal/infra/utils/__init__.py",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1"
+    },
+    "areal.infra.utils.concurrent": {
+      "path": "areal/infra/utils/concurrent.py",
+      "sha256": "5afaa1066af87012caed2de2b8fd5ae72ce57a4d276efc49a66aed6195ab5afb"
+    },
+    "areal.infra.utils.exp_metadata": {
+      "path": "areal/infra/utils/exp_metadata.py",
+      "sha256": "151268301321da014957dfaa31fc1ff04b8ee167e25f5521f9e99d5d4371533d"
+    },
+    "areal.infra.utils.http": {
+      "path": "areal/infra/utils/http.py",
+      "sha256": "56f1c442a47ab9910b33c4ab3c9feb2352b1c0610e805b73d2b4fd5d72065ab4"
+    },
+    "areal.infra.utils.inference_targets": {
+      "path": "areal/infra/utils/inference_targets.py",
+      "sha256": "e9b0b015992f0bb1bbdc54b83da5a8d5a16a1f162854808a60689e4a7902cf4e"
+    },
+    "areal.infra.utils.launcher": {
+      "path": "areal/infra/utils/launcher.py",
+      "sha256": "5fcd553ffb60fc7f701045ade90c4ed4e582238806270e3fb45a49185a22952e"
+    },
+    "areal.infra.utils.proc": {
+      "path": "areal/infra/utils/proc.py",
+      "sha256": "56220c3cb24f3aed766f1c69b9d1da2f9349e8df102238b5d61afaf13b9afaa6"
+    },
+    "areal.infra.utils.ray": {
+      "path": "areal/infra/utils/ray.py",
+      "sha256": "7d2f2a467423688ba1243a5d3f625cf475fb546676817a8816666ed7f7c4e660"
+    },
+    "areal.infra.utils.slurm": {
+      "path": "areal/infra/utils/slurm.py",
+      "sha256": "38a4c7a759497d4b71969f15a4f063d3c3e730875a627144ed597cbab8937c2c"
+    },
+    "areal.infra.workflow_context": {
+      "path": "areal/infra/workflow_context.py",
+      "sha256": "e76c6edc8a631ec6079e167067ddff389bee23a4b3d19193f8fa58468f63fc33"
+    },
+    "areal.infra.workflow_executor": {
+      "path": "areal/infra/workflow_executor.py",
+      "sha256": "eee33608c94575e1a777f870d53e44e4cdf6bd449a0a17041f7d7752871ea0e6"
+    },
+    "areal.utils": {
+      "path": "areal/utils/__init__.py",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1"
+    },
+    "areal.utils.async_checkpoint": {
+      "path": "areal/utils/async_checkpoint.py",
+      "sha256": "b681ae3954e383a66a7c695095317269ec247c9ec6e8fc366f3e7eaab8216af2"
+    },
+    "areal.utils.checkpoint_pointer": {
+      "path": "areal/utils/checkpoint_pointer.py",
+      "sha256": "3a4b2929487d194df9d2cfad7e753add58e899cd03121e12a8c4b5050d7c82f5"
+    },
+    "areal.utils.config_utils": {
+      "path": "areal/utils/config_utils.py",
+      "sha256": "f4f283789edffac573234f9739624eb8905c53531a71ab166de2de9fcf69a8cf"
+    },
+    "areal.utils.constants": {
+      "path": "areal/utils/constants.py",
+      "sha256": "6b915185fbf17ea7888c1001443511a9cf4920f0451db9868a999afdc83d1cd7"
+    },
+    "areal.utils.data": {
+      "path": "areal/utils/data.py",
+      "sha256": "380dbddc720311cd74768c4468a67d88efb4c273899438975408d737c80039de"
+    },
+    "areal.utils.dynamic_import": {
+      "path": "areal/utils/dynamic_import.py",
+      "sha256": "ad6c9db02b2132b9bf772fefb51b4f21cde9d00d6e4742a4931266367e7c6fd9"
+    },
+    "areal.utils.environ": {
+      "path": "areal/utils/environ.py",
+      "sha256": "22950d245c45b920e6ef940ac561ad6fb598b638994de2ab3b99f6374ac47f77"
+    },
+    "areal.utils.evaluator": {
+      "path": "areal/utils/evaluator.py",
+      "sha256": "d5746dd0e516073003e2948dfa9841faff596985bd0af07ab2a031cbec028b79"
+    },
+    "areal.utils.fs": {
+      "path": "areal/utils/fs.py",
+      "sha256": "7336c05d2eaaccc0ddc63b10d52aa1b77bfa4d14061f67e49b387bd052d66da5"
+    },
+    "areal.utils.hf_utils": {
+      "path": "areal/utils/hf_utils.py",
+      "sha256": "97b5a2fc92ec908492d880cb493832125d9a30554260d1c8b51dfb89194d873e"
+    },
+    "areal.utils.logging": {
+      "path": "areal/utils/logging.py",
+      "sha256": "7ec3f782d0b7e6f9a019317677275485c6feda80f41357c8e4e5935e7e0f3d15"
+    },
+    "areal.utils.math": {
+      "path": "areal/utils/math.py",
+      "sha256": "ad9f9e0d0a9f1bc22ce44438a0300d3f8b730db8158276918e690a1d9715c0b4"
+    },
+    "areal.utils.name_resolve": {
+      "path": "areal/utils/name_resolve.py",
+      "sha256": "7b0346507f56cdc884c74e15ff7070de7c21c972eb86bc79847cb6d888aab424"
+    },
+    "areal.utils.names": {
+      "path": "areal/utils/names.py",
+      "sha256": "c6f700980d01655a5f92111cb3cb6dc50f76355324bbdc20bb5c3c4c67e37a85"
+    },
+    "areal.utils.network": {
+      "path": "areal/utils/network.py",
+      "sha256": "4dd453a42f1f7c66e59b594f6e465efdc1532cf700837c5c297c7d2818f70134"
+    },
+    "areal.utils.offload": {
+      "path": "areal/utils/offload.py",
+      "sha256": "2443dab0dd6715e4a56201bdaf3fb7431ea5bc6167be7f99a2a586db23bda838"
+    },
+    "areal.utils.perf_tracer": {
+      "path": "areal/utils/perf_tracer.py",
+      "sha256": "0e5d6f68606f70faf7a02e308b818e7be43315e2374085d8cb47daa77cede14c"
+    },
+    "areal.utils.pkg_version": {
+      "path": "areal/utils/pkg_version.py",
+      "sha256": "5d6be48195d65f96d76f19e62cc2d0d88a5b6368bf3d362ecf48a398fbf6c56a"
+    },
+    "areal.utils.recover": {
+      "path": "areal/utils/recover.py",
+      "sha256": "d5d8da8aae237f4c20af742b01c1d7d11779f3f760e1a587fa601ff327452f49"
+    },
+    "areal.utils.saver": {
+      "path": "areal/utils/saver.py",
+      "sha256": "20ae9104108d4f86de296345416746360e5d3e61395aa4cf149177382d94950e"
+    },
+    "areal.utils.seqpack": {
+      "path": "areal/utils/seqpack.py",
+      "sha256": "899f368ea957f5e3a3f29037b931e7988dd16692599cfa551a9020c185b59639"
+    },
+    "areal.utils.stats_tracker": {
+      "path": "areal/utils/stats_tracker.py",
+      "sha256": "128ba1db6869cdf3ca8de1ed388c1df31f59ca8a08db46b6b12ca13d74c192f1"
+    },
+    "areal.utils.timeutil": {
+      "path": "areal/utils/timeutil.py",
+      "sha256": "a5ef4cb5d304a5b60fc189fa594b893639baaea005e325ed39f3a9e8bd0e6370"
+    },
+    "areal.version": {
+      "path": "areal/version.py",
+      "sha256": "426255c3e70e7f8386b6bf02b95343f04bfebb25c19ab9a0a37cefba174a5ac8"
+    }
+  },
+  "loaded_original_module_count": 92,
+  "observed_dependency_versions": {
+    "torch": "2.11.0",
+    "numpy": "2.2.6",
+    "transformers": "5.5.4",
+    "pytest": "9.0.2",
+    "hydra-core": "1.4.0.dev1",
+    "omegaconf": "2.4.0.dev2",
+    "torchdata": "0.11.0",
+    "ray": "2.58.0",
+    "openai": "2.33.0",
+    "aiohttp": "3.9.5",
+    "numba": "0.61.2",
+    "llvmlite": "0.44.0",
+    "colorlog": "6.12.0",
+    "uvloop": "0.22.1"
+  },
+  "official_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "pytest",
+      "tests/test_staleness_manager.py",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=<probe-output>/official-tests.xml"
+    ],
+    "returncode": 0,
+    "wall_ms": 5449.457666836679,
+    "log_sha256": "3b031a374593ab8307d953f60ebc55c845c02e562d27366e6366116c4c415247",
+    "command_paths_normalized_for_public_artifact": true,
+    "summary": {
+      "tests": 45,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "pytest_suite_time_seconds": 4.388,
+    "xml_sha256": "05d3a9c9df50845bab6664c07484b821adbef29a71cdf4403615af7277c7eaba",
+    "test_version_provider": "unchanged upstream MockVersionProvider integer counter"
+  },
+  "wall_ms": 11354.810333112255,
+  "dependency_scope": "Observed CPU import/test environment, not a full uv.lock installation or GPU training validation.",
+  "source_preservation": {
+    "overlapping_source_output_rejected_before_mkdir": true,
+    "bytecode_writing_disabled": true,
+    "pytest_cacheprovider_disabled": true,
+    "clean_pinned_checkout_checked_before_and_after": true
+  }
+}

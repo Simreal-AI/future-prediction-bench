@@ -1,0 +1,291 @@
+{
+  "scope": "single public solved Boltons repository fixture, ARM64 QEMU/HVF on this host",
+  "measures": "environment setup, scripted repair, full VM C/R, isolated host-checked case grading",
+  "does_not_measure": [
+    "policy inference",
+    "gradient updates",
+    "RL sample efficiency"
+  ],
+  "network_interface": "none",
+  "host_workspace_mount": false,
+  "baseline": {
+    "reward": 0.0,
+    "passed_cases": 7,
+    "case_count": 14,
+    "case_results": [
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "21e57e33b30c2322804f7f72df59656c470e82c4b64eb58230bfc78daa4c79c2"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+      },
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "26cb0b8f46d53a3284f85d76fb30ec49560ebb5287bfaa562be3c69c19d01ff6"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+      },
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "886d0b9b945f097ba790f064d9db7a70210539072b6370fd7dd67de6ae61b735"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+      },
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "ebef1ee82b1929c3b39b5f9df86cb3f52e62553dd68c14686f36eeeaf0b2c87c"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+      },
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "173be02f7b7dd6b0c5d8f629b8fa7813fe00a847d56fabb90c2a908377332bf8"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+      },
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "89adff98cc6a2e5ebc5b3e714bbbf7c2f5a6bd2fb7364a582de82dc27f82a9f8"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+      },
+      {
+        "passed": false,
+        "returncode": 0,
+        "stdout_sha256": "34f7f20e0ba3fe4014d685a3a8b34b2b717d3d83277a08e95aafabb23ceed24e"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+      }
+    ]
+  },
+  "solution": {
+    "reward": 1.0,
+    "passed_cases": 14,
+    "case_count": 14,
+    "case_results": [
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0"
+      },
+      {
+        "passed": true,
+        "returncode": 0,
+        "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+      }
+    ]
+  },
+  "restored_pristine_after_repair": true,
+  "restored_process_and_ram": true,
+  "validation_vm_metrics": {
+    "vm_starts": 1,
+    "guest_commands": 43,
+    "snapshot_saves": 2,
+    "snapshot_loads": 31,
+    "vm_start_seconds": 0.1867351250257343,
+    "guest_command_seconds": 1.7223611255176365,
+    "snapshot_save_seconds": 0.4868379579856992,
+    "snapshot_load_seconds": 3.419855960411951
+  },
+  "repetitions": 3,
+  "condition_order": "alternated within pairs",
+  "warm_setup_seconds": 5.890330375172198,
+  "runs": [
+    {
+      "condition": "cold_full_vm",
+      "iteration": 0,
+      "wall_seconds": 8.606043209088966,
+      "reward": 1.0,
+      "vm_metrics": {
+        "vm_starts": 1,
+        "guest_commands": 23,
+        "snapshot_saves": 1,
+        "snapshot_loads": 14,
+        "vm_start_seconds": 0.09350820886902511,
+        "guest_command_seconds": 0.8927923345472664,
+        "snapshot_save_seconds": 0.20071895816363394,
+        "snapshot_load_seconds": 1.9393016234971583
+      }
+    },
+    {
+      "condition": "warm_full_vm_restore",
+      "iteration": 0,
+      "wall_seconds": 3.3239909999538213,
+      "reward": 1.0,
+      "vm_metrics": {
+        "vm_starts": 1,
+        "guest_commands": 23,
+        "snapshot_saves": 2,
+        "snapshot_loads": 15,
+        "vm_start_seconds": 0.14898195816203952,
+        "guest_command_seconds": 0.8827046658843756,
+        "snapshot_save_seconds": 0.4610398751683533,
+        "snapshot_load_seconds": 2.1545407089870423
+      }
+    },
+    {
+      "condition": "warm_full_vm_restore",
+      "iteration": 1,
+      "wall_seconds": 3.955769957974553,
+      "reward": 1.0,
+      "vm_metrics": {
+        "vm_starts": 1,
+        "guest_commands": 38,
+        "snapshot_saves": 3,
+        "snapshot_loads": 30,
+        "vm_start_seconds": 0.14898195816203952,
+        "guest_command_seconds": 1.8748882950749248,
+        "snapshot_save_seconds": 0.8081465000286698,
+        "snapshot_load_seconds": 4.586345373420045
+      }
+    },
+    {
+      "condition": "cold_full_vm",
+      "iteration": 1,
+      "wall_seconds": 8.578399708028883,
+      "reward": 1.0,
+      "vm_metrics": {
+        "vm_starts": 1,
+        "guest_commands": 23,
+        "snapshot_saves": 1,
+        "snapshot_loads": 14,
+        "vm_start_seconds": 0.24252462480217218,
+        "guest_command_seconds": 0.8907858750317246,
+        "snapshot_save_seconds": 0.19240524992346764,
+        "snapshot_load_seconds": 1.697707831626758
+      }
+    },
+    {
+      "condition": "cold_full_vm",
+      "iteration": 2,
+      "wall_seconds": 8.146598584018648,
+      "reward": 1.0,
+      "vm_metrics": {
+        "vm_starts": 1,
+        "guest_commands": 23,
+        "snapshot_saves": 1,
+        "snapshot_loads": 14,
+        "vm_start_seconds": 0.08566133305430412,
+        "guest_command_seconds": 0.8457909596618265,
+        "snapshot_save_seconds": 0.2081710840575397,
+        "snapshot_load_seconds": 1.5096990000456572
+      }
+    },
+    {
+      "condition": "warm_full_vm_restore",
+      "iteration": 2,
+      "wall_seconds": 2.1163555830717087,
+      "reward": 1.0,
+      "vm_metrics": {
+        "vm_starts": 1,
+        "guest_commands": 53,
+        "snapshot_saves": 4,
+        "snapshot_loads": 45,
+        "vm_start_seconds": 0.14898195816203952,
+        "guest_command_seconds": 2.569204835454002,
+        "snapshot_save_seconds": 0.9894265830516815,
+        "snapshot_load_seconds": 5.691252789925784
+      }
+    }
+  ],
+  "median_cold_seconds": 8.578399708028883,
+  "median_warm_seconds": 3.3239909999538213,
+  "steady_state_speedup": 2.580752988846257,
+  "warm_total_seconds": 15.286446916172281,
+  "cold_total_seconds": 25.331041501136497,
+  "amortized_speedup_including_warm_setup": 1.6570915164293376,
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  }
+}

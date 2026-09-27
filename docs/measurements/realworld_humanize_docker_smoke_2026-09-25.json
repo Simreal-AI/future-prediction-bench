@@ -1,0 +1,47 @@
+{
+  "schema_version": "realworld-humanize-docker-smoke-0.1",
+  "classification": "public_solved_repository_integration_fixture",
+  "task_id": "humanize-4150-naturalsize-rounding-v1",
+  "repository": "https://github.com/python-humanize/humanize",
+  "source_tag": "4.15.0",
+  "source_commit": "2ddb5903cdc1c7e6eb6b083f4f99f73db50aecd9",
+  "source_sdist_sha256": "1dd098483eb1c7ee8e32eb2e99ad1910baefa4b75c3aff3a82f4d78688993b10",
+  "source_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+  "source_file": "src/humanize/filesize.py",
+  "upstream_repair": "https://github.com/python-humanize/humanize/pull/329",
+  "host_verifier_cases": 14,
+  "model_inference_measured": false,
+  "training_measured": false,
+  "throughput_claim": false,
+  "arms": {
+    "baseline": {
+      "status": "graded",
+      "reward": 0.0,
+      "case_count": 14,
+      "case_pass_count": 5,
+      "visible_actions_used": 1,
+      "checkpoint_count": 1,
+      "submitted_workspace_sha256": "b42ad06044a4bab6906fc95b16c4fa1348a8c82f36cbe490f18b9a929293cfd2",
+      "evidence_sha256": "1f6d1ef218ca388aec1b8e241b02601b2c6c920f07dc089ca15fdc03160e28f6",
+      "action_file_sha256": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6"
+    },
+    "solution": {
+      "status": "graded",
+      "reward": 1.0,
+      "case_count": 14,
+      "case_pass_count": 14,
+      "visible_actions_used": 4,
+      "checkpoint_count": 2,
+      "submitted_workspace_sha256": "9aede467b9952c961b4e626af4b44cb7c59addb2604884cf16744afb768dbccc",
+      "evidence_sha256": "a1226f0ae76a220a4ed711e04a0b1794d010b5533a70f87fde4c6570c4c6f48a",
+      "action_file_sha256": "d37792eb769405652078ff05508621526f6479dc966130407b0c43625ac6bacd",
+      "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6"
+    }
+  },
+  "limits": [
+    "One public solved Humanize defect with scripted actions, not held-out repair ability.",
+    "Verifier files were kept on the host during execution; their construction is visible in the public fixture builder.",
+    "Only one baseline and one repair Docker episode; timings are not a throughput estimate."
+  ]
+}

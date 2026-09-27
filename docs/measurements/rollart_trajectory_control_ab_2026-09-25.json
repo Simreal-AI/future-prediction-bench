@@ -1,0 +1,304 @@
+{
+  "schema_version": "rollart-control-public-summary-0.1",
+  "measured_on": "2026-09-25",
+  "host": "macOS 26.2 arm64; local Docker 28.3.3",
+  "paper_reference": "https://arxiv.org/html/2512.22560",
+  "task": "public solved Boltons 26.0.0 singularize ss fixture",
+  "pinned_source_commit": "fb464991b718ca7bfabc14555c2947f25e7c79c9",
+  "pinned_source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+  "local_image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+  "hidden_cases_per_episode": 14,
+  "what_is_measured": "valid graded environment episodes per hour; no model inference, GPU, optimizer, or RL update",
+  "measurement_code_note": "Both A/B sets used the same multi-turn scheduler with visible action-observation history. A later additive audit-export field is unit-tested and separately real-container smoke-tested, but is not included in these exact throughput timings.",
+  "configurations": [
+    {
+      "label": "one_verifier_four_inflight",
+      "actor_workers": 1,
+      "environment_workers": 1,
+      "reward_workers": 1,
+      "queue_capacities": {
+        "actor": 1,
+        "environment": 1,
+        "reward": 1
+      },
+      "serial_max_in_flight": 1,
+      "pipeline_max_in_flight": 4,
+      "repetitions": 2,
+      "episodes_per_arm": 4,
+      "expected_rewards": [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "summary_by_delay_seconds": {
+        "0": {
+          "median_wall_seconds": {
+            "serial": 15.116827083518729,
+            "pipeline": 13.379547332995571
+          },
+          "median_valid_graded_episodes_per_hour": {
+            "serial": 952.5808504947274,
+            "pipeline": 1076.2695957947599
+          },
+          "throughput_ratio_pipeline_over_serial": 1.1298459288109708,
+          "max_queue_wait_p95_seconds": {
+            "serial": {
+              "actor": 5.733291618525982e-05,
+              "environment": 5.404185503721237e-05,
+              "reward": 5.9542013332247734e-05
+            },
+            "pipeline": {
+              "actor": 0.00010954216122627258,
+              "environment": 1.2769986661151052,
+              "reward": 8.007811208022758
+            }
+          }
+        },
+        "2": {
+          "median_wall_seconds": {
+            "serial": 19.55033050000202,
+            "pipeline": 20.550521374912933
+          },
+          "median_valid_graded_episodes_per_hour": {
+            "serial": 736.5604381981426,
+            "pipeline": 700.7121492099375
+          },
+          "throughput_ratio_pipeline_over_serial": 0.9513301460014587,
+          "max_queue_wait_p95_seconds": {
+            "serial": {
+              "actor": 9.349989704787731e-05,
+              "environment": 4.0667131543159485e-05,
+              "reward": 4.666694439947605e-05
+            },
+            "pipeline": {
+              "actor": 0.00011137500405311584,
+              "environment": 1.3973529159557074,
+              "reward": 13.20648591616191
+            }
+          }
+        },
+        "5": {
+          "median_wall_seconds": {
+            "serial": 29.658847270999104,
+            "pipeline": 25.63498747907579
+          },
+          "median_valid_graded_episodes_per_hour": {
+            "serial": 485.521229750576,
+            "pipeline": 561.732281389012
+          },
+          "throughput_ratio_pipeline_over_serial": 1.1569674958962914,
+          "max_queue_wait_p95_seconds": {
+            "serial": {
+              "actor": 0.0003462920431047678,
+              "environment": 7.575005292892456e-05,
+              "reward": 5.550007335841656e-05
+            },
+            "pipeline": {
+              "actor": 0.0020668748766183853,
+              "environment": 2.0174597911536694,
+              "reward": 22.41783345793374
+            }
+          }
+        }
+      },
+      "paired_wall_seconds": [
+        {
+          "delay_seconds": 0,
+          "repetition": 0,
+          "serial": 16.71760741691105,
+          "pipeline": 13.318091040942818,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 0,
+          "repetition": 1,
+          "serial": 13.516046750126407,
+          "pipeline": 13.441003625048324,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 2,
+          "repetition": 0,
+          "serial": 19.307821833062917,
+          "pipeline": 20.91708974982612,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 2,
+          "repetition": 1,
+          "serial": 19.79283916694112,
+          "pipeline": 20.183952999999747,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 5,
+          "repetition": 0,
+          "serial": 38.42872512503527,
+          "pipeline": 31.615863083163276,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 5,
+          "repetition": 1,
+          "serial": 20.888969416962937,
+          "pipeline": 19.654111874988303,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        }
+      ]
+    },
+    {
+      "label": "two_verifiers_two_inflight",
+      "actor_workers": 1,
+      "environment_workers": 1,
+      "reward_workers": 2,
+      "queue_capacities": {
+        "actor": 1,
+        "environment": 1,
+        "reward": 1
+      },
+      "serial_max_in_flight": 1,
+      "pipeline_max_in_flight": 2,
+      "repetitions": 2,
+      "episodes_per_arm": 4,
+      "expected_rewards": [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "summary_by_delay_seconds": {
+        "0": {
+          "median_wall_seconds": {
+            "serial": 10.952093708096072,
+            "pipeline": 6.684749292093329
+          },
+          "median_valid_graded_episodes_per_hour": {
+            "serial": 1314.817091946095,
+            "pipeline": 2154.15707766815
+          },
+          "throughput_ratio_pipeline_over_serial": 1.6383701511513866,
+          "max_queue_wait_p95_seconds": {
+            "serial": {
+              "actor": 4.2499974370002747e-05,
+              "environment": 7.624994032084942e-05,
+              "reward": 4.483410157263279e-05
+            },
+            "pipeline": {
+              "actor": 0.00014033401384949684,
+              "environment": 0.30563216586597264,
+              "reward": 0.00011895899660885334
+            }
+          }
+        },
+        "2": {
+          "median_wall_seconds": {
+            "serial": 13.854473104001954,
+            "pipeline": 8.837687958031893
+          },
+          "median_valid_graded_episodes_per_hour": {
+            "serial": 1039.375506517131,
+            "pipeline": 1629.3854307124468
+          },
+          "throughput_ratio_pipeline_over_serial": 1.567658099017933,
+          "max_queue_wait_p95_seconds": {
+            "serial": {
+              "actor": 0.00014858413487672806,
+              "environment": 0.0012986250221729279,
+              "reward": 6.962497718632221e-05
+            },
+            "pipeline": {
+              "actor": 0.00011045904830098152,
+              "environment": 0.31452495814301074,
+              "reward": 0.00014808308333158493
+            }
+          }
+        },
+        "5": {
+          "median_wall_seconds": {
+            "serial": 15.938180146040395,
+            "pipeline": 10.121991645894013
+          },
+          "median_valid_graded_episodes_per_hour": {
+            "serial": 903.4908545426039,
+            "pipeline": 1422.6449204629962
+          },
+          "throughput_ratio_pipeline_over_serial": 1.574609099040871,
+          "max_queue_wait_p95_seconds": {
+            "serial": {
+              "actor": 0.00018687499687075615,
+              "environment": 6.99581578373909e-05,
+              "reward": 3.2499898225069046e-05
+            },
+            "pipeline": {
+              "actor": 7.466692477464676e-05,
+              "environment": 0.335226290859282,
+              "reward": 0.00011383416131138802
+            }
+          }
+        }
+      },
+      "paired_wall_seconds": [
+        {
+          "delay_seconds": 0,
+          "repetition": 0,
+          "serial": 10.961022083181888,
+          "pipeline": 6.664144334150478,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 0,
+          "repetition": 1,
+          "serial": 10.943165333010256,
+          "pipeline": 6.70535425003618,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 2,
+          "repetition": 0,
+          "serial": 13.925219458062202,
+          "pipeline": 8.821383625036106,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 2,
+          "repetition": 1,
+          "serial": 13.783726749941707,
+          "pipeline": 8.85399229102768,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 5,
+          "repetition": 0,
+          "serial": 16.111813500057906,
+          "pipeline": 9.15180724998936,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        },
+        {
+          "delay_seconds": 5,
+          "repetition": 1,
+          "serial": 15.764546792022884,
+          "pipeline": 11.092176041798666,
+          "reward_equal": true,
+          "host_evidence_digest_equal": true
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Only two alternating repetitions per delay; p95 refers to per-run stage queue waits over a very small sample.",
+    "Host load and Docker cache varied between the two configurations; do not compare their absolute times to infer the reward-worker effect alone.",
+    "These are fixed scripted actions on a public solved fixture, not learned-policy performance or RollArt training-step time."
+  ]
+}

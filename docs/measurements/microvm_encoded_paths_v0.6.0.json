@@ -1,0 +1,24 @@
+{
+  "kind": "live_encoded_workspace_path_roundtrip_v1",
+  "long_apostrophe_path_chars": 511,
+  "newline_path_supported": true,
+  "unicode_separator_path_supported": true,
+  "roundtrip_sha256s": [
+    "14a3952abb10b1c076b332e3eda981f1739264629f46c50df1ef74140627a744",
+    "cbdbf15a79e6650f937b2b065cc5339ca4339d5f0d70504285589983867e9c13",
+    "b7e3feef818b917902822b4acb303be6d63152ef51924747296ab74af61cb07f"
+  ],
+  "baseline_reward": 0.0,
+  "hidden_case_count": 14,
+  "raw_summary_sha256": "1ec3488ca4e3bb479c72b8ce64c4cd70748c90871f4e9fd3423254f947ce2dda",
+  "asset_binding": {
+    "manifest_schema_version": "boltons-microvm-assets-v2",
+    "rootfs_seed_sha256": "98877b015eb530e022e15480d5c2f788a6f4a94587b92e318c3d66b4a2640545",
+    "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "task_id": "boltons-26-singularize-ss-v1"
+  },
+  "scope": "One real ARM64 QEMU/HVF episode on the public Boltons fixture. A 511-character apostrophe-containing path, a path containing a newline, and a path containing U+2028 each round-tripped through write_file/read_file with exact content SHA-256 and text.",
+  "provenance_note": "The local probe loaded the pinned v2 VM assets. Its task timestamps were refreshed, so this record does not claim an exact task-definition digest. The operational run and local probe script are excluded from the source bundle.",
+  "limitation": "Single correctness probe; no model inference, training, or speed comparison."
+}

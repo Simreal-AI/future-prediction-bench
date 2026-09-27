@@ -1,0 +1,90 @@
+{
+  "kind": "public_graded_realworld_virtio_read_heavy_ab_v1",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "pairs": 3,
+  "graded_episodes": 6,
+  "actions_per_episode": [
+    "read_file",
+    "read_file",
+    "read_file",
+    "read_file",
+    "read_file",
+    "replace_text",
+    "run_visible_checks",
+    "submit"
+  ],
+  "read_paths": [
+    "boltons/strutils.py",
+    "tests/test_strutils.py",
+    "README.md",
+    "pyproject.toml",
+    "boltons/__init__.py"
+  ],
+  "case_count_per_episode": 14,
+  "reward_each_episode": 1.0,
+  "all_action_observations_equal": true,
+  "all_case_results_equal": true,
+  "all_rewards_equal": true,
+  "pair_results": [
+    {
+      "pair": 1,
+      "order": [
+        "serial",
+        "virtio_read"
+      ],
+      "serial_five_reads_ms": 172.598874,
+      "virtio_five_reads_ms": 15.846666,
+      "serial_whole_episode_seconds": 7.430009,
+      "virtio_whole_episode_seconds": 7.492583,
+      "observations_cases_rewards_equal": true
+    },
+    {
+      "pair": 2,
+      "order": [
+        "virtio_read",
+        "serial"
+      ],
+      "serial_five_reads_ms": 173.216792,
+      "virtio_five_reads_ms": 14.356627,
+      "serial_whole_episode_seconds": 7.210606,
+      "virtio_whole_episode_seconds": 7.448658,
+      "observations_cases_rewards_equal": true
+    },
+    {
+      "pair": 3,
+      "order": [
+        "serial",
+        "virtio_read"
+      ],
+      "serial_five_reads_ms": 167.002084,
+      "virtio_five_reads_ms": 18.449831,
+      "serial_whole_episode_seconds": 7.278866,
+      "virtio_whole_episode_seconds": 7.525362,
+      "observations_cases_rewards_equal": true
+    }
+  ],
+  "median": {
+    "serial_five_reads_ms": 172.598874,
+    "virtio_five_reads_ms": 15.846666,
+    "read_ratio_serial_over_virtio": 10.892,
+    "serial_whole_episode_seconds": 7.278866,
+    "virtio_whole_episode_seconds": 7.492583,
+    "virtio_agent_upload_ms": 136.848417,
+    "virtio_agent_start_ping_ms": 24.026667,
+    "virtio_agent_retire_ms": 91.817792
+  },
+  "retirement_and_snapshot_checks": {
+    "virtio_runs_with_stop_ack_closed_socket_unusable_old_client_no_reconnect_no_fork": 3,
+    "snapshot_saves_per_episode": 1,
+    "snapshot_loads_per_episode": 14
+  },
+  "source_sha256": {
+    "future_prediction_bench/microvm_coding.py": "5724ebbdee5c7d8e820cc355bb8c2c1248cd4a821498f60aa08d6fbf97752cac",
+    "future_prediction_bench/microvm_runtime.py": "0c72ac87353ceb09d027401995925823076293a793ac9934ba6f7b8a8349960c",
+    "future_prediction_bench/guest_action_rpc.py": "60e68593593051bfcdfa6e8e8898a3a4ff9134ce169626cd09f01c46b6761167",
+    "future_prediction_bench/virtio_action.py": "3f5fb387d26aee81bac8b832e87b7f6cddf8a14b1a12302945c7fbd3a2803e77",
+    "examples/realworld_boltons26/benchmark_virtio_graded.py": "1bc22a8227bef2a1d332bfbd3b6b0e8c8fc53b1c5e17a826b56fa632b7d882e5"
+  },
+  "raw_run_sha256": "635c0ca096c3fc0356599d007cdabd4e0275d1813a5cebd660e50e8a61635c7e",
+  "measurement_scope": "five distinct scripted repository reads, one pinned ARM64 QEMU/HVF fixture, exact eight-action budget; no model, GPU, optimizer, or RL throughput claim"
+}

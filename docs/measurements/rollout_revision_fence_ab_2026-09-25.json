@@ -1,0 +1,222 @@
+{
+  "kind": "rollout_revision_fence_real_docker_ab_v1",
+  "date_utc": "2026-09-25",
+  "scope": "pinned public solved Boltons v2; scripted actions, no model or optimizer",
+  "source_sha256": {
+    "trajectory_control.py": "0d3659cb480589a13f0c12f599cc73164b2cf2294aec904007bcfb17594c0e20",
+    "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+    "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31",
+    "benchmark_revision_fence.py": "1b8f3220c14bedf0165d09ce01ff55c7def75081820a526254a67b21236a4242"
+  },
+  "task_id": "boltons-26-singularize-ss-v2",
+  "task_sha256": "0942fd424a6764acdd0bf536447436d4b146cb2fe1266804408f0d74a72c8d70",
+  "fixture_sha256": {
+    "task.json": "7c411f32f13ec31d028b7d90982af8df6a7869d9baf765681530644a970fdc14",
+    "verify.json": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+    "actions.baseline.jsonl": "98958e610b32db397abf6634cddac18d0884cc2a995218455e8d6ea531c55b9c",
+    "actions.solution.replace_text.jsonl": "5564c04f31a5f53230e25f8f650d2a08f030e90696bc710f56db30723fd9cf54"
+  },
+  "artifact_binding": {
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+    "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+    "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+  },
+  "raw_report_sha256": "1614f5f7d408ecd7e7e12f74373919cf00ccec83fa4f53135674fad9f70e77a7",
+  "pairs": 3,
+  "batch_size": 2,
+  "graded_episodes": 12,
+  "schedule": [
+    [
+      1,
+      "report_only"
+    ],
+    [
+      1,
+      "fence"
+    ],
+    [
+      2,
+      "fence"
+    ],
+    [
+      2,
+      "report_only"
+    ],
+    [
+      3,
+      "report_only"
+    ],
+    [
+      3,
+      "fence"
+    ]
+  ],
+  "full_batch_wall_seconds": [
+    {
+      "pair": 1,
+      "arm": "report_only",
+      "wall_seconds": 7.790618709055707,
+      "control_run_seconds": 7.789291416062042,
+      "setup_and_cleanup_seconds": 0.0013272929936647415,
+      "queue_wait_p95_seconds": {
+        "actor": 3.970786929130554e-05,
+        "environment": 2.801224916940555,
+        "reward": 1.7843703338876367
+      },
+      "stage_work_sum_seconds": {
+        "actor": 0.00031912513077259064,
+        "environment": 3.7118054181337357,
+        "reward": 4.5086025421041995
+      }
+    },
+    {
+      "pair": 1,
+      "arm": "fence",
+      "wall_seconds": 5.6439663749188185,
+      "control_run_seconds": 5.642583166016266,
+      "setup_and_cleanup_seconds": 0.0013832089025527239,
+      "queue_wait_p95_seconds": {
+        "actor": 5.683419294655323e-05,
+        "environment": 0.38580329110845923,
+        "reward": 2.040209708036855
+      },
+      "stage_work_sum_seconds": {
+        "actor": 0.00035887351259589195,
+        "environment": 1.1952160838991404,
+        "reward": 4.789415251230821
+      }
+    },
+    {
+      "pair": 2,
+      "arm": "fence",
+      "wall_seconds": 6.074773041997105,
+      "control_run_seconds": 6.072318958118558,
+      "setup_and_cleanup_seconds": 0.002454083878546953,
+      "queue_wait_p95_seconds": {
+        "actor": 3.091711550951004e-05,
+        "environment": 0.3966223341412842,
+        "reward": 2.6324672498740256
+      },
+      "stage_work_sum_seconds": {
+        "actor": 0.00032083294354379177,
+        "environment": 1.2222920421045274,
+        "reward": 5.187975250184536
+      }
+    },
+    {
+      "pair": 2,
+      "arm": "report_only",
+      "wall_seconds": 5.787134666927159,
+      "control_run_seconds": 5.785209209192544,
+      "setup_and_cleanup_seconds": 0.0019254577346146107,
+      "queue_wait_p95_seconds": {
+        "actor": 3.85830644518137e-05,
+        "environment": 0.34382391697727144,
+        "reward": 2.108885542023927
+      },
+      "stage_work_sum_seconds": {
+        "actor": 0.00039512477815151215,
+        "environment": 1.2336780417244881,
+        "reward": 4.9304660831112415
+      }
+    },
+    {
+      "pair": 3,
+      "arm": "report_only",
+      "wall_seconds": 5.875573917059228,
+      "control_run_seconds": 5.874177542049438,
+      "setup_and_cleanup_seconds": 0.001396375009790063,
+      "queue_wait_p95_seconds": {
+        "actor": 5.724979564547539e-05,
+        "environment": 0.36597929196432233,
+        "reward": 2.1443814169615507
+      },
+      "stage_work_sum_seconds": {
+        "actor": 0.0004544169642031193,
+        "environment": 1.3315476670395583,
+        "reward": 5.067605500109494
+      }
+    },
+    {
+      "pair": 3,
+      "arm": "fence",
+      "wall_seconds": 6.179090833989903,
+      "control_run_seconds": 6.17797812493518,
+      "setup_and_cleanup_seconds": 0.001112709054723382,
+      "queue_wait_p95_seconds": {
+        "actor": 0.0006329999305307865,
+        "environment": 0.3404145408421755,
+        "reward": 1.969657874898985
+      },
+      "stage_work_sum_seconds": {
+        "actor": 0.0004462909419089556,
+        "environment": 1.33985620806925,
+        "reward": 5.329059459269047
+      }
+    }
+  ],
+  "median_full_graded_batch_seconds": {
+    "report_only": 5.875573917059228,
+    "fence": 6.074773041997105
+  },
+  "median_graded_episodes_per_hour": {
+    "report_only": 1225.412206813604,
+    "fence": 1185.2294645781487
+  },
+  "fence_over_report_only_wall_ratio": 1.033902922122981,
+  "parity": {
+    "statuses_rewards_evidence_actions_revisions_freshness_equal": true,
+    "all_batches_graded": true,
+    "stale_rejections_on_stable_revision": 0,
+    "per_episode_status": [
+      "graded",
+      "graded"
+    ],
+    "per_episode_reward": [
+      1.0,
+      0.0
+    ],
+    "evidence_sha256": [
+      "2eea6a666875581c06fa0e24a4e68406050cdf816102d213d5866c9ea0ea00fd",
+      "860b8cbc0b880d247a81a358852530018c1eacb70de680bea589a4209a5a856d"
+    ],
+    "action_sha256s": [
+      [
+        "aed24f90de8b1a01386e07b7b42a28647c4a45d06def66887512cf3d916aba5a",
+        "19c61773c9fd5af7d34667cb7d435245d2760091dd7eed183e02a7dab699922d",
+        "74a98119f2dc5c5d065bc8ef078d0a197318f824d1113f1aadae5983bb3a6541",
+        "6831a7112fd0308595c6abaab94fbd4f05541fda862d0e6075e89ad1df53163b"
+      ],
+      [
+        "6831a7112fd0308595c6abaab94fbd4f05541fda862d0e6075e89ad1df53163b"
+      ]
+    ],
+    "policy_revisions": [
+      [
+        "pinned-scripted-revision-v1",
+        "pinned-scripted-revision-v1",
+        "pinned-scripted-revision-v1",
+        "pinned-scripted-revision-v1"
+      ],
+      [
+        "pinned-scripted-revision-v1"
+      ]
+    ],
+    "freshness": [
+      "current_revision",
+      "current_revision"
+    ],
+    "stale_action_rejections": [
+      0,
+      0
+    ]
+  },
+  "conclusion": "No measured throughput improvement from the opt-in fence on stable scripted Docker episodes; the change adds a revision-lineage guard.",
+  "limits": [
+    "One public solved fixture and scripted actions; no model inference or optimizer.",
+    "Three alternating pairs on one Mac; the first report-only arm includes startup noise.",
+    "No policy revision changed in this timing A/B; revision-flip behavior is unit-tested.",
+    "Host-side verifier cases are public fixture material but not exposed to the policy during episodes."
+  ]
+}

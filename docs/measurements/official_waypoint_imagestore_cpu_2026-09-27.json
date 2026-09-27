@@ -1,0 +1,284 @@
+{
+  "schema_version": "official-waypoint-imagestore-public-evidence-v1",
+  "observation_date": "2026-09-27",
+  "scope": "unchanged_author_images_store_real_Linux_filesystems_and_flock_owned_byte_fixtures",
+  "source_before": {
+    "repository": "https://github.com/Alex-XJK/waypoint",
+    "commit": "dcb6a7b0f4114f4732b9d7f1d1824dc5e4ff4a24",
+    "clean": true,
+    "go_module_count": 29,
+    "canonical_go_tree_sha256": "94c8943f9e0ae8631aa5c08b2df3951974e92d9930513c9773e41fbc332f59ac",
+    "source_sha256": {
+      "pkg/waypoint/imagestore.go": "7da668ecaf5c22e5d9e293547aa95601264cdf7a881ba8dc86dd306bc3ce3300",
+      "go.mod": "96c01ebb7fba1b9bc243ba028af4aa55754425c0d1a24cebbdc28530e49dee64",
+      "go.sum": "73ad92b4a3264581a00aee3dd7dee6dee3f64e014fe11d278e130e2303a05209",
+      "LICENSE": "cddf00b77e2d22068bde8e501d95bca1e3de615e0b4e905298e5752b04deea11",
+      "NOTICE": "098349e723ae12a0c1babfcf87b7cefa222b75b9dea863d1c92ea3cb2e44f63a"
+    },
+    "license": "Apache-2.0",
+    "notice_present": true
+  },
+  "source_after": {
+    "repository": "https://github.com/Alex-XJK/waypoint",
+    "commit": "dcb6a7b0f4114f4732b9d7f1d1824dc5e4ff4a24",
+    "clean": true,
+    "go_module_count": 29,
+    "canonical_go_tree_sha256": "94c8943f9e0ae8631aa5c08b2df3951974e92d9930513c9773e41fbc332f59ac",
+    "source_sha256": {
+      "pkg/waypoint/imagestore.go": "7da668ecaf5c22e5d9e293547aa95601264cdf7a881ba8dc86dd306bc3ce3300",
+      "go.mod": "96c01ebb7fba1b9bc243ba028af4aa55754425c0d1a24cebbdc28530e49dee64",
+      "go.sum": "73ad92b4a3264581a00aee3dd7dee6dee3f64e014fe11d278e130e2303a05209",
+      "LICENSE": "cddf00b77e2d22068bde8e501d95bca1e3de615e0b4e905298e5752b04deea11",
+      "NOTICE": "098349e723ae12a0c1babfcf87b7cefa222b75b9dea863d1c92ea3cb2e44f63a"
+    },
+    "license": "Apache-2.0",
+    "notice_present": true
+  },
+  "compiled_original_production_package_go_file_count": 12,
+  "compiled_package": "github.com/Alex-XJK/waypoint/pkg/waypoint",
+  "normal_full_package_import": true,
+  "author_source_modified": false,
+  "package_compiled": true,
+  "module_verify_passed": true,
+  "external_fixture_cases_passed": 2,
+  "upstream_unit_tests_run": false,
+  "cli_runtime_run": false,
+  "detached_flusher_subprocess_run": false,
+  "actual_criu_run": false,
+  "whole_process_checkpoint_verified": false,
+  "incremental_parent_chain_verified": false,
+  "agent_rollout_run": false,
+  "gpu_run": false,
+  "trainer_run": false,
+  "speedup_claim": false,
+  "flusher_count_per_checkpoint": 1,
+  "concurrent_writers_verified": false,
+  "top_level_regular_fixture_files_only": true,
+  "power_loss_recovery_tested": false,
+  "public_inputs": {
+    "go1.27.1.linux-arm64.tar.gz": {
+      "url": "https://go.dev/dl/go1.27.1.linux-arm64.tar.gz",
+      "sha256": "3450b45a3f9ee8568792736a5c5e70a1f2e9b36c35a8f74958c03e51d7d92bec",
+      "bytes": 67009954
+    },
+    "module-proxy/github.com/creack/pty/@v/v1.1.24.mod": {
+      "url": "https://proxy.golang.org/github.com/creack/pty/@v/v1.1.24.mod",
+      "sha256": "a3979fd32c00f35d17eb3b97d0b3cc6f4efb057bf78271361fa773531e601531",
+      "bytes": 38
+    },
+    "module-proxy/github.com/creack/pty/@v/v1.1.24.info": {
+      "url": "https://proxy.golang.org/github.com/creack/pty/@v/v1.1.24.info",
+      "sha256": "1c916a1e65da9cf22d6b223a900d750b8f174ec093cc66969cc3e1fc4d141569",
+      "bytes": 188
+    },
+    "module-proxy/github.com/creack/pty/@v/v1.1.24.zip": {
+      "url": "https://proxy.golang.org/github.com/creack/pty/@v/v1.1.24.zip",
+      "sha256": "754e25253e76a5583b80d57d3add3afe68fc4d9f2a490968a9d1eda8c8fd8815",
+      "bytes": 40880
+    },
+    "module-proxy/golang.org/x/sys/@v/v0.42.0.mod": {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.42.0.mod",
+      "sha256": "57f4393ea18d5446a12363b35c23a616d843fa1669c7121a70a2bc3a9677d665",
+      "bytes": 35
+    },
+    "module-proxy/golang.org/x/sys/@v/v0.42.0.info": {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.42.0.info",
+      "sha256": "4f952cb1f57499e8605892ce833af159f1edd800d2ad09a25463674aa636756e",
+      "bytes": 190
+    },
+    "module-proxy/golang.org/x/sys/@v/v0.42.0.zip": {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.42.0.zip",
+      "sha256": "99df0ad90183debc80aee0b7489648574c6baa0c1cf5da37aaf591cf2e2d426a",
+      "bytes": 2009900
+    }
+  },
+  "linux_container_image": {
+    "id": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+    "architecture": "arm64",
+    "os": "linux",
+    "privileged": false,
+    "uid": 65534
+  },
+  "checker_sha256": "b0cd53439aafd7366227cf7aa1bcdb9a79d37d3a38103b7a38567b6a2f7115bc",
+  "harness_sha256": "be0064320b0cbf648c50637d8482442409f34cb357d18aced7e7474a953d2346",
+  "raw_passing_result_sha256": "03ea97f9f26bad57f5dac08ccad480a4b4f0cbd9f5f2a3f6e0567f7a7d4cb407",
+  "raw_container_stdout_sha256": "eb9522e7060cad37440ff6dbe40519ef5c36e525686e3fb19afa7b95afbddad2",
+  "raw_container_stderr_sha256": "38b4dc4eedc3d9d2ad3f02fa161ce358b1044b759c66930a194b8f4c3594e34d",
+  "build_and_fixture_wall_ms": 13734.090500045568,
+  "timer_scope": "cold_compile_container_and_functional_fixture; atomic_case_includes_deliberate_40ms_reader_lease",
+  "fixture": {
+    "actual_criu_run": false,
+    "build_info": {
+      "GoVersion": "go1.27.1",
+      "Path": "fpb-waypoint-fixture",
+      "Main": {
+        "Path": "fpb-waypoint-fixture",
+        "Version": "(devel)"
+      },
+      "Deps": [
+        {
+          "Path": "github.com/Alex-XJK/waypoint",
+          "Version": "v0.0.0",
+          "Replace": {
+            "Path": "/source",
+            "Version": "(devel)"
+          }
+        },
+        {
+          "Path": "golang.org/x/sys",
+          "Version": "v0.42.0",
+          "Sum": "h1:omrd2nAlyT5ESRdCLYdm3+fMfNFE/+Rf4bDIQImRJeo="
+        }
+      ],
+      "Settings": [
+        {
+          "Key": "-buildmode",
+          "Value": "exe"
+        },
+        {
+          "Key": "-compiler",
+          "Value": "gc"
+        },
+        {
+          "Key": "DefaultGODEBUG",
+          "Value": "cryptocustomrand=1,tlssecpmlkem=0,tracebacklabels=0,urlstrictcolons=0,x509sslcertoverrideplatform=0"
+        },
+        {
+          "Key": "CGO_ENABLED",
+          "Value": "0"
+        },
+        {
+          "Key": "GOARCH",
+          "Value": "arm64"
+        },
+        {
+          "Key": "GOOS",
+          "Value": "linux"
+        },
+        {
+          "Key": "GOARM64",
+          "Value": "v8.0"
+        }
+      ]
+    },
+    "cases": [
+      {
+        "case": "atomic_reader_handoff",
+        "concurrent_readers": 2,
+        "functional_case_wall_ms": 51.949,
+        "idempotent_second_flush": true,
+        "injected_lease_hold_ms": 40,
+        "new_target_exact_reads": 8,
+        "old_target_exact_reads": 43,
+        "passed": true,
+        "reader_errors": [],
+        "shared_lease_prevented_repoint": true,
+        "source_removed_after_flush": true,
+        "new_target_exact_reads_include_post_handoff_checks": true,
+        "explicit_post_handoff_exact_reads": 8,
+        "concurrent_new_target_exact_reads": 0
+      },
+      {
+        "canonical_path_preserved_on_failure": true,
+        "case": "real_permission_failure_and_retry",
+        "failure_observed": "flush pages-fixture.img: open <owned-tmpfs-fixture>/retry-fixture/pages-fixture.img: permission denied",
+        "partial_disk_directory_observed": true,
+        "passed": true,
+        "retry_replaces_partial_copy_and_preserves_all_bytes": true,
+        "source_bytes_preserved": true
+      }
+    ],
+    "fixture_bytes_per_case": 262185,
+    "fixture_filesystems": {
+      "disk_filesystem_magic": "0x794c7630",
+      "disk_is_tmpfs": false,
+      "source_is_tmpfs": true,
+      "source_tmpfs_magic": "0x1021994"
+    },
+    "fixture_sha256": {
+      "PAGES-fixture.img": "4575729021d236392886f472f59119b04bd90b33b953d69ee8467b9f13cd9d0e",
+      "manifest.json": "1cc18a6e93320564c1a43ca4f64fce2ea8bcf7ca21f1b222fc42b6e2fb1b77a3",
+      "pages-fixture.img": "101d389649bf4182f06492eccc65f6ef9efa2f84070c8708ebef881821a381de"
+    },
+    "go_version": "go1.27.1",
+    "goarch": "arm64",
+    "goos": "linux",
+    "model_rollout_run": false,
+    "passed": true,
+    "schema_version": "official-waypoint-imagestore-fixture-v1",
+    "scope": "unchanged_author_images_store_with_owned_byte_fixtures",
+    "speedup_claim": false,
+    "trainer_run": false,
+    "uid": 65534,
+    "whole_process_checkpoint_verified": false
+  },
+  "reproduction_command": "PYTHONDONTWRITEBYTECODE=1 python3 examples/official_waypoint/check_imagestore.py --source runs/official-waypoint-source-20260927 --cache runs/waypoint-public-inputs-20260927 --output runs/official-waypoint-imagestore-probe3a-20260927",
+  "retained_prior_attempts": [
+    {
+      "status": "failed_original_socket_path_guard_before_image_store_cases",
+      "actual_error_summary": "original manager rejected worst-case socket path: 110 characters exceeds 107",
+      "correction": "shortened external harness owned temporary path; no author changes",
+      "raw_result_sha256": "79ba91716e64bc7bf873f5f6b4da6f5050e0aea1e03392d0132c02fc676d6bce",
+      "raw_stdout_sha256": "eae0332871b8e9e803eb2583c6f325d4bc03316a8428378fff7b8dcfc751d691",
+      "checker_sha256": "028520774bd142a79d8ff8c10a0c1fd72f8598ccae7a6a9e055cd5e48a72ba09",
+      "harness_sha256": "2aec634794b26188a9e3ce13ff5fbceb89b08f0f895883581fee11cb05aaf791",
+      "author_source_clean_before_and_after": true,
+      "source_commit": "dcb6a7b0f4114f4732b9d7f1d1824dc5e4ff4a24"
+    },
+    {
+      "status": "passed_prior_to_helper_download_and_path_hardening",
+      "raw_result_sha256": "38b4e4ca4a025824e32bb9255f128c7383afce6ff832b13f02c0697732792dbf",
+      "raw_stdout_sha256": "377f92904eca63e1ac5b50bb5a826237719cf31aef2cf928159513434e27126b",
+      "raw_stderr_sha256": "38b4dc4eedc3d9d2ad3f02fa161ce358b1044b759c66930a194b8f4c3594e34d",
+      "checker_sha256": "e257994bc21b12ccacdf63498b8bdaff2cb9ba5a618d58d0426714b85f84bb34",
+      "harness_sha256": "be0064320b0cbf648c50637d8482442409f34cb357d18aced7e7474a953d2346",
+      "author_source_clean_before_and_after": true,
+      "source_commit": "dcb6a7b0f4114f4732b9d7f1d1824dc5e4ff4a24",
+      "external_fixture_cases_passed": 2,
+      "concurrent_old_target_exact_reads": 35,
+      "concurrent_new_target_exact_reads": 1,
+      "explicit_post_handoff_exact_reads": 8,
+      "build_and_fixture_wall_ms": 12478.582540992647,
+      "functional_case_wall_ms": 50.146,
+      "timer_scope": "atomic_case_includes_deliberate_40ms_reader_lease; no_speedup_claim"
+    },
+    {
+      "status": "host_sandbox_docker_socket_denied_before_container_or_compile",
+      "phase": "cached_docker_image_inspect",
+      "automatic_review_retry": "same_helper_with_fresh_output_and_scoped_container_permission_passed",
+      "actual_container_or_author_runtime_run": false
+    }
+  ],
+  "helper_guard_checks": {
+    "checker_sha256": "b0cd53439aafd7366227cf7aa1bcdb9a79d37d3a38103b7a38567b6a2f7115bc",
+    "checks_passed": [
+      "source_output_same",
+      "output_inside_source",
+      "source_inside_output",
+      "source_cache_same",
+      "cache_inside_source",
+      "source_inside_cache",
+      "output_cache_same",
+      "cache_inside_output",
+      "output_inside_cache",
+      "empty_existing_output",
+      "dangling_output_symlink",
+      "output_symlink_ancestor",
+      "fixed_input_symlink_before_output_creation",
+      "bad_cached_pin_before_output_creation",
+      "new_disjoint_paths_accepted",
+      "exclusive_descriptor_https_curl_download",
+      "verified_cache_not_overwritten_or_downloaded",
+      "download_hash_mismatch",
+      "hash_failure_partial_cleanup",
+      "curl_failure_partial_cleanup",
+      "no_overwrite_on_publish_race",
+      "reject_http_before_write"
+    ],
+    "check_count": 22,
+    "author_checkout_clean": true,
+    "network_or_docker_or_go_run": false,
+    "downloader_test_note": "local controlled subprocess output only; original author runtime not doubled",
+    "raw_guard_report_sha256": "99915c343b8aa652007b88b8c84ed2c40556b8338f67296a288c3a34acb6e7f5"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "actor_and_enqueue_seconds": 3.0947198329959065,
+  "artifact_binding": {
+    "image_sha256": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+    "seed_workspace_sha256": "4463d7c6acfced27ada226f4d26229fc3d78c8eec8fcde7734b8c73fd66a31b6",
+    "verifier_sha256": "25baa1c40e3c2313d76f37bd799d846503e7103e54708a93f200cca853199135",
+    "visible_check_sha256": "f3a6ee392ef55f252ee2c90931e58b48dbf5053599bad98dd2d2bb5eda832e5b"
+  },
+  "attempt": 1,
+  "case_count": 14,
+  "case_results": [
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "e893640fd10c61667fce12d680cc8ac1184ed14d1664e4f933d7b8c460112000"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "1bfb99d3aa02d5157895fa47a1d670bf1b5499d9fa2e38d5f182f33ee47fe321"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "29e86792f4a6bb3cae98ee783597c120f16363821dff0823ea663292cca3e225"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "71488f41aef223f51fd3268431244b8d15cb467fc1f01df9510f651f85c65bbe"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "2a6943dbf0912de45d3f688d11de2dcf0ac55375df94edb22a242cfce6330b57"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "c56abdcb2691d4546cb1c5ecf73964aff96e6f2e166e4869a65aef4817250ec6"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "d15bbb6df9281ece80dc13a6025ea6b5e88ebd11fe538170b47352ce7c41cfd0"
+    },
+    {
+      "passed": true,
+      "return_code": 0,
+      "stdout_sha256": "9427682f2991a9fa18fb707462e081192d6ee2072fa98691abd8fc54005fc07d"
+    }
+  ],
+  "claims_excluded": [
+    "throughput improvement",
+    "model training",
+    "remote weight atomicity",
+    "microVM isolation",
+    "revision-flip race from this smoke"
+  ],
+  "fixture_sha256": {
+    "actions.solution.replace_text.jsonl": "5564c04f31a5f53230e25f8f650d2a08f030e90696bc710f56db30723fd9cf54",
+    "task.json": "3504ced6320e339f0ae164ac66758156e1fedab4a8b596e98f6baf89ae02e8de",
+    "verify.json": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58"
+  },
+  "host": {
+    "machine": "arm64",
+    "system": "Darwin"
+  },
+  "kind": "real_docker_durable_atomic_revision_smoke_v1",
+  "passed_cases": 14,
+  "queue_revision_fence": {
+    "generation": 1,
+    "policy_id": "scripted-public-boltons-v2",
+    "revision": "pinned-scripted-weight-revision-v1"
+  },
+  "queue_revision_fence_current_at_read": true,
+  "reward": 1.0,
+  "scope": "One pinned public solved Boltons v2 episode; scripted actions; stable revision",
+  "snapshot_sha256": "6d54ddfa47023ba730f636b23602b912ee34324e961841795e83788882f84db8",
+  "source_sha256": {
+    "coding_env.py": "0f0d47eece7284aa3aaaab73adece22d281971c10d27be20862ae96692463a45",
+    "durable_rollout.py": "7ea249293ba8e096be56b2f2cfc0c2d5570228374d25ece36067763e1bcccd44",
+    "realworld.py": "8e93f4717dfc5a233eebd5b6f48bb472ece87e2dcb2859e3e2119a509fd04a31",
+    "smoke_durable_atomic_revision.py": "2e928a3ee3527749503a3a2f98cb6098072a7c2989be0f0814f14d2da73db6ca"
+  },
+  "status": "graded",
+  "submission_sha256": "5b2989452f4411db46952ac93c7968a08929e5586d9f7075e55a236bbb4d9dbd",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "task_sha256": "9b7fdfc34641e6cb3057fd146778cf3fb0fcba442f9d6a1f5ed64076f7cc7de5",
+  "trainer_ready": false,
+  "verifier_separate_process": true,
+  "wall_seconds": 5.622813916997984,
+  "worker_process_and_verify_seconds": 2.341679540928453
+}

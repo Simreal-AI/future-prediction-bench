@@ -1,0 +1,495 @@
+{
+  "schema_version": "rollart-readiness-ab-0.1",
+  "image": "sha256:8e8fad2e920379c34538b76ed81165e0c7c896605972a851830392892f282fb6",
+  "host": "macOS-26.2-arm64-arm-64bit",
+  "task_id": "boltons-26-singularize-ss-v1",
+  "source_sdist_sha256": "5566d6cfd5a1e873d8e8476496287a9f92979964611ad9a9cecb6b0ef29b1edd",
+  "controller_sha256": "04acf70b2898f70b5519873d666d317f71f23401a32aba1db05faf5479cb9490",
+  "episode_count": 4,
+  "repetitions": 3,
+  "delays_seconds": [
+    0.0,
+    2.0,
+    5.0
+  ],
+  "fixed_resources": {
+    "actor_workers": 1,
+    "environment_workers": 1,
+    "reward_workers": 1,
+    "verifier_case_workers_per_episode": 1,
+    "max_in_flight": 4,
+    "queue_capacities": {
+      "actor": 1,
+      "environment": 1,
+      "reward": 1
+    }
+  },
+  "measures_model_inference": false,
+  "measures_rl_training": false,
+  "pairs": [
+    {
+      "delay_seconds": 0.0,
+      "repetition": 0,
+      "worker_full_batch_seconds": 15.666268083034083,
+      "scheduler_full_batch_seconds": 13.019696708070114,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 1,
+      "worker_full_batch_seconds": 12.680556542007253,
+      "scheduler_full_batch_seconds": 14.887608792167157,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 2,
+      "worker_full_batch_seconds": 13.92218125006184,
+      "scheduler_full_batch_seconds": 15.093146207975224,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 0,
+      "worker_full_batch_seconds": 14.669145749881864,
+      "scheduler_full_batch_seconds": 15.745077040977776,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 1,
+      "worker_full_batch_seconds": 15.5057319579646,
+      "scheduler_full_batch_seconds": 14.775844291085377,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 2,
+      "worker_full_batch_seconds": 14.897544041043147,
+      "scheduler_full_batch_seconds": 18.30003491602838,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 0,
+      "worker_full_batch_seconds": 15.073843749938533,
+      "scheduler_full_batch_seconds": 14.372639917070046,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 1,
+      "worker_full_batch_seconds": 13.31479425006546,
+      "scheduler_full_batch_seconds": 17.16754108387977,
+      "exact_action_revision_reward_evidence_parity": true
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 2,
+      "worker_full_batch_seconds": 13.485093249939382,
+      "scheduler_full_batch_seconds": 13.761740415822715,
+      "exact_action_revision_reward_evidence_parity": true
+    }
+  ],
+  "summary_by_delay_seconds": {
+    "0.0": {
+      "worker_median_full_batch_seconds": 13.92218125006184,
+      "scheduler_median_full_batch_seconds": 14.887608792167157,
+      "median_throughput_ratio": 0.9351522762598881,
+      "paired_deltas_seconds": [
+        2.646571374963969,
+        -2.2070522501599044,
+        -1.1709649579133838
+      ]
+    },
+    "2.0": {
+      "worker_median_full_batch_seconds": 14.897544041043147,
+      "scheduler_median_full_batch_seconds": 15.745077040977776,
+      "median_throughput_ratio": 0.9461715558628987,
+      "paired_deltas_seconds": [
+        -1.0759312910959125,
+        0.7298876668792218,
+        -3.402490874985233
+      ]
+    },
+    "5.0": {
+      "worker_median_full_batch_seconds": 13.485093249939382,
+      "scheduler_median_full_batch_seconds": 14.372639917070046,
+      "median_throughput_ratio": 0.9382474846477893,
+      "paired_deltas_seconds": [
+        0.7012038328684866,
+        -3.852746833814308,
+        -0.2766471658833325
+      ]
+    }
+  },
+  "run_diagnostics": [
+    {
+      "delay_seconds": 0.0,
+      "repetition": 0,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0006729590240865946,
+          "environment": 5.884721542010084,
+          "reward": 10.883661415660754
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 8.704187348484993e-05,
+          "environment": 4.139767790911719,
+          "reward": 6.77800845913589
+        },
+        "first_episode_submit_to_reward_start_seconds": 4.497021124931052,
+        "first_episode_reward_work_seconds": 2.3891460839658976,
+        "first_episode_reward_queue_seconds": 4.496503541013226
+      }
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 0,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0006847907789051533,
+          "environment": 3.610997542971745,
+          "reward": 10.659196249907836
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.00011312519200146198,
+          "environment": 1.6042361250147223,
+          "reward": 6.836073749931529
+        },
+        "first_episode_submit_to_reward_start_seconds": 4.237786165904254,
+        "first_episode_reward_work_seconds": 2.7122385839466006,
+        "first_episode_reward_queue_seconds": 4.237650540890172
+      }
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 1,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0007912081200629473,
+          "environment": 3.0124790831469,
+          "reward": 13.02405225019902
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.00010529207065701485,
+          "environment": 1.205145874992013,
+          "reward": 8.62134875007905
+        },
+        "first_episode_submit_to_reward_start_seconds": 6.106691709021106,
+        "first_episode_reward_work_seconds": 2.625850541051477,
+        "first_episode_reward_queue_seconds": 6.106554334051907
+      }
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 1,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0006185842212289572,
+          "environment": 2.948831917019561,
+          "reward": 10.86648295680061
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 7.883296348154545e-05,
+          "environment": 1.2241802918724716,
+          "reward": 6.889838624978438
+        },
+        "first_episode_submit_to_reward_start_seconds": 4.365764667047188,
+        "first_episode_reward_work_seconds": 2.6227029159199446,
+        "first_episode_reward_queue_seconds": 4.363110542064533
+      }
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 2,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.00103021040558815,
+          "environment": 3.2614837922155857,
+          "reward": 11.941985124954954
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0010300420690327883,
+          "environment": 1.4280982920899987,
+          "reward": 7.920715874992311
+        },
+        "first_episode_submit_to_reward_start_seconds": 5.131202416028827,
+        "first_episode_reward_work_seconds": 2.91696475003846,
+        "first_episode_reward_queue_seconds": 5.131066208006814
+      }
+    },
+    {
+      "delay_seconds": 0.0,
+      "repetition": 2,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0010290832724422216,
+          "environment": 3.8980769177433103,
+          "reward": 13.34424575092271
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.00029454100877046585,
+          "environment": 1.1662746251095086,
+          "reward": 7.739071042044088
+        },
+        "first_episode_submit_to_reward_start_seconds": 5.0663645409513265,
+        "first_episode_reward_work_seconds": 2.7764372921083122,
+        "first_episode_reward_queue_seconds": 5.064541250001639
+      }
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 0,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0010386253707110882,
+          "environment": 3.189923125319183,
+          "reward": 12.774706538999453
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0009222500957548618,
+          "environment": 1.2382155410014093,
+          "reward": 8.14170604199171
+        },
+        "first_episode_submit_to_reward_start_seconds": 5.179730209056288,
+        "first_episode_reward_work_seconds": 3.065027666045353,
+        "first_episode_reward_queue_seconds": 5.179600500036031
+      }
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 0,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0011632489040493965,
+          "environment": 4.523973332019523,
+          "reward": 12.913558416999876
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.000501417089253664,
+          "environment": 2.0845111671369523,
+          "reward": 6.3631803339812905
+        },
+        "first_episode_submit_to_reward_start_seconds": 8.367525625042617,
+        "first_episode_reward_work_seconds": 2.854396666167304,
+        "first_episode_reward_queue_seconds": 6.3631803339812905
+      }
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 1,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0008200821466743946,
+          "environment": 3.560710499295965,
+          "reward": 12.80695925001055
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.00011141598224639893,
+          "environment": 1.3881457501556724,
+          "reward": 6.020106416894123
+        },
+        "first_episode_submit_to_reward_start_seconds": 8.026333749992773,
+        "first_episode_reward_work_seconds": 3.1877708330284804,
+        "first_episode_reward_queue_seconds": 6.020106416894123
+      }
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 1,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.001016874797642231,
+          "environment": 3.3427677077706903,
+          "reward": 13.61521966708824
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0029535419307649136,
+          "environment": 1.3080799581948668,
+          "reward": 8.780384915880859
+        },
+        "first_episode_submit_to_reward_start_seconds": 5.765747833997011,
+        "first_episode_reward_work_seconds": 3.190941374981776,
+        "first_episode_reward_queue_seconds": 5.7654755839612335
+      }
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 2,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0012726252898573875,
+          "environment": 2.978161375038326,
+          "reward": 13.153646372957155
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0003850830253213644,
+          "environment": 1.1698167079593986,
+          "reward": 8.722334833815694
+        },
+        "first_episode_submit_to_reward_start_seconds": 5.502554750069976,
+        "first_episode_reward_work_seconds": 3.342415540944785,
+        "first_episode_reward_queue_seconds": 5.502312417142093
+      }
+    },
+    {
+      "delay_seconds": 2.0,
+      "repetition": 2,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0014943762216717005,
+          "environment": 5.391829670406878,
+          "reward": 16.49277245788835
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0004676668904721737,
+          "environment": 2.031972417142242,
+          "reward": 7.556106875184923
+        },
+        "first_episode_submit_to_reward_start_seconds": 9.5646472920198,
+        "first_episode_reward_work_seconds": 3.406125290784985,
+        "first_episode_reward_queue_seconds": 7.556106875184923
+      }
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 0,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0013496661558747292,
+          "environment": 3.3345527893397957,
+          "reward": 13.154048749711365
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0009120828472077847,
+          "environment": 1.248189208097756,
+          "reward": 8.838862916920334
+        },
+        "first_episode_submit_to_reward_start_seconds": 5.974655042169616,
+        "first_episode_reward_work_seconds": 3.0269930828362703,
+        "first_episode_reward_queue_seconds": 5.974234624998644
+      }
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 0,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.00086583336815238,
+          "environment": 3.3324392917566,
+          "reward": 12.410501831909642
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0002817919012159109,
+          "environment": 1.2977560420986265,
+          "reward": 5.248062416911125
+        },
+        "first_episode_submit_to_reward_start_seconds": 8.29298804095015,
+        "first_episode_reward_work_seconds": 2.803328375099227,
+        "first_episode_reward_queue_seconds": 3.290590832941234
+      }
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 1,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0012380010448396206,
+          "environment": 6.18499995674938,
+          "reward": 12.522677874891087
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0005320420023053885,
+          "environment": 3.2217782500665635,
+          "reward": 5.825767291011289
+        },
+        "first_episode_submit_to_reward_start_seconds": 8.517459917115048,
+        "first_episode_reward_work_seconds": 2.474423582898453,
+        "first_episode_reward_queue_seconds": 3.5151138331275433
+      }
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 1,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0006534149870276451,
+          "environment": 2.619684289675206,
+          "reward": 11.663407000945881
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 7.087504491209984e-05,
+          "environment": 1.1634629170875996,
+          "reward": 7.706544167129323
+        },
+        "first_episode_submit_to_reward_start_seconds": 4.520310999825597,
+        "first_episode_reward_work_seconds": 3.264883500058204,
+        "first_episode_reward_queue_seconds": 4.520175041863695
+      }
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 2,
+      "placement": "worker",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0006205406971275806,
+          "environment": 2.4710967063438147,
+          "reward": 11.948060501134023
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.00017812498845160007,
+          "environment": 1.0203963338863105,
+          "reward": 7.6178577919490635
+        },
+        "first_episode_submit_to_reward_start_seconds": 4.687197040999308,
+        "first_episode_reward_work_seconds": 3.0136394591536373,
+        "first_episode_reward_queue_seconds": 4.686249332968146
+      }
+    },
+    {
+      "delay_seconds": 5.0,
+      "repetition": 2,
+      "placement": "scheduler",
+      "stage_diagnostics": {
+        "work_seconds_by_stage": {
+          "actor": 0.0008216251153498888,
+          "environment": 2.6735857494641095,
+          "reward": 12.025940374005586
+        },
+        "queue_wait_p95_seconds_by_stage": {
+          "actor": 0.0009181250352412462,
+          "environment": 1.2037765830755234,
+          "reward": 4.323371208040044
+        },
+        "first_episode_submit_to_reward_start_seconds": 6.934590582968667,
+        "first_episode_reward_work_seconds": 4.127914125099778,
+        "first_episode_reward_queue_seconds": 1.9338129579555243
+      }
+    }
+  ],
+  "measurement_scope": "Full real Docker graded batches including factory setup, all coding actions, 14-case host verification per episode, and cleanup. The 2/5-second first-episode readiness waits are injected; they are not measured model or verifier latency. This does not measure RL training.",
+  "limitations": [
+    "One public solved repository fixture and fixed scripted actions; repetitions share host and Docker cache.",
+    "Readiness delays are artificial and only test control-plane scheduling under delayed feedback.",
+    "The held lease remains in the in-flight bound; a full bound can still prevent admission of new episodes.",
+    "No token-level behavior likelihoods, optimizer step, GPU, or model-quality measurement."
+  ]
+}
