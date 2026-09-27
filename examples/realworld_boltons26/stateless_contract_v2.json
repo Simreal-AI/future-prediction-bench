@@ -1,0 +1,9 @@
+{
+  "kind": "stateless_python_cases_overlay_v1",
+  "task_id": "boltons-26-singularize-ss-v2",
+  "verifier_sha256": "2fbdc59f999b489b13052102d9b9b31b0e136ec9271242870084fb3d63b5eb58",
+  "requires_live_background_process_state": false,
+  "requires_shared_case_filesystem_state": false,
+  "requires_quiescent_submitted_state": true,
+  "allow_unprivileged_case_execution": true
+}
