@@ -1,0 +1,15 @@
+[package]
+name = "fpb-cubecow-latency-fixture"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+cubecow = { path = "/source/cubecow" }
+serde_json = "=1.0.149"
+
+[profile.release]
+opt-level = 3
+debug = false
