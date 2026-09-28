@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.19.2
+
+Compatibility fix for the initial public alpha release.
+
+- Make the deeply nested JSON rejection test portable across Python builds:
+  valid JSON may reach schema rejection before a decoder recursion limit.
+  Both paths must reject the input and keep training readiness false.
+- Add a deterministic check that decoder recursion errors still produce a
+  machine-readable CLI error.
+- Include the fix in the versioned source and materials archives and refresh
+  the published-version and validation documentation.
+
+Runtime input validation and training-readiness behavior are unchanged.
+
 ## 0.19.1
 
 Public alpha release of the forecasting protocol and real-world agent
