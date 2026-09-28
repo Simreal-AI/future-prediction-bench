@@ -8,6 +8,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
+from unittest.mock import patch
 
 from future_prediction_bench.gpu_preflight import audit_gpu_job, main
 
@@ -206,6 +207,15 @@ class GPUPreflightTests(unittest.TestCase):
         self.assertFalse(report["input_contract_passed"])
         self.assertFalse(report["trainer_ready"])
         self.assertEqual(report["errors"], ["optimizer_not_explicitly_supported"])
+
+    def test_decoder_recursion_error_is_machine_readable_and_fail_closed(self):
+        with patch("future_prediction_bench.gpu_preflight.json.loads",
+                   side_effect=RecursionError), redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(main(["--plan", str(self.root / "plan.json")]), 2)
+        report = json.loads(output.getvalue())
+        self.assertEqual(report["errors"], ["plan:invalid_json"])
+        self.assertFalse(report["input_contract_passed"])
+        self.assertFalse(report["trainer_ready"])
 
     def test_deep_json_and_huge_integer_fail_as_machine_readable_input_errors(self):
         (self.root / "plan.json").write_text("[" * 2000 + "0" + "]" * 2000)
