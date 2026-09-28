@@ -1,8 +1,25 @@
 # Validation record
 
-Updated: 2026-09-27. Version: 0.19.0. This records infrastructure checks, not forecasting or learned-policy performance.
+Updated: 2026-09-28. Version: 0.19.2. This records infrastructure checks, not forecasting or learned-policy performance. Earlier research records below retain their original dates and scope.
 
-## Public alpha release checks: 0.19.1
+## Public alpha compatibility release: 0.19.2
+
+The published v0.19.1 source passed local checks, but its first Linux CI run
+exposed a build-dependent JSON decoder depth assumption in one test. The
+runtime still rejected the input. The corrected assertion passed the
+[Python 3.10 and 3.12 CI matrix](https://github.com/Simreal-AI/future-prediction-bench/actions/runs/36328786747)
+on main. Version 0.19.2 includes that correction in all release archives and
+adds a deterministic decoder-recursion error check. Runtime validation is
+unchanged; invalid inputs must remain rejected and `trainer_ready=false`.
+
+The default local Python 3.12 suite ran 712 tests successfully with 11 optional
+checks skipped. The 443-file source archive and English materials bundle were
+audited against the public manifest, including tests from an extracted archive,
+checksums, relative links, private-data scans, and distribution contents.
+The source distribution and wheel built successfully; installed-wheel import
+and CLI checks passed outside the checkout.
+
+## Historical public alpha release checks: 0.19.1
 
 The English release was built from a clean 443-file public-manifest checkout.
 The default Python 3.12 suite ran 711 tests successfully with 11 optional checks
@@ -36,7 +53,7 @@ These are source-release checks, not model performance or training results.
 - Fixture JSONL and the first live public question export passed schema validation.
 - Coverage includes baseline priority and privacy, positive/negative relative rewards, missing baselines, invalid/void outcomes, deadline enforcement, train/test isolation, source parsing, retry exhaustion, process-restart recovery, and strict JSON parsing.
 - Public documentation, demo prompts, and fixtures are English and contain no personal absolute paths. The research filter retains multilingual detection test data deliberately.
-- CI is configured for Python 3.10 and 3.12; this is a workflow configuration, not a claim that remote GitHub CI has already run.
+- CI runs tests, fixture validation, the offline demo, distribution builds, and installed-wheel checks for Python 3.10 and 3.12. Remote compatibility validation is recorded in the current release section above.
 
 ## Real-world task and replay checks
 
@@ -126,4 +143,4 @@ The self-improvement module tests hashed candidate lineage, frozen development c
 
 Before unattended forecasting, configure and exercise actual model/search credentials, review matching market contracts, confirm the fixed internal baseline configuration, and observe the first complete live settlement cycle. Additional domains, representative question difficulty, cross-domain balance, and long-running source stability still need validation.
 
-The foreground worker is implemented but no persistent process or hosted schedule was enabled during this development session. The repository has not been published. License and GitHub ownership decisions remain in the [release checklist](RELEASE_CHECKLIST.md).
+The foreground worker is implemented, but no persistent process or hosted schedule is enabled by the public source release. The repository is public under the MIT license and maintained by Simreal-AI. Publication checks are recorded in the [release checklist](RELEASE_CHECKLIST.md).

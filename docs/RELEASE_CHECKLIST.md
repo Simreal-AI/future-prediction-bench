@@ -1,10 +1,10 @@
 # Public release checklist
 
-Use this checklist for public source releases. The v0.19.1 alpha release is maintained by Simreal-AI at `https://github.com/Simreal-AI/future-prediction-bench` under the MIT license. Publishing source does not start a hosted worker, invoke paid models, or publish an event dataset.
+Use this checklist for public source releases. The v0.19.2 alpha release is maintained by Simreal-AI at `https://github.com/Simreal-AI/future-prediction-bench` under the MIT license. Publishing source does not start a hosted worker, invoke paid models, or publish an event dataset.
 
 ## Decisions before publication
 
-- [x] Confirm the GitHub owner, repository name, visibility, and release version: Simreal-AI/future-prediction-bench, public alpha, v0.19.1.
+- [x] Confirm the GitHub owner, repository name, visibility, and release version: Simreal-AI/future-prediction-bench, public alpha, v0.19.2.
 - [x] Add the MIT license file and package metadata.
 - [x] Document separate third-party rights in `THIRD_PARTY_NOTICES.md`; exclude downloaded third-party sources, raw source snapshots, and live question datasets from this source release.
 - [x] Add project URLs and Simreal-AI maintainer identity; use repository issues for public contact.
